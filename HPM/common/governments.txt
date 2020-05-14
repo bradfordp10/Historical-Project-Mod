@@ -6,8 +6,10 @@
 proletarian_dictatorship = {
     #which ideology of parties.
     communist = yes
+    socialist = yes
 
-    election = no
+    election = yes
+    duration = 42
     appoint_ruling_party = yes
     flagType = communist
 }
@@ -15,6 +17,7 @@ proletarian_dictatorship = {
 presidential_dictatorship = {
     #which ideology of parties.
     reactionary = yes
+    conservative = yes
 
     election = no
     appoint_ruling_party = yes
@@ -24,6 +27,7 @@ presidential_dictatorship = {
 bourgeois_dictatorship = {
     #which ideology of parties.
     anarcho_liberal = yes
+    liberal = yes
 
     election = no
     appoint_ruling_party = yes
@@ -58,7 +62,7 @@ prussian_constitutionalism = {
 
 
     election = yes
-    duration = 48
+    duration = 42
     appoint_ruling_party = yes
     flagType = monarchy
 }
@@ -74,7 +78,7 @@ hms_government = {
 
 
     election = yes
-    duration = 48
+    duration = 42
     appoint_ruling_party = yes
     flagType = monarchy
 }
@@ -90,7 +94,7 @@ democracy = {
 
 
     election = yes
-    duration = 48
+    duration = 42
     appoint_ruling_party = no
     flagType = republic
 }
