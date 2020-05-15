@@ -4,7 +4,9 @@ add_core = ENG
 trade_goods = coal
 life_rating = 35
 #naval_base = 1 #Chatham
-fort = 1
+#fort = 1
+terrain = mining_district
+
 party_loyalty = {
     ideology = liberal
     loyalty_value = 5
