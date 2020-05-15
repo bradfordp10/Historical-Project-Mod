@@ -106,6 +106,8 @@ OLD = {
 }
 WEI = {
     value = 125
+    level = 3
+    influence_value = 0
     military_access = yes
 }
 
