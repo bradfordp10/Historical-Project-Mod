@@ -106,7 +106,7 @@ OLD = {
 }
 WEI = {
     value = 125
-    level = 3
+    level = 4
     influence_value = 0
     military_access = yes
 }
@@ -129,7 +129,7 @@ SAR = {
 }
 PAP = {
     value = 125
-    level = 3
+    level = 4
     influence_value = 0
 }
 SWI = {
