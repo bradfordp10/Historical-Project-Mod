@@ -1245,6 +1245,7 @@ political_decisions = {
         }
 
         allow = {
+            year = 1842
             owns = 250
             OR = {
                 AND = {
@@ -1274,10 +1275,6 @@ political_decisions = {
             modifier = {
                 factor = 0
                 NOT = { badboy = 0.08 }
-            }
-            modifier = {
-                factor = 0
-                NOT = { year = 1842 }
             }
         }
     }
