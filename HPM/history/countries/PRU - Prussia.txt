@@ -102,7 +102,6 @@ foreign_investment = {
     OLD = 10000
     MEC = 7500
     SAX = 7500
-    HAN = 10000
     SIC = 2000
 }
 
