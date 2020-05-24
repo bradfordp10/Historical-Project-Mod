@@ -1,7 +1,6 @@
-owner = NEH
-controller = NEH
+owner = PRU
+controller = PRU
 add_core = NEH
-add_core = SWI
 add_core = PRU
 trade_goods = coal
 life_rating = 32
