@@ -90,7 +90,6 @@ foreign_investment = {
         BAV = 7500
         WUR = 5000
         BAD = 5000
-        HAN = 7500
 }
 
 oob = "AUS_oob.txt"
