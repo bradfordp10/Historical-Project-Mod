@@ -213,7 +213,10 @@ country_event = {
 
     trigger = {
         tag = SWE
-        exists = NOR
+        OR = {
+            AND ={ NOR = { exists = no } any_core = { is_core = NOR } }
+            exists = NOR
+        }
         year = 1865
         NOT = {
             year = 1875
@@ -249,6 +252,7 @@ country_event = {
 
     option = {
         name = "EVTOPTA36608"
+        prestige = 2
         relation = { who = NOR value = 20 }
     }
 

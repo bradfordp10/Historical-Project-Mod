@@ -2842,223 +2842,218 @@ country_event = {
 #########################################
 
 #Norway asks for independence from Sweden
-country_event = {
-
-    id = 49505
-
-    title = "EVTNAME49505"
-    desc = "EVTDESC49505"
-    picture = "danishgovernment"
-
-    trigger = {
-        war = no
-        tag = SWE
-        any_state = {
-            any_owned_province = { is_core = NOR }
-            average_militancy = 2
-        }
-        average_consciousness = 6
-        year = 1880
-        revolution_n_counterrevolution = 1
-        is_possible_vassal = NOR
-        NOT = {
-            has_country_flag = norway_asks_for_indepenedence
-            exists = NOR
-        }
-    }
-
-    mean_time_to_happen = {
-        days = 1
-        modifier = {
-            factor = 0.5
-            press_rights = free_press
-        }
-        modifier = {
-            factor = 0.75
-            vote_franschise = universal_voting
-        }
-        modifier = {
-            factor = 0.85
-            vote_franschise = universal_weighted_voting
-        }
-        modifier = {
-            factor = 0.95
-            vote_franschise = wealth_voting
-            }
-        modifier = {
-            factor = 1.25
-            press_rights = censored_press
-        }
-        modifier = {
-            factor = 1.5
-            press_rights = state_press
-        }
-    }
-
-    immediate = { random_owned = { limit = { owner = { accepted_culture = norwegian } } owner = { remove_accepted_culture = norwegian } } }
-
-    option = {
-        name = "EVT49505OPTA"
-        any_owned = {
-            limit = { is_core = NOR }
-            remove_core = SWE
-        }
-        release = NOR
-        any_pop = {
-            consciousness = -4
-        }
-        NOR = {
-            any_pop = {
-                militancy = -4
-            }
-            relation = {
-                who = THIS
-                value = 100
-            }
-        }
-        set_country_flag = norway_asks_for_indepenedence
-        ai_chance = {
-            factor = 90
-        }
-    }
-
-    option = {
-        name = "EVT49505OPTB"
-        any_pop = {
-            limit = {
-                culture = norwegian
-            }
-            consciousness = 4
-            militancy = 3
-        }
-        any_country = {
-                limit = {
-                    is_greater_power = yes
-                    continent = europe
-                }
-                relation = {
-                    who = THIS
-                    value = -20
-                }
-        }
-        set_country_flag = norway_asks_for_indepenedence
-        ai_chance = {
-            factor = 10
-        }
-    }
-}
+#country_event = {
+#
+#    id = 49505
+#
+#    title = "EVTNAME49505"
+#    desc = "EVTDESC49505"
+#    picture = "danishgovernment"
+#
+#    trigger = {
+#        war = no
+#        tag = SWE
+#        any_state = {
+#            any_owned_province = { is_core = NOR }
+#            average_militancy = 2
+#        }
+#        average_consciousness = 6
+#        year = 1880
+#        revolution_n_counterrevolution = 1
+#        is_possible_vassal = NOR
+#        NOT = {
+#            has_country_flag = norway_asks_for_indepenedence
+#            exists = NOR
+#        }
+#    }
+#
+#    mean_time_to_happen = {
+#        days = 1
+#        modifier = {
+#            factor = 0.5
+#            press_rights = free_press
+#        }
+#        modifier = {
+#            factor = 0.75
+#            vote_franschise = universal_voting
+#        }
+#        modifier = {
+#            factor = 0.85
+#            vote_franschise = universal_weighted_voting
+#        }
+#        modifier = {
+#            factor = 0.95
+#            vote_franschise = wealth_voting
+#            }
+#        modifier = {
+#            factor = 1.25
+#            press_rights = censored_press
+#        }
+#        modifier = {
+#            factor = 1.5
+#            press_rights = state_press
+#        }
+#    }
+#
+#    immediate = { random_owned = { limit = { owner = { accepted_culture = norwegian } } owner = { remove_accepted_culture = norwegian } } }
+#
+#    option = {
+#        name = "EVT49505OPTA"
+#        release = NOR
+#        any_pop = {
+#            consciousness = -4
+#        }
+#        NOR = {
+#            any_pop = {
+#                militancy = -4
+#            }
+#            relation = {
+#                who = THIS
+#                value = 100
+#            }
+#        }
+#        set_country_flag = norway_asks_for_indepenedence
+#        ai_chance = {
+#            factor = 90
+#        }
+#    }
+#
+#    option = {
+#        name = "EVT49505OPTB"
+#        any_pop = {
+#            limit = {
+#                culture = norwegian
+#            }
+#            consciousness = 4
+#            militancy = 3
+#        }
+#        any_country = {
+#                limit = {
+#                    is_greater_power = yes
+#                    continent = europe
+#                }
+#                relation = {
+#                    who = THIS
+#                    value = -20
+#                }
+#        }
+#        set_country_flag = norway_asks_for_indepenedence
+#        ai_chance = {
+#            factor = 10
+#        }
+#    }
+#}
 
 #Norway demands independence from Sweden
-country_event = {
-
-    id = 49506
-    title = "EVTNAME49506"
-    desc = "EVTDESC49506"
-    picture = "danishgovernment"
-
-    trigger = {
-        war = no
-        tag = SWE
-        any_state = {
-            any_owned_province = { is_core = NOR }
-            average_militancy = 3
-        }
-        average_consciousness = 7
-        year = 1910
-        revolution_n_counterrevolution = 1
-        is_possible_vassal = NOR
-        has_country_flag = norway_asks_for_indepenedence
-        NOT = {
-            exists = NOR
-            has_country_flag = norway_demands_independence
-        }
-    }
-
-    mean_time_to_happen = {
-        months = 40
-        modifier = {
-            factor = 0.5
-            press_rights = free_press
-        }
-        modifier = {
-            factor = 0.75
-            vote_franschise = universal_voting
-        }
-        modifier = {
-            factor = 0.85
-            vote_franschise = universal_weighted_voting
-        }
-        modifier = {
-            factor = 0.95
-            vote_franschise = wealth_voting
-            }
-        modifier = {
-            factor = 1.25
-            press_rights = censored_press
-        }
-        modifier = {
-            factor = 1.5
-            press_rights = state_press
-        }
-    }
-
-    immediate = { random_owned = { limit = { owner = { accepted_culture = norwegian } } owner = { remove_accepted_culture = norwegian } } }
-
-    option = {
-        name = "EVT49506OPTA"
-        any_owned = {
-            limit = { is_core = NOR }
-            remove_core = SWE
-            remove_core = SCA
-        }
-        release = NOR
-        any_pop = {
-            consciousness = -4
-        }
-        NOR = {
-            capital = 313
-            any_pop = {
-                militancy = -4
-            }
-        }
-        badboy = -10
-        set_country_flag = norway_demands_independence
-        ai_chance = {
-            factor = 90
-        }
-    }
-
-    option = {
-        name = "EVT49506OPTB"
-        any_owned = {
-            limit = { is_core = NOR }
-            secede_province = NOR
-        }
-        war = {
-            target = NOR
-            attacker_goal = {
-                casus_belli = civil_war
-            }
-
-            defender_goal = {
-                casus_belli = status_quo
-            }
-        }
-        any_greater_power = {
-                limit = {
-                    continent = europe
-                }
-                relation = {
-                    who = THIS
-                    value = -40
-                }
-        }
-        set_country_flag = norway_demands_independence
-        ai_chance = {
-            factor = 10
-        }
-    }
-}
+#country_event = {
+#
+#    id = 49506
+#    title = "EVTNAME49506"
+#    desc = "EVTDESC49506"
+#    picture = "danishgovernment"
+#
+#    trigger = {
+#        war = no
+#        tag = SWE
+#        any_state = {
+#            any_owned_province = { is_core = NOR }
+#            average_militancy = 3
+#        }
+#        average_consciousness = 7
+#        year = 1910
+#        revolution_n_counterrevolution = 1
+#        is_possible_vassal = NOR
+#        has_country_flag = norway_asks_for_indepenedence
+#        NOT = {
+#            exists = NOR
+#            has_country_flag = norway_demands_independence
+#        }
+#    }
+#
+#    mean_time_to_happen = {
+#        months = 40
+#        modifier = {
+#            factor = 0.5
+#            press_rights = free_press
+#        }
+#        modifier = {
+#            factor = 0.75
+#            vote_franschise = universal_voting
+#        }
+#        modifier = {
+#            factor = 0.85
+#            vote_franschise = universal_weighted_voting
+#        }
+#        modifier = {
+#            factor = 0.95
+#            vote_franschise = wealth_voting
+#            }
+#        modifier = {
+#            factor = 1.25
+#            press_rights = censored_press
+#        }
+#        modifier = {
+#            factor = 1.5
+#            press_rights = state_press
+#        }
+#    }
+#
+#    immediate = { random_owned = { limit = { owner = { accepted_culture = norwegian } } owner = { remove_accepted_culture = norwegian } } }
+#
+#    option = {
+#        name = "EVT49506OPTA"
+#        any_owned = {
+#            limit = { is_core = NOR }
+#            remove_core = SCA
+#        }
+#        release = NOR
+#        any_pop = {
+#            consciousness = -4
+#        }
+#        NOR = {
+#            capital = 313
+#            any_pop = {
+#                militancy = -4
+#            }
+#        }
+#        badboy = -10
+#        set_country_flag = norway_demands_independence
+#        ai_chance = {
+#            factor = 90
+#        }
+#    }
+#
+#    option = {
+#        name = "EVT49506OPTB"
+#        any_owned = {
+#            limit = { is_core = NOR }
+#            secede_province = NOR
+#        }
+#        war = {
+#            target = NOR
+#            attacker_goal = {
+#                casus_belli = civil_war
+#            }
+#
+#            defender_goal = {
+#                casus_belli = status_quo
+#            }
+#        }
+#        any_greater_power = {
+#                limit = {
+#                    continent = europe
+#                }
+#                relation = {
+#                    who = THIS
+#                    value = -40
+#                }
+#        }
+#        set_country_flag = norway_demands_independence
+#        ai_chance = {
+#            factor = 10
+#        }
+#    }
+#}
 
 #Finnish Independence from Sweden
 country_event = {
@@ -3725,11 +3720,26 @@ country_event = {
     trigger = {
         NOT = { tag = SCA }
         war = no
-        is_our_vassal = NOR
+        OR = {
+            is_our_vassal = NOR
+            AND = {
+                NOR = { exists = no}
+                any_owned = { is_core = NOR }
+                owns = 313
+            }
+        }
         OR = {
             AND = {
                 revolution_n_counterrevolution = 1
-                NOR = { average_consciousness = 3 }
+                OR { 
+                    any_state = {
+                        any_owned_province = {
+                            is_core = NOR
+                        }
+                        average_consciousness = 4
+                    }
+                    NOR = { average_consciousness = 3 }
+                }
                 year = 1900
             }
             AND = {
@@ -3741,8 +3751,19 @@ country_event = {
                 }
             }
             AND = {
-                NOT = { relation = { who = NOR value = 0 } }
-                NOR = { average_consciousness = 6 }
+                OR = {
+                    AND = {
+                        NOT = { relation = { who = NOR value = 0 } }
+                        NOR = { average_consciousness = 6 }
+                    }
+                    any_state = {
+                        any_owned_province = {
+                            is_core = NOR
+                        }
+                        average_militancy = 6
+                        average_consciousness = 9
+                    }
+                }
             }
         }
     }
@@ -3773,7 +3794,21 @@ country_event = {
         name = "EVT95095OPTA"
         prestige = -5
         badboy = -2
-        release_vassal = NOR
+        random_country = {
+            limit = {
+                exists = yes
+                is_our_vassal = NOR
+            }
+            release_vassal = NOR
+        }
+        random_country = {
+            limit = {
+                exists = yes
+                any_core = { is_core = NOR }
+                owns = 313
+            }
+            release = NOR
+        }
         random_owned = { limit = { owner = { accepted_culture  = norwegian } } owner = { remove_accepted_culture = norwegian } }
         NOR = {
             any_pop = { militancy = -8 }
@@ -3849,11 +3884,26 @@ country_event = {
             militancy = 7
         }
 
-        release_vassal = NOR
+       random_country = {
+            limit = {
+                exists = yes
+                is_our_vassal = NOR
+            }
+            release_vassal = NOR
+        }
+
+        random_country = {
+            limit = {
+                exists = yes
+                any_core = { is_core = NOR }
+                owns = 313
+            }
+            release = NOR
+        }
 
         war = {
             target = NOR
-            attacker_goal = { casus_belli = make_puppet }
+            attacker_goal = { casus_belli = civil_war }
         }
 
         ai_chance = {
