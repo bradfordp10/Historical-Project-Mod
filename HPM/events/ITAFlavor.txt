@@ -825,7 +825,10 @@ country_event = {
     trigger = {
         tag = SIC
         government = absolute_monarchy
-        has_country_modifier = springtime_of_nations
+        OR = {
+            has_country_flag = liberal_revolution_in_progress
+            has_country_modifier = springtime_of_nations
+        }
         any_owned_province = {
             is_core = SYC
             OR = {

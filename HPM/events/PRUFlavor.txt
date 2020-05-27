@@ -793,16 +793,25 @@ country_event = {
         }
         OR = {
             owns = 608
-            ALL = {
+            AND = {
                 NEH = {
                     exists = yes
                     ai = yes
                 }
             }
         }
-        has_country_modifier = springtime_of_nations
+        OR = {
+            has_country_flag = liberal_revolution_in_progress
+            has_country_modifier = springtime_of_nations
+        }
+        608 = {
+            OR = {
+                average_militancy = 2
+                average_consciousness = 4
+                controlled_by = REB
+            }
+        }
         war = no
-        year = 1842
     }
 
     fire_only_once = yes
