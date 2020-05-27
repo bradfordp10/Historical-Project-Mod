@@ -836,16 +836,23 @@ political_decisions = {
             NOT = { owns = 594 }
             owns = 549
             SGM = { exists = yes ai = yes owns = 594 }
+            OR = {
+                government = absolute_monarchy
+                government = prussian_constitutionalism
+                government = hms_government
+            }
         }
 
         allow = {
             war = no
-            is_sphere_leader_of = SGM
+            OR = {
+                is_sphere_leader_of = SGM
+                SGM = { part_of_sphere = no }
+            }
             OR = {
                 AND = {
                     SGM = {
-                        vassal_of = THIS
-                        average_militancy = 1
+                        average_militancy = 3
                     }
                     nationalism_n_imperialism = 1
                 }
@@ -863,7 +870,6 @@ political_decisions = {
 
         effect = {
             diplomatic_influence = { who = SGM value = -400 }
-            release = SGM
             leave_alliance = SGM
             594 = {
                 remove_core = SGM

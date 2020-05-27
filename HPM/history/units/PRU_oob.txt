@@ -1,10 +1,4 @@
 #German Minors
-NEH = {
-    value = 200
-    level = 5
-    influence_value = 100
-}
-
 SGM = {
     value = 200
     level = 5
@@ -13,25 +7,25 @@ SGM = {
 }
 
 ANH = {
-    value = 200
+    value = 125
     level = 5
     influence_value = 0
     military_access = yes
 }
 BRA = {
-    value = 200
+    value = 125
     level = 5
     influence_value = 0
     military_access = yes
 }
 BRE = {
-    value = 200
+    value = 125
     level = 5
     influence_value = 0
     military_access = yes
 }
 COB = {
-    value = 200
+    value = 125
     level = 5
     influence_value = 0
     military_access = yes
@@ -43,7 +37,7 @@ FRM = {
     military_access = yes
 }
 HAM = {
-    value = 200
+    value = 125
     level = 5
     influence_value = 0
     military_access = yes
@@ -61,20 +55,26 @@ HES = {
     military_access = yes
 }
 LIP = {
-    value = 200
+    value = 125
     level = 5
     influence_value = 0
     military_access = yes
 }
 LUB = {
-    value = 200
+    value = 125
     level = 5
     influence_value = 0
     military_access = yes
 }
 
 MEC = {
-    value = 200
+    value = 125
+    level = 5
+    influence_value = 0
+    military_access = yes
+}
+STR = {
+    value = 125
     level = 5
     influence_value = 0
     military_access = yes
@@ -92,7 +92,7 @@ NAS = {
     military_access = yes
 }
 OLD = {
-    value = 200
+    value = 125
     level = 5
     influence_value = 0
     military_access = yes

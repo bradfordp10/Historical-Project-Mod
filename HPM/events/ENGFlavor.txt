@@ -46,6 +46,19 @@ country_event = {
             limit = { is_core = HAN } 
             owner = { release = HAN }
         }
+        AUS = { 
+            diplomatic_influence = {
+                who = HAN
+                value = 150
+            }
+            create_alliance = HAN
+        }
+        PRU = {
+            diplomatic_influence = {
+                who = HAN
+                value = 50
+            }
+        }
         prestige = 5
         election = yes
     }

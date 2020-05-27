@@ -390,10 +390,17 @@ HEK = {
     color3= { 195 149 155  }
 }
 
-# Mecklenburg FIXED
+# Mecklenburg-Scwerin
 MEC = {
     color1= { 248 199 67  }
     color2= { 244 56 49  }
+    color3= { 112 150 105  }
+}
+
+# Mecklenburg-Strelitz
+STR = {
+    color1= { 244 56 49  }
+    color2= { 248 199 67  }
     color3= { 112 150 105  }
 }
 
