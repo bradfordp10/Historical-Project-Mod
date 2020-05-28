@@ -252,7 +252,7 @@ country_event = {
 
     option = {
         name = "EVTOPTA36608"
-        prestige = 2
+        prestige = 1
         relation = { who = NOR value = 20 }
     }
 

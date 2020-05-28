@@ -32,8 +32,6 @@ COB = {
 }
 FRM = {
     value = 100
-    level = 3
-    influence_value = 0
     military_access = yes
 }
 HAM = {
@@ -44,14 +42,10 @@ HAM = {
 }
 HEK = {
     value = 100
-    level = 3
-    influence_value = 0
     military_access = yes
 }
 HES = {
     value = 100
-    level = 3
-    influence_value = 0
     military_access = yes
 }
 LIP = {
@@ -81,14 +75,10 @@ STR = {
 }
 MEI = {
     value = 100
-    level = 3
-    influence_value = 0
     military_access = yes
 }
 NAS = {
     value = 100
-    level = 3
-    influence_value = 0
     military_access = yes
 }
 OLD = {
@@ -99,8 +89,6 @@ OLD = {
 }
 SAX = {
     value = 50
-    level = 3
-    influence_value = 0
     military_access = yes
 }
 WEI = {
@@ -111,20 +99,14 @@ WEI = {
 }
 BAV = {
     value = 75
-    level = 3
-    influence_value = 0
     military_access = yes
 }
 BAD = {
     value = 100
-    level = 3
-    influence_value = 0
     military_access = yes
 }
 WUR = {
     value = 100
-    level = 3
-    influence_value = 0
     military_access = yes
 }
 

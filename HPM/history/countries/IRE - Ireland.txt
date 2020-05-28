@@ -37,6 +37,11 @@ border_policy = open_borders
 
 set_country_flag = catholic_country
 
+govt_flag = {
+    government = hms_government
+    flag = democracy
+}
+
 ruling_party = IRE_conservative
 upper_house = {
     fascist = 0
