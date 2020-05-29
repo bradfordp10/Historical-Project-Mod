@@ -11,7 +11,6 @@ country_event = {
         is_vassal = no
         war = no
         primary_culture = north_german
-        has_country_flag = ubd_substate
     }
 
     fire_only_once = yes
@@ -22,7 +21,6 @@ country_event = {
         name = "EVTOPTA31500001" #Latvian Rule
         primary_culture = latvian
         remove_accepted_culture = latvian
-        remove_accepted_culture = russian
         any_pop = { limit = { OR = { has_pop_culture = north_german has_pop_culture = russian } militancy = 9 consciousness = 9 } }
         any_owned = { limit = { OR = { is_core = LAT is_core = EST } } add_core = UBD }
         ai_chance = { factor = 0 }
@@ -32,7 +30,6 @@ country_event = {
         name = "EVTOPTB31500001" #Estonian
         primary_culture = estonian
         remove_accepted_culture = estonian
-        remove_accepted_culture = russian
         any_pop = { limit = { OR = { has_pop_culture = north_german has_pop_culture = russian } militancy = 9 consciousness = 9 } }
         any_owned = { limit = { OR = { is_core = LAT is_core = EST } } add_core = UBD }
         ai_chance = { factor = 0 }
@@ -40,7 +37,6 @@ country_event = {
 
     option = {
         name = "EVTOPTC31500001" #Keep German Rule
-        remove_accepted_culture = russian
         any_pop = { limit = { OR = { has_pop_culture = estonian has_pop_culture = latvian has_pop_culture = russian } } militancy = 9 consciousness = 9 }
         any_owned = { limit = { OR = { is_core = LAT is_core = EST } } add_core = UBD }
         ai_chance = { factor = 05 }
@@ -51,7 +47,6 @@ country_event = {
         UBD = {
             primary_culture = latvian
             remove_accepted_culture = latvian
-            remove_accepted_culture = russian
             }
         any_owned = { limit = { is_core = LAT } secede_province = LAT any_pop = { limit = { OR = { has_pop_culture = north_german has_pop_culture = russian } militancy = 9 consciousness = 9 } } }
         change_tag = EST
@@ -65,7 +60,6 @@ country_event = {
         UBD = {
             primary_culture = latvian
             remove_accepted_culture = latvian
-            remove_accepted_culture = russian
         }
         any_owned = { limit = { is_core = EST } secede_province = EST any_pop = { limit = { OR = { has_pop_culture = north_german has_pop_culture = russian } militancy = 9 consciousness = 9 } } }
         change_tag = LAT

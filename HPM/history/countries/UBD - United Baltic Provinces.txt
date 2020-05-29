@@ -2,7 +2,6 @@ capital = 354
 primary_culture = north_german
 culture = latvian
 culture = estonian
-culture = russian
 religion = protestant
 government = absolute_monarchy
 plurality = 0
@@ -52,11 +51,6 @@ upper_house = {
     socialist = 0
     communist = 0
 }
-
-set_country_flag = ubd_substate
-decision = UBD_1836_setup
-
-oob = "UBD_oob.txt"
 
 # Technologies
 post_napoleonic_thought = 1
