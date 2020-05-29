@@ -2831,4 +2831,22 @@ political_decisions = {
             }
         }
     }
+
+    PAP_occupation = {
+        any_province = {
+            limit = {
+                is_core = PAP
+                NOT = { owner = PAP}
+            }
+            add_province_modifier = { 
+                name = occupied_province 
+                duration = -1 
+            }
+        }
+        any_province = {
+            limit = { is_core = HAN }
+            add_province_modifier = { occupied_province duration = -1 }
+        }
+        #to prevent mass Irish migration to Hanover
+    }
 }

@@ -1,3 +1,36 @@
+#Austria and Italian States
+#Austria - Parma
+vassal = {
+    first = AUS
+    second = PAR
+    start_date = 1836.1.1
+    end_date = 1859.1.1
+}
+
+#Austria - Modena
+vassal = {
+    first = AUS
+    second = MOD
+    start_date = 1836.1.1
+    end_date = 1859.1.1
+}
+
+#Austria - Lucca
+vassal = {
+    first = AUS
+    second = LUC
+    start_date = 1836.1.1
+    end_date = 1847.1.1
+}
+
+#Austria - Tuscany
+vassal = {
+    first = AUS
+    second = TUS
+    start_date = 1836.1.1
+    end_date = 1859.1.1
+}
+
 #Bahrain - Qatar
 vassal = {
     first = BHR

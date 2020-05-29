@@ -46,6 +46,10 @@ country_event = {
             limit = { is_core = HAN } 
             owner = { release = HAN }
         }
+        any_province = {
+            limit = { is_core = HAN }
+            remove_province_modifier = occupied_province
+        }
         AUS = { 
             diplomatic_influence = {
                 who = HAN

@@ -347,7 +347,6 @@ country_event = {
     trigger = {
         primary_culture = north_italian
         war = no
-        is_vassal = no
         ai = yes
         NOT = {
             tag = SAR
@@ -832,8 +831,8 @@ country_event = {
         any_owned_province = {
             is_core = SYC
             OR = {
-                average_militancy = 6
-                average_consciousness = 8
+                average_militancy = 3
+                average_consciousness = 4
                 controlled_by = REB
             }
         }
@@ -885,7 +884,7 @@ country_event = {
             }
         }
         SYC = {
-            government = democracy
+            government = hms_government
             political_reform = mandatory_service
             ruling_party_ideology = liberal
             clr_country_flag = election_started
@@ -1032,6 +1031,110 @@ country_event = {
     }
 }
 
+#Austrian and French Withdrawl from Romagna
+country_event = {
+    id = 96175
+    title = "EVTNAME96175"
+    desc = "EVTDESC96175"
+
+    trigger = {
+        tag = PAP
+        year = 1838
+        has_unclaimed_cores = yes
+    }
+
+    mean_time_to_happen = {
+        months = 3
+    }
+
+    fire_only_once = yes
+
+    option = {
+        name = "EVT96175OPTA"
+        any_country = {
+            limit = { 
+                exists = yes
+                OR = { 
+                    any_province = {
+                        is_core = PAP
+                        NOT = { is_core = THIS }
+                    }
+                    is_our_vassal = RMG
+                }  
+            }
+            any_province = {
+                limit = {
+                    is_core = PAP
+                    NOT = { province_id = 742 }
+                }
+                secede_province = PAP
+            }
+            country_event = 96176
+        }
+
+        random_country = {
+            limit = {
+                tag = RMG
+                exists = yes
+                ai = yes
+                is_vassal = yes
+            }
+            inherit = PAP
+        }
+
+        any_province = {
+                limit = {
+                    is_core = PAP
+                    NOT = { province_id = 742 }
+                }
+                remove_province_modifier = occupied_province
+            }
+    }
+}
+
+country_event = {
+    id = 96176
+    title = "EVTNAME96175"
+    desc = "EVTDESC96175"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT96176OPTA"
+        FROM = {
+            relation = {
+                who = PAP
+                value = 50
+            }
+        }
+    }
+}
+
+#Retreat from Ferrara
+id = 96177
+    title = "EVTNAME96177"
+    desc = "EVTDESC96177"
+
+    trigger = {
+        NOT = {
+            tag = RMG
+            tag = PAP
+        }
+        OR = {
+            has_country_flag = liberal_revolution_in_progress
+            has_country_modifier = springtime_of_nations
+        }
+        owns = 742
+    }
+
+    option = {
+        name = "EVT96177OPTA"
+        742 = {
+            secede_province = PAP
+            remove_province_modifier = occupied_province
+        }
+    }
+
 # The adventures of Pinocchio
 country_event = {
 
@@ -1062,3 +1165,4 @@ country_event = {
         any_pop = { scaled_consciousness = { factor = 1    } }
     }
 }
+

@@ -1,5 +1,5 @@
-owner = PAP
-controller = PAP
+owner = AUS
+controller = AUS
 add_core = PAP
 add_core = RMG
 add_core = ITA

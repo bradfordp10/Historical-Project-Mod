@@ -88,6 +88,8 @@ nonstate_consciousness = 1
 
 oob = "PAP_oob.txt"
 
+decision = PAP_occupation
+
 1858.6.23 = {
     decision = the_case_of_edgardo_mortara
 }

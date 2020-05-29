@@ -959,19 +959,24 @@ political_decisions = {
 
         allow = {
             war = no
-            is_vassal = no
+            OR = {
+                government = absolute_monarchy
+                government = prussian_constitutionalism
+                government = hms_government
+            }
+            OR = {
+                is_vassal = no
+                overlord = { is_our_vassal = TUS }
+            }
             OR = {
                 part_of_sphere = no
-                AND = {
-                    sphere_owner = { is_sphere_leader_of = TUS }
-                    year = 1847
-                }
+                sphere_owner = { is_sphere_leader_of = TUS }
             }
             TUS = {
                 war = no
                 neighbour = LUC
-                is_vassal = no
             }
+            year = 1847
         }
 
         effect = {

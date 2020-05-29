@@ -2561,3 +2561,11 @@ emergency_tax_measures2 = {
     global_pop_militancy_modifier = 0.10
     icon = 10
 }
+
+## Omni New ##
+
+occupied_province = {
+    population_growth = -0.001
+    immigrant_attract = -1
+    icon = 8
+}
