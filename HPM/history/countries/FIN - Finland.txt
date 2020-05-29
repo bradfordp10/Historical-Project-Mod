@@ -51,10 +51,6 @@ upper_house = {
     communist = 0
 }
 
-decision = FIN_1836_setup
-
-oob = "FIN_oob.txt"
-
 # Technologies
 post_napoleonic_thought = 1
 flintlock_rifles = 1
