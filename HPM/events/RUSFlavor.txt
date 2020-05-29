@@ -1122,11 +1122,15 @@ country_event = {
             relation = { who = THIS value = -25 }
         }
         diplomatic_influence = { who = FIN value = 200 }
-        339 = { remove_core = RUS }
         982 = {
-            remove_core = RUS
             add_core = FIN
             secede_province = FIN
+        }
+        FIN = {
+            any_owned = {
+                limit =  { is_core = RUS }
+                remove_core = RUS
+            }
         }
         ai_chance = {
             factor = 85
