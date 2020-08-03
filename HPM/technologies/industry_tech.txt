@@ -217,11 +217,11 @@ combustion_engine = {
     year = 1880
     cost = 18000
 
-    rgo_goods_output = { coal = 0.15 }
-    rgo_goods_output = { iron = 0.15 }
-    rgo_goods_output = { oil = 0.15 }
-    rgo_goods_output = { precious_metal = 0.15 }
-    rgo_goods_output = { sulphur = 0.15 }
+    rgo_goods_output = { coal = 0.65 }
+    rgo_goods_output = { iron = 0.65 }
+    rgo_goods_output = { oil = 0.65 }
+    rgo_goods_output = { precious_metal = 0.65 }
+    rgo_goods_output = { sulphur = 0.65 }
     farm_rgo_eff = 0.15
     ai_chance = {
         factor = 3
@@ -651,7 +651,7 @@ hot_blast = {
 
 mechanized_mining = {
     area = metallurgy
-    year = 1840
+    year = 1836
     cost = 7200
     rgo_goods_output = {
         iron = 0.3
@@ -766,7 +766,7 @@ mechanized_mining = {
 
 regenerative_furnaces = {
     area = metallurgy
-    year = 1850
+    year = 1836
     cost = 10800
 
     rgo_goods_output = {
@@ -861,7 +861,7 @@ regenerative_furnaces = {
 }
 drilling_and_blasting = {
     area = metallurgy
-    year = 1870
+    year = 1850
     cost = 14400
 
     rgo_goods_output = {
@@ -965,7 +965,7 @@ drilling_and_blasting = {
 }
 advanced_metallurgy = {
     area = metallurgy
-    year = 1890
+    year = 1870
     cost = 18000
 
     rgo_goods_output = {
@@ -1062,7 +1062,7 @@ advanced_metallurgy = {
 }
 electric_furnace = {
     area = metallurgy
-    year = 1905
+    year = 1900
     cost = 21600
 
     #factory_goods_output = {
@@ -1414,7 +1414,7 @@ medicine = {
 }
 inorganic_chemistry = {
     area = chemistry_and_electricity
-    year = 1836
+    year = 1850
     cost = 10800
 
     supply_limit = 0.25
@@ -1477,7 +1477,7 @@ inorganic_chemistry = {
 }
 organic_chemistry = {
     area = chemistry_and_electricity
-    year = 1850
+    year = 1870
     cost = 14400
 
     supply_limit = 0.25
@@ -1521,7 +1521,7 @@ organic_chemistry = {
 }
 electricity = {
     area = chemistry_and_electricity
-    year = 1870
+    year = 1880
     cost = 18000
 
     supply_limit = 0.50
@@ -1560,7 +1560,7 @@ electricity = {
 }
 synthetic_polymers = {
     area = chemistry_and_electricity
-    year = 1900
+    year = 1905
     cost = 21600
 
     supply_limit = 0.50
