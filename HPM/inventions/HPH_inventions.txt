@@ -243,6 +243,7 @@ neocolonialism_doctrine = {
 pattinson_process = {
     limit = {
         mechanized_mining = 1
+        year = 1840
     }
     #news = no
     chance = {
@@ -305,6 +306,7 @@ pattinson_process = {
 parkes_process = {
     limit = {
         regenerative_furnaces = 1
+        year = 1850
     }
     #news = no
     chance = {
@@ -540,15 +542,16 @@ dynamite = {
     }
     effect = {
         rgo_goods_output = { coal = 0.25 }
-        rgo_size = { coal = 0.25 }
-        rgo_size = { iron = 0.25 }
-        rgo_size = { sulphur = 0.25 }
+        rgo_size = { coal = 0.75 }
+        rgo_size = { iron = 0.75 }
+        rgo_size = { sulphur = 0.75 }
     }
 }
 
 deep_mining = {
     limit = {
         drilling_and_blasting = 1
+        year = 1870
     }
     #news = no
     chance = {
@@ -608,6 +611,7 @@ deep_mining = {
 percussion_drill = {
     limit = {
         drilling_and_blasting = 1
+        year = 1870
     }
     #news = no
     chance = {
@@ -915,6 +919,7 @@ trinitrotoluene = {
 shrinkage_stoping = {
     limit = {
         electric_furnace = 1
+        year = 1905
     }
     #news = no
     chance = {
@@ -974,6 +979,7 @@ shrinkage_stoping = {
 froth_flotation = {
     limit = {
         electric_furnace = 1
+        year = 1905
     }
     #news = no
     chance = {
