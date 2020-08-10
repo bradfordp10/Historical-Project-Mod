@@ -182,18 +182,18 @@ the_dark_continent = {
     chance = {
         base = 0
         modifier = {
-            factor = -60
+            factor = -300
             NOT = { year = 1890 }
         }
         modifier = {
-            factor = -100
+            factor = -340
             NOT = {
                 has_global_flag = called_congo_conference
                 year = 1890
             }
         }
         modifier = {
-            factor = -100
+            factor = -340
             NOT = { is_greater_power = yes }
             OR = {
                 has_country_flag = congo_master
@@ -203,15 +203,15 @@ the_dark_continent = {
             }
         }
         modifier = {
-            factor = 20
+            factor = 100
             biologism = 1
         }
         modifier = {
-            factor = 20
+            factor = 100
             military_logistics  = 1
         }
         modifier = {
-            factor = 20
+            factor = 100
             steel_steamers = 1
         }
         modifier = {
