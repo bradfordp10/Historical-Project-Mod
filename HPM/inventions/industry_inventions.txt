@@ -352,7 +352,7 @@ mechanized_slaughtering_block = {
 precision_work = {
     limit = { interchangeable_parts = 1 }
     chance = {
-        base = 2
+        base = 100
         modifier = {
             factor = 2
             invention = mechanical_precision_saw

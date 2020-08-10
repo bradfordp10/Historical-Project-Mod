@@ -274,7 +274,7 @@ gas_attack_capability = {
         has_country_flag = existing_country
     }
     chance = {
-        base = 0
+        base = 100
         modifier = {
             factor = 2
             invention = cracking
@@ -294,7 +294,7 @@ gas_defense_capability = {
         has_country_flag = existing_country
     }
     chance = {
-        base = 0
+        base = 100
         modifier = {
             factor = 5
             war = yes
@@ -840,19 +840,19 @@ colonial_negotiations = {
     chance = {
         base = 0
         modifier = {
-            factor = -75
+            factor = -300
             NOT = { year = 1880 }
         }
         modifier = {
-            factor = 25
+            factor = 100
             machine_guns = 1
         }
         modifier = {
-            factor = 25
+            factor = 100
             economic_responsibility = 1
         }
         modifier = {
-            factor = 25
+            factor = 100
             naval_logistics = 1
         }
         modifier = {

@@ -29,7 +29,7 @@ country = {
     COLONIAL_LIFERATING = 35,
     BASE_GREATPOWER_DAILY_INFLUENCE = 0.25, -- Influence value which is distributed each day
     AI_SUPPORT_REFORM = 0.025, -- At least this many % needs to support a reform for the AI to take it
-    BASE_MONTHLY_DIPLOPOINTS = 0.3, -- Base value gain for diplomatic actions each month
+    BASE_MONTHLY_DIPLOPOINTS = 0.5, -- Base value gain for diplomatic actions each month
     DIPLOMAT_TRAVEL_TIME = 14,
     PROVINCE_OVERSEAS_PENALTY = 0.015, -- Each province req. this many goods flagged as overseas penalty
     NONCORE_TAX_PENALTY = -0.05, -- -5% for each non-core in state
@@ -462,8 +462,8 @@ diplomacy = {
 
     REMOVEFROMSPHERE_RELATION_ON_ACCEPT = -10,
     REMOVEFROMSPHERE_INFLUENCE_COST = 100,
-    REMOVEFROMSPHERE_PRESTIGE_COST = 10, -- only applied if removing country is sphere leader
-    REMOVEFROMSPHERE_INFAMY_COST = 1, -- only applied if removing country is sphere leader
+    REMOVEFROMSPHERE_PRESTIGE_COST = 1, -- only applied if removing country is sphere leader
+    REMOVEFROMSPHERE_INFAMY_COST = 0, -- only applied if removing country is sphere leader
 
     INCREASEOPINION_RELATION_ON_ACCEPT = 20,
     INCREASEOPINION_INFLUENCE_COST = 50,
@@ -505,15 +505,15 @@ diplomacy = {
 
     MIN_WARSCORE_TO_INTERVENE = -1,
     MIN_MONTHS_TO_INTERVENE = 0,
-    MAX_WARSCORE_FROM_BATTLES = 50,
+    MAX_WARSCORE_FROM_BATTLES = 20,
 
     GUNBOAT_DIPLOMATIC_COST = 1,
     GUNBOAT_RELATION_ON_ACCEPT = 1,
-    WARGOAL_JINGOISM_REQUIREMENT = 0.07,
+    WARGOAL_JINGOISM_REQUIREMENT = 0.01,
 
     LIBERATE_STATE_RELATION_INCREASE = 50,
     DISHONORED_CALLALLY_PRESTIGE_PENALTY = -3,
-    BASE_TRUCE_MONTHS = 12,
+    BASE_TRUCE_MONTHS = 0,
     MAX_INFLUENCE = 100,
     WARSUBSIDIES_PERCENT = 0.20, -- How many percent of imports you are going to pay each day(mil. constructions and mil. maintainence)
     NEIGHBOUR_BONUS_INFLUENCE_PERCENT = 0.50, -- Bonus to neighbouring countries when influencing
@@ -561,8 +561,8 @@ diplomacy = {
     GW_JUSTIFY_CB_BADBOY_IMPACT = 0.33, -- % deduction of infamy cost for justify CB in great war
     GW_CB_CONSTRUCTION_SPEED = 0.25, -- faster CB construction against enemies while at great war
     GW_WARGOAL_JINGOISM_REQUIREMENT_MOD = 0.2, -- % deduction of required jingoists in country
-    GW_WARSCORE_COST_MOD = 0.65, -- cost reduction factor on warscore needed to fulfill goal if great war
-    GW_WARSCORE_COST_MOD_2 = 0.3, -- cost reduction factor on warscore needed to fulfill goal if late game great war
+    GW_WARSCORE_COST_MOD = 0.50, -- cost reduction factor on warscore needed to fulfill goal if great war
+    GW_WARSCORE_COST_MOD_2 = 0.2, -- cost reduction factor on warscore needed to fulfill goal if late game great war
     GW_WARSCORE_2_THRESHOLD = 50, -- warscore threshold where a GW turns into a world war for winner side
     TENSION_DECAY = -0.08,
     TENSION_FROM_CB = 0.04,
@@ -630,11 +630,11 @@ pops = {
     PROMOTION_SCALE = 0.003,
     PROMOTION_ASSIMILATION_CHANCE = 0.05,
     LUXURY_THRESHOLD = 500,
-    BASE_GOODS_DEMAND = 0.8,
+    BASE_GOODS_DEMAND = 0.9,
     BASE_POPGROWTH = 0.0001,
     MIN_LIFE_RATING_FOR_GROWTH = 30,
     LIFE_RATING_GROWTH_BONUS = 0.0001,
-    LIFE_NEED_STARVATION_LIMIT = 0.5,
+    LIFE_NEED_STARVATION_LIMIT = 0.8,
 
     MIL_LACK_EVERYDAY_NEED = 0.1,
     MIL_HAS_EVERYDAY_NEED = -0.1,

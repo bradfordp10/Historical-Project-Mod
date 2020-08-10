@@ -1384,19 +1384,19 @@ mission_to_civilize = {
     chance = {
         base = 0
         modifier = {
-            factor = -75
+            factor = -300
             NOT = { year = 1860 }
         }
         modifier = {
-            factor = 25
+            factor = 100
             nationalism_n_imperialism = 1
         }
         modifier = {
-            factor = 25
+            factor = 100
             market_regulations = 1
         }
         modifier = {
-            factor = 25
+            factor = 100
             naval_statistics = 1
         }
         modifier = {
