@@ -196,7 +196,7 @@ BEL_394 = { 394 392 393 395 398 } #Wallonia
 
 FRA_399 = { 403 402 2570 } #Picardie - used to be { 403 405 406 408 402 2570 }
 
-FRA_400 = { 408 405 406 407 432 } #Champagne
+FRA_400 = { 408 405 406 407 } #Champagne
 
 FRA_404 = { 399 400 401 404 } #Nord-Pas-De-Calais/Artois
 
@@ -210,54 +210,62 @@ FRA_420 = { 420 421 422 424 423 } #Bretagne
 
 FRA_425 = { 425 426 427 } #Ile de France
 
-FRA_428 = { 428 429 431 430 433 } #Bourgogne
+FRA_428 = { 428 429 431 430 433 432 } #Bourgogne
 
 FRA_435 = { 435 434 437 } #Loire
 
 FRA_438 = { 438 436 439 440 441 } #Region Centre
 
-FRA_442 = { 442 444 443 } #Poitou
+#FRA_442 = {  } #Poitou
 
 FRA_445 = { 445 446 447 } #Limousin
 
-FRA_448 = { 448 449 450 } #Auvergne
+#FRA_448 = {  } #Auvergne
 
-FRA_451 = { 451 452 453 454 } #Rhone
+FRA_451 = { 451 452 453 448 449  } #Auvergne-Rhone
 
-FRA_455 = { 455 457 456 } #Le Midi
+FRA_455 = { 455 456 450 } #Le Midi
 
-FRA_458 = { 458 459 460 } #Aquitaine
+FRA_458 = { 442 444 443 458 459 } #Aquitaine
 
-FRA_461 = { 461 462 463 464 } #Languedoc
+FRA_461 = { 461 462 463 467 468 } #Languedoc
 
 SAR_466 = { 465 466 472 } #Savoie
 
-FRA_467 = { 467 468 469 470 471 } #Provence
+#FRA_467 = {  } #Provence
+
+FRA_454 = { 454 469 470 471 } #Alpes
+
+FRA_460 = { 460 457 464 } #Pyrenees
 
 
 ### Spain & Portugal
 
-SPA_474 = { 474 476 } #Galicia
+SPA_474 = { 474 476 518 519 } #Galicia
 
-SPA_477 = { 477 479 480 481 482 483 475 478 } #LeÛn-Castilla
+SPA_477 = { 477 482 475 } #Leon
+
+SPA_479 = { 479 480 481 483 478 } #Castilla la Vieja
 
 SPA_484 = { 484 485 486 } #Extremadura
 
 SPA_487 = { 487 488 489 490 491 } #Castilla la Nueva
 
-SPA_492 = { 492 493 494 495 496 497 } #Vasconia-AragÛn
+SPA_492 = { 492 493 494 } #Vasconia
 
-SPA_498 = { 498 499 500 501 502 } #Catalonia
+SPA_495 = { 495 496 497 } #Aragon
 
-SPA_503 = { 503 504 505 506 507 508 } #Valencia
+SPA_498 = { 498 499 500 501 464 } #Catalonia
+
+SPA_503 = { 503 504 505 } #Valencia
+
+SPA_507 = { 506 507 508 } #Murcia
 
 SPA_512 = { 512 509 510 511 517 } #Andalucia
 
 SPA_513 = { 513 514 515 516 } #Granada
 
-POR_518 = { 518 519 520 } #Douro
-
-POR_521 = { 521 522 523 524 } #Estremadura
+POR_521 = { 521 522 523 524 520 } #Beira
 
 POR_525 = { 525 526 527 } #Alentejo
 
@@ -306,9 +314,9 @@ SWI_603 = { 603 606 611 2568 605 604 607 608 609 } #Switzerland
 
 PRU_682 = { 682 683 684 685 } #Silesia
 
-PRU_690 = { 690 691 694 693 } #Westpreuﬂen
+PRU_690 = { 690 691 694 } #Westpreuﬂen
 
-PRU_695 = { 695 696 697 698 } #Ostpreuﬂen
+PRU_695 = { 695 696 697 698 693 } #Ostpreuﬂen
 
 PRU_701 = { 701 699 700 } #Posen
 
@@ -384,7 +392,7 @@ SIC_754 = { 754 755 759 760 761 2567 } #Campania
 
 SIC_763 = { 763 762 764 854 } #Sicily
 
-SAR_765 = { 765 766 473 } #Sardinia & Corscia/Thyrrenian Islands
+SAR_765 = { 765 766 473 502 } #Western Mediterranean Islands
 
 
 ### Balkans
@@ -415,24 +423,28 @@ TUR_810 = { 809 810 811 812 813 814 } #Bulgaria
 
 TUR_823 = { 823 829 830 } #Eastern Macedonia
 
-GRE_826 = { 834 842 839 840 841 } #Peloponnese
+GRE_826 = { 842 839 840 841 } #Peloponnese
 
-TUR_832 = { 832 831 833 825 824 826 } #Thessalia
+TUR_832 = { 832 831 833 825 824 } #Thessalia
 
-GRE_837 = { 837 836 835 838 845 827 } #Attica - Central Greece
+GRE_837 = { 834 837 836 835 838 } #Attica - Central Greece
 
-EGY_843 = { 848 843 844 846 847 } #Aegean Islands
+EGY_843 = { 848 843 844 845 846 847 } #Aegean Islands
+
+ENG_826 = { 826 827 } #Ionian Islands
 
 TUR_853 = { 849 853 852 851 850 } #Albania
 
 TUR_855 = { 855 856 857 } #Cyprus
 
-TUR_860 = { 860 828 858 859 } #Thrace
+TUR_860 = { 828 858 859 } #Thrace
+
+TUR_861 = { 860 861 } #Constantinople
 
 
 ### Middle East
 
-TUR_863 = { 863 861 862 864 865 867 } #Hudavendigar
+TUR_863 = { 863 862 864 865 867 } #Hudavendigar
 
 TUR_869 = { 869 870 871 872 } #Aydin
 
@@ -500,7 +512,9 @@ NEJ_1156 = { 1160 1156 1158 } #Hail
 
 NEJ_1157 = { 1157 1161 2586 1159 } #Nejd
 
-ABU_1162 = { 1162 1165 1167 1168 2664 1164 1163 } #Gullf States
+ABU_1162 = { 1162 1165 1164 1163 } #Arabian Gulf
+
+ABU_1167 = { 1167 1168 2664 } #Trucial Oman
 
 OMA_1166 = { 1166 1169 1170 1171 1172 1174 } #Oman
 
@@ -879,11 +893,11 @@ MOR_1683 = { 1683 1684 1697 } #Taza
 
 MOR_1694 = { 1694 1699 1698 1695 } #Agadir
 
-FRA_1700 = { 1700 1701 1709 } #Algiers
+FRA_1700 = { 1700 1706 1703 } #Algiers
 
-ALD_1704 = { 1704 1705 1706 1707 1703 } #Oran
+ALD_1704 = { 1704 1705 1707 } #Oran
 
-ALD_1708 = { 1708 1710 1702 } #Constantine
+ALD_1708 = { 1708 1710 1702 1701 1709 } #Constantine
 
 ALD_1713 = { 1713 1715 1711 1712 } #North Central Sahara
 
@@ -893,23 +907,25 @@ ALD_1718 = { 1720 1718 1719 1721 1722 1716 1717 } #Sahara
 
 TUN_1726 = { 1725 1726 1727 1728 1729 1730 } #Tunisia
 
-TRI_1731 = { 1731 1733 1734 1732 1744 1740 1741 1742 } #Tripolitania
+TRI_1731 = { 1731 1733 1734 1732 1740 } #Tripolitania
 
-TRI_1735 = { 1735 1736 1737 1738 2585 } #Cyrenaica
+TRI_1735 = { 1735 1736 1737 1738 } #Cyrenaica
 
-#TRI_1740 = { 1740 1741 1742 1743 } #Fezzan
+TRI_1740 = { 1741 1742 1743 1744 2585 } #Libyan Desert
 
-EGY_1745 = { 1745 1747 1750 1748 1749 1751 1746 } #Cairo
+EGY_1745 = { 1745 1747 1750 1748 1749 } #Cairo
 
-#EGY_1751 = { 1751 1746 1752 1753 } #Alexandria
+EGY_1751 = { 1751 1746 1752 1753 } #Alexandria
 
 EGY_1755 = { 1755 1756 1757 } #Sinai
 
-EGY_1758 = { 1752 1753  1759 1758 1761 1760 1754 } #Western Desert
+EGY_1758 = { 1759 1758 1761 1760 1754 } #Western Desert
 
-EGY_1762 = { 1765 1763 1762 2559 1764 1772 } #Middle Egypt
+EGY_1762 = { 1765 1763 1762 2559 1764 } #Middle Egypt
 
-EGY_1771 = { 1769 1771 1768 1770 1767 1766 } #Upper Egypt
+EGY_1771 = { 1769 1768 1767 1766 } #Upper Egypt
+
+EGY_1770 = { 1770 1771 1772 } #Red Sea Coast
 
 FRA_1808 = { 1808 1809 1810 1811 1815 1816 } #Outer Hausaland - South Niger
 
