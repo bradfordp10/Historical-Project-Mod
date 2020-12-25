@@ -425,13 +425,13 @@ TUR_823 = { 823 829 830 } #Eastern Macedonia
 
 GRE_826 = { 842 839 840 841 } #Peloponnese
 
-TUR_832 = { 832 831 833 825 824 } #Thessalia
+TUR_832 = { 832 831 833 825 } #Thessalia
 
 GRE_837 = { 834 837 836 835 838 } #Attica - Central Greece
 
 EGY_843 = { 848 843 844 845 846 847 } #Aegean Islands
 
-ENG_826 = { 826 827 } #Ionian Islands
+TUR_824 = { 824 826 827 } #Epirus
 
 TUR_853 = { 849 853 852 851 850 } #Albania
 
