@@ -249,9 +249,9 @@ SPA_479 = { 479 480 481 483 478 } #Castilla la Vieja
 
 SPA_484 = { 484 485 486 } #Extremadura
 
-SPA_487 = { 487 488 489 490 491 } #Castilla la Nueva
+SPA_487 = { 487 488 489 490 491 494 } #Castilla la Nueva
 
-SPA_492 = { 492 493 494 } #Vasconia
+SPA_492 = { 492 493 } #Vasconia
 
 SPA_495 = { 495 496 497 } #Aragon
 
@@ -265,7 +265,9 @@ SPA_512 = { 512 509 510 511 517 } #Andalucia
 
 SPA_513 = { 513 514 515 516 } #Granada
 
-POR_521 = { 521 522 523 524 520 } #Beira
+POR_521 = { 521 523 524 } #Estremadura
+
+POR_518 = { 518 519 520 522 } #Beira
 
 POR_525 = { 525 526 527 } #Alentejo
 
@@ -310,7 +312,9 @@ BAV_595 = { 595 596 597 598 } #Franconia
 
 BAV_599 = { 599 592 600 601 602 } #Upper Bavaria
 
-SWI_603 = { 603 606 611 2568 605 604 607 608 609 } #Switzerland
+SWI_603 = { 603 606 611 2568 604 } #Switzerland
+
+SWI_605 = { 605 607 608 609 } #Romandie
 
 PRU_682 = { 682 683 684 685 } #Silesia
 
@@ -355,13 +359,13 @@ RUS_715 = { 715 711 713 716 } #West Galicia
 
 AUS_726 = { 726 727 728 2669 } #Lombardia
 
-AUS_733 = { 736 737 } #Friuli
+#AUS_733 = { 736 737 } #Friuli
 
 AUS_729 = { 729 730 731 732 733 8 } #Venetia
 
 AUS_734 = { 734 735 } #South Tirol
 
-AUS_736 = { 769 770 778 } #Istria
+AUS_736 = { 736 737 769 770 778 } #Istria
 
 AUS_768 = { 767 768 } #Slovenia
 
@@ -378,17 +382,19 @@ AUS_2538 = { 2538 791 792 } #Vojvodina
 
 SAR_720 = { 720 721 722 723 724 725 } #Piemonte
 
-#MOD_739 = { 739 738 740 } #Emilia
+MOD_739 = { 739 738 740 } #Emilia
 
 TUS_744 = { 744 745 746 747 748 1981 } #Tuscany
 
-PAP_741 = { 741 742 743 739 738 740 } #Emilia-Romagna
+PAP_741 = { 741 742 743 } #Romagna
 
 PAP_752 = { 749 752 750 751 } #Lazio
 
 SIC_753 = { 756 758 10 753 757 } #Puglia
 
-SIC_754 = { 754 755 759 760 761 2567 } #Campania
+SIC_754 = { 754 755 2567 } #Campania
+
+SIC_759 = { 759 760 761 } #Calabria
 
 SIC_763 = { 763 762 764 854 } #Sicily
 
@@ -462,9 +468,9 @@ TUR_890 = { 890 891 887 } #Van
 
 TUR_893 = { 893 889 899 892 2414 } #Diyarbakir
 
-TUR_894 = { 894 896 898 900 895 } #Adana
+TUR_894 = { 894 896 898 895 } #Adana
 
-EGY_897 = { 897 904 905 903 902 } #Western Syria
+EGY_897 = { 897 904 905 903 902 900 } #Western Syria
 
 EGY_903 = { 901 1813 906 907 } #Eastern Syria
 
@@ -909,9 +915,9 @@ TUN_1726 = { 1725 1726 1727 1728 1729 1730 } #Tunisia
 
 TRI_1731 = { 1731 1733 1734 1732 1740 } #Tripolitania
 
-TRI_1735 = { 1735 1736 1737 1738 } #Cyrenaica
+TRI_1735 = { 1735 1736 1737 1738 2585 } #Cyrenaica
 
-TRI_1740 = { 1741 1742 1743 1744 2585 } #Libyan Desert
+TRI_1740 = { 1741 1742 1743 1744 } #Fezzan
 
 EGY_1745 = { 1745 1747 1750 1748 1749 } #Cairo
 
@@ -925,7 +931,7 @@ EGY_1762 = { 1765 1763 1762 2559 1764 } #Middle Egypt
 
 EGY_1771 = { 1769 1768 1767 1766 } #Upper Egypt
 
-EGY_1770 = { 1770 1771 1772 } #Red Sea Coast
+EGY_1770 = { 1834 1770 1771 1772 } #Red Sea Coast
 
 FRA_1808 = { 1808 1809 1810 1811 1815 1816 } #Outer Hausaland - South Niger
 
@@ -937,7 +943,7 @@ ENG_1825 = { 1821 1824 1825 1826 } #Chad
 
 EGY_1827 = { 1827 1829 1828 1830 1831 } #Sudan
 
-EGY_1834 = { 1834 1836 1833 1835 1837 2564 1806 } #Dongola
+EGY_1834 = { 1836 1833 1835 1837 2564 1806 } #Dongola
 
 EGY_1838 = { 1839 1838 1840 1739 1842 1841 } #Kordofan
 
