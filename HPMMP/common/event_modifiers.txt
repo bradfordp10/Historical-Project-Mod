@@ -2532,6 +2532,414 @@ emergency_tax_measures2 = {
     icon = 10
 }
 
+###HFM Modifiers###
+
+###HFM ANZAC & CAN Modifiers ###
+
+gateway_to_australia = {
+    assimilation_rate = 1
+    immigrant_attract = 3
+    population_growth = 0.01
+    icon = 9
+}
+
+australia_goldrush = {
+    assimilation_rate = 1
+    immigrant_attract = 5
+    population_growth = 0.02
+    icon = 9
+}
+
+australia_migrations = {
+    population_growth = 0.005
+    immigrant_attract = 3
+    assimilation_rate = 1
+    icon = 9
+}
+
+australia_migrations_vic = {
+    population_growth = 0.02
+    immigrant_attract = 3
+    assimilation_rate = 1
+    icon = 9
+}
+
+vancouver_boom = {
+    population_growth = 0.01
+    assimilation_rate = 1
+    icon = 17
+}
+
+america_new_world = {
+    global_immigrant_attract = 0.5
+    global_population_growth = 0.01
+    icon = 17
+}
+
+###HFM USA Modifiers###
+
+california_gold_rush = {
+    immigrant_attract = 3       #300%
+    population_growth = 0.01
+    assimilation_rate = 1
+    icon = 19
+}
+
+lone_star = {
+    immigrant_attract = 3
+    assimilation_rate = 0.5
+    icon = 19
+}
+
+manufacturing_belt_city = {
+    population_growth = 0.005
+    local_factory_output = 0.05
+    icon = 13
+}
+
+manufacturing_belt = {
+    factory_owner_cost = -0.05
+    icon = 11
+}
+
+king_cotton = {
+    local_RGO_output = 0.075
+    local_RGO_throughput = 0.075
+    icon = 15
+}
+
+###Dutch###
+kpm_shipping = {
+    local_RGO_output = 0.15
+    farm_rgo_size = 3
+    rich_income_modifier = 0.25
+    icon = 1
+}
+
+thorbecke_reforms = {
+    ruling_party_support = 0.05
+    core_pop_militancy_modifier = -0.02
+    core_pop_consciousness_modifier = -0.01
+    icon = 7
+}
+
+###HFM Russia/Balkans Modifiers
+
+russian_army_education = {
+    education_efficiency_modifier = 0.05
+    war_exhaustion = -1.5
+    org_regain = 0.05
+    army_tech_research_bonus = 0.05
+    icon = 5
+}
+
+nationalist_balkans = {
+    icon = 17
+    core_pop_militancy_modifier = -0.05
+    core_pop_consciousness_modifier = -0.05
+}
+
+great_eastern_crisis = {
+    icon = 7
+}
+
+russoification = {
+    immigrant_attract = 2.5
+    farm_RGO_size = 0.1
+    mine_RGO_size = 0.1
+    pop_consciousness_modifier = -0.02
+    icon = 7
+}
+
+cuza_reforms = {
+    tax_efficiency = 0.05
+    administrative_efficiency_modifier = 0.05
+    education_efficiency_modifier = 0.05
+    icon = 1
+}
+
+###HFM - French Modifiers
+
+notre_dame_afrique = {
+    assimilation_rate = 0.05
+    immigrant_attract = 1
+    pop_consciousness_modifier = -0.01
+    icon = 7
+}
+
+war_minister_boulanger = {
+    mobilisation_size = 0.01
+    land_unit_start_experience = 5
+    ruling_party_support = 0.05
+    icon = 17
+}
+
+boulangisme = {
+    icon = 18
+}
+
+war_graves = {
+    core_pop_consciousness_modifier = -0.1
+    local_ruling_party_support = -0.15
+    icon = 20
+}
+
+french_colonial_integration = {
+    population_growth = 0.001
+    assimilation_rate = 0.1
+    immigrant_attract = 3
+    icon = 19
+}
+
+la_tache_noire = {
+    cb_generation_speed_modifier = 0.15
+    leadership_modifier = 0.05
+    min_military_spending = 0.25
+    mobilisation_size = 0.05
+    war_exhaustion = -0.25
+    icon = 11
+}
+
+troupes_de_marine = {
+    prestige = 0.01
+    mobilisation_size = 0.005
+    naval_unit_start_experience = 0.05
+    icon = 15
+}
+
+
+###HFM German Modifiers
+the_reichstag = {
+    prestige = 0.01
+    icon = 15
+}
+
+immigration_boom_baltic = {
+    immigrant_attract = 5
+    assimilation_rate = 0.5
+    farm_rgo_size = 0.5
+    mine_RGO_size = 0.5
+    non_accepted_pop_militancy_modifier = 0.01
+    icon = 9
+}
+
+emergency_wartime_austria = {
+    tax_efficiency = 0.05
+    war_exhaustion = -1.5
+    global_pop_militancy_modifier = -0.03
+    global_pop_consciousness_modifier = -0.03
+    icon = 10
+}
+
+zollervein = {
+    supply_consumption = -0.1
+    tax_efficiency = 0.05
+    influence_modifier = 0.15
+    import_cost = -0.05
+    icon = 9
+}
+
+diplomatic_isolation = {
+    influence_modifier = -0.5
+    icon = 8
+}
+
+brothers_war_aggressor = {
+    icon = 7
+}
+
+drang_nach_osten = {
+    immigrant_attract = 0.75
+    farm_rgo_size = 0.5
+    mine_RGO_size = 0.5
+    icon = 19
+}
+
+drang_nach_osten_country = {
+    global_immigrant_attract = 0.5
+    icon = 19
+}
+
+###HFM China Modifiers
+
+unciv_balance_qng = {
+    research_points_modifier = -0.4
+    cb_generation_speed_modifier = -0.25
+    icon = 10
+}
+
+qing_ai_boost = {
+    war_exhaustion = -5
+    org_regain = 0.05
+    supply_consumption = -0.15
+    global_pop_militancy_modifier = -0.1
+    icon = 15
+}
+
+qing_substate_boost = {
+    org_regain = 0.15
+    land_organisation = 0.1
+    icon = 15
+}
+
+ever_victorious_army = {
+    org_regain = 0.2
+    land_organisation = 0.1
+    land_unit_start_experience = 5
+    supply_consumption = -0.1
+    war_exhaustion = -5
+    icon = 15
+}
+
+the_xiang_army = {
+    war_exhaustion = -5
+    org_regain = 0.1
+    land_organisation = 0.05
+    supply_consumption = -0.1
+    global_pop_militancy_modifier = -0.05
+    icon = 15
+}
+
+the_eight_banners = {
+    land_organisation = -0.05
+    naval_organisation = -0.25
+    administrative_efficiency_modifier = -0.05
+    min_military_spending = 0.25
+    pension_level = 0.05
+    min_social_spending = 0.25
+    max_social_spending = 0.50
+    research_points_modifier = -0.15
+    cb_generation_speed_modifier = -1
+    war_exhaustion = -5
+    supply_consumption = -0.2
+    research_points_on_conquer = -0.5
+    tax_efficiency = -0.01
+    icon = 16
+}
+
+taiping_draft = {
+    land_organisation = -0.1
+    org_regain = -0.1
+    mobilisation_size = 0.15
+    prestige = -0.02
+    icon = 18
+}
+
+taiping_losing_boost = {
+    land_unit_start_experience = 15
+    war_exhaustion = -15
+    org_regain = 0.1
+    icon = 15
+}
+
+boxer_attacked = {
+    global_pop_consciousness_modifier = 0.35
+    global_pop_militancy_modifier = 0.35
+    war_exhaustion = 2.5
+    icon = 4
+}
+
+hundred_days_reforms = {
+    prestige = 0.05
+    research_points = 2.5
+    global_pop_consciousness_modifier = 0.2 
+    global_pop_militancy_modifier = 0.02
+    icon = 3
+}
+
+maritime_customs_service = {
+    tariff_efficiency_modifier = 0.15
+    min_tariff = 0.1
+    icon = 9
+}
+
+canton_system = {
+    prestige = 0.02
+    import_cost = 0.05
+    rich_income_modifier = 0.25
+    local_RGO_throughput = 0.05
+    icon = 11
+}
+
+lin_zexu = {
+    prestige = 0.05
+    leadership_modifier = 0.2
+    global_pop_consciousness_modifier = -0.01
+    icon = 17
+}
+
+likin_tax = {
+    tax_efficiency = 0.075
+    administrative_efficiency_modifier = 0.05
+    global_pop_militancy_modifier = 0.01
+    min_tax = 0.1
+    war_exhaustion = -0.5
+    icon = 9
+}
+
+yuan_shikai = {
+    prestige = 0.01
+    ruling_party_support = 0.25
+    supply_consumption = -0.15
+    land_organisation = 0.05
+    naval_organisation = 0.05
+    org_regain = 0.05
+    administrative_efficiency_modifier = 0.05
+    icon = 17
+}
+
+###HFM Siam Modifiers###
+
+rama_iv = {
+    global_pop_consciousness_modifier = -0.1
+    global_pop_militancy_modifier = -0.05
+    research_points_modifier = 0.01
+    icon = 5
+}
+
+rama_v = {
+    global_pop_consciousness_modifier = -0.05
+    global_pop_militancy_modifier = -0.1
+    diplomatic_points_modifier = 0.1 
+    land_organisation = 0.1
+    supply_consumption = -0.05
+    icon = 5
+}
+
+###HFM EIC Modifiers###
+
+eic_balance = {
+    max_tax = 0.75
+    administrative_efficiency_modifier = 0.25
+    research_points_modifier = -2.55
+    leadership_modifier = 4
+    supply_consumption = -0.3
+    tax_efficiency = -0.05
+    import_cost = -0.25
+    icon = 7
+}
+
+eic_balance2 = {
+    supply_consumption = -0.1
+    prestige = 0.03
+    icon = 7
+}
+
+eic_balance2_ai = {
+    supply_consumption = -0.5
+    icon = 7
+}
+
+sepoy_mutiny = {
+    land_organisation = -0.75
+    org_regain = -0.15
+    non_accepted_pop_consciousness_modifier = 0.03
+    non_accepted_pop_militancy_modifier = 0.01
+    tax_efficiency = -0.1
+    administrative_efficiency_modifier = -0.25
+    icon = 16
+}
+
 ###HFM UK Modifiers###
 royal_irish_constabulary = {
     pop_consciousness_modifier = -0.03
@@ -2580,4 +2988,22 @@ white_rajah = {
     cb_generation_speed_modifier = -1
     supply_consumption = -0.05
     icon = 5
+}
+
+###HFM Generic Modifiers###
+
+military_aid = {
+    org_regain = 0.1
+    land_organisation = 0.05
+    land_defense_modifier = 0.05
+    supply_consumption = -0.05
+    icon = 15
+}
+
+ai_warships_cooldown = {
+    icon = 17
+}
+
+foreign_weapons_imported = {
+    icon = 9
 }

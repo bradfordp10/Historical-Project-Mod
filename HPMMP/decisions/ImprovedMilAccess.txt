@@ -11,6 +11,7 @@ political_decisions = {
     	    		sphere_owner = { NOT = { military_access = THIS } }
     	    	}
         	}
+            NOT = { has_country_modifier = neutrality_modifier }
         }
 
         allow = {
