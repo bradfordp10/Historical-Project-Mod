@@ -1,93 +1,115 @@
-give_military_access = {
-	picture = declare_neutrality
-    potential = {
-        OR= {
-	    	AND = { 
-	    		is_vassal = yes
-	    		overlord = { NOT = { military_access = THIS } }
-	    	}
-	    	AND = { 	
-	    		part_of_sphere = yes
-	    		sphere_owner = { NOT = { military_access = THIS } }
-	    	}
-    	}
+political_decisions = {
+    give_military_access = {
+        potential = {
+            OR= {
+    	    	AND = { 
+    	    		is_vassal = yes
+    	    		overlord = { NOT = { military_access = THIS } }
+    	    	}
+    	    	AND = { 	
+    	    		part_of_sphere = yes
+    	    		sphere_owner = { NOT = { military_access = THIS } }
+    	    	}
+        	}
+        }
+
+        allow = {
+        	OR= {
+    	    	AND = { 
+    	    		is_vassal = yes
+    	    		overlord = { NOT = { military_access = THIS } }
+    	    	}
+    	    	AND = { 	
+    	    		part_of_sphere = yes
+    	    		sphere_owner = { NOT = { military_access = THIS } }
+    	    	}
+        	}
+        }
+
+        effect = {
+        	any_country = {
+        		limit = {
+        			exists = yes
+        			NOT = { military_access = THIS }
+                    OR = {
+                        is_our_vassal = THIS
+                        is_sphere_leader_of = THIS
+                    }
+        		}
+        		military_access = THIS
+        	}
+        }
+
+        ai_will_do = {
+        	factor = 1
+        }
     }
 
-    allow = {
-    	OR= {
-	    	AND = { 
-	    		is_vassal = yes
-	    		overlord = { NOT = { military_access = THIS } }
-	    	}
-	    	AND = { 	
-	    		part_of_sphere = yes
-	    		sphere_owner = { NOT = { military_access = THIS } }
-	    	}
-    	}
-    }
+    remove_military_access = {
+    	potential = {
+            OR = {
+                any_greater_power = {
+             		military_access = THIS
+             		NOT = {
+             			OR = {
+        		 			is_our_vassal = THIS
+        	     			is_sphere_leader_of = THIS
+             			}
+             		}
+        	    }
+                any_neighbor_country = { 
+                    military_access = THIS
+                    NOT = {
+                        OR = {
+                            is_our_vassal = THIS
+                            is_sphere_leader_of = THIS
+                        }
+                    }
+                }
+            }
+        }
 
-    effect = {
-    	any_country = {
-    		limit = {
-    			exists = yes
-    			is_our_vassal = THIS
-    			NOT = { military_access = THIS }
-    		}
-    		military_access = THIS
-    	}
+        allow = {
+        	OR = {
+                any_greater_power = {
+                    military_access = THIS
+                    NOT = {
+                        OR = {
+                            is_our_vassal = THIS
+                            is_sphere_leader_of = THIS
+                        }
+                    }
+                }
+                any_neighbor_country = { 
+                    military_access = THIS
+                    NOT = {
+                        OR = {
+                            is_our_vassal = THIS
+                            is_sphere_leader_of = THIS
+                        }
+                    }
+                }
+            }
+        }
 
-    	any_country = {
-    		limit = {
-    			exists = yes
-    			is_sphere_leader_of = THIS
-    			NOT = { military_access = THIS }
-    		}
-    		military_access = THIS
-    	}
-    }
-    ai_will_do = {
-    	factor = 1
-    }
-}
+        effect = {
+        	any_country = {
+        		limit = { 
+                    exists = yes
+        			military_access = THIS
+        			NOT = {
+    	    			OR = {
+    	    				is_sphere_leader_of = THIS
+    	    				is_our_vassal = THIS
+    	    			}
+    	    		}
+        		}
+        		end_military_access = THIS
+        	}
+        }
 
-remove_military_access = {
-	potential = {
-        any_country = {
-     		military_access = THIS
-     		NOT = {
-     			OR = {
-		 			is_our_vassal = THIS
-	     			is_sphere_leader_of = THIS
-     			}
-     		}
-	    }
-    }
-    allow = {
-    	any_country = {
-     		military_access = THIS
-     		NOT = {
-     			OR = {
-		 			is_our_vassal = THIS
-	     			is_sphere_leader_of = THIS
-     			}
-     		}
-	    }
-    }
-    effect = {
-    	any_country = {
-    		limit = { 
-    			military_access = THIS
-    			NOT = {
-	    			OR = {
-	    				is_sphere_leader_of = THIS
-	    				is_our_vassal = THIS
-	    			}
-	    		}
-    		}
-    		end_military_access = THIS
-    	}
-    }
-    ai_will_do = {
-    	factor = 1
+        ai_will_do = {
+        	factor = 1
+        }
     }
 }
