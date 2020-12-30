@@ -243,7 +243,9 @@ FRA_460 = { 460 457 464 } #Pyrenees
 
 SPA_474 = { 474 476 } #Galicia
 
-SPA_477 = { 477 479 480 481 482 483 475 478 } #Leon-Castilla
+SPA_477 = { 477 482 475 } #Leon
+
+SPA_479 = { 479 480 481 483 478 } #Castilla la Vieja
 
 SPA_484 = { 484 485 486 } #Extremadura
 
@@ -1038,9 +1040,9 @@ ENG_1957 = { 1957 1961 } #Southern Cameroons
 
 SOK_1963 = { 1963 1964 1960 } #Adamawa
 
-FRA_1965 = { 1965 1966 1967 1968 1970 1971 1969 } #Ubangi-Shari
+FRA_1965 = { 1965 1966 1967 1968 } #Ubangi-Shari
 
-#FRA_1970 = { } #Bangassou
+FRA_1970 = { 1970 1971 1969 } #Bangassou
 
 FRA_1972 = { 1972 1974 1975 1976 } #Gabon
 
