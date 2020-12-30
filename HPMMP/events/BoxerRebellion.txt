@@ -20,28 +20,38 @@ country_event = {
     trigger = {
         tag = QNG
         civilized = no
-        civilization_progress = 0.75
-        any_owned_province = {
-            controlled_by = THIS
-            is_core = CHI
-            OR = {
-                is_primary_culture = yes
-                is_accepted_culture = yes
+        OR = {
+            civilization_progress = 0.65
+            year = 1895
+            has_country_flag = wuxu_coup
+        }
+        OR = {
+            any_owned_province = {
+                controlled_by = THIS
+                is_core = CHI
+                OR = {
+                    is_primary_culture = yes
+                    is_accepted_culture = yes
+                }
+                NOT = {
+                    region = CHI_1612
+                    region = CHI_1616
+                    is_core = MCK
+                    is_core = XIN
+                    is_core = XBI
+                }
+                OR = {
+                    has_province_modifier = western_presence
+                    has_province_modifier = foreign_smugglers
+                    has_province_modifier = foreign_trading_post
+                    has_province_modifier = local_opium_habit
+                    has_province_modifier = extraterritoriality_granted
+                    owner = { has_country_modifier = legation_quarter }
+                }
             }
-            NOT = {
-                region = CHI_1612
-                region = CHI_1616
-                is_core = MCK
-                is_core = XIN
-                is_core = XBI
-            }
-            OR = {
-                has_province_modifier = western_presence
-                has_province_modifier = foreign_smugglers
-                has_province_modifier = foreign_trading_post
-                has_province_modifier = local_opium_habit
-                has_province_modifier = extraterritoriality_granted
-                owner = { has_country_modifier = legation_quarter }
+            AND = {
+                ai = yes
+                year = 1895
             }
         }
         OR = {
@@ -65,6 +75,10 @@ country_event = {
         modifier = {
             factor = 0.5
             part_of_sphere = yes
+        }
+        modifier = {
+            factor = 0.1
+            year = 1898
         }
         modifier = {
             factor = 0.5
@@ -358,14 +372,21 @@ country_event = {
         tag = QNG
         has_country_flag = boxers_appeared
         1616 = { controlled_by = THIS }
-        any_owned_province = {
-            region = CHI_1616
-            controlled_by = THIS
-            any_neighbor_province = {
-                OR = {
-                    has_province_modifier = boxer_presence
-                    has_province_modifier = boxer_agitation
+        OR = {
+            any_owned_province = {
+                region = CHI_1616
+                controlled_by = THIS
+                any_neighbor_province = {
+                    OR = {
+                        has_province_modifier = boxer_presence
+                        has_province_modifier = boxer_agitation
+                    }
                 }
+            }
+            AND = {
+                year = 1890
+                civilized = no
+                ai = yes
             }
         }
         NOT = {
@@ -450,6 +471,10 @@ country_event = {
                 duration = -1
             }
         }
+        add_country_modifier = {
+            name = boxer_attacked
+            duration = 3650
+        }
         any_owned = {
             limit = { has_province_modifier = boxer_presence }
             remove_province_modifier = western_presence
@@ -470,7 +495,7 @@ country_event = {
     option = {
         name = "EVT99010OPTB"
         set_country_flag = boxers_attacked_capital
-        prestige = -10
+        prestige = -25
         CHI_1616 = {
             any_owned = {
                 add_province_modifier = {
@@ -491,7 +516,7 @@ country_event = {
             limit = { has_province_modifier = boxer_agitation }
             any_pop = {
                 limit = { is_culture_group = east_asian }
-                militancy = 4
+                militancy = 10
             }
         }
         ai_chance = {
@@ -777,6 +802,7 @@ country_event = {
     option = {
         name = "EVT13370OPTA"
         prestige = 25
+        set_country_flag = boxers_attacked_capital
         any_pop = {
             ideology = { factor = 0.05 value = reactionary }
             militancy = -8

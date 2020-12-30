@@ -41,6 +41,10 @@ country_event = {
             year = 1912
             NOT = { has_country_flag = NEW_independence_refused }
         }
+        modifier = {
+            factor = 0.01
+            exists = NZL
+        }
     }
 
     option = {
@@ -112,6 +116,10 @@ country_event = {
             modifier = {
                 factor = 1.2
                 militancy = 5
+            }
+            modifier = {
+                factor = 2.0
+                exists = CAN
             }
 
         }
@@ -350,6 +358,10 @@ country_event = {
                 factor = 1.2
                 militancy = 5
             }
+            modifier = {
+                factor = 2.0
+                exists = CAN
+            }
 
         }
     }
@@ -551,6 +563,14 @@ country_event = {
             modifier = {
                 factor = 1.2
                 militancy = 5
+            }
+            modifier = {
+                factor = 2.0
+                exists = CAN
+            }
+            modifier = {
+                factor = 2.0
+                exists = AST
             }
 
         }
@@ -773,7 +793,14 @@ country_event = {
                 factor = 1.2
                 militancy = 5
             }
-
+            modifier = {
+                factor = 2.0
+                exists = CAN
+            }
+            modifier = {
+                factor = 2.0
+                exists = AST
+            }
         }
     }
     option = {
@@ -1542,6 +1569,14 @@ country_event = {
             modifier = {
                 factor = 1.2
                 militancy = 5
+            }
+            modifier = {
+                factor = 2.0
+                exists = CAN
+            }
+            modifier = {
+                factor = 2.0
+                exists = AST
             }
 
         }
