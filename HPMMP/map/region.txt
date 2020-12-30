@@ -427,9 +427,11 @@ GRE_826 = { 834 842 839 840 841 } #Peloponnese
 
 TUR_832 = { 832 831 833 825 } #Thessalia
 
-GRE_837 = { 837 836 835 838 845 } #Attica - Central Greece
+GRE_837 = { 837 836 835 838 } #Central Greece
 
-EGY_843 = { 848 843 844 846 847 } #Aegean Islands
+EGY_843 = { 843 844 845 846 } #Aegean Islands
+
+EGY_848 = { 848 847 } #Crete
 
 GRE_827 = { 826 827 } #Ionian Islands
 
