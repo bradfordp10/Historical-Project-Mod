@@ -249,6 +249,25 @@ country_event = {
                 }
             }
         }
+        #Return the Suez to Egypt
+        random_owned = {
+            limit = {
+                province_id = 1755
+                EGY = { 
+                    exists = yes 
+                    owns = 1757
+                }
+            }
+            secede_province = EGY
+            remove_core = THIS
+            THIS = {
+                diplomatic_influence = {
+                    who = EGY
+                    value = 400
+                }
+                badboy = -2
+            }
+        }
     }
 }
 
