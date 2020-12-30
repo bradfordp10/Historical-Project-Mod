@@ -415,7 +415,7 @@ MON_2582 = { 2583 2569 2577 800 2582 } #Montenegro
 
 TUR_803 = { 803 804 798 802 799 } #Southern Serbia
 
-TUR_805 = { 805 819 820 821 822 823 824 } #Macedonia
+TUR_805 = { 805 819 820 821 822 823 } #Macedonia
 
 TUR_806 = { 806 807 1780 } #Northern Macedonia
 
@@ -427,13 +427,11 @@ TUR_823 = { 829 830 } #Western Thrace
 
 GRE_826 = { 834 842 839 840 841 } #Peloponnese
 
-TUR_832 = { 832 831 833 825 } #Thessalia
+TUR_832 = { 832 831 833 825 824 } #Thessalia
 
-GRE_837 = { 837 836 835 838 } #Central Greece
+GRE_837 = { 837 836 835 838 845 } #Central Greece
 
-EGY_843 = { 843 844 845 846 } #Aegean Islands
-
-EGY_848 = { 848 847 } #Crete
+EGY_843 = { 848 843 844 846 847 } #Aegean Islands
 
 GRE_827 = { 826 827 } #Ionian Islands
 

@@ -13,6 +13,13 @@ country_event = {
     picture = "ottoman"
 
     trigger = {
+        RUS = {
+            OR = {
+                is_disarmed = yes
+                is_greater_power = no
+            }
+        }
+        NOT = { has_global_flag = great_eastern_crisis }
         NOT = { has_global_flag = berlin_congress_held }
         OR = {
             year = 1870
@@ -123,6 +130,10 @@ country_event = {
             factor = 0.5
             has_global_flag = treaty_of_paris_russia
             year = 1875
+        }
+        modifier = {
+            factor = 0.75
+            RUS = { is_greater_power = no }
         }
         modifier = {
             factor = 0.8
@@ -606,6 +617,7 @@ country_event = {
     picture = "bosnia_issue"
 
     trigger = {
+        NOT = { has_global_flag = the_reichstadt_agreement }
         OR = {
             TUR = { owns = 783 }
             BOS = { vassal_of = TUR }
@@ -745,7 +757,10 @@ country_event = {
     trigger = {
         TUR = {
             exists = yes
-            war = no
+            OR = {
+                war = no
+                has_country_flag = lost_russo_turkish_war
+            }
             check_variable = {
                 which = berlin_congress_support_OE
                 value = 1
@@ -794,6 +809,12 @@ country_event = {
                 }
             }
         }
+        modifier = {
+            factor = 0.05
+            TUR = {
+                has_country_flag = lost_russo_turkish_war
+            }
+        }
     }
 
     option = {
@@ -822,7 +843,10 @@ country_event = {
     trigger = {
         TUR = {
             exists = yes
-            war = no
+            OR = { 
+                war = no
+                has_country_flag = lost_russo_turkish_war
+            }
             check_variable = {
                 which = berlin_congress_support_balkans
                 value = 1
@@ -869,6 +893,12 @@ country_event = {
                     which = berlin_congress_support_balkans
                     value = 5
                 }
+            }
+        }
+        modifier = {
+            factor = 0.05
+            TUR = {
+                has_country_flag = lost_russo_turkish_war
             }
         }
     }
@@ -1307,6 +1337,7 @@ country_event = {
                             province_id = 848 #Chania
                             region = TUR_805 #W. Macedonia
                         }
+                        NOT = { province_id = 823}
                     }
                     remove_core = TUR
                     secede_province = GRE
@@ -1357,6 +1388,42 @@ country_event = {
                 factor = 0.40
             }
             militancy = 3
+        }
+        ROM = {
+            add_country_modifier = {
+                name = nationalist_balkans
+                duration = -1
+            }
+        }
+        BUL = {
+            add_country_modifier = {
+                name = nationalist_balkans
+                duration = -1
+            }
+        }
+        RUM = {
+            add_country_modifier = {
+                name = nationalist_balkans
+                duration = -1
+            }
+        }
+        MON = {
+            add_country_modifier = {
+                name = nationalist_balkans
+                duration = -1
+            }
+        }
+        SER = {
+            add_country_modifier = {
+                name = nationalist_balkans
+                duration = -1
+            }
+        }
+        GRE = {
+            add_country_modifier = {
+                name = nationalist_balkans
+                duration = -1
+            }
         }
         ai_chance = {
             factor = 90
@@ -1414,6 +1481,10 @@ country_event = {
         }
         ai_chance = {
             factor = 10
+            modifier = {
+                factor = 0
+                has_country_flag = lost_russo_turkish_war
+            }
         }
     }
 }
@@ -1934,6 +2005,36 @@ country_event = {
             }
             militancy = 5
         }
+        ROM = {
+            add_country_modifier = {
+                name = nationalist_balkans
+                duration = -1
+            }
+        }
+        BUL = {
+            add_country_modifier = {
+                name = nationalist_balkans
+                duration = -1
+            }
+        }
+        GRE = {
+            add_country_modifier = {
+                name = nationalist_balkans
+                duration = -1
+            }
+        }
+        SER = {
+            add_country_modifier = {
+                name = nationalist_balkans
+                duration = -1
+            }
+        }
+        ALB = {
+            add_country_modifier = {
+                name = nationalist_balkans
+                duration = -1
+            }
+        }
         ai_chance = {
             factor = 70
         }
@@ -1990,6 +2091,10 @@ country_event = {
         }
         ai_chance = {
             factor = 30
+            modifier = {
+                factor = 0
+                has_country_flag = lost_russo_turkish_war
+            }
         }
     }
 }
@@ -2512,7 +2617,10 @@ country_event = {
 
     trigger = {
         has_country_flag = claimed_bosnia
-        has_global_flag = berlin_congress_held
+        OR = { 
+            has_global_flag = berlin_congress_held
+            has_global_flag = dismantle_ottomans
+        }
         is_greater_power = yes
         BOS = {
             exists = yes
@@ -2529,13 +2637,13 @@ country_event = {
         clr_country_flag = claimed_bosnia
         prestige = 10
         BOS = { country_event = 19370 }
-        leave_alliance = RUS
-        relation = { who = RUS value = -50 }
-        add_casus_belli = {
-            target = RUS
-            type = release_puppet
-            months = 12
-        }
+        #leave_alliance = RUS
+        #relation = { who = RUS value = -50 }
+        #add_casus_belli = {
+            #target = RUS
+            #type = release_puppet
+            #months = 12
+        #}
         ai_chance = { factor = 100 }
     }
 
