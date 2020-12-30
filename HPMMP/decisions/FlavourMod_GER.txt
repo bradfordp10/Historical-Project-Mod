@@ -504,33 +504,7 @@ political_decisions = {
 			set_global_flag = dutch_prussian_alliance
 		}
 	}
-	
-	treaty_of_amsterdamn = {
-		picture = "treaty_signing"
-		potential = {
-			is_greater_power = yes
-			primary_culture = north_german
-			NOT = { exists = BEL }
-			387 = { owned_by = NET }
-			has_global_flag = dutch_prussian_alliance_accepted
-			NOT = { has_global_flag = treaty_of_amsterdamn }
-		}
-		allow = {
-			war = no
-			NOT = { exists = BEL }
-			387 = { owned_by = NET }
-		}
-		
-		effect = {
-			badboy = 3
-			prestige = 10
-			NET = { country_event = 99958 }
-			set_global_flag = treaty_of_amsterdamn
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
+
 	rhineland_reacquire = {
 		picture = "rhineland"
 		potential = {

@@ -351,58 +351,6 @@ political_decisions = {
 		}
 	}
 	
-	purchase_annam = {
-		picture = dreams_of_empire
-		potential = {
-			capital_scope = { continent = europe }
-			is_greater_power = yes
-			NOT = { has_country_flag = purchase_annam }
-			1375 = {
-				owner = {
-					is_greater_power = yes
-					ai = yes
-					capital_scope = { continent = europe }
-				}
-			}
-			1369 = {
-				OR = {
-					owner = {
-						civilized = no
-						ai = yes
-					}
-					owned_by = THIS
-				}
-			}
-			owns = 1380
-			NOT = { owns = 1375 }
-		}
-		
-		allow = {
-			total_pops = 2000000
-			OR = {
-				money = 100000
-				ai = yes
-			}
-			num_of_ports = 3
-			total_amount_of_ships = 35
-			NOT = { any_greater_power = { war_with = THIS } }
-			NOT = { war_exhaustion = 5 }
-		}
-		
-		effect = {
-			set_country_flag = purchase_annam
-			random_country = {
-				limit = {
-					exists = yes
-					owns = 1375
-				}
-				country_event = 999600
-			}
-		}
-		
-		ai_will_do = { factor = 1 }
-	}
-	
 	support_troupes_de_marine = {
 		picture = troupes_de_marine
 		potential = {
