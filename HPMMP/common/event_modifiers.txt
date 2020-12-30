@@ -2531,3 +2531,53 @@ emergency_tax_measures2 = {
     global_pop_militancy_modifier = 0.10
     icon = 10
 }
+
+###HFM UK Modifiers###
+royal_irish_constabulary = {
+    pop_consciousness_modifier = -0.03
+    pop_militancy_modifier = -0.03
+    icon = 19
+}
+
+india_civil_service = {
+    non_accepted_pop_militancy_modifier = -0.02
+    non_accepted_pop_consciousness_modifier = -0.02
+    administrative_efficiency_modifier = 0.025
+    influence_modifier = 0.05
+    icon = 17
+}
+
+pax_britannica = {
+    prestige = 0.01
+    navy_tech_research_bonus = 0.05
+    naval_unit_start_experience = 5
+    naval_organisation = 0.05
+    diplomatic_points_modifier = 0.5
+    badboy = -0.05
+    influence_modifier = 0.05
+    supply_consumption = 0.05
+    min_military_spending = 0.25
+    icon = 7
+}
+
+singapore_port = {
+    mine_rgo_size = 1
+    farm_rgo_size = 1
+    mine_RGO_eff = 0.5
+    rich_income_modifier = 0.025
+    icon = 11
+}
+
+anglification = {
+    assimilation_rate = 1.5
+    icon = 19
+}
+
+white_rajah = {
+    global_pop_consciousness_modifier = -0.05
+    global_pop_militancy_modifier = -0.05
+    diplomatic_points_modifier = 0.05
+    cb_generation_speed_modifier = -1
+    supply_consumption = -0.05
+    icon = 5
+}
