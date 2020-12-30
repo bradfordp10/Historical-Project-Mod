@@ -210,7 +210,7 @@ FRA_420 = { 420 421 422 424 423 } #Bretagne
 
 FRA_425 = { 425 426 427 } #Ile de France
 
-FRA_428 = { 428 429 431 430 433 432 } #Bourgogne
+FRA_428 = { 428 429 431 433 432 } #Bourgogne
 
 FRA_435 = { 435 434 437 } #Loire
 
@@ -427,7 +427,7 @@ GRE_826 = { 834 842 839 840 841 } #Peloponnese
 
 TUR_832 = { 832 831 833 825 } #Thessalia
 
-GRE_837 = { 837 836 835 838 845 827 } #Attica - Central Greece
+GRE_837 = { 837 836 835 838 845 } #Attica - Central Greece
 
 EGY_843 = { 848 843 844 846 847 } #Aegean Islands
 
