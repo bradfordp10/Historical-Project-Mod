@@ -1,4 +1,4 @@
-capital = 360
+capital = 361
 primary_culture = lithuanian
 religion = catholic
 government = absolute_monarchy

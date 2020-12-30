@@ -220,15 +220,15 @@ FRA_438 = { 438 436 439 440 441 } #Region Centre
 
 FRA_445 = { 445 446 447 } #Limousin
 
-#FRA_448 = {  } #Auvergne
+FRA_448 = { 448 449 430 } #Auvergne
 
-FRA_451 = { 451 452 453 448 449  } #Auvergne-Rhone
+FRA_451 = { 451 452 453 467 468 } #Rhone
 
 FRA_455 = { 455 456 450 } #Le Midi
 
 FRA_458 = { 442 444 443 458 459 } #Aquitaine
 
-FRA_461 = { 461 462 463 467 468 } #Languedoc
+FRA_461 = { 461 462 463 } #Languedoc
 
 SAR_466 = { 465 466 472 } #Savoie
 
@@ -243,21 +243,19 @@ FRA_460 = { 460 457 464 } #Pyrenees
 
 SPA_474 = { 474 476 } #Galicia
 
-SPA_477 = { 477 482 475 } #Leon
-
-SPA_479 = { 479 480 481 483 478 494 } #Castilla la Vieja
+SPA_477 = { 477 479 480 481 482 483 475 478 } #Leon-Castilla
 
 SPA_484 = { 484 485 486 } #Extremadura
 
 SPA_487 = { 487 488 489 490 491 } #Castilla la Nueva
 
-SPA_492 = { 492 493 } #Vasconia
+SPA_492 = { 492 493 494 } #Vasconia
 
 SPA_495 = { 495 496 497 } #Aragon
 
 SPA_498 = { 498 499 500 501 } #Catalonia
 
-SPA_503 = { 503 504 505 } #Valencia
+SPA_503 = { 503 504 505 502 } #Valencia
 
 SPA_507 = { 506 507 508 } #Murcia
 
@@ -312,9 +310,7 @@ BAV_595 = { 595 596 597 598 } #Franconia
 
 BAV_599 = { 599 592 600 601 602 } #Upper Bavaria
 
-SWI_603 = { 603 606 611 2568 604 } #Switzerland
-
-SWI_605 = { 605 607 608 609 } #Romandie
+SWI_603 = { 603 606 611 2568 605 604 607 608 609 } #Switzerland
 
 PRU_682 = { 682 683 684 685 } #Silesia
 
@@ -392,13 +388,11 @@ PAP_752 = { 749 752 750 751 } #Lazio
 
 SIC_753 = { 756 758 10 753 757 } #Puglia
 
-SIC_754 = { 754 755 2567 } #Campania
-
-SIC_759 = { 759 760 761 } #Calabria
+SIC_754 = { 754 755 2567 759 760 761 } #Campania
 
 SIC_763 = { 763 762 764 854 } #Sicily
 
-SAR_765 = { 765 766 473 502 } #Western Mediterranean Islands
+SAR_765 = { 765 766 473 } #Thyrrenian Islands
 
 
 ### Balkans
@@ -419,7 +413,7 @@ MON_2582 = { 2583 2569 2577 800 2582 } #Montenegro
 
 TUR_803 = { 803 804 798 802 799 } #Southern Serbia
 
-TUR_805 = { 805 819 820 821 822 } #Southern Macedonia
+TUR_805 = { 805 819 820 821 822 823 824 } #Macedonia
 
 TUR_806 = { 806 807 1780 } #Northern Macedonia
 
@@ -427,23 +421,23 @@ TUR_809 = { 815 817 808 816 } #Eastern Rumelia
 
 TUR_810 = { 809 810 811 812 813 814 } #Bulgaria
 
-TUR_823 = { 823 829 830 } #Eastern Macedonia
+TUR_823 = { 829 830 } #Western Thrace
 
-GRE_826 = { 842 839 840 841 } #Peloponnese
+GRE_826 = { 834 842 839 840 841 } #Peloponnese
 
 TUR_832 = { 832 831 833 825 } #Thessalia
 
-GRE_837 = { 834 837 836 835 838 } #Attica - Central Greece
+GRE_837 = { 837 836 835 838 845 827 } #Attica - Central Greece
 
-EGY_843 = { 848 843 844 845 846 847 } #Aegean Islands
+EGY_843 = { 848 843 844 846 847 } #Aegean Islands
 
-TUR_824 = { 824 826 827 } #Epirus
+GRE_827 = { 826 827 } #Ionian Islands
 
 TUR_853 = { 849 853 852 851 850 } #Albania
 
 TUR_855 = { 855 856 857 } #Cyprus
 
-TUR_860 = { 828 858 859 } #Thrace
+TUR_860 = { 828 858 859 } #Eastern Thrace
 
 TUR_861 = { 860 861 } #Constantinople
 
@@ -543,13 +537,13 @@ RUS_349 = { 349 350 351 352 353 } #Estonia
 
 RUS_354 = { 354 355 356 357 358 359 } #Latvia
 
-RUS_360 = { 360 361 362 363 364 365 } #Lithuania
+RUS_360 = { 361 362 363 364 365 } #Lithuania
 
 RUS_339 = { 339 984 995 988 2587 983 982 } #Karelia
 
 RUS_706 = { 706 708 709 710 717 712 } #Masovia
 
-RUS_707 = { 936 707 719 937 } #Brêst
+RUS_707 = { 936 707 719 937 360 } #Brêst
 
 RUS_718 = { 718 941 942 } #Minsk
 
@@ -559,9 +553,9 @@ RUS_943 = { 943 999 1000 1007 } #Smolensk
 
 RUS_947 = { 944 945 946 948 949 } #Orsha
 
-RUS_958 = { 958 959 960 } #Kiev
+RUS_958 = { 958 959 960 955 } #Kiev
 
-RUS_959 = { 955 956 957 } #Volyn
+RUS_959 = { 956 957 } #Volyn
 
 RUS_964 = { 967 966 964 } #Crimea
 
@@ -927,11 +921,9 @@ EGY_1755 = { 1755 1756 1757 } #Sinai
 
 EGY_1758 = { 1759 1758 1761 1760 1754 } #Western Desert
 
-EGY_1762 = { 1765 1763 1762 2559 1764 } #Middle Egypt
+EGY_1762 = { 1765 1763 1762 2559 1764 1772 } #Middle Egypt
 
-EGY_1771 = { 1769 1768 1767 1766 } #Upper Egypt
-
-EGY_1770 = { 1834 1770 1771 1772 } #Red Sea Coast
+EGY_1771 = { 1769 1771 1768 1770 1767 1766 1834 } #Upper Egypt
 
 FRA_1808 = { 1808 1809 1810 1811 1815 1816 } #Outer Hausaland - South Niger
 
