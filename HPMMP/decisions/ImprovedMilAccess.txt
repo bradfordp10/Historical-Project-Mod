@@ -30,6 +30,7 @@ political_decisions = {
         	any_country = {
         		limit = {
         			exists = yes
+                    NOT = { tag = THIS }
         			NOT = { military_access = THIS }
                     OR = {
                         is_our_vassal = THIS
@@ -98,10 +99,8 @@ political_decisions = {
                     exists = yes
         			military_access = THIS
         			NOT = {
-    	    			OR = {
-    	    				is_sphere_leader_of = THIS
-    	    				is_our_vassal = THIS
-    	    			}
+    	    			is_sphere_leader_of = THIS
+    	    			is_our_vassal = THIS
     	    		}
         		}
         		end_military_access = THIS
