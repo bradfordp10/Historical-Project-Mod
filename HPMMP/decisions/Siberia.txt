@@ -8,7 +8,10 @@ political_decisions = {
         }
         allow = {
             money = 75000
-            iron_railroad = 1
+            OR = { 
+                iron_railroad = 1
+                year = 1890
+            }
             owns = 1082
             owns = 1078
             owns = 1075
@@ -20,9 +23,9 @@ political_decisions = {
         effect = {
             set_country_flag = build_the_tsr
             treasury = -75000
-            1082 = { infrastructure = 1 }
-            1083 = { infrastructure = 1 }
-            1059 = { infrastructure = 1 }
+            1082 = { infrastructure = 2 }
+            1083 = { infrastructure = 2 }
+            1059 = { infrastructure = 2 }
         }
         ai_will_do = {
             factor = 1
@@ -39,13 +42,13 @@ political_decisions = {
                 owns = 1082 #Sanity check if they haven't lost Vladivostok in the meantime
             }
             allow = {
-                money = 15000
+                money = 35000
                 war = no
             }
             effect = {
                 set_country_flag = build_the_manchurian_railway
-                treasury = -15000
-                1481 = { infrastructure = 1 }
+                treasury = -35000
+                1481 = { infrastructure = 2 }
                 diplomatic_influence = { who = MCK value = 50 }
             }
             ai_will_do = {
