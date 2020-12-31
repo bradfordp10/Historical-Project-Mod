@@ -103,6 +103,23 @@ political_decisions = {
                     }
                 }
             }
+            modifier = {
+                factor = 0
+                NOT = { 
+                    has_country_flag = brothers_war_loser 
+                    OR = {
+                        average_militancy = 7
+                        revolt_percentage = .25
+                    }
+                }
+            }
+            modifier = {
+                factor = 0
+                part_of_sphere = yes
+                sphere_owner = {
+                    is_culture_group = germanic
+                }
+            }
         }
     }
 
@@ -140,6 +157,11 @@ political_decisions = {
                 has_country_modifier = global_liberal_agitation
                 has_country_modifier = springtime_of_nations
             }
+            HUN = { 
+                NOT = { 
+                    has_country_modifier = begin_revolution
+                }
+            }
         }
 
         allow = {
@@ -166,6 +188,7 @@ political_decisions = {
         }
 
         effect = {
+            prestige = -20
             HUN = {
                 all_core = {
                     limit = { NOT = { province_id = 624 } }
@@ -239,13 +262,14 @@ political_decisions = {
         }
 
         allow = {
-            war_with = AUS
+            war = no
+            NOT = { has_country_modifier = no_more_war }
         }
 
         effect = {
             set_country_flag = hungarian_revolution_began
-            small_arms = 10
-            regular_clothes = 10
+            small_arms = 100
+            regular_clothes = 100
             leadership = 40
             define_general = {
                 name = "Józef Bem"
@@ -280,6 +304,47 @@ political_decisions = {
                 add_province_modifier = {
                     name = nationalist_agitation
                     duration = 1095
+                }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        OR = {
+                            national_provinces_occupied = .25
+                            any_greater_power = { war_with = THIS }
+                        }
+                    }
+                }
+                owner = {
+                    prestige = -10
+                    war = {
+                        target = HUN
+                        attacker_goal = {
+                            casus_belli = annex_core_country
+                        }
+                        call_ally = yes
+                    }
+                }
+            }
+            AUS = {
+                random_owned = {
+                    limit = {
+                        owner = {
+                            NOT = {
+                                national_provinces_occupied = .25
+                                any_greater_power = { war_with = THIS }
+                            }
+                        }
+                    }
+                    owner = {
+                        prestige = 20
+                        war = {
+                            target = HUN
+                            attacker_goal = {
+                                casus_belli = annex_core_country
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -394,7 +459,7 @@ political_decisions = {
 
         effect = {
             set_country_flag = released_galicia
-            #prestige = 10
+            prestige = 10
             any_owned = {
                 limit = { is_core = GLM }
                 secede_province = GLM
@@ -954,6 +1019,59 @@ political_decisions = {
         ai_will_do = {
             factor = 1
         }
+    }
+
+    embrace_polish_minority = {
+        picture = embrace_minority
+        potential = {
+            OR = {
+                tag = KUK       
+                tag = DNB          
+            }
+            NOT = {
+                accepted_culture = polish
+                has_country_flag = embraced_poles
+                has_country_flag = danube_proposal_in_progress
+            }
+            OR = {
+                accepted_culture = slovene
+                NOT = { any_owned_province = { is_core = SLO } }          
+            }                                   
+        }
+
+        allow = {
+            year = 1900
+            prestige = 50
+            mass_politics = 1
+            behaviorism = 1
+            social_alienation = 1
+        }
+
+        effect = {
+            set_country_flag = embraced_poles
+            add_accepted_culture = polish
+            prestige = -25
+            any_pop = {
+                limit = {
+                    OR = {
+                        has_pop_culture = hungarian
+                        has_pop_culture = czech
+                        has_pop_culture = croat
+                        has_pop_culture = slovene
+                    }
+                }   
+                militancy = 4
+                consciousness = 4
+            }
+            any_pop = {
+                limit = { has_pop_culture = polish }
+                militancy = -4
+                consciousness = -4
+            }                    
+        }
+        ai_will_do = {
+            factor = 1
+        }                           
     }
 
     budapest_united = {

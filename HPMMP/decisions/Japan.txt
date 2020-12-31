@@ -69,14 +69,14 @@ political_decisions = {
             war_with = TKG
             TKG = {
                 OR = {
-                    war_exhaustion = 33
+                    war_exhaustion = 50
                     any_owned_province = { controlled_by = THIS }
                 }
                 OR = {
                     national_provinces_occupied = 0.10
-                    blockade = 0.33
+                    blockade = 0.5
                 }
-                war_exhaustion = 5
+                war_exhaustion = 10
             }
         }
 
@@ -286,7 +286,7 @@ political_decisions = {
                 owner = {
                     add_country_modifier = {
                         name = daimyo_draft
-                        duration = 90
+                        duration = 365
                     }
                 }
             }
@@ -520,6 +520,7 @@ political_decisions = {
 
             government = prussian_constitutionalism
             any_pop = { militancy = -2 }
+            create_vassal = RYU
         }
 
         ai_will_do = { factor = 1 }
@@ -651,17 +652,26 @@ political_decisions = {
         }
 
         allow = {
-            war = no
+            NOT = { war_with = KOR  }
             is_our_vassal = KOR
             NOT = { truce_with = KOR }
-            KOR = {
-                civilized = yes
-                in_sphere = THIS
-                NOT = {
-                    any_owned_province = {
-                        has_province_modifier = peasant_revolt
+            OR = {
+                AND = {
+                    is_our_vassal = KOR
+                    year = 1910
+                }
+                KOR = {
+                    civilized = yes
+                    in_sphere = THIS
+                    NOT = {
+                        any_owned_province = {
+                            has_province_modifier = peasant_revolt
+                        }
                     }
                 }
+                owns = 1632
+                owns = 1625
+                owns = 1619
             }
         }
 
@@ -693,6 +703,14 @@ political_decisions = {
                 }
                 civilized = no
                 annex_to = THIS
+            }
+
+            random_country = {
+                limit = {
+                    tag = KOR
+                    exists = no
+                }
+                civilized = yes
             }
 
             random_country = {
@@ -791,14 +809,11 @@ political_decisions = {
                 has_country_flag = sonno_joi
                 civilized = yes
             }
-            OR = {
-                ruling_party_ideology = conservative
-                ai = yes
-            }
         }
 
         effect = {
             set_global_flag = order_to_expel_barbarians
+            ruling_party_ideology = conservative
             prestige = 5
             TKG = { country_event = 97617 }
             any_country = {
@@ -1206,7 +1221,7 @@ political_decisions = {
             owns = 2562
             owns = 2681
             owns = 2406
-            NOT = { has_country_flag = taiwan_administration }
+            NOT = { has_global_flag = taiwan_administration }
         }
         allow = {
             civilized = yes
@@ -1238,8 +1253,59 @@ political_decisions = {
                 change_province_name = "Tainan Cho"
                 state_scope = { change_region_name = "Takasago" }
             }
-            set_country_flag = taiwan_administration
+            TAI = { add_accepted_culture = japanese }
+            set_global_flag = taiwan_administration
         }
+    }
+
+    taiwan_administration_china = {
+        picture = taiwan_china
+        potential = {
+            OR = {
+                tag = TAI
+                tag = FJN
+                tag = CHI
+                tag = KMT
+                tag = QNG
+            }
+            owns = 1485
+            owns = 2562
+            owns = 2681
+            owns = 2406
+            has_global_flag = taiwan_administration
+        }
+        allow = {
+            owns = 1485
+            owns = 2562
+            owns = 2681
+            owns = 2406
+        }
+        effect = {
+            prestige = 1
+            2681 = {
+                add_core = TAI
+                remove_core = FJN
+                change_province_name = "Taipei"
+            }
+            2562 = {
+                add_core = TAI
+                remove_core = FJN
+                change_province_name = "Taitung"
+            }
+            2406 = {
+                add_core = TAI
+                remove_core = FJN
+                change_province_name = "Penghu"
+            }
+            1485 = {
+                add_core = TAI
+                remove_core = FJN
+                change_province_name = "Tainan"
+                state_scope = { change_region_name = "Taiwan" }
+            }
+            TAI = { remove_accepted_culture = japanese }
+            clr_global_flag = taiwan_administration
+        }   
     }
 
     inherit_ryukyu = {
@@ -1249,6 +1315,10 @@ political_decisions = {
                 AND = {
                     tag = JAP
                     has_country_modifier = fukoku_kyohei
+                    OR = {
+                        has_country_flag = taiwan_line_of_advantage
+                        revolution_n_counterrevolution = 1
+                    }
                 }
                 AND = {
                     tag = TKG
@@ -1333,6 +1403,7 @@ political_decisions = {
             NOT = {
                 tag = JAP
                 tag = TKG
+                tag = RYU
                 has_country_flag = unite_with_japan
             }
         }
@@ -1432,37 +1503,44 @@ political_decisions = {
             has_country_modifier = fukoku_kyohei
             civilized = yes
             NOT = { has_country_flag = negotiate_treaty_shimonoseki }
-            1485 = {
-                owner = {
-                    is_culture_group = east_asian
-                    war_with = THIS
-                    NOT = {
-                        capital = 1485
-                        has_country_flag = negotiate_unequal_treaty
+            OR = {
+                1485 = {
+                    owner = {
+                        is_culture_group = east_asian
+                        war_with = THIS
+                        NOT = {
+                            capital = 1485
+                            has_country_flag = negotiate_unequal_treaty
+                        }
                     }
                 }
+                truce_with = QNG
+                truce_with = TPG
             }
         }
 
         allow = {
-            1485 = {
-                owner = {
-                    OR = {
-                        war_exhaustion = 50
-                        any_owned_province = { controlled_by = THIS }
+            OR = { 
+                1485 = {
+                    owner = {
+                        OR = {
+                            war_exhaustion = 50
+                            any_owned_province = { controlled_by = THIS }
+                        }
+                        OR = {
+                            national_provinces_occupied = 0.10
+                            blockade = 0.50
+                        }
+                        war_exhaustion = 10
                     }
-                    OR = {
-                        national_provinces_occupied = 0.10
-                        blockade = 0.50
-                    }
-                    war_exhaustion = 10
                 }
+                owns = 1485
             }
         }
 
         effect = {
             set_country_flag = negotiate_treaty_shimonoseki
-            1485 = {
+            1616 = {
                 owner = {
                     set_country_flag = negotiate_unequal_treaty
                     country_event = 1316085
@@ -1524,6 +1602,7 @@ political_decisions = {
 
     japanese_sakhalin = {
         picture = map_yellow_sea
+        blue_and_brown_water_schools = 1
         potential = {
             OR = {
                 tag = JAP
@@ -1638,7 +1717,7 @@ political_decisions = {
             }
             add_country_modifier = {
                 name = taiping_draft
-                duration = 90
+                duration = 365
             }
             set_country_flag = satsuma_draft_happened
         }
@@ -1650,6 +1729,7 @@ political_decisions = {
         potential = {
             primary_culture = japanese
             1643 = { NOT = { life_rating = 25 } }
+            NOT = { has_country_flag = establish_the_kaitakushi }
         }
 
         allow = {
@@ -1686,6 +1766,7 @@ political_decisions = {
         }
 
         effect = {
+            set_country_flag = establish_the_kaitakushi
             remove_country_modifier = uncivilized_isolationism
             1643 = { change_province_name = "Sapporo" life_rating = 25 }
             1644 = { change_province_name = "Nemuro" life_rating = 25 }

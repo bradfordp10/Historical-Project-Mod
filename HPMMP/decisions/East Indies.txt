@@ -907,6 +907,15 @@ political_decisions = {
                 factor = 0
                 is_greater_power = yes
             }
+            modifier = {
+                factor = 0
+                1445 = { 
+                    owner = {
+                        is_secondary_power = no
+                        is_greater_power = no                   
+                    }
+                }
+            }
         }
     }
 

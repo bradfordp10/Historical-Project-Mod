@@ -97,14 +97,15 @@ political_decisions = {
 			invention = machine_tools
 			invention = nitroglycerin		
 			iron_steamers = 1
-			money = 50100
+			business_banks = 1
+			money = 100000
 			1755 = { owner = { NOT = { truce_with = THIS war_with = THIS is_greater_power = yes } } }
 		}
 		
 		effect = {
 			set_global_flag = suez_canal_company_founded_backup
 			prestige = 5
-			treasury = -50000
+			treasury = -100000
 			diplomatic_influence = { who = EGY value = 100 }
 			1755 = { owner = { relation = { who = THIS value = 75 } country_event = 36981 } }
 		}
@@ -135,13 +136,14 @@ political_decisions = {
 			invention = machine_tools
 			invention = nitroglycerin		
 			iron_steamers = 1
-			money = 400100
+			business_banks = 1
+			money = 100000
 		}
 		
 		effect = {
 			set_global_flag = suez_canal_company_founded
 			prestige = 5
-			treasury = -400000
+			treasury = -100000
 			1755 = { owner = { relation = { who = THIS value = 75 } country_event = 36982 } }
 		}
 		
@@ -355,11 +357,7 @@ political_decisions = {
 					government = hms_government
 					NOT = { has_global_flag = british_dismantled }
 					has_global_flag = france_dismantled
-					OR = { 
-						FRA = { government = proletarian_dictatorship }
-						BOR = { government = proletarian_dictatorship }
-					}
-					ENG = { government = proletarian_dictatorship }
+					FRA = { government = proletarian_dictatorship }
 				}
 			}
 			2217 = { owned_by = ENG }
@@ -406,6 +404,7 @@ political_decisions = {
 				add_accepted_culture = afro_caribbean
 			}
 			inherit = CRB
+			release_vassal = CRB
 		}
 	}
 

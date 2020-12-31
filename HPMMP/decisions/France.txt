@@ -64,6 +64,7 @@ political_decisions = {
             }
             set_country_flag = french_foreign_legion_supported
         }
+        ai_will_do = { factor = 1 }
     }
 
     french_military_mission_to_japan = {
@@ -107,6 +108,7 @@ political_decisions = {
             }
             set_country_flag = military_mission_in_japan
         }
+        ai_will_do = { factor = 1 }
     }
 
     palais_garnier = {
@@ -126,6 +128,7 @@ political_decisions = {
             prestige = 10
             set_country_flag = palais_garnier_built
         }
+        ai_will_do = { factor = 1 }
     }
 
     the_lambert_charter = {
@@ -163,6 +166,7 @@ political_decisions = {
             }
             set_country_flag = lambert_has_been_chartered
         }
+        ai_will_do = { factor = 1 }
     }
 
     end_the_merina_monarchy = {
@@ -198,6 +202,7 @@ political_decisions = {
             set_global_flag = merina_monarchy_is_over
             MAD = { country_event = 95505 }
         }
+        ai_will_do = { factor = 1 }
     }
 
     brazzas_expedition = {
@@ -225,6 +230,7 @@ political_decisions = {
             diplomatic_influence = { who = LOA value = 200 }
             relation = { who = LOA value = 200 }
         }
+        ai_will_do = { factor = 1 }
     }
 
     the_rhine_crisis = {
@@ -277,6 +283,14 @@ political_decisions = {
                 factor = 0
                 badboy = 0.5
             }
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_greater_power = {
+                        alliance_with = THIS
+                    }
+                }
+            }
         }
     }
 
@@ -304,6 +318,7 @@ political_decisions = {
             country_event = 37236
             set_country_flag = the_eiffel_tower_was_built
         }
+        ai_will_do = { factor = 1 }
     }
 
     haussmanns_renovations = {
@@ -357,6 +372,7 @@ political_decisions = {
             prestige = 10
             set_country_flag = extreme_home_makeover
         }
+        ai_will_do = { factor = 1 }
     }
 
     annex_mayotte = {
@@ -379,6 +395,7 @@ political_decisions = {
                 change_province_name = "Mayotte"
             }
         }
+        ai_will_do = { factor = 1 }
     }
 
     plantations_in_comoros = {
@@ -412,6 +429,7 @@ political_decisions = {
                 life_rating = 5
             }
         }
+        ai_will_do = { factor = 1 }
     }
 
     cotton_in_algiers = {
@@ -442,6 +460,7 @@ political_decisions = {
                 trade_goods = cotton
             }
         }
+        ai_will_do = { factor = 1 }
     }
 
     claim_savoy = {
@@ -484,6 +503,18 @@ political_decisions = {
                 country_event = 37244
             }
         }
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                466 = { NOT = { is_core = ITA } }
+            }
+            
+            modifier = {
+                factor = 0
+                badboy = 0.8
+            }
+        }
     }
 
     annex_new_caledonia = {
@@ -510,6 +541,7 @@ political_decisions = {
             1097 = { secede_province = FRA }
             add_country_modifier = { name = penal_colonies duration = -1 }
         }
+        ai_will_do = { factor = 1 }
     }
 
     french_language_schooling = {
@@ -538,6 +570,20 @@ political_decisions = {
                 limit = {
                     OR = {
                         is_core = BRT
+                        is_core = WLL
+                        is_core = CAT
+                        is_core = CRS
+                        is_core = ITA
+                        is_core = THIS
+                        is_core = SWI
+                        AND = {
+                            is_core = LUX
+                            THIS = { has_country_flag = chose_door_one }
+                        }
+                        AND = {
+                            is_core = RHI
+                            THIS = { has_country_flag = chose_door_one }
+                        }
                         is_core = OCC
                         culture = picard
                     }
@@ -559,7 +605,24 @@ political_decisions = {
                 }
                 OCC = { all_core = { remove_core = OCC } }
             }
+            any_country = {
+                limit = {
+                    tag = LUX
+                    exists = yes
+                    vassal_of = THIS
+                }
+                primary_culture = french
+            }
+            any_country = {
+                limit = {
+                    tag = RHI
+                    exists = yes
+                    vassal_of = THIS
+                }
+                primary_culture = french
+            }
         }
+        ai_will_do = { factor = 1 }
     }
 
     st_barths_question = {
@@ -594,6 +657,55 @@ political_decisions = {
             3246 = { owner = { country_event = 36623 } }
         }
 
+        ai_will_do = { factor = 1 }
+    }
+
+    alsace_lorraine_mines = {
+        picture = alsace_lorraine_mines
+        potential = {
+            owns = 409
+            NOT = { 409 = { trade_goods = precious_metal } }
+            bessemer_process = 1
+        }
+        
+        allow = {
+            war = no
+            advanced_metallurgy = 1
+            money = 30100
+        }
+        
+        effect = {
+            money = -30000
+            412 = { trade_goods = iron }
+            409 = { trade_goods = precious_metal }
+        }
+        
+        ai_will_do = { factor = 1 }
+    }
+    
+    french_iron_mines = {
+        picture = normandie_mine
+        potential = {
+            owns = 434
+            bessemer_process = 1
+            NOT = { has_country_flag = french_mines_placed }
+        }
+        
+        allow = {
+            war = no
+            advanced_metallurgy = 1
+            money = 30100
+        }
+        
+        effect = {
+            FRA = { set_country_flag = french_mines_placed }
+            money = -30000
+            434 = { trade_goods = iron }
+            418 = { trade_goods = iron }
+            428 = { trade_goods = iron }
+            411 = { trade_goods = iron }
+        }
+        
         ai_will_do = { factor = 1 }
     }
 

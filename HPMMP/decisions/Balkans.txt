@@ -154,6 +154,21 @@ political_decisions = {
             prestige = 20
             badboy = 2
             any_country = {
+                limit = {      
+                    OR = { 
+                        is_our_vassal = WAL
+                        is_our_vassal = MOL
+                        is_our_vassal = SIE
+                    }
+                    NOT = { tag = THIS }
+                }
+                casus_belli = {
+                    target = THIS
+                    type = humiliate
+                    months = 12
+                }
+            }
+            any_country = {
                 limit = {
                     primary_culture = romanian
                     ai = yes
@@ -1352,49 +1367,49 @@ political_decisions = {
     }
 
 
-#    embrace_bosnians_YUG = {
-#        picture = embrace_minority
-#        potential = {
-#            tag = YUG
-#            any_owned_province = { culture = bosniak }
-#            NOT = {
-#                primary_culture = bosniak
-#                accepted_culture = bosniak
-#            }
-#        }
-#
-#        allow = {
-#            prestige = 50
-#            NOT = { government = theocracy }
-#            citizenship_policy = full_citizenship
-#            citizens_rights = all_voting_pops
-#            nationalism_n_imperialism = 1
-#            NOT = {
-#                any_owned_province = {
-#                    culture = bosniak
-#                    average_militancy = 2
-#                }
-#            }
-#        }
-#
-#        effect = {
-#            add_accepted_culture = bosniak
-#            prestige = -25
-#            any_pop = {
-#                limit = { has_pop_culture = bosniak }
-#                consciousness = -4
-#                militancy = -4
-#            }
-#            any_pop = {
-#                limit = {
-#                    is_primary_culture = no
-#                    is_accepted_culture = no
-#                }
-#                consciousness = 8
-#                militancy = 6
-#            }
-#        }
-#    }
+    embrace_bosnians_YUG = {
+        picture = embrace_minority
+        potential = {
+            tag = YUG
+            any_owned_province = { culture = bosniak }
+            NOT = {
+                primary_culture = bosniak
+                accepted_culture = bosniak
+            }
+        }
+
+        allow = {
+            prestige = 50
+            NOT = { government = theocracy }
+            citizenship_policy = full_citizenship
+            citizens_rights = all_voting_pops
+            nationalism_n_imperialism = 1
+            NOT = {
+                any_owned_province = {
+                    culture = bosniak
+                    average_militancy = 2
+                }
+            }
+        }
+
+        effect = {
+            add_accepted_culture = bosniak
+            prestige = -25
+            any_pop = {
+                limit = { has_pop_culture = bosniak }
+                consciousness = -4
+                militancy = -4
+            }
+            any_pop = {
+                limit = {
+                    is_primary_culture = no
+                    is_accepted_culture = no
+                }
+                consciousness = 8
+                militancy = 6
+            }
+        }
+    }
 
     embrace_bulgarians_YUG = {
         picture = embrace_minority
@@ -2082,8 +2097,11 @@ political_decisions = {
         allow = {
             war = no
             invention = manifest_destiny
-            private_bank_money_bill_printing = 1
-            stock_exchange = 1
+            OR = { 
+                private_bank_money_bill_printing = 1
+                stock_exchange = 1
+                nationalism_n_imperialism = 1
+            }
             809 = { has_building = railroad }
             money = 10000
         }

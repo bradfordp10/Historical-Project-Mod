@@ -99,10 +99,20 @@ political_decisions = {
                     NOT = { has_country_flag = electricity_invented }
                     electricity = 1
                 }
+                any_greater_power = {
+                    ai = no
+                    NOT = { has_country_flag = biologism_invented }
+                    biologism = 1
+                }
                 any_neighbor_country = {
                     ai = no
                     NOT = { has_country_flag = electricity_invented }
                     electricity = 1
+                }
+                any_neighbor_country = {
+                    ai = no
+                    NOT = { has_country_flag = biologism_invented }
+                    biologism = 1
                 }
                 AND = {
                     NOT = { has_country_flag = medicine_invented }
@@ -119,6 +129,10 @@ political_decisions = {
                 AND = {
                     NOT = { has_country_flag = electricity_invented }
                     electricity = 1
+                }
+                AND = {
+                    NOT = { has_country_flag = biologism_invented }
+                    biologism = 1
                 }
             }
         }
@@ -143,6 +157,10 @@ political_decisions = {
                 limit = { owner = { NOT = { has_country_flag = electricity_invented } electricity = 1 } }
                 owner = { set_country_flag = electricity_invented }
             }
+            random_owned = {
+                limit = { owner = { NOT = { has_country_flag = biologism_invented } biologism = 1 } }
+                owner = { set_country_flag = biologism_invented }
+            }
             any_country = {
                 limit = { NOT = { has_country_flag = medicine_invented } medicine = 1 }
                 set_country_flag = medicine_invented
@@ -159,8 +177,101 @@ political_decisions = {
                 limit = { NOT = { has_country_flag = electricity_invented } electricity = 1 }
                 set_country_flag = electricity_invented
             }
+            any_country = {
+                limit = { NOT = { has_country_flag = biologism_invented } biologism = 1 }
+                set_country_flag = biologism_invented
+            }
         }
 
+        ai_will_do = { factor = 1 }
+    }
+
+    abolishing_serfs = {
+        potential = {
+            ai = yes
+            exists = yes
+                       
+                               
+                                                      
+            OR = {
+                                                                                                   
+                                                                                                                                             
+                                                                                                           
+                                                                                                                                                                                                     
+                                                                                                                                                  
+                                                                                           
+                                                                                                                                                                                               
+                                                                                                    
+                                                                                                                                                  
+                                                                                                                                                            
+                AND = {
+                    any_owned_province = { has_pop_type = serfs }
+                    NOT = { debt_law = serfdom }
+                                       
+                            
+                }
+                any_neighbor_country = {
+                    ai = no
+                    any_owned_province = { has_pop_type = serfs }
+                    NOT = { debt_law = serfdom }
+                }
+                any_greater_power = {
+                    ai = no
+                    any_owned_province = { has_pop_type = serfs }
+                    NOT = { debt_law = serfdom }
+                }
+            }
+        }
+        
+        allow = {
+        }
+        
+        effect = {
+            random_owned = {
+                limit = {
+                    owner = {
+                        any_owned_province = { has_pop_type = serfs }
+                        NOT = { debt_law = serfdom }
+                    }
+                }
+                owner = {
+                    any_owned = {
+                        limit = {
+                            has_pop_type = serfs
+                            has_pop_type = labourers
+                        }
+                        any_pop = { limit = { type = serfs } pop_type = labourers }
+                    }
+                    any_owned = {
+                        limit = {
+                            has_pop_type = serfs
+                            has_pop_type = farmers
+                        }
+                        any_pop = { limit = { type = serfs } pop_type = farmers }
+                    }
+                }
+            }
+            any_country = {
+                limit = {
+                    any_owned_province = { has_pop_type = serfs }
+                    NOT = { debt_law = serfdom }
+                }
+                any_owned = {
+                    limit = {
+                        has_pop_type = serfs
+                        has_pop_type = labourers
+                    }
+                    any_pop = { limit = { type = serfs } pop_type = labourers }
+                }
+                any_owned = {
+                    limit = {
+                        has_pop_type = serfs
+                        has_pop_type = farmers
+                    }
+                    any_pop = { limit = { type = serfs } pop_type = farmers }
+                }
+            }
+        }
         ai_will_do = { factor = 1 }
     }
 
@@ -629,6 +740,34 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
+    release_bukovina = {
+        potential = {
+            owns = 662
+            owns = 663
+            OR = {
+                tag = AUS
+                tag = KUK
+            }
+            NOT = { owns = 660 }    
+            NOT = { owns = 661 }
+            NOT = { owns = 953 }
+            NOT = { owns = 952 }
+            BKV = { exists = no }
+        }
+        
+        allow = {
+            war = no
+        }
+        
+        effect = {
+            release_vassal = BKV
+            diplomatic_influence = { who = BKV value = 400 }
+            relation = { who = BKV value = 400 }
+            create_alliance = BKV
+        }
+        ai_will_do = { factor = 1 }
+    }
+
     clean_up_crisis_tension = {
         potential = {
             ai = yes
@@ -754,6 +893,51 @@ political_decisions = {
         }
 
         ai_will_do = { factor = 1 }
+    }
+
+    modern_central_banking_system_flag = {
+        potential = {
+            ai = yes
+            exists = yes
+            OR = {
+                any_greater_power = {
+                    ai = no
+                    NOT = { has_country_flag = modern_central_bank_system_invented }
+                    modern_central_bank_system = 1
+                                                                      
+                }
+                any_neighbor_country = {
+                    ai = no
+                    NOT = { has_country_flag = modern_central_bank_system_invented }
+                    modern_central_bank_system = 1
+                }
+                AND = {
+                    NOT = { has_country_flag = modern_central_bank_system_invented }
+                    modern_central_bank_system = 1
+                                                              
+                }
+            }
+        }
+        
+        allow = {
+        }
+        
+        effect = {
+            random_owned = {
+                limit = { owner = { NOT = { has_country_flag = modern_central_bank_system_invented } modern_central_bank_system = 1 } }
+                owner = { set_country_flag = modern_central_bank_system_invented }
+            }
+            any_country = {
+                           
+                            
+                limit = { NOT = { has_country_flag = modern_central_bank_system_invented } modern_central_bank_system = 1 }
+                set_country_flag = modern_central_bank_system_invented
+            }
+        }
+        
+        ai_will_do = { factor = 1 }
+                            
+                                                              
     }
 
     pay_owed_steamers = {

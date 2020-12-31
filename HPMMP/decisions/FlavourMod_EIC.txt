@@ -35,7 +35,7 @@ political_decisions = {
 			set_country_flag = gov_india
 			remove_country_modifier = eic_balance2
 			any_country = {
-				limit = { ai = yes is_culture_group = south_asian civilized = no vassal_of = THIS }
+				limit = { is_culture_group = south_asian civilized = no vassal_of = THIS }
 				economic_reform = yes_land_reform
 				military_reform = yes_foreign_officers
 				military_reform = yes_foreign_naval_officers
@@ -117,7 +117,7 @@ political_decisions = {
 				consciousness = -2
 			}
 			any_country = {
-				limit = { ai = yes is_culture_group = south_asian civilized = no vassal_of = THIS }
+				limit = { is_culture_group = south_asian civilized = no vassal_of = THIS }
 				economic_reform = yes_admin_reform
 			}
 		}

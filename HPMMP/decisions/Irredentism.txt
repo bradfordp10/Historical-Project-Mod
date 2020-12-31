@@ -664,10 +664,6 @@ political_decisions = {
         potential = {
             tag = BRZ
             NOT = { has_country_flag = cisplatina_is_ours }
-            OR = {
-                government = absolute_monarchy
-                government = fascist_dictatorship
-            }
         }
 
         allow = {
@@ -677,9 +673,7 @@ political_decisions = {
             is_greater_power = yes
             OR = {
                 government = fascist_dictatorship
-                AND = {
-                    government = absolute_monarchy
-                    war_policy = jingoism
+                war_policy = jingoism
                 }
             }
         }
@@ -703,7 +697,7 @@ political_decisions = {
         }
 
         ai_will_do = {
-            factor = 0
+            factor = 1
         }
     }
 
@@ -746,7 +740,7 @@ political_decisions = {
         }
 
         ai_will_do = {
-            factor = 0
+            factor = 1
         }
     }
 
@@ -771,7 +765,7 @@ political_decisions = {
             leadership = 20
             add_country_modifier = {
                 name = small_country_draft
-                duration = 30
+                duration = 365
             }
             set_country_flag = rgs_draft_happened
         }
@@ -799,7 +793,7 @@ political_decisions = {
             leadership = 20
             add_country_modifier = {
                 name = small_country_draft
-                duration = 30
+                duration = 365
             }
             set_country_flag = rgr_draft_happened
         }
@@ -829,7 +823,7 @@ political_decisions = {
             leadership = 20
             add_country_modifier = {
                 name = small_country_draft
-                duration = 30
+                duration = 365
             }
             set_country_flag = yucatan_draft_happened
         }
@@ -1167,6 +1161,31 @@ political_decisions = {
             860 = { remove_core = BUL }
         }
         ai_will_do = { factor = 1 }
+    }
+
+    claim_ulster = {
+        picture = ulster_scot
+        potential = {
+            tag = SCO
+            is_vassal = no
+            NOT = { has_country_flag = ulster_scot }
+        }
+        
+        allow = {
+            is_greater_power = yes
+            revolution_n_counterrevolution = 1
+            war_policy = jingoism
+            war = no
+        }
+        
+        effect = {
+            set_country_flag = ulster_scot
+            ENG_254 = { add_core = SCO }
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
     }
 
 }

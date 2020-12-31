@@ -89,6 +89,8 @@ political_decisions = {
                 }
             }
         }
+
+        ai_will_do = { factor = 1 }
     }
 
 # USA
@@ -226,6 +228,8 @@ political_decisions = {
             prestige = 1
             set_country_flag = custers_expedition_sent
         }
+
+        ai_will_do = { factor = 1 }
     }
 
     enact_the_homestead_act = {
@@ -247,9 +251,11 @@ political_decisions = {
             set_country_flag = homestead_act
             add_country_modifier = {
                 name = the_homestead_act
-                duration = 3650
+                duration = -1
             }
         }
+
+        ai_will_do = { factor = 1 }
     }
 
     bixby_letter = {
@@ -270,6 +276,8 @@ political_decisions = {
             set_country_flag = bixby_letter_sent
             war_exhaustion = -2
         }
+
+        ai_will_do = { factor = 1 }
     }
 
     enact_anaconda_plan = {
@@ -296,6 +304,8 @@ political_decisions = {
             }
             set_global_flag = anaconda_plan_active
         }
+
+        ai_will_do = { factor = 1 }
     }
 
     shermans_march_to_the_sea = {
@@ -338,6 +348,8 @@ political_decisions = {
                 war_exhaustion = 4
             }
         }
+
+        ai_will_do = { factor = 1 }
     }
 
     emancipation_proclamation = {
@@ -379,6 +391,8 @@ political_decisions = {
                 }
             }
         }
+
+        ai_will_do = { factor = 1 }
     }
     manifest_destiny = {
         potential = {
@@ -505,7 +519,38 @@ political_decisions = {
                 }
                 consciousness = 2
             }
+            MEX = {
+                any_pop = {
+                    limit = {
+                        location = {
+                            is_core = CAL
+                        }
+                        culture = yankee
+                    }
+                    reduce_pop = 5
+                }
+                any_pop = {
+                    limit = {
+                        location = {
+                            is_core = CAL
+                        }
+                        culture = mexican
+                    }
+                    reduce_pop = 0.4
+                }
+                any_pop = {
+                    limit = {
+                        location = {
+                            is_core = CAL
+                        }
+                        culture = native_american_minor
+                    }
+                    reduce_pop = 0.4
+                }
+            }
         }
+        
+        ai_will_do = { factor = 1 }
     }
     gag_rule = {
         picture = gag_rule
@@ -532,6 +577,8 @@ political_decisions = {
             }
             set_country_flag = house_gag_rule_enacted
         }
+
+        ai_will_do = { factor = 1 }
     }
 
     corwin_amendment = {
@@ -559,6 +606,8 @@ political_decisions = {
             }
             set_country_flag = corwin_amendment_enacted
         }
+
+        ai_will_do = { factor = 1 }
     }
 
     fugitive_slave_act = {
@@ -584,6 +633,8 @@ political_decisions = {
             any_pop = { limit = { location = { state_scope = { is_slave = yes } } } consciousness = -2 }
             set_country_flag = fugitive_slave_act_enacted
         }
+
+        ai_will_do = { factor = 1 }
     }
 
     nashville_convention = {
@@ -608,6 +659,8 @@ political_decisions = {
             any_pop = { limit = { location = { state_scope = { is_slave = yes } } } consciousness = -3 }
             set_country_flag = nashville_convention_held
         }
+
+        ai_will_do = { factor = 1 }
     }
 
     ostend_manifesto = {
@@ -713,6 +766,8 @@ political_decisions = {
             any_pop = { limit = { location = { state_scope = { NOT = { is_slave = yes } } } } consciousness = 1 }
             set_country_flag = kansas_nebraska_act_acting
         }
+
+        ai_will_do = { factor = 1 }
     }
 
     wilmot_proviso = {
@@ -933,6 +988,7 @@ political_decisions = {
             any_pop = { limit = { location = { state_scope = { is_slave = yes } } } consciousness = 1 }
             any_pop = { limit = { location = { state_scope = { NOT = { is_slave = yes } } } } consciousness = -2 }
         }
+        ai_will_do = { factor = 1 }
     }
 
     form_kellys_irish_brigade = {
@@ -951,6 +1007,9 @@ political_decisions = {
         }
 
         effect = {
+            small_arms = 300
+            regular_clothes = 300
+            canned_food = 300
             random_pop = {
                 limit = {
                     pop_type = farmers
@@ -961,6 +1020,8 @@ political_decisions = {
             war_exhaustion = -1
             set_country_flag = kellys_irish_brigade
         }
+
+        ai_will_do = { factor = 1 }
     }
 
     raise_the_bonnie_blue_flag = {
@@ -1018,8 +1079,8 @@ political_decisions = {
                 background = rising_star
             }
 
-            #small_arms = 100
-            #regular_clothes = 100
+            small_arms = 100
+            regular_clothes = 100
 
             add_country_modifier = {
                 name = the_bonnie_blue_flag
@@ -1028,6 +1089,7 @@ political_decisions = {
 
             set_country_flag = bonnie_blue_flag
         }
+        ai_will_do = { factor = 1 }
     }
 
     enact_radical_reconstruction = {
@@ -1054,6 +1116,7 @@ political_decisions = {
             any_pop = { militancy = -3 }
             remove_country_modifier = the_slavery_debate
             remove_accepted_culture = dixie
+            remove_accepted_culture = texan
             any_owned = {
                 limit = { is_core = CSA }
                 add_province_modifier = { name = reconstruction duration = 2555 }
@@ -1063,8 +1126,23 @@ political_decisions = {
                 consciousness = -3
                 militancy = -3
             }
+            any_pop = {
+                limit = { 
+                    has_pop_culture = dixie
+                    type = soldiers
+                }
+                reduce_pop = 0.7
+                pop_type = farmers
+            }
+            any_owned = {
+                limit = {
+                    produces = cotton
+                }
+                remove_province_modifier = king_cotton
+            }
             set_country_flag = has_used_radical_reconstruction
         }
+        ai_will_do = { factor = 1 }
     }
 
     annex_hawaii = {
@@ -1183,6 +1261,8 @@ political_decisions = {
                 658 = { add_core = USA }
             }
         }
+
+        ai_will_do = { factor = 1 }
     }
 
     sell_alaska = {
@@ -1227,6 +1307,10 @@ political_decisions = {
                     }
                 }
                 set_country_flag = alaska_purchase_interest
+            }
+            random_country = {
+                limit = { tag = USA }
+                relation = { who = THIS value = 50 }
             }
         }
         ai_will_do = {
@@ -1451,6 +1535,7 @@ political_decisions = {
             100 = { owned_by = THIS NOT = { is_core = MEX } }
             104 = { owned_by = THIS NOT = { is_core = MEX } }
             105 = { owned_by = THIS NOT = { is_core = MEX } }
+            NOT = { check_variable = { which = owed_cash_money value = 1 } }
         }
 
         allow = {
@@ -1768,6 +1853,7 @@ political_decisions = {
             random_owned = { limit = { province_id = 138 } remove_core = RGR }
             set_country_flag = clay_and_douglas_draft_enacted
         }
+        ai_will_do = { factor = 1 }
     }
 
     offer_to_buy_cuba = {
@@ -1818,6 +1904,7 @@ political_decisions = {
                 owner = { country_event = 90131 }
             }
         }
+        ai_will_do = { factor = 1 }
     }
 
     annexation_santo_domingo = {

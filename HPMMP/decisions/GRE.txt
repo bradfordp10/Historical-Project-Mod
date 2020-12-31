@@ -8,6 +8,7 @@ political_decisions = {
             capital_scope = { continent = europe }
             847 = { is_colonial = yes }
             civilized = yes
+            NOT = { has_country_flag = make_crete_a_state }
         }
 
         allow = {
@@ -15,6 +16,7 @@ political_decisions = {
         }
 
         effect = {
+            set_country_flag = make_crete_a_state
             release = CRE
             inherit = CRE
         }
@@ -32,7 +34,7 @@ political_decisions = {
         allow = {
             plurality = 40
             OR = {
-                prestige = 40
+                prestige = 20
                 state_n_government = 1
             }
         }
@@ -59,7 +61,16 @@ political_decisions = {
 
         allow = {
             NOT = { has_country_flag = population_exchange_with_turkey }
-            invention = national_fraternity
+            TUR = { is_greater_power = no }
+            OR = {
+                AND = {
+                    year = 1890
+                    invention = national_fraternity         
+                }
+                TUR = {
+                    has_country_flag = ottomans_to_turks
+                }
+            }
             owns = 832
             owns = 805
             owns = 823
@@ -199,6 +210,7 @@ political_decisions = {
                     NOT = {
                         government = democracy
                         government = hms_government
+                        government = prussian_constitutionalism
                     }
                 }
             }
@@ -213,6 +225,7 @@ political_decisions = {
                 NOT = {
                     government = democracy
                     government = hms_government
+                    government = prussian_constitutionalism
                 }
             }
             modifier = {
@@ -222,6 +235,17 @@ political_decisions = {
                     government = bourgeois_dictatorship
                     government = absolute_monarchy
                 }
+            }
+            modifier = {
+                factor = 0
+                GRE = {
+                    NOT = {
+                        government = prussian_constitutionalism
+                        government = hms_government
+                        government = absolute_monarchy
+                    }
+                }                                     
+                government = absolute_monarchy
             }
         }
     }

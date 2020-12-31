@@ -22,8 +22,14 @@ political_decisions = {
         allow = {
             war = no
             OR = {
+                year = 1870
                 steel_breech_loaded_artillery = 1
                 machine_guns = 1
+                AND = {
+                    nationalism_n_imperialism = 1
+                    has_country_modifier = prussian_general_staff 
+                    ai = no
+                }
             }
             FRA = {
                 war = no
@@ -32,12 +38,37 @@ political_decisions = {
                     relation = { who = THIS value = 100 }
                 }
             }
+            OR = {
+                AND = {
+                    BAV = { in_sphere = THIS }
+                    WUR = { in_sphere = THIS }
+                    BAD = { in_sphere = THIS }
+                }
+                SGF = { in_sphere = THIS }
+                year = 1860
+            }
+            crisis_exist = no
         }
 
         effect = {
             prestige = 5
             FRA = { country_event = 19200 }
             set_country_flag = ems_dispatch_sent
+            set_global_flag = franco_prussian_war_started
+            any_pop = {
+                limit = { is_primary_culture = yes }
+                militancy = -6
+            }
+            any_country = {
+                limit = {
+                    primary_culture = south_german
+                    NOT = { tag = AUS }
+                    NOT = { tag = KUK }
+                    NOT = { tag = BAN }
+                    exists = yes
+                }
+                country_event = 99999           
+            }
         }
 
         ai_will_do = {
@@ -79,11 +110,28 @@ political_decisions = {
             set_global_flag = germania_werft_has_been_built
             prestige = 10
             treasury = -50000
-            369 = {
-                naval_base = 6
-                add_province_modifier = { name = germania_werft duration = -1 }
+            andom_owned = {
+                limit = {
+                    province_id = 369
+                    state_scope = {
+                        NOT = { has_building = aeroplane_factory }
+                    }
+                }
+                owner = { 
+                    capital = 369
+                    build_factory_in_capital_state = steamer_shipyard
+                }
+                369 = {
+                    naval_base = 6
+                    add_province_modifier = {
+                        name = germania_werft
+                        duration = -1
+                    }
+                }
             }
         }
+
+        ai_will_do = { factor = 1 }
     }
 
     support_ruhr_industrialism = {
@@ -120,6 +168,8 @@ political_decisions = {
             tech_school = prussian_tech_school
             prestige = 5
         }
+
+        ai_will_do = { factor = 1 }
     }
 
     die_wacht_am_rhein = {
@@ -163,6 +213,8 @@ political_decisions = {
                 }
             }
         }
+
+        ai_will_do = { factor = 1 }
     }
 
     niederwald_denkmal = {
@@ -319,7 +371,7 @@ political_decisions = {
         }
 
         allow = {
-            mass_politics = 1
+            year = 1892
             OR = {
                 is_greater_power = yes
                 invention = national_fraternity
@@ -367,6 +419,7 @@ political_decisions = {
                     duration = -1
                 }
             }
+            prestige = 5
             set_global_flag = the_walhalla_is_built
         }
     }
@@ -444,17 +497,62 @@ political_decisions = {
         }
 
         allow = {
-            market_structure = 1
-            organized_factories = 1
-            early_railroad = 1
+            OR = {
+                AND = {
+                    market_structure = 1
+                    organized_factories = 1
+                    early_railroad = 1
+                }
+                tech_school = prussian_tech_school
+            }
         }
 
         effect = {
+            random_owned = {
+                limit = {
+                    province_id = 579 #Ost-Rhineland
+                    state_scope = {
+                        NOT = { has_building = steel_factory }
+                    }
+                }
+                
+                owner = { 
+                    capital = 579
+                    build_factory_in_capital_state = steel_factory
+                }
+            }
             add_country_modifier = {
                 name = ruhr_boom
                 duration = 3650
             }
+            add_country_modifier = {
+                name = global_baby_boom_small
+                duration = 720
+            }
+            any_owned = {
+                limit = {
+                    OR = {
+                        region = PRU_575 #Rheinland
+                        region = PRU_578 #Eastern Rheinland
+                        region = PRU_581 #Westfalen
+                        province_id = 573 #Saar
+                    }
+                }
+                add_province_modifier = {
+                    name = ruhr_boom_city
+                    duration = 720
+                }
+            }
+            capital_scope = {
+                add_province_modifier = {
+                    name = baby_boom
+                    duration = 365
+                }
+            }
             set_global_flag = ruhr_boom_has_happened
+        }
+        ai_will_do = { 
+            factor = 1 
         }
     }
 
@@ -664,7 +762,10 @@ political_decisions = {
 
         allow = {
             war = no
-            revolution_n_counterrevolution = 1
+            OR = {
+                revolution_n_counterrevolution = 1
+                tag = GER
+            }
             OR = {
                 ruling_party_ideology = liberal
                 ruling_party_ideology = conservative
@@ -685,8 +786,14 @@ political_decisions = {
                     factor = 0.2
                     value = jingoism
                 }
+                ideology = {
+                    factor = 0.05
+                    value = conservative
+                }
             }
+
         }
+        ai_will_do = { factor = 1 }
     }
 
     reclaim_alsace_lorraine = {
@@ -821,6 +928,31 @@ political_decisions = {
                 }
                 country_event = 33025
             }
+        }
+    }
+
+    annex_limburg = {
+        picture = treaty_signing
+        potential = {
+            has_country_flag = limburg_crisis
+            LBG = { exists = yes }
+        }
+        
+        allow = {
+            war = no
+            is_sphere_leader_of = LBG
+            LBG = {
+                exists = yes
+                is_vassal = no
+            }
+        }
+        
+        effect = {
+            clr_country_flag = limburg_crisis
+            any_country = { clr_country_flag = limburg_crisis_NET }
+            any_country = { limit = { has_country_flag = support_netherlands } clr_country_flag = support_netherlands leave_alliance = NET }
+            any_country = { release = LBG leave_alliance = LBG }
+            inherit = LBG
         }
     }
 

@@ -7,6 +7,8 @@ political_decisions = {
             NOT = {
                 tag = TUR
                 tag = RUS
+                tag = SAR
+                tag = SIC
                 is_vassal = yes
                 has_global_flag = called_congo_conference
             }
@@ -20,7 +22,7 @@ political_decisions = {
             has_global_flag = berlin_conference
             slavery = no_slavery
             war = no
-            total_pops = 800000
+            total_pops = 1000000
             OR = {
                 AND = {
                     is_secondary_power = yes
@@ -97,12 +99,12 @@ political_decisions = {
                 government = prussian_constitutionalism
                 government = absolute_monarchy
             }
+            has_country_flag = colonial_beginnings
             NOT = { has_country_flag = force_publique_formed }
         }
         allow = {
             any_owned_province = {
                 continent = africa
-                is_colonial = yes
             }
             military_logistics = 1
         }
@@ -739,5 +741,41 @@ political_decisions = {
         }
 
         ai_will_do = { factor = 1 }
+    }
+
+    law_of_equality = {
+        picture = law_of_equality
+        potential = {
+            tag = BEL
+            owns = 390
+            NOT = { accepted_culture = flemish }
+            NOT = { has_country_flag = law_of_equality }
+        }
+
+        allow = {
+            war = no
+            OR = {
+                revolution_n_counterrevolution = 1
+                387 = { average_militancy = 6 }
+                num_of_revolts = 1
+            }
+        }
+
+        effect = {
+            set_country_flag = law_of_equality
+            prestige = 5
+            add_accepted_culture = flemish
+            any_pop = {
+                limit = {
+                    has_pop_culture = flemish
+                }
+                militancy = -5
+                consciousness = -5
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
     }
 }

@@ -115,9 +115,7 @@ annex_california = {
         has_global_flag = bear_flag_revolt
         has_global_flag = mexican_american_war
         has_country_flag = hasmanifestdestiny
-###        OR = {  has_country_flag = treaty_of_guadalupe_hidalgo
-###            MEX = { has_recently_lost_war = yes }
-###        }
+        neighbour = CAL
         NOT = { has_country_flag = second_velasco }
         NOT = { has_country_flag = annex_california }
     }

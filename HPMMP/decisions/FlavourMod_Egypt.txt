@@ -106,16 +106,13 @@ political_decisions = {
 		effect = {
 			set_country_flag = enact_ismail_pasha_reforms
 			prestige = 15
-			#Bonus for AI
-			random_owned = {
+			random_country = {
 				limit = {
-					owner = {
-						ai = yes 
-						vassal_of = TUR
-					}
+					tag = TUR
+					ai = yes
+					is_our_vassal = EGY
 				}
 				TUR = { 
-					release = EGY 
 					release_vassal = EGY 
 				}
 			}
