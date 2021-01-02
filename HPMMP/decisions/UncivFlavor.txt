@@ -85,6 +85,9 @@ political_decisions = {
             set_country_flag = muhammad_alis_reforms_enacted
             prestige = 5
             treasury = 5000
+            small_arms = 20
+            regular_clothes = 50
+            military_reform = yes_foreign_navies
             military_reform = yes_foreign_training
             economic_reform = finance_reform_two
             add_country_modifier = {
@@ -223,6 +226,7 @@ political_decisions = {
             }
             any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } militancy = -4 }
         }
+        ai_will_do = { factor = 1 }
     }
 
     conquest_of_the_south = {
@@ -278,6 +282,7 @@ political_decisions = {
 
         effect = {
             set_country_flag = conquest_of_the_south
+            years_of_research = 1
             1864 = { add_core = ETH secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 21 }
             1866 = { add_core = ETH secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 21 }
             1867 = { add_core = ETH secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 21 }
@@ -300,6 +305,7 @@ political_decisions = {
             OR = {
                 civilized = yes
                 civilization_progress = 0.5
+                year = 1886
             }
             owns = 1859
         }
@@ -307,6 +313,7 @@ political_decisions = {
         effect = {
             set_country_flag = addis_ababa_built
             prestige = 5
+            years_of_research = 1
             1859 = {
                 change_province_name = "Addis Ababa"
                 life_rating = 5
@@ -591,6 +598,8 @@ political_decisions = {
         potential = {
             1875 = { empty = yes }
             civilized = yes
+            has_global_flag = berlin_conference
+            total_amount_of_ships = 50
             OR = {
                 AND = {
                     OR = {
@@ -607,6 +616,7 @@ political_decisions = {
                 AND = {
                     is_canal_enabled = 2
                     capital_scope = { continent = europe }
+                    NOT = { tag = TUR }
                     any_owned_province = {
                         OR = {
                             AND = {
@@ -659,6 +669,40 @@ political_decisions = {
             1875 = { secede_province = THIS life_rating = 25 }
         }
 
+        ai_will_do = { factor = 1 }
+    }
+
+    commodities_in_south_east_asia = {
+        picture = coffee_in_colombia
+        potential = {
+            OR = {
+                owns = 1369
+                owns = 1346                            
+            }
+            NOT = { has_global_flag = commodities_in_south_east_asia_placed }
+        }
+        
+        allow = {
+            war = no
+            OR = {
+                year = 1890
+                modern_central_bank_system = 1
+            }
+        }
+        
+        effect = {
+            set_global_flag = commodities_in_south_east_asia_placed
+            #Vietnam
+            1369 = { trade_goods = tea }
+            1370 = { trade_goods = coffee }
+            1371 = { trade_goods = coffee }
+            1376 = { trade_goods = coffee }
+            1375 = { trade_goods = tobacco }
+            #Thailand
+            1346 = { trade_goods = coffee }
+            1358 = { trade_goods = coffee }
+        }
+        
         ai_will_do = { factor = 1 }
     }
 

@@ -225,7 +225,17 @@ political_decisions = {
         picture = map_central_america
         potential = {
             2190 = { NOT = { owned_by = THIS } owner = { NOT = { capital_scope = { continent = north_america } } } }
-            2189 = { owned_by = THIS }
+            2189 = { 
+                OR = {
+                    owned_by = THIS
+                    owner = {
+                        in_sphere = THIS
+                        vassal_of = THIS
+                        war = no
+                        is_greater_power = no
+                    }
+                }
+            }
             BLZ = { exists = no }
             OR = {
                 primary_culture = central_american
