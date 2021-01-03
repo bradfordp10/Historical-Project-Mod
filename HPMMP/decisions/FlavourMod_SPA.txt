@@ -1,0 +1,687 @@
+political_decisions = {
+	colonial_reconquista = {
+		picture = spain_reconquest
+		potential = {
+			OR = {
+				tag = IBR
+				tag = SPC
+			}
+			NOT = { year = 1890 }
+			NOT = { has_global_flag = reconquista }
+		}
+
+		allow = {
+			is_greater_power = yes
+			war = no
+			war_policy = jingoism
+		}
+
+		effect = {
+			prestige = 5
+			badboy = 3
+			any_country = {
+				limit = {
+					OR = {
+						capital_scope = { continent = south_america }
+						capital_scope = { continent = north_america }
+					}
+					NOT = { 
+						tag = USA
+						tag = TEX
+						tag = BRZ
+					}
+				}
+				country_event = {
+					id = 99988
+					days = 15
+				}
+			}	
+			any_pop = {
+				limit = { 
+					is_culture_group = iberian
+					pop_majority_ideology = reactionary
+				}
+				militancy = -5
+			}
+			any_pop = {
+				limit = { 
+					is_culture_group = iberian
+					pop_majority_ideology = conservative
+				}
+				militancy = -5
+			}
+			any_pop = {
+				limit = { 
+					is_culture_group = iberian
+					pop_majority_ideology = liberal
+				}
+				militancy = 2
+			}
+			set_global_flag = reconquista
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	colonial_reconquista_frca = {
+		picture = map_central_america
+		potential = {
+			OR = {
+				tag = IBR
+				tag = SPC
+			}
+			UCA = {
+				exists = yes
+				num_of_revolts = 1
+			}
+			NOT = { has_country_flag = reconquista_frca }
+		}
+
+		allow = {
+			is_greater_power = yes
+			war = no
+			war_policy = jingoism
+		}
+
+		effect = {
+			set_country_flag = reconquista_frca
+			prestige = 5
+			badboy = 5
+			casus_belli = {
+				target = UCA
+				type = make_puppet
+				months = 12
+			}
+			war = {
+				target = UCA
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = no
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	spanish_reconquest_vns = {
+		picture = spain_reconquest_vns
+		potential = {
+			OR = {
+				tag = IBR
+				tag = SPC
+				tag = SPA
+			}
+			is_greater_power = yes
+			has_global_flag = reconquista
+			NOT = { has_country_flag = reconquest_vns }
+		}
+
+		allow = {
+			war = no
+			MEX = {
+				OR = { 
+					all_core = {
+						OR = {
+							MEX = { 
+								vassal_of = THIS
+							}
+							OR = {
+								owned_by = THIS
+								owner = {
+									in_sphere = THIS
+									vassal_of = THIS
+								}
+							}
+						}
+					}
+					vassal_of = THIS
+				}
+			}
+			OR = {
+				UCA = {
+					vassal_of = THIS
+				}
+				2193 = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+					}
+				}
+				2192 = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+					}
+				}
+				2186 = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+					}
+				}
+				2197 = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+					}
+				}
+				2201 = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							vassal_of = THIS
+						}
+					}
+				}
+			}
+		}
+
+		effect = {	
+			prestige = 5
+			COS = {
+				government = democracy
+				
+			}
+			ELS = {
+				government = democracy
+			}
+			HON = {
+				government = democracy
+			}
+			NIC = {
+				government = democracy
+			}
+			GUA = {
+				government = democracy
+			}
+			MEX = {
+				government = absolute_monarchy
+				inherit = HON
+				inherit = NIC
+				inherit = GUA
+				inherit = ELS
+				inherit = COS
+				inherit = UCA
+			}
+			relation = {
+				who = MEX
+				value = 400
+			}
+			diplomatic_influence = {
+				who = MEX
+				value = 200
+			}
+			create_alliance = MEX
+			create_vassal = MEX
+			set_country_flag = reconquest_vns
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	spanish_reconquest_vng = {
+		picture = spain_reconquest_vng
+		potential = {
+			OR = {
+				tag = IBR
+				tag = SPC
+				tag = SPA
+			}
+			is_greater_power = yes
+			has_global_flag = reconquista
+			NOT = { has_country_flag = reconquest_vng }
+		}
+
+		allow = {
+			war = no
+			CLM = {
+				OR = {
+					vassal_of = THIS
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+								vassal_of = THIS
+								war = no
+								is_greater_power = no
+							}
+						}
+					}
+				}
+			}
+			VNZ = {
+				OR = {
+					vassal_of = THIS
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+								vassal_of = THIS
+								war = no
+								is_greater_power = no
+							}
+						}
+					}
+				}
+			}
+			ECU = {
+				OR = {
+					vassal_of = THIS
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+								vassal_of = THIS
+								war = no
+								is_greater_power = no
+							}
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			prestige = 5
+			VNZ = {
+				government = democracy
+			}
+			ECU = {
+				government = democracy
+			}
+			CLM = {
+				government = democracy
+			}
+			GCO = {
+				government = absolute_monarchy
+				inherit = CLM
+				inherit = VNZ
+				inherit = ECU
+			}
+		
+			relation = {
+				who = GCO
+				value = 400
+			}
+			diplomatic_influence = {
+				who = GCO
+				value = 200
+			}
+			create_alliance = GCO
+			create_vassal = GCO
+			set_country_flag = reconquest_vng
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	spanish_reconquest_vop = {
+		picture = spain_reconquest_vop
+		potential = {
+			OR = {
+				tag = IBR
+				tag = SPC
+				tag = SPA
+			}
+			is_greater_power = yes
+			has_global_flag = reconquista
+			NOT = { has_country_flag = reconquest_vop }
+		}
+
+		allow = {
+			war = no
+			PEU = {
+				OR = {
+				vassal_of = THIS
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+								vassal_of = THIS
+								war = no
+								is_greater_power = no
+							}
+						}
+					}
+				}
+			}
+			BOL = {
+				OR = {
+					vassal_of = THIS
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+								vassal_of = THIS
+								war = no
+								is_greater_power = no
+							}
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			prestige = 5
+			BOL = {
+				government = democracy
+			}
+			PEU = {
+				government = democracy
+			}
+			PBC = {
+				government = absolute_monarchy
+				inherit = BOL
+				inherit = PEU
+			}
+
+			relation = {
+				who = PBC
+				value = 400
+			}
+			diplomatic_influence = {
+				who = PBC
+				value = 200
+			}
+			create_alliance = PBC
+			create_vassal = PBC
+			set_country_flag = reconquest_vop
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	spanish_reconquest_cgc = {
+		picture = spain_reconquest_cgc
+		potential = {
+			OR = {
+				tag = IBR
+				tag = SPC
+				tag = SPA
+			}
+			is_greater_power = yes
+			has_global_flag = reconquista
+			NOT = { has_country_flag = reconquest_cgc }
+		}
+
+		allow = {
+			war = no
+			CHL = {
+				OR = {
+					vassal_of = THIS
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+								vassal_of = THIS
+								war = no
+								is_greater_power = no
+							}
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			prestige = 5
+			relation = {
+				who = CHL
+				value = 400
+			}
+			diplomatic_influence = {
+				who = CHL
+				value = 200
+			}	
+			create_alliance = CHL
+			create_vassal = CHL
+			set_country_flag = reconquest_cgc
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	spanish_reconquest_vlp = {
+		picture = spain_reconquest_vlp
+		potential = {
+			OR = {
+				tag = IBR
+				tag = SPC
+				tag = SPA
+			}
+			is_greater_power = yes
+			has_global_flag = reconquista
+			NOT = { has_country_flag = reconquest_vlp }
+		}
+
+		allow = {
+			war = no
+			OR = {  
+				ARG = {
+					OR = {
+						vassal_of = THIS
+						all_core = {
+							OR = {
+								owned_by = THIS
+								owner = {
+									in_sphere = THIS
+									vassal_of = THIS
+									war = no
+									is_greater_power = no
+								}
+							}
+						}
+					}
+				}
+				ARC = {
+					OR = {
+						vassal_of = THIS
+						all_core = {
+							OR = {
+								owned_by = THIS
+								owner = {
+									in_sphere = THIS
+									vassal_of = THIS
+									war = no
+									is_greater_power = no
+								}
+							}
+						}
+					}
+				}
+			}
+			URU = {
+				OR = {
+					vassal_of = THIS
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+								vassal_of = THIS
+								war = no
+								is_greater_power = no
+							}
+						}
+					}
+				}
+			}
+			PRG = {
+				OR = {
+					vassal_of = THIS
+					all_core = {
+						OR = {
+							owned_by = THIS
+							owner = {
+								in_sphere = THIS
+								vassal_of = THIS
+								war = no
+								is_greater_power = no
+							}
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			prestige = 5
+			URU = {
+				government = democracy
+			}
+			PRG = {
+				government = democracy
+			}
+			ARC = {
+				government = democracy
+			}
+			ARG = {
+				government = democracy
+			}
+			LPL = {
+				government = absolute_monarchy
+				inherit = ARG
+				inherit = ARC
+				inherit = PRG
+				inherit = URU
+			}
+			relation = {
+				who = LPL
+				value = 400
+			}
+			diplomatic_influence = {
+				who = LPL
+				value = 200
+			}	
+			create_alliance = LPL
+			create_vassal = LPL
+			set_country_flag = reconquest_vlp
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	colony_rebel_again = {
+		picture = spain_reconquest
+		potential = {
+			OR = {
+				AND = {
+					OR = {
+						tag = MEX
+						tag = ELS
+						tag = GUA
+						tag = UCA
+						tag = HON
+						tag = COS
+						tag = NIC
+					}
+					OR = {
+						SPC = { has_country_flag = reconquest_vns }
+						IBR = { has_country_flag = reconquest_vns }
+						SPA = { has_country_flag = reconquest_vns }
+					}
+				}
+				AND = {
+					OR = {
+						tag = CLM
+						tag = VNZ
+						tag = ECU
+						tag = GCO
+					}
+					OR = {
+						SPC = { has_country_flag = reconquest_vng }
+						IBR = { has_country_flag = reconquest_vng }
+						SPA = { has_country_flag = reconquest_vng }
+					}
+				}
+				AND = {
+					OR = {
+						tag = PEU
+						tag = BOL
+						tag = PBC
+					}
+					OR = {
+						SPC = { has_country_flag = reconquest_vop }
+						IBR = { has_country_flag = reconquest_vop }
+						SPA = { has_country_flag = reconquest_vop }
+					}
+				}
+				AND = {
+					tag = CHL
+					OR = {
+						SPC = { has_country_flag = reconquest_cgc }
+						IBR = { has_country_flag = reconquest_cgc }
+						SPA = { has_country_flag = reconquest_cgc }
+					}
+				}
+				AND = {
+					OR = {
+						tag = ARG
+						tag = ARC
+						tag = PRG
+						tag = URU
+						tag = LPL
+					}
+					OR = {
+						SPC = { has_country_flag = reconquest_vlp }
+						IBR = { has_country_flag = reconquest_vlp }
+						SPA = { has_country_flag = reconquest_vlp }
+					}
+				}
+			}
+			NOT = {
+				vassal_of = SPC
+				vassal_of = SPA
+				vassal_of = IBR
+			}
+			NOT = { has_country_flag = colony_rebel_again }
+		}
+
+		allow = {
+			war = no
+		}
+
+		effect = {
+			government = democracy
+			set_country_flag = colony_rebel_again 
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
