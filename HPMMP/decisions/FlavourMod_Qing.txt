@@ -251,11 +251,6 @@ political_decisions = {
 				personality = intelligent
 				background = gifted_administrator
 			}
-			any_pop = {	
-				militancy = -2
-				consciousness = -2
-			}	
-			grain = 250
 			set_variable = { which = china_destablization value = 1 }
 		}
 		ai_will_do = { factor = 1 }
@@ -299,8 +294,6 @@ political_decisions = {
 				background = gifted_administrator
 			}
 			set_global_flag = the_xiang_army
-			any_pop = {	militancy = -1 consciousness = -1 }	
-			grain = 250
 			set_variable = { which = china_destablization value = 1 }
 		}
 		ai_will_do = { factor = 1 }
@@ -789,7 +782,6 @@ political_decisions = {
 			random_owned = {
 				limit = { owner = { civilized = no } }
 				owner = { economic_reform = yes_education_reform  }
-				owner = { economic_reform = yes_land_reform }
 			}
 			activate_technology = private_banks
 			activate_technology = no_standard

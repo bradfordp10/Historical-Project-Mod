@@ -33,7 +33,6 @@ political_decisions = {
 			}
 			year = 1855
 			exists = LUX
-			NET = { ai = yes }
 			LUX = { vassal_of = NET }
 			NOT = { has_country_flag = claim_luxmebourg }
 		}
@@ -249,7 +248,6 @@ political_decisions = {
 						}
 					}
 				}
-				ai = no
 			}
 		}
 		
@@ -273,7 +271,6 @@ political_decisions = {
 			has_country_flag = 2nd_empire
 			has_country_modifier = louis_napoleon_iii
 			ITA = {
-				ai = yes
 				exists = yes
 				owns = 750 #Viterbo
 				NOT = { owns = 749 } #Rome

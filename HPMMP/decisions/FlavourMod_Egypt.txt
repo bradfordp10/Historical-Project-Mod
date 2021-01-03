@@ -112,9 +112,7 @@ political_decisions = {
 					ai = yes
 					is_our_vassal = EGY
 				}
-				TUR = { 
-					release_vassal = EGY 
-				}
+				release_vassal = EGY
 			}
 			add_country_modifier = {
 				name = ismail_pasha_reforms

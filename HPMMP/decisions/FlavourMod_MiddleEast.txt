@@ -239,19 +239,13 @@ political_decisions = {
 		
 		allow = {
 			war = no
-			OR = {
-				state_n_government = 1
-				year = 1843
-			}
+			state_n_government = 1
 			NOT = { war_policy = pacifism }
 		}
 		
 		effect = {
 			set_country_flag = reforms_of_abdulmejid_I
 			political_reform = mandatory_service
-			activate_technology = muzzle_loaded_rifles
-			activate_technology = military_staff_system
-			activate_technology = iron_muzzle_loaded_artillery
 			any_pop = {
 				limit = { type = officers }
 				consciousness = -1
@@ -325,9 +319,6 @@ political_decisions = {
 			political_reform = mandatory_service
 			government = absolute_monarchy	
 			tech_school = army_tech_school
-			activate_technology = army_professionalism 
-			activate_technology = military_plans
-			activate_technology = breech_loaded_rifles
 			add_country_modifier = {
 				name = abdulmejid_i_reforms
 				duration = 14600

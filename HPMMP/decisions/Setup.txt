@@ -522,6 +522,7 @@ political_decisions = {
 
         effect = {
             add_country_modifier = {name = smithian_school duration = 3650 }
+            add_country_modifier = { name = eic_balance2 duration = 8030 }               
             any_pop = {
                 limit = {
                     OR = {
