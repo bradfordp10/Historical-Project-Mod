@@ -1,0 +1,407 @@
+#War Exhaustion & Militancy Buff
+country_event = {
+	id = 99927
+	title = "EVTNAME99912"
+	desc = "EVTDESC99912"
+	trigger = {
+		has_global_flag = the_xiang_army
+		tag = QNG
+		ai = yes
+		1082 = { owned_by = RUS }
+		OR = {
+			war_exhaustion = 70
+			average_militancy = 6
+		}
+		has_global_flag = taiping_has_happened
+		TPG = { ai = yes  exists = yes }		
+	}
+	
+	option = {
+		name = "EVTOPT99905"
+		war_exhaustion = -60
+		any_pop = {	militancy = -6 consciousness = -2 }
+	}
+}
+
+#Taiping Losing Boost
+country_event = {
+	id = 99929
+	title = "EVTNAME99929"
+	desc = "EVTDESC99929"
+	fire_only_once = yes	
+	
+	trigger = {
+		ai = yes
+		war = yes
+		tag = TPG
+		war_exhaustion = 50
+		OR = {
+			has_global_flag = ever_victorious_army
+			NOT = { military_score = 100 }
+			QNG = { brigades_compare = 0.7 }	
+		}
+		national_provinces_occupied = 0.25
+		QNG = {  exists = yes   ai = yes }		
+	}
+
+	option = {
+		name = "EVTOPT99905"
+		any_pop = { militancy = -10 }
+		grain = 500
+		small_arms = 150
+		canned_food = 150
+		regular_clothes = 150
+		war_exhaustion = -80
+	}
+}
+
+#Taiping Declare War
+country_event = {
+	id = 99931
+	title = "EVTNAME160001" #The Taiping Rebellion
+	desc = "EVTDESC160001"
+	picture = "taiping_attack"
+	fire_only_once = yes	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVT160001OPTA"
+		plurality = -5
+		war = {
+			target = TPG
+			attacker_goal = { casus_belli = civil_war }		
+			defender_goal = { casus_belli = civil_war }
+		}		
+		set_global_flag = tpg_war_started
+		small_arms = 150
+		canned_food = 150
+		regular_clothes = 150
+		grain = 1000
+	}
+}
+
+#Taiping Western Military Intervention
+country_event = {
+	id = 99946
+	title = "EVTNAME99946"
+	desc = "EVTDESC99946"
+	fire_only_once = yes	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = "EVT99946OPTA"
+		military_access = QNG
+		relation = { who = QNG value = 150 }
+		prestige = 15
+		badboy = -1
+		treasury = -75000
+		QNG = {
+			grain = 250
+			small_arms = 50
+			war_exhaustion = -25
+			treasury = 55000
+		}
+		war = {
+			target = TPG
+			attacker_goal = { casus_belli = cut_down_to_size_taiping }
+			defender_goal = { casus_belli = humiliate }
+			call_ally = no
+		}
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "EVT99946OPTB"
+		prestige = -35
+		badboy = -3
+		relation = { who = QNG value = -100 }		
+		ai_chance = { factor = 0 }
+	}
+}
+
+#Western Intervention in China Success
+country_event = {
+	id = 99962
+	title = "EVTNAME99962"
+	desc = "EVTDESC99962"
+	picture = "qing_emperor"
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPT99962"
+		war_exhaustion = 50
+		QNG = { country_event = 99963 }
+		random_owned = { limit = { NOT = { region = CHI_2221 } } state_scope = { any_owned = { secede_province = QNG } } }
+		random_owned = { limit = { NOT = { region = CHI_2221 } } state_scope = { any_owned = { secede_province = QNG } } }
+		random_owned = { limit = { NOT = { region = CHI_2221 } } state_scope = { any_owned = { secede_province = QNG } } }
+		random_owned = { limit = { NOT = { region = CHI_2221 } } state_scope = { any_owned = { secede_province = QNG } } }
+		random_owned = { limit = { NOT = { region = CHI_2221 } } state_scope = { any_owned = { secede_province = QNG } } }
+		random_owned = { limit = { NOT = { region = CHI_2221 } } state_scope = { any_owned = { secede_province = QNG } } }
+	}
+}
+
+#Western Intervention Success - Qing Response
+country_event = {
+	id = 99963
+	title = "EVTNAME99962"
+	desc = "EVTDESC99963"
+	picture = "qing_emperor"
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPT99963"
+		war_exhaustion = -100
+		plurality = -1
+		any_owned = { limit = { controlled_by = TPG } change_controller = THIS }
+	}
+}
+
+#Taiping Victory - British Response
+country_event = {
+	id = 99968
+	title = "EVTNAME99968" 
+	desc = "EVTDESC99968"
+	picture = "taiping_attack"
+	
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "EVT99968OPTA"
+		prestige = 10
+		any_country = {
+				limit = {
+					AND = {
+						capital_scope = { continent = asia }
+						is_culture_group = east_asian
+					}
+					civilized = no
+					exists = yes
+					ai = yes
+					NOT = {
+						tag = MCK
+						tag = IMG
+						tag = XBI
+						tag = TPG
+						tag = KOR
+						part_of_sphere = yes
+					}
+				}
+				country_event = 99969
+		}
+		end_war = TPG
+		
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				FROM = { brigades_compare = 2 }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { brigades_compare = 1.5 }
+			}
+			modifier = {
+				factor = 0.5
+				has_recently_lost_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				war_exhaustion = 30
+			}
+		}
+	}
+	
+	option = {
+		name = "EVT99968OPTC"
+		prestige = 20
+		badboy = 8
+		any_country = {
+				limit = {
+					OR = {
+						capital_scope = { continent = asia }
+						tag = PGG
+					}
+					is_culture_group = east_asian
+					civilized = no
+					exists = yes
+					ai = yes
+					NOT = {
+						tag = MCK
+						tag = IMG
+						tag = TPG
+						tag = KOR
+						part_of_sphere = yes
+					}
+				}
+				country_event = 99969
+		}
+		end_war = TPG
+		1608 = { secede_province = THIS change_controller = THIS add_province_modifier = { name = treaty_port duration = -1 } remove_core = TPG }
+		1493 = { secede_province = THIS change_controller = THIS add_province_modifier = { name = treaty_port duration = -1 } remove_core = TPG }
+		1538 = { remove_core = TPG }
+		TPG = { country_event = 99970 }
+		
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 2
+				war = no
+			}
+			modifier = {
+				factor = 0
+				FROM = { brigades_compare = 2 }
+			}
+			modifier = {
+				factor = 0
+				badboy = 17
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { brigades_compare = 1.5 }
+			}
+			modifier = {
+				factor = 0.5
+				has_recently_lost_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				war_exhaustion = 30
+			}
+			modifier = {
+				factor = 2
+				war_policy = jingoism
+			}
+		}
+	}
+	
+	option = {
+		name = "EVT99968OPTD"
+		prestige = -10
+		badboy = -2
+		end_war = TPG
+		relation = { who = TPG value = 150 }
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 2.5
+				FROM = { brigades_compare = 2 }
+			}
+			modifier = {
+				factor = 2.5
+				badboy = 17
+			}
+			modifier = {
+				factor = 2.5
+				FROM = { brigades_compare = 1.5 }
+			}
+			modifier = {
+				factor = 2.5
+				has_recently_lost_war = yes
+			}
+			modifier = {
+				factor = 2.5
+				war_exhaustion = 30
+			}
+			modifier = {
+				factor = 2.5
+				war_policy = pacifism
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 99969
+	title = "EVTNAME99969" #Chinese Rebels come under British sphere of influence
+	desc = "EVTDESC99969"
+	picture = "Administration"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPT99969"
+		relation = { who = FROM value = 100 }
+		military_access = FROM
+		create_alliance = FROM
+		FROM = { diplomatic_influence = { who = THIS value = 200 } }
+		
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 2.5
+				OR = {
+					tag = PGG
+					tag = GUI
+					tag = UYG
+				}
+			}
+			modifier = {
+				factor = 0
+				tag = NIA
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB99969"
+		TPG = { inherit = THIS }
+		
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0
+				tag = PGG
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 99970
+	title = "EVTNAME99970" #British Seize Canton and Ningbo
+	desc = "EVTDESC99970"
+	picture = "Administration"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT99970OPTA"
+		war = {
+			target = ENG
+			attacker_goal = { casus_belli = unification_casus_belli state_province_id = 1493  }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+	}
+	
+	option = {
+		name = "EVT99970OPTB"
+		prestige = -25
+		any_pop = {
+			limit = {
+				OR = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			ideology = {
+				value = reactionary
+				factor = 0.05
+			}
+			militancy = 2
+			consciousness = 3
+		}
+		any_pop = {
+			limit = {
+				is_primary_culture = no
+				is_accepted_culture = no
+			}
+			militancy = 3
+			consciousness = 4
+		}
+	}
+}
