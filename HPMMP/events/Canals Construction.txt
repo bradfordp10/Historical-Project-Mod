@@ -222,6 +222,7 @@ country_event = {
     option = {
         name = "EVT36971OPTA"
         set_global_flag = suez_inauguration
+        set_country_flag = suez_builder
         clr_global_flag = suez_canal_construction
         prestige = 20
         enable_canal = 2
@@ -282,7 +283,7 @@ country_event = {
 
     trigger = {
         is_greater_power = yes
-        owns = 1755
+        has_country_flag = suez_builder
         has_global_flag = suez_inauguration
         is_canal_enabled = 2
     }
@@ -325,6 +326,7 @@ country_event = {
     trigger = {
         is_greater_power = yes
         colonial_nation = yes
+        NOT = { has_country_flag = suez_builder }
         NOT = { owns = 1755 }
         has_global_flag = suez_inauguration
         is_canal_enabled = 2
@@ -411,6 +413,10 @@ country_event = {
         modifier = {
             factor = 0.5
             EGY = { revolt_percentage = 0.5 }
+        }
+        modifier = {
+            factor = 0.01
+            has_global_flag = berlin_conference
         }
         modifier = {
             factor = 1.5
@@ -905,6 +911,16 @@ country_event = {
             }
             THIS = { treasury = 100000 }
         }
+        random_owned = {
+            limit = { owner = { tag = EGY } }
+            EGY = { plurality = -15 }
+            FROM = {
+                diplomatic_influence = {
+                    who = THIS
+                    value = 400
+                }
+            }                             
+        }
     }
 }
 
@@ -920,11 +936,36 @@ country_event = {
     option = {
         name = "EVT36981OPTA"
         treasury = 100000
+        random_owned = {
+            limit = { owner = { civilized = no } }
+            owner = { 
+                plurality = -10
+                economic_reform = yes_finance_reform 
+            }
+        }
         relation = { who = FROM value = 100 }
         FROM = { diplomatic_influence = { who = THIS value = 400 } }
         any_country = {
             limit = { NOT = { tag = FROM } is_greater_power = yes }
             diplomatic_influence = { who = THIS value = -50 }
         }
+    }
+}
+
+#The Suez Canal Company
+country_event = {
+    id = 36982
+    title = "EVTNAME36981"
+    desc = "EVTDESC36981"
+    picture = "Suez3"
+    
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT36981OPTA"
+        treasury = 450000
+        plurality = -15
+        relation = { who = FROM value = 100 }
+        1755 = { secede_province = FROM }
     }
 }

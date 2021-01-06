@@ -91,10 +91,11 @@ country_event = {
 
     option = {
         name = "EVTOPTA46301"
-        #set_country_flag = JogoBonito
+        set_country_flag = JogoBonito
         prestige = 1
         poor_strata = {
             consciousness = -2
+            militancy = 2
         }
     }
 }
@@ -374,7 +375,7 @@ country_event = {
 
     option = {
         name = "EVT110074OPTA" #Long live!
-        prestige = 1
+        prestige = 5
         remove_country_modifier = regency_government
         any_pop = { militancy = -1 consciousness = 1 }
         set_country_flag = coronation_of_pedro

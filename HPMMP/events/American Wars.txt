@@ -484,7 +484,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 12
+        months = 1
         modifier = {
             factor = 0.25
             year = 1850
@@ -525,6 +525,10 @@ country_event = {
             modifier = {
                 factor = 0.25
                 relation = { who = ENG value = 10 }
+            }
+            modifier = {
+                factor = 4
+                owns = 21
             }
             modifier = {
                 factor = 0.5
@@ -606,7 +610,16 @@ country_event = {
         badboy = -2
         prestige = -10
         USA = { country_event = 44152 }
-        CAN_13 = { add_core = ENG }
+        CAN_13 = { 
+            limit = {
+                empty = no
+            }
+            add_core = ENG
+            add_province_modifier = {
+                name = gateway_to_america
+                duration = 365
+            }
+        }
         #CAN_18 = { add_core = ENG }
         ENG_22 = { add_core = ENG }
         USA_78 = {
@@ -641,6 +654,10 @@ country_event = {
                 is_core = USA
             }
             secede_province = USA
+            add_province_modifier = {
+                name = gateway_to_america
+                duration = 3650
+            }
         }
         ai_chance = {
             factor = 95
@@ -721,6 +738,33 @@ country_event = {
             secede_province = ENG
         }
         COL = { all_core = { remove_core = ENG } }
+        any_pop = { 
+                limit = {
+                    location = { 
+                        province_id = 78
+                    }
+                    culture = native_american_minor 
+                }
+                reduce_pop = 0.1 
+            }
+            any_pop = { 
+                limit = {
+                    location = { 
+                        province_id = 79
+                    }
+                    culture = native_american_minor 
+                }
+                reduce_pop = 0.4 
+            }
+            any_pop = { 
+                limit = {
+                    location = { 
+                        province_id = 78
+                    }
+                    culture = yankee 
+                }
+                reduce_pop = 2.5
+            }
         any_pop = {
             scaled_consciousness = {
                 issue = pacifism
@@ -888,6 +932,7 @@ country_event = {
 
     option = {
         name = "EVT44154OPTB"
+        set_country_flag = oregon_war
         prestige = 5
         leave_alliance = USA
         relation = { who = USA value = -200 }

@@ -1,18 +1,18 @@
 #Mzilikazi of Matabele flees to Matabeland
-#country_event = {
-#    id = 95517
-#    title = "EVTNAME95517"
-#    desc = "EVTDESC95517"
-#    picture = "mzilikazi_flees"
-#
-#    is_triggered_only = yes
-#
-#
-#    option = {
-#        name = "EVT95517OPTA"
-#        MAT = { country_event = 95518 }
-#    }
-#}
+country_event = {
+    id = 95517
+    title = "EVTNAME95517"
+    desc = "EVTDESC95517"
+    picture = "mzilikazi_flees"
+
+    is_triggered_only = yes
+
+
+    option = {
+        name = "EVT95517OPTA"
+        MAT = { country_event = 95518 }
+    }
+}
 
 country_event = { #Mzilikazi of Matabele flees to Matabeland
     id = 95518
@@ -21,6 +21,8 @@ country_event = { #Mzilikazi of Matabele flees to Matabeland
     picture = "mzilikazi_flees"
 
     is_triggered_only = yes
+
+    fire_only_once = yes
 
     option = {
         name = "EVT95518OPTA"
@@ -38,12 +40,12 @@ country_event = { #Mzilikazi of Matabele flees to Matabeland
             any_pop = { limit = { NOT = { has_pop_culture = boer } } literacy = -0.99 }
             any_pop = { limit = { has_pop_culture = nguni } reduce_pop = 1.2 }
         }
-        #2075 = { #Serowe
-        #    add_core = MAT
-        #    secede_province = MAT
-        #    life_rating = 20
-        #    any_pop = { limit = { NOT = { has_pop_culture = boer } } literacy = -0.99 }
-        #}
+        2075 = { #Serowe
+            add_core = MAT
+            secede_province = MAT
+            life_rating = 20
+            any_pop = { limit = { NOT = { has_pop_culture = boer } } literacy = -0.99 }
+        }
 
         2108 = {
             any_pop = { limit = { has_pop_culture = nguni }
@@ -85,7 +87,7 @@ country_event = { #The Mfecane
 
     fire_only_once = yes
 
-    mean_time_to_happen = { months = 4 }
+    mean_time_to_happen = { days = 10 }
 
     option = {
         name = "EVT95519OPTA"

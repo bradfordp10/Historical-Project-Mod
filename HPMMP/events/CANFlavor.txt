@@ -374,6 +374,18 @@ country_event = {
             prestige = -100
             relation = { who = USA value = 200 }
         }
+        13 = {
+            add_province_modifier = {
+                name = vancouver_boom
+                duration = 365
+            }
+        }
+        14 = {
+            add_province_modifier = {
+                name = vancouver_boom
+                duration = 365
+            }
+        }
         relation = {
             who = CAN
             value = 400
@@ -390,6 +402,7 @@ country_event = {
             modifier = {
                 factor = 0
                 OR = {
+                    government = proletarian_dictatorship
                     government = bourgeois_dictatorship
                     government = fascist_dictatorship
                     government = presidential_dictatorship
@@ -1695,6 +1708,110 @@ country_event = {
         prestige = -10
         ai_chance = {
             factor = 5
+        }
+    }
+}
+
+country_event = {
+    id = 44356
+    title = "EVTNAME44356"
+    desc = "EVTDESC44356"
+    picture = "bagdadrailway"
+    
+    trigger = {
+        tag = CAN
+        war = no
+        has_country_flag = build_the_cnr1
+        owns = 36
+        owns = 26
+        NOT = {
+            has_country_flag = build_the_cnr2
+            has_country_modifier = in_bankrupcy
+            has_country_modifier = generalised_debt_default
+        }
+    }
+    
+    mean_time_to_happen = {
+        months = 18
+    }
+    
+    option = {
+        name = "EVTOPT44356"
+        set_country_flag = build_the_cnr2
+        treasury = -200000
+        any_owned = {
+            limit = {
+                OR = {
+                    province_id = 41
+                    province_id = 30
+                    province_id = 35
+                    province_id = 29
+                    province_id = 26
+                }
+                can_build_in_province = {
+                    building = railroad
+                }
+            }
+            infrastructure = 1
+        }
+        26 = { 
+            change_province_name = "Calgary"
+            add_province_modifier = {
+                name = gateway_to_harbor
+                duration = 365
+            }
+        }
+    }
+}
+
+country_event = {
+    id = 44357
+    title = "EVTNAME44357"
+    desc = "EVTDESC44357"
+    picture = "bagdadrailway"
+    
+    trigger = {
+        tag = CAN
+        war = no
+        has_country_flag = build_the_cnr2
+        owns = 26
+        owns = 13
+        NOT = {
+            has_country_flag = build_the_cnr3
+            has_country_modifier = in_bankrupcy
+            has_country_modifier = generalised_debt_default
+        }
+    }
+    
+    mean_time_to_happen = {
+        months = 24
+    }
+    
+    option = {
+        name = "EVTOPT44356"
+        set_country_flag = build_the_cnr3
+        prestige = 10
+        treasury = -300000
+        any_owned = {
+            limit = {
+                OR = {
+                    province_id = 28
+                    province_id = 21
+                    province_id = 20
+                    province_id = 13
+                }
+                can_build_in_province = {
+                    building = railroad
+                }
+            }
+            infrastructure = 1
+        }
+        13 = { 
+            change_province_name = "Vancouver"
+            add_province_modifier = {
+                name = gateway_to_harbor
+                duration = 720
+            }
         }
     }
 }

@@ -1246,6 +1246,7 @@ country_event = {
         name = "EVT60055559OPTA"
         623 = { #Sopron
             remove_core = AUS
+            remove_core = GER
             add_core = HUN
             secede_province = HUN
             remove_province_modifier = integration_refusal

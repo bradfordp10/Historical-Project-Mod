@@ -1072,6 +1072,8 @@ province_event = {
         any_neighbor_province = { is_core = THIS }
         owner = {
             NOT = { has_country_modifier = interment_camps }
+            NOT = { has_country_modifier = preparations_to_kill } 
+            NOT = { any_owned_province = { has_province_modifier = genocide } }
             is_substate = no
             civilized = yes
             is_vassal = no
@@ -1082,8 +1084,23 @@ province_event = {
     mean_time_to_happen = {
         months = 120
         modifier = {
+            factor = 0.5
+            owner = { has_country_flag = new_world_nation }
+        }
+        modifier = {
+            factor = 0.75
+            owner = { primary_culture = russian }
+        }
+        modifier = {
             factor = 0.75
             owner = { nationalism_n_imperialism = 1 }
+        }
+        modifier = {
+            factor = 0.75
+            owner = { 
+                is_culture_group = germanic
+                nationalism_n_imperialism = 1
+            }
         }
         modifier = {
             factor = 1.5
@@ -1226,6 +1243,8 @@ province_event = {
         has_province_modifier = core_integration
         owner = {
             NOT = { has_country_modifier = interment_camps }
+            NOT = { has_country_modifier = preparations_to_kill } 
+            NOT = { any_owned_province = { has_province_modifier = genocide } }
         }
         is_core = THIS
     }
@@ -1266,9 +1285,14 @@ province_event = {
             is_primary_culture = yes
             is_accepted_culture = yes
         }
-        any_neighbor_province = { is_core = THIS }
+        OR = { 
+            any_neighbor_province = { is_core = THIS }
+            is_overseas = yes
+        }
         owner = {
             NOT = { has_country_modifier = interment_camps }
+            NOT = { has_country_modifier = preparations_to_kill } 
+            NOT = { any_owned_province = { has_province_modifier = genocide } }
             civilized = yes
             war = no
         }
@@ -1277,8 +1301,27 @@ province_event = {
     mean_time_to_happen = {
         months = 180
         modifier = {
+            factor = 0.5
+            owner = { has_country_flag = new_world_nation }
+        }
+        modifier = {
+            factor = 0.75
+            owner = { primary_culture = russian }
+        }
+        modifier = {
             factor = 0.75
             owner = { nationalism_n_imperialism = 1 }
+        }
+        modifier = {
+            factor = 0.75
+            owner = { revolution_n_counterrevolution = 1 }
+        }
+        modifier = {
+            factor = 0.75
+            owner = { 
+                is_culture_group = germanic
+                nationalism_n_imperialism = 1
+            }
         }
         modifier = {
             factor = 1.5
@@ -1361,12 +1404,18 @@ province_event = {
             NOT = {
                 citizens_rights = all_voting_pops
                 has_country_modifier = interment_camps
+                has_country_modifier = preparations_to_kill
+                any_owned_province = { has_province_modifier = genocide }
             }
         }
     }
 
     mean_time_to_happen = {
-        months = 180
+        months = 150
+        modifier = {
+            factor = 0.75
+            owner = { has_country_flag = new_world_nation }
+        }
         modifier = {
             factor = 0.75
             owner = { nationalism_n_imperialism = 1 }
@@ -1600,6 +1649,8 @@ province_event = {
         has_province_modifier = national_assimilation
         owner = {
             NOT = { has_country_modifier = interment_camps }
+            NOT = { has_country_modifier = preparations_to_kill } 
+            NOT = { any_owned_province = { has_province_modifier = genocide } }
         }
         OR = {
             NOT = { is_core = THIS }
@@ -1664,6 +1715,7 @@ province_event = {
             NOT = {
                 citizens_rights = all_voting_pops
                 has_country_modifier = interment_camps
+                has_country_modifier = preparations_to_kill any_owned_province = { has_province_modifier = genocide } 
             }
         }
     }
@@ -1863,6 +1915,7 @@ province_event = {
             NOT = {
                 citizens_rights = all_voting_pops
                 has_country_modifier = interment_camps
+                has_country_modifier = preparations_to_kill any_owned_province = { has_province_modifier = genocide }
             }
         }
     }
@@ -1975,6 +2028,7 @@ province_event = {
             NOT = {
                 citizens_rights = all_voting_pops
                 has_country_modifier = interment_camps
+                has_country_modifier = preparations_to_kill any_owned_province = { has_province_modifier = genocide }
             }
         }
     }
@@ -2080,12 +2134,17 @@ province_event = {
                 citizens_rights = all_voting_pops
                 has_country_modifier = interment_camps
                 badboy = 0.92
+                has_country_modifier = preparations_to_kill any_owned_province = { has_province_modifier = genocide }
             }
         }
     }
 
     mean_time_to_happen = {
         months = 300
+        modifier = {
+            factor = 0.45
+            owner = { has_country_flag = new_world_nation }
+        }
         modifier = {
             factor = 1.2
             owner = {
