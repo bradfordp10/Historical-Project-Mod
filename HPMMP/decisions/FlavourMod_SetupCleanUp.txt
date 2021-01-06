@@ -25,6 +25,84 @@ political_decisions = {
 		
 		effect = { USA = { diplomatic_influence = { who = THIS value = -400 } } }
 	}
+
+	cleanup_morocco = {
+		potential = {
+			capital_scope = { continent = europe }
+			is_greater_power = yes
+			has_global_flag = tangier_protocol_succeeded
+			NOT = { tag = FRA }
+			NOT = { tag = SPA }
+			NOT = { tag = IBR }
+			NOT = { tag = SPC }
+			ai = yes
+			OR = {
+				owns = 1683 #Taza
+				owns = 1680 #Fez
+				owns = 1690 #Marrakesh
+				owns = 1694 #Agadir
+			}
+			NOT = { has_global_flag = cleanup_morocco }
+		}
+		
+		allow = {
+			OR = {
+				SPA = {
+					OR = {
+						owns = 1683 #Taza
+						owns = 1680 #Fez
+						owns = 1690 #Marrakesh
+						owns = 1694 #Agadir
+					}
+					#money = 75000
+				}
+				SPC = {
+					OR = {
+						owns = 1683 #Taza
+						owns = 1680 #Fez
+						owns = 1690 #Marrakesh
+						owns = 1694 #Agadir
+					}
+					#money = 75000
+				}
+				FRA = {
+					OR = {
+						owns = 1683 #Taza
+						owns = 1680 #Fez
+						owns = 1690 #Marrakesh
+						owns = 1694 #Agadir
+					}
+					#money = 75000
+				}
+			}
+		}
+		
+		effect = {
+			any_owned = {
+				limit = {  is_core = MOR }
+				secede_province = UTI
+			}
+			
+			random_country = {
+				limit = {
+					OR = {
+						tag = FRA
+						tag = SPA
+						tag = SPC
+					}
+					OR = {
+						owns = 1683 #Taza
+						owns = 1680 #Fez
+						owns = 1690 #Marrakesh
+						owns = 1694 #Agadir
+					}
+				}
+				inherit = UTI
+				#treasury = -75000
+			}
+			#treasury = 75000
+		}
+	}
 	
 	cleanup_war_with_non_existing_country = {
 		potential = {

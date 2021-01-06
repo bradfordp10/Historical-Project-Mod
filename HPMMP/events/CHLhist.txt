@@ -337,7 +337,7 @@ country_event = {
             end_military_access = THIS
             country_event = 97083
         }
-        add_country_modifier = { name = small_country_draft duration = 180 }
+        add_country_modifier = { name = small_country_draft duration = 730 }
 
         ai_chance = { factor = 100 }
     }

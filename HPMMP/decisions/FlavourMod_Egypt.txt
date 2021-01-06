@@ -53,8 +53,9 @@ political_decisions = {
 					NOT = { province_id = 1755 }
 					NOT = { is_core = SUD }
 				}
-				secede_province = EGY
+				secede_province = UTI
 			}
+			EGY = { inherit = UTI }
 			create_vassal = EGY
 			EGY = {
 				prestige = -80

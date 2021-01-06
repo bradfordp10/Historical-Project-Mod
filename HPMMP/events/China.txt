@@ -27,6 +27,12 @@ country_event = {
             limit = { owner = { has_country_flag = activate_experimental_railroad } NOT = { experimental_railroad = 1 } }
             owner = { activate_technology = experimental_railroad  clr_country_flag = activate_experimental_railroad }
         }
+        remove_country_modifier = missionary_activity
+        religion = mahayana
+        set_country_flag = mahayana_country
+        clr_country_flag = protestant_country
+        clr_country_flag = change_to_protestant
+        clr_country_flag = missionary_activity
         MCK = { all_core = { add_core = CHI } }
         XBI = { all_core = { add_core = CHI } }
         XIN = { all_core = { add_core = CHI } }
@@ -36,6 +42,71 @@ country_event = {
         GNG = { all_core = { add_core = CHI } }
         FJN = { all_core = { add_core = CHI } }
         KML = { all_core = { add_core = CHI } }
+        remove_country_modifier = isolationist_foreign_naval_officers
+        remove_country_modifier = isolationist_foreign_naval_schools
+        remove_country_modifier = isolationist_foreign_officers
+        remove_country_modifier = isolationist_foreign_training
+        random_owned = { limit = {  owner = { has_global_flag = ever_victorious_army } } owner = { activate_technology = military_staff_system } }
+        random_owned = { limit = {  owner = { has_global_flag = the_xiang_army } } owner = { activate_technology = army_command_principle } }
+        random_owned = { 
+            limit = {  owner = { has_country_flag = beiyang_fleet_established } }
+            owner = { 
+                activate_technology = battleship_column_doctrine
+                activate_technology = steamers
+                activate_technology = alphabetic_flag_signaling
+                activate_technology = iron_steamers 
+            } 
+        }
+        random_owned = {
+            limit = {  owner = { has_country_flag = the_new_army_established } }
+            owner = { 
+                activate_technology = army_command_principle
+                activate_technology = muzzle_loaded_rifles
+                activate_technology = bronze_muzzle_loaded_artillery
+                activate_technology = iron_muzzle_loaded_artillery
+                activate_technology = military_staff_system
+            } 
+        }
+        random_owned = {
+            limit = {  owner = { has_country_flag = fuzhou_aresenal_established } }
+            owner = { 
+                activate_technology = post_nelsonian_thought
+                activate_technology = clipper_design
+            } 
+        }
+        random_owned = {
+            limit = {  owner = { has_country_flag = establish_the_peking_field_force } }
+            owner = { 
+                activate_technology = military_plans
+                activate_technology = army_professionalism
+            }                                        
+        }
+        random_owned = {
+            limit = {  owner = { has_country_flag = hanyang_arsenal } }
+            owner = { 
+                activate_technology = breech_loaded_rifles 
+                activate_technology = piston_steam_engine
+            }                                               
+        }
+        random_owned = {
+            limit = {  owner = { has_country_flag = abolish_the_imperial_examinations } }
+            owner = { 
+                social_reform = low_schools
+            } 
+        }
+        random_owned = {
+            limit = {  owner = { has_country_flag = kiangnan_aresenal_established } }
+            owner = { 
+                activate_technology = raider_group_doctrine
+                activate_technology = mechanized_mining
+            } 
+        }
+        random_owned = {
+            limit = {  owner = { has_country_flag = establish_china_merchants_group } }
+            owner = { 
+                activate_technology = freedom_of_trade
+            } 
+        }
         random_owned = {
             limit = {
                 owner = {
@@ -44,7 +115,6 @@ country_event = {
                 }
             owner = { political_reform = closed_borders }
         }
-
         random_owned = {
             limit = {
                 owner = {
@@ -127,6 +197,9 @@ country_event = {
             }
             country_event = { id=90901 days=0 }
         }
+
+        KMT = { civilized = yes }
+        CHI = { civilized = yes }
 
         #Non-cores should flip to colonies
         random_owned = {
@@ -275,7 +348,7 @@ country_event = {
         }
         add_country_modifier = {
             name = taiping_draft
-            duration = 90
+            duration = 365
         }
         add_country_modifier = { name = global_baby_boom duration = 730 }
         prestige = 10
@@ -285,6 +358,10 @@ country_event = {
         remove_country_modifier = uncivilized_isolationism
         remove_country_modifier = trade_restrictions
         remove_country_modifier = sayings_of_the_dutch
+        remove_country_modifier = isolationist_foreign_naval_officers
+        remove_country_modifier = isolationist_foreign_naval_schools
+        remove_country_modifier = isolationist_foreign_officers                              
+        remove_country_modifier = isolationist_foreign_training
         clr_country_flag = using_foreign_weapons
         clr_country_flag = using_foreign_artillery
         clr_country_flag = using_foreign_ships
@@ -605,6 +682,7 @@ country_event = {
             war = {
                 target = THIS
                 attacker_goal = { casus_belli = treaty_port_casus_belli }
+                defender_goal = { casus_belli = status_quo }
                 call_ally = yes
             }
         }
@@ -641,6 +719,7 @@ country_event = {
             war = {
                 target = THIS
                 attacker_goal = { casus_belli = treaty_port_casus_belli }
+                defender_goal = { casus_belli = status_quo }
                 call_ally = yes
             }
         }
@@ -740,6 +819,7 @@ country_event = {
             modifier = { factor = 0.9 any_owned_province = { country_units_in_province = REB } }
             modifier = { factor = 0.8 num_of_revolts = 3 }
             modifier = { factor = 1.25 military_score = FROM }
+            modifier = { factor = 1.25 civilized = yes }
         }
     }
 }

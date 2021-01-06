@@ -354,6 +354,15 @@ political_decisions = {
 					add_province_modifier = { name = baby_boom duration = 720 }
 				}
 			}	
+
+			random_owned = {
+				limit = {
+					province_id = 1086
+					is_colonial = no
+				}
+				1086 = { secede_province = UTI }
+				THIS = { inherit = UTI }
+			}
 			
 			random_owned = {
 				limit = {
