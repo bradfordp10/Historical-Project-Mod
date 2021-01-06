@@ -6,8 +6,10 @@
 proletarian_dictatorship = {
     #which ideology of parties.
     communist = yes
+    socialist = yes
 
-    election = no
+    election = yes
+    duration = 42
     appoint_ruling_party = yes
     flagType = communist
 }
@@ -15,6 +17,7 @@ proletarian_dictatorship = {
 presidential_dictatorship = {
     #which ideology of parties.
     reactionary = yes
+    conservative = yes
 
     election = no
     appoint_ruling_party = yes

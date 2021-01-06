@@ -29,7 +29,9 @@ country_event = {
         }
         modifier = {
             factor = 0.9
-            NOT = { plurality = 40 }
+            NOT = {
+                plurality = 4
+            }
         }
         modifier = {
             factor = 2
@@ -939,7 +941,7 @@ province_event = {
     }
 
     mean_time_to_happen = {
-        months = 1000
+        months = 600
         modifier = {
             factor = 0.9
             average_militancy = 5
