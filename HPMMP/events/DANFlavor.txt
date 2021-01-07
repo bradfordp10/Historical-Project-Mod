@@ -745,7 +745,7 @@ country_event = {
 
     option = {
         name = "EVTOPTA36213"
-        prestige = 5
+        prestige = 10
     }
 }
 
@@ -850,7 +850,7 @@ country_event = {
 
     option = {
         name = "EVTOPTA36217"
-        prestige = 3
+        prestige = 5
     }
 }
 
@@ -896,7 +896,7 @@ country_event = {
 
     option = {
         name = "EVTOPTA36218"
-        prestige = 3
+        prestige = 5
         372 = {
             any_pop = {
                 militancy = -1

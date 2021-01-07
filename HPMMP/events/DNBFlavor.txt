@@ -1490,6 +1490,9 @@ country_event = {
         }
         662 = { add_core = DNB }
         663 = { add_core = DNB }
+        647 = { add_core = DNB }
+        652 = { add_core = DNB }
+        653 = { add_core = DNB }
         any_pop = {
             limit = { has_pop_culture = romanian }
             militancy = -4
@@ -2487,7 +2490,7 @@ country_event = {
                     tag = BOH
                     tag = SLO
                     tag = SLV
-                    #tag = SIE
+                    tag = SIE
                     tag = GLM
                     tag = CRO
                 }
@@ -2502,7 +2505,7 @@ country_event = {
                     tag = SLO
                     tag = SLV
                     tag = HUN
-                    #tag = SIE
+                    tag = SIE
                     tag = ROM
                     tag = POL
                     tag = GLM
@@ -2548,7 +2551,7 @@ country_event = {
                     tag = BOH
                     tag = SLO
                     tag = SLV
-                    #tag = SIE
+                    tag = SIE
                     tag = ROM
                     tag = POL
                     tag = GLM
@@ -2571,7 +2574,7 @@ country_event = {
                     tag = BOH
                     tag = SLO
                     tag = SLV
-                    #tag = SIE
+                    tag = SIE
                     tag = GLM
                     tag = CRO
                 }
@@ -2586,7 +2589,7 @@ country_event = {
                     tag = BOH
                     tag = SLO
                     tag = SLV
-                    #tag = SIE
+                    tag = SIE
                     tag = ROM
                     tag = POL
                     tag = GLM

@@ -38,7 +38,15 @@ country_event = {
 
     option = {
         name = "EVTOPTA36898"
-        random_owned = { limit = { owner = { is_our_vassal = HAN } } owner = { release_vassal = HAN diplomatic_influence = { who = HAN value = -200 } } }
+        random_owned = { limit = { owner = { is_our_vassal = HAN } } owner = { leave_alliance = HAN release_vassal = HAN diplomatic_influence = { who = HAN value = -200 } } }
+        HAN = { government = absolute_monarchy }
+        random_country = {
+            limit = {
+                tag = AUS
+                is_greater_power = yes
+            }
+            diplomatic_influence = { who = HAN value = 400 }
+        }
         prestige = 5
         election = yes
     }
@@ -1838,6 +1846,16 @@ country_event = {
             limit = { has_pop_culture = maori }
             militancy = -3
         }
+        any_owned = {
+            limit = {
+                is_core = NZL
+                is_colonial = yes
+            }
+            add_province_modifier = {
+                name = small_immigration_boom
+                duration = 1825
+            }
+        }
     }
 }
 
@@ -1909,6 +1927,7 @@ country_event = {
     fire_only_once = yes
 
     trigger = {
+        is_greater_power = yes
         2509 = {
             owned_by = THIS
             is_colonial = yes
@@ -1952,20 +1971,7 @@ country_event = {
     desc = "EVTDESC36950"
     picture = "administration"
 
-    trigger = {
-        OR = {
-            tag = ENG
-            tag = ENL
-        }
-        ASH = { owns = 1907 }
-        owns = 1908
-        year = 1850
-        relation = { who = DEN value = 0 }
-        NOT = {
-            has_country_flag = sale_of_danish_gold_coast
-            alliance_with = ASH
-        }
-    }
+    is_triggered_only = yes
 
     mean_time_to_happen = {
         months = 40
@@ -1973,64 +1979,22 @@ country_event = {
 
     option = {
         name = "EVT36950OPTA"
+        treasury = -35000
+        DEN = {
+            prestige = 5 
+            treasury = 35000
+        }
         set_country_flag = sale_of_danish_gold_coast
-        DEN = { prestige = 5 }
+        
         diplomatic_influence = { who = ASH value = -200 }
         relation = { who = ASH value = -200 }
-
-        random_country = {
-            limit = {
-                owns = 1907
-                civilized = no
-                NOT = { has_global_flag = berlin_conference }
-                THIS = { NOT = { nationalism_n_imperialism = 1 } }
-            }
-            add_casus_belli = {
-                target = THIS
-                type = demand_concession_casus_belli
-                months = 60
-            }
-        }
-        random_country = {
-            limit = {
-                owns = 1907
-                civilized = no
-                NOT = { has_global_flag = berlin_conference }
-                THIS = { nationalism_n_imperialism = 1 }
-            }
-            add_casus_belli = {
-                target = THIS
-                type = demand_concession_NI_casus_belli
-                months = 60
-            }
-        }
-        random_country = {
-            limit = {
-                owns = 1907
-                civilized = no
-                has_global_flag = berlin_conference
-                THIS = { nationalism_n_imperialism = 1 }
-            }
-            add_casus_belli = {
-                target = THIS
-                type = demand_concession_BC_casus_belli
-                months = 60
-            }
-        }
-        random_country = {
-            limit = {
-                owns = 1907
-                civilized = yes
-            }
-            1907 = { add_core = THIS }
-        }
+        1907 = { secede_province = THIS remove_core = FROM }
         ai_chance = {
             factor = 100
         }
     }
     option = {
         name = "EVT36950OPTB"
-        set_country_flag = sale_of_danish_gold_coast
         prestige = -5
         ai_chance = {
             factor = 0
@@ -2064,6 +2028,7 @@ country_event = {
             number_of_states = 2
             any_owned_province = { port = yes }
             NOT = { truce_with = ENG }
+            owns = 1332
         }
         OR = {
             war_policy = jingoism
@@ -2073,6 +2038,15 @@ country_event = {
 
     mean_time_to_happen = {
         months = 12
+        modifier = {
+            factor = 0.75
+            year = 1852
+        }
+        
+        modifier = {
+            factor = 0.5
+            year = 1853
+        }
     }
 
     option = {
@@ -2085,6 +2059,14 @@ country_event = {
             target = BUR
             type = demand_concession_NI_casus_belli
             months = 60
+        }
+        war = {
+            target = BUR
+            attacker_goal = { 
+                casus_belli = demand_concession_NI_casus_belli 
+                state_province_id = 1332
+            }
+            defender_goal = { casus_belli = status_quo }
         }
         ai_chance = {
             factor = 95
@@ -2222,6 +2204,13 @@ country_event = {
             THIS = { diplomatic_influence = { who = FROM value = 100 } }
         }
         relation = { who = FROM value = 50 }
+        random_country = {
+            limit = { tag = FROM }
+            random_owned = { limit = { province_id = 1909 } 1909 = { secede_province = THIS } }
+            random_owned = { limit = { province_id = 1907 } 1907 = { secede_province = THIS } }
+            random_owned = { limit = { province_id = 1908 } 1908 = { secede_province = THIS } }
+        }
+        1909 = { secede_province = THIS }
         random_country = {
             limit = {
                 tag = ATJ
@@ -2497,7 +2486,7 @@ country_event = {
     }
 
     fire_only_once = yes
-    mean_time_to_happen = { months = 6 }
+    mean_time_to_happen = { months = 1 }
 
     option = {
         name = "EVT36967OPTA"
@@ -2510,7 +2499,8 @@ country_event = {
             months = 50
         }
         ai_chance = {
-            factor = 0
+            factor = 1
+            modifier = { factor = 100 war = yes }
         }
     }
 
@@ -2520,43 +2510,21 @@ country_event = {
         relation = { who = LHJ value = -400 }
         diplomatic_influence = { who = LHJ value = -400 }
 
-        random_owned = {
-            limit = { owner = { ai = yes } }
-            owner = {
-                random_list = {
-                    50 = { inherit = LHJ }
-                    50 = {
-                        random_country = { limit = { neighbour = LHJ NOT = { alliance_with = LHJ } } ENG = { military_access = THIS } }
-                        casus_belli = { target = LHJ type = establish_protectorate_casus_belli months = 60 }
-                        casus_belli = { target = LHJ type = conquest_any months = 36 }
-                         war = {
-                            target = LHJ
-                            attacker_goal = { casus_belli = conquest_any }
-                            defender_goal = { casus_belli = humiliate }
-                            call_ally = no
-                        }
-                    }
-                }
-            }
+        owner = {
+            random_country = { limit = { neighbour = LHJ NOT = { alliance_with = LHJ } } ENG = { military_access = THIS } }
+            casus_belli = { target = LHJ type = establish_protectorate_casus_belli months = 60 }
+            casus_belli = { target = LHJ type = conquest_any months = 36 }
+            war = {
+                target = LHJ
+                attacker_goal = { casus_belli = conquest_any }
+                defender_goal = { casus_belli = humiliate }
+                call_ally = no
+            }  
         }
 
-
-        random_owned = {
-            limit = { owner = { ai = no } }
-            owner = {
-                random_country = { limit = { neighbour = LHJ NOT = { alliance_with = LHJ } } ENG = { military_access = THIS } }
-                casus_belli = { target = LHJ type = establish_protectorate_casus_belli months = 60 }
-                casus_belli = { target = LHJ type = conquest_any months = 36 }
-                 war = {
-                    target = LHJ
-                    attacker_goal = { casus_belli = conquest_any }
-                    defender_goal = { casus_belli = humiliate }
-                    call_ally = no
-                }
-            }
-        }
         ai_chance = {
-            factor = 100
+            factor = 99
+            modifier = { factor = 0 war = yes }
         }
     }
 }
@@ -2756,19 +2724,22 @@ country_event = {
             }
         }
         tag = ENG
-        2070 = { any_neighbor_province = { owned_by = THIS } }
+        OR = {
+            2068 = { any_neighbor_province = { owned_by = THIS } }
+            2068 = { any_neighbor_province = { owner = { civilized = no in_sphere = THIS } } }
+        }
         has_global_flag = berlin_conference
         owns = 2087
     }
 
-    mean_time_to_happen = { months = 4 }
+    mean_time_to_happen = { days = 1 }
 
     option = {
         name = "EVT3697006OPTA"
-        2070 = { secede_province = THIS life_rating = 25 }
-        2635 = { secede_province = THIS life_rating = 25 }
-        2068 = { secede_province = THIS life_rating = 25 }
-        2068 = { change_province_name = "Salisbury" }
+        2070 = { secede_province = THIS life_rating = 25 any_pop = { limit = { NOT = { has_pop_culture = british } } literacy = -0.99 } }
+        2635 = { secede_province = THIS life_rating = 25 any_pop = { limit = { NOT = { has_pop_culture = british } } literacy = -0.99 } }
+        2068 = { secede_province = THIS change_province_name = "Salisbury" life_rating = 25 any_pop = { limit = { NOT = { has_pop_culture = british } } literacy = -0.99 } }
+        2096 = { any_pop = { limit = { type = soldiers has_pop_culture = british } move_pop = 2068 } }
         2087 = { any_pop = { limit = { type = soldiers has_pop_culture = british } move_pop = 2068 } }
         2087 = { any_pop = { limit = { type = artisans has_pop_culture = british } pop_type = soldiers } }
     }
@@ -2943,6 +2914,7 @@ country_event = {
 
     option = {
         name = "EVT3697010OPTA"
+            set_country_flag = durand_line
             badboy = -2
             relation = { who = ENG value = 400 }
             treasury = 50000
@@ -2950,6 +2922,23 @@ country_event = {
             any_owned = { limit = { is_core = HND } secede_province = ENG }
             FROM = { diplomatic_influence = { who = THIS value = 50 } }
             FROM = { any_owned = { limit = { is_core = AFG } secede_province = AFG } }
+            ENG = {     
+                diplomatic_influence = {
+                    who = THIS
+                    value = 100
+                }           
+            }
+            any_owned = {
+                limit = {
+                    owner = { ai = yes neighbour = RUS }
+                    OR = {
+                        region = RUS_1196
+                        region = KHI_1191
+                        region = KOK_1190
+                    }
+                }
+                secede_province = RUS
+            }
             ai_chance = {
                 factor = 90
                 modifier = {
@@ -3004,10 +2993,10 @@ country_event = {
             relation = { who = SIK value = -400 }
             diplomatic_influence = { who = SIK value = -400 }
             leave_alliance = THIS
-            casus_belli = { target = SIK type = conquest_any months = 30 }
+            casus_belli = { target = SIK type = make_puppet months = 30 }
             war = {
                 target = SIK
-                attacker_goal = { casus_belli = conquest_any }
+                attacker_goal = { casus_belli = make_puppet }
                 defender_goal = { casus_belli = humiliate }
             }
             SIK = { tech_school = developing_tech_school }
@@ -3019,28 +3008,6 @@ country_event = {
         relation = { who = SIK value = -400 }
         diplomatic_influence = { who = SIK value = -400 }
         leave_alliance = THIS
-        random_country = {
-            limit = {
-                tag = SIK
-                exists = yes
-                neighbour = THIS
-                NOT = { number_of_states = 2 }
-                civilized = no
-                NOT = { THIS = { nationalism_n_imperialism = 1 } }
-            }
-            add_casus_belli = { target = THIS type = establish_protectorate_casus_belli months = 24 }
-        }
-        random_country = {
-            limit = {
-                tag = SIK
-                exists = yes
-                neighbour = THIS
-                NOT = { number_of_states = 2 }
-                civilized = no
-                THIS = { nationalism_n_imperialism = 1 NOT = { has_global_flag = berlin_conference } }
-            }
-            add_casus_belli = { target = THIS type = establish_protectorate_NI_casus_belli months = 24 }
-        }
 
         random_country = {
             limit = {
@@ -3048,21 +3015,19 @@ country_event = {
                 exists = yes
                 neighbour = THIS
                 NOT = { number_of_states = 2 }
-                civilized = no
-                THIS = { nationalism_n_imperialism = 1 has_global_flag = berlin_conference }
+                civilized = no                                            
             }
-            add_casus_belli = { target = THIS type = establish_protectorate_BC_casus_belli months = 24 }
+            add_casus_belli = { target = THIS type = make_puppet months = 24 }
         }
-
         random_country = {
             limit = {
                 tag = SIK
                 exists = yes
                 neighbour = THIS
-                NOT = { number_of_states = 2 }
+                NOT = { number_of_states = 2 }                           
                 civilized = yes
             }
-            add_casus_belli = { target = THIS type = conquest months = 40 }
+            add_casus_belli = { target = THIS type = make_puppet months = 40 }
         }
 
         ai_chance = { factor = 0 }
@@ -3081,7 +3046,6 @@ country_event = {
         tag = BHR
         year = 1860
         is_vassal = no
-        ai = yes
         QAT = {
             exists = yes
             vassal_of = THIS
@@ -3128,7 +3092,14 @@ country_event = {
         relation = { who = BHR value = -400 }
         diplomatic_influence = { who =  BHR value = -400 }
         relation = { who = QAT value = 400 }
-        diplomatic_influence = { who = QAT value = 100 }
+        diplomatic_influence = { who = QAT value = 400 }
+        random_country = {
+            limit = {
+                vassal_of = THIS
+                exists = yes
+                tag = BHR
+                }
+        THIS = { release_vassal = BHR }
 
         casus_belli = {
             target = BHR
@@ -3152,7 +3123,7 @@ country_event = {
         relation = { who =  BHR value = -400 }
         diplomatic_influence = { who =  BHR value = -400 }
         relation = { who = QAT value = 400 }
-
+        diplomatic_influence = { who = QAT value = 400 }
         random_country = {
             limit = {
                 vassal_of = THIS
@@ -3178,6 +3149,9 @@ country_event = {
         war = {
             target = BHR
             attacker_goal = { casus_belli = add_to_sphere }
+            defender_goal = {
+                casus_belli = status_quo
+                }
         }
 
         ai_chance = { factor = 90 }
@@ -3266,24 +3240,128 @@ province_event = {
     id = 315001
     title = "EVTNAME315001"
     desc = "EVTDESC315001"
-
+    
     trigger = {
         trade_goods = precious_metal
-        province_id = 2400 # Rio Grande
-        year = 1893
+        OR = {
+            province_id = 2478
+            province_id = 2481
+            province_id = 2472
+            province_id = 2470
+            province_id = 2334
+            province_id = 2400
+        }
+        year = 1875
     }
-
+ 
     mean_time_to_happen = {
         months = 24
+        modifier = {
+            factor = 10000
+            province_id = 2478
+            NOT = { year = 1900 }
+        }
+        modifier = {
+            factor = 10000
+            OR = {
+                province_id = 2478
+                province_id = 2481
+                province_id = 2472
+                province_id = 2470
+            }
+            NOT = { year = 1890 }
+        }
+        modifier = {
+            factor = 10000
+            OR = {
+                province_id = 2334
+                province_id = 2400
+            }
+            NOT = { year = 1905 }
+        }
     }
+    
+    immediate = { trade_goods = grain }
 
     option = {
         name = "EVTOPTA315001"
+        owner = { random_owned = { limit = { owner = { owns = 2492 2492 = { NOT = { trade_goods = iron } } } }
+            owner = { 2492 = { trade_goods = iron } }
+            }
+        }
+        
+        owner = { random_owned = { limit = { owner = { owns = 2484 2484 = { NOT = { trade_goods = coal } } } }
+            owner = { 2484 = { trade_goods = coal } }
+            }
+        }
+        
+        owner = { random_owned = { limit = { owner = { owns = 2481 2481 = { trade_goods = grain } } }
+            owner = { 2481 = { trade_goods = coal } }
+            }
+        }
+        
+        owner = { random_owned = { limit = { owner = { owns = 2472 2472 = { trade_goods = grain } } }
+            owner = { 2472 = { trade_goods = coal } }
+            }
+        }
+        
+        owner = { random_owned = { limit = { owner = { owns = 2470 2470 = { trade_goods = grain } } }
+            owner = { 2470 = { trade_goods = coal } }
+            }
+        }
 
-        owner = {
-            random_owned = {
-                limit = { owner = { owns = 2400 2400 = { NOT = { trade_goods = grain } } } }
-                owner = { 2400 = { trade_goods = grain } }
+        owner = { random_owned = { limit = { owner = { owns = 2494 2494 = { NOT = { trade_goods = iron } } } }
+            owner = { 2494 = { trade_goods = iron } }
+            }
+        }
+        
+        owner = { random_owned = { limit = { owner = { owns = 2495 2495 = { NOT = { trade_goods = iron } } } }
+            owner = { 2495 = { trade_goods = iron } }
+            }
+        }
+        
+        owner = { random_owned = { limit = { owner = { owns = 2495 2495 = { NOT = { trade_goods = iron } } } }
+            owner = { 2495 = { trade_goods = iron } }
+            }
+        }
+        
+        owner = { random_owned = { limit = { owner = { owns = 2475 2475 = { NOT = { trade_goods = iron } } } }
+            owner = { 2475 = { trade_goods = iron } }
+            }
+        }
+        
+        owner = { random_owned = { limit = { owner = { owns = 2473 2473 = { NOT = { trade_goods = iron } } } }
+            owner = { 2473 = { trade_goods = iron } }
+            }
+        }
+        
+        owner = { random_owned = { limit = { owner = { owns = 2483 2483 = { NOT = { trade_goods = iron } } } }
+            owner = { 2483 = { trade_goods = iron } }
+            }
+        }
+        
+        owner = { random_owned = { limit = { owner = { owns = 2489 2489 = { NOT = { trade_goods = iron } } } }
+            owner = { 2489 = { trade_goods = iron } }
+            }
+        }
+        
+        owner = { random_owned = { limit = { owner = { owns = 2487 2487 = { NOT = { trade_goods = iron } } } }
+            owner = { 2487 = { trade_goods = iron } }
+            }
+        }
+        
+        owner = { random_owned = { limit = { owner = { owns = 2482 2482 = { NOT = { trade_goods = iron } } } }
+            owner = { 2482 = { trade_goods = iron } }
+            }
+        }
+        
+        owner = { random_owned = { limit = { owner = { owns = 2400 2400 = { NOT = { trade_goods = wool } } } }
+            owner = { 2400 = { trade_goods = wool } }
+            }
+        }
+        
+        owner = { random_owned = { limit = { owner = { owns = 2334 2334 = { NOT = { trade_goods = wool } } } }
+            owner = { 2334 = { trade_goods = wool } }
             }
         }
     }

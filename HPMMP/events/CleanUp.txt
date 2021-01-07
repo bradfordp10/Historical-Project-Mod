@@ -263,6 +263,11 @@ country_event = {
         social_reform = no_pensions
         social_reform = no_health_care
         #Genocide Cleanup
+        clr_country_flag = everywhere_genocide_only                      
+        clr_country_flag = non_colonial_genocide_only        
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
         ##Set Up Timer based on time the thing ran
         random_owned = {
             limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }
@@ -447,6 +452,11 @@ country_event = {
         political_reform = underground_parties
         social_reform = culture_voting_only
         #Genocide Cleanup
+        clr_country_flag = everywhere_genocide_only                      
+        clr_country_flag = non_colonial_genocide_only        
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
         ##Set Up Timer based on time the thing ran
         random_owned = {
             limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }
@@ -609,6 +619,11 @@ country_event = {
         prestige_factor = -0.05
         random_owned = { limit = { owner = { border_policy = closed_borders } } owner = { political_reform = open_borders } }
         #Genocide Cleanup
+        clr_country_flag = everywhere_genocide_only                      
+        clr_country_flag = non_colonial_genocide_only        
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
         ##Set Up Timer based on time the thing ran
         random_owned = {
             limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }
@@ -748,6 +763,11 @@ country_event = {
         clr_country_flag = anarcho_liberal_gov
         government = absolute_monarchy
         #Genocide Cleanup
+        clr_country_flag = everywhere_genocide_only                      
+        clr_country_flag = non_colonial_genocide_only        
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
         ##Set Up Timer based on time the thing ran
         random_owned = {
             limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }
@@ -890,6 +910,11 @@ country_event = {
         clr_country_flag = fascist_gov
         clr_country_flag = anarcho_liberal_gov
         #Genocide Cleanup
+        clr_country_flag = everywhere_genocide_only                      
+        clr_country_flag = non_colonial_genocide_only        
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
         ##Set Up Timer based on time the thing ran
         random_owned = {
             limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }
@@ -1039,6 +1064,11 @@ country_event = {
         government = hms_government
         random_owned = { limit = { owner = { border_policy = closed_borders } } owner = { political_reform = open_borders } }
         #Genocide Cleanup
+        clr_country_flag = everywhere_genocide_only                      
+        clr_country_flag = non_colonial_genocide_only        
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
         ##Set Up Timer based on time the thing ran
         random_owned = {
             limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }
@@ -1186,6 +1216,11 @@ country_event = {
         clr_country_flag = fascist_gov
         clr_country_flag = anarcho_liberal_gov
         #Genocide Cleanup
+        clr_country_flag = everywhere_genocide_only                      
+        clr_country_flag = non_colonial_genocide_only        
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
         ##Set Up Timer based on time the thing ran
         random_owned = {
             limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }
@@ -1328,6 +1363,11 @@ country_event = {
         clr_country_flag = fascist_gov
         set_country_flag = anarcho_liberal_gov
         #Genocide Cleanup
+        clr_country_flag = everywhere_genocide_only                      
+        clr_country_flag = non_colonial_genocide_only        
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
         ##Set Up Timer based on time the thing ran
         random_owned = {
             limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }
@@ -1470,6 +1510,11 @@ country_event = {
         clr_country_flag = fascist_gov
         clr_country_flag = anarcho_liberal_gov
         #Genocide Cleanup
+        clr_country_flag = everywhere_genocide_only                      
+        clr_country_flag = non_colonial_genocide_only        
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
         ##Set Up Timer based on time the thing ran
         random_owned = {
             limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }
@@ -1613,6 +1658,11 @@ country_event = {
         set_country_flag = fascist_gov
         clr_country_flag = anarcho_liberal_gov
         #Genocide Cleanup
+        clr_country_flag = everywhere_genocide_only                      
+        clr_country_flag = non_colonial_genocide_only        
+        clr_country_flag = colonial_genocide_only
+        clr_country_flag = preparations_to_kill
+        remove_country_modifier = preparations_to_kill
         ##Set Up Timer based on time the thing ran
         random_owned = {
             limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }

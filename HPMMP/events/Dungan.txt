@@ -65,7 +65,7 @@ province_event = {
         }
         any_pop = {
             limit = { has_pop_religion = sunni }
-            reduce_pop = 0.97
+            reduce_pop = 0.99
             militancy = 10
             consciousness = 10
         }
@@ -107,6 +107,7 @@ country_event = {
 
     trigger = {
         tag = QNG
+        war_with = TPG
         YNN = {
             substate_of = THIS
             NOT = { num_of_revolts = 1 }
@@ -128,10 +129,10 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 3
+        months = 4
         modifier = {
-            factor = 4
-            war = no
+            factor = 0.1
+            war = yes
         }
     }
 
@@ -145,13 +146,14 @@ country_event = {
                 consciousness = -5
                 militancy = -5
             }
+            add_country_modifier = { name = taiping_losing_boost duration = 150 }   
         }
         any_country = {
             limit = { war_with = YNN }
             end_war = YNN
         }
         YNN = { change_tag = PGG }
-        PGG = { religion = sunni set_country_flag = sunni_country clr_country_flag = mahayana_country }
+        PGG = { government = absolute_monarchy religion = sunni set_country_flag = sunni_country clr_country_flag = mahayana_country }
         casus_belli = {
             target = PGG
             type = make_puppet
@@ -174,7 +176,10 @@ country_event = {
 
     trigger = {
         tag = QNG
-        has_global_flag = panthay_rebellion
+        OR = { 
+            has_global_flag = panthay_rebellion
+            truce_with = PGG
+        }
         is_our_vassal = PGG
     }
 
@@ -186,6 +191,7 @@ country_event = {
         name = "EVT80126OPTA"
         clr_global_flag = panthay_rebellion
         prestige = 10
+        plurality = -2
         PGG = { change_tag = YNN }
         YNN = {
             religion = mahayana
@@ -195,7 +201,7 @@ country_event = {
                 remove_province_modifier = anti_manchu_sentiment
                 any_pop = {
                     limit = { has_pop_religion = sunni }
-                    reduce_pop = 0.40
+                    reduce_pop = 0.7
                     militancy = -4
                 }
             }
@@ -215,6 +221,7 @@ country_event = {
     news_desc_medium = "EVTDESC80123_NEWS_MEDIUM"
     news_desc_short = "EVTDESC80123_NEWS_SHORT"
     picture = "panthay_rebellion"
+    fire_only_once = yes
 
     trigger = {
         tag = PGG
@@ -230,7 +237,7 @@ country_event = {
     option = {
         name = "EVT80123OPTA"
         prestige = 10
-        QNG = { prestige = -10 }
+        QNG = { prestige = -10 plurality = -2 }
         clr_global_flag = panthay_rebellion
         PGG = { all_core = { remove_core = YNN } }
     }
@@ -272,11 +279,16 @@ country_event = {
             factor = 4
             war = no
         }
+        modifier = {
+            factor = 0.1
+            has_global_flag = ever_victorious_army
+        }
     }
 
     option = {
         name = "EVT80125OPTA"
         set_global_flag = dungan_rebellion
+        plurality = -2
         release_vassal = XIN
         any_country = {
             limit = { war_with = XIN }
@@ -284,6 +296,7 @@ country_event = {
         }
         XIN = { change_tag = UYG }
         UYG = {
+            government = absolute_monarchy
             primary_culture = uighur
             add_accepted_culture = tajik
             add_accepted_culture = kazak
@@ -368,7 +381,11 @@ country_event = {
 
     option = {
         name = "EVT80126OPTA"
-        clr_global_flag = dungan_rebellion
+        plurality = -2
+        UYG = { 
+            change_tag = XIN
+            end_war = QNG
+        }
         prestige = 10
         UYG = { change_tag = XIN }
         XIN = {
@@ -400,6 +417,7 @@ country_event = {
     news_desc_medium = "EVTDESC80127_NEWS_MEDIUM"
     news_desc_short = "EVTDESC80127_NEWS_SHORT"
     picture = "dungan_revolt_xinhai"
+    fire_only_once = yes
 
     trigger = {
         tag = UYG
@@ -416,7 +434,6 @@ country_event = {
         name = "EVT80123OPTA"
         prestige = 10
         QNG = { prestige = -10 }
-        clr_global_flag = dungan_rebellion
     }
 }
 
@@ -438,20 +455,47 @@ country_event = {
                 owns = 1557
             }
         }
+        year = 1870
         OR = {
-            XBI = { average_militancy = 2 }
+            XBI = { average_militancy = 4 }
             1557 = { average_militancy = 4 }
-            XBI = { civilization_progress = 0.4     }
+            AND = { 
+                THIS = { civilization_progress = 0.4 }
+                year = 1885
+            }
         }
         has_global_flag = dungan_rebellion
+        NOT = { has_country_flag = qinghai_revolt_dungan }
     }
 
-    mean_time_to_happen = { months = 20 }
+    mean_time_to_happen = { 
+        months = 25
+        
+        modifier = {
+            factor = 0.8
+            year = 1890
+        }
+        
+        modifier = {
+            factor = 0.01
+            year = 1895
+        }
+        
+        modifier = {
+            factor = 0.1
+            OR = { 
+                civilization_progress = 0.75
+                civilized = yes
+            }
+        }
+    }
 
     fire_only_once = yes
 
     option = {
         name = "EVT80128OPTA"
+        set_country_flag = qinghai_revolt_dungan
+        plurality = -2
         any_country = {
             limit = { war_with = XBI }
             end_war = XBI
@@ -460,6 +504,7 @@ country_event = {
         random_owned = { limit = { owner = { owns = 1557 } } owner = { release = XBI } }
         random_owned = { limit = { owner = { NOT = { owns = 1557 } } } owner = { release_vassal = XBI } }
         relation = { who = XBI value = -400 }
+        XBI = { government = absolute_monarchy }
         war = {
             target = XBI
             attacker_goal = {
