@@ -18,10 +18,11 @@ country_event = {
 
     trigger = {
         tag = FRA
-        government = hms_government
+        NOT = { government = democracy }
         OR = {
             has_country_modifier = springtime_of_nations
             has_country_flag = liberal_revolution_in_progress
+            year = 1848
         }
         OR = {
             AND = {
@@ -51,7 +52,7 @@ country_event = {
             NOT = { has_country_modifier = springtime_of_nations }
         }
         modifier = {
-            factor = 0.1
+            factor = 0.01
             capital_scope = { controlled_by = REB }
         }
         modifier = {
@@ -86,6 +87,7 @@ country_event = {
 
     immediate = {
         set_country_flag = 2nd_republic
+        set_global_flag = french_revolution_1848
         clr_country_flag = liberal_revolution_fired
         clr_country_flag = liberal_revolution_in_progress
         set_country_flag = had_liberal_revolution
@@ -122,7 +124,10 @@ country_event = {
         clr_country_flag = fascist_party_in_power
         clr_country_flag = anarcho_liberal_party_in_power
 
-
+        random_owned = {
+            limit = { owner = { NOT = { border_policy = open_borders } } }
+            owner = { political_reform = open_borders }
+        }
         random_owned = {
             limit = {
                 owner = { NOT = { political_parties = secret_ballots } }
@@ -137,11 +142,12 @@ country_event = {
         }
         add_country_modifier = {
             name = power_vacuum
-            duration = 1095
+            duration = 1825
         }
         any_pop = {
             limit = {
                 is_primary_culture = yes
+                is_accepted_culture = yes
                 OR = {
                     type = soldiers
                     type = officers
@@ -157,7 +163,7 @@ country_event = {
                 is_culture_group = french
                 location = { is_core = FRA }
             }
-            ideology = { factor = 0.2 value = conservative }
+            ideology = { factor = 0.25 value = conservative }
             dominant_issue = { factor = 0.10 value = jingoism }
         }
         any_pop = {
@@ -210,6 +216,17 @@ country_event = {
             relation = { who = THIS value = -100 }
             leave_alliance = THIS
         }
+        any_country = {
+            limit = {
+                government = democracy
+                NOT = {
+                    vassal_of = THIS
+                    substate_of = THIS
+                    in_sphere = THIS
+                }
+            }
+            relation = { who = THIS value = 200 }
+        }
     }
 }
 
@@ -238,6 +255,8 @@ country_event = {
         months = 3
     }
 
+    fire_only_once = yes
+
     option = {
         name = "EVT10401OPTA"
         set_country_flag = french_presidential_election
@@ -258,6 +277,7 @@ country_event = {
         any_pop = {
             limit = {
                 is_primary_culture = yes
+                is_accepted_culture = yes
                 location = { is_core = FRA }
             }
             scaled_consciousness = {
@@ -278,6 +298,7 @@ country_event = {
         political_reform = wealth_voting
         political_reform = censored_press
         political_reform = underground_parties
+        remove_accepted_culture = french_canadian
         clr_country_flag = election_started
         clr_country_flag = conservative_party_in_power
         clr_country_flag = liberal_party_in_power
@@ -299,6 +320,7 @@ country_event = {
         any_pop = {
             limit = {
                 is_primary_culture = yes
+                is_accepted_culture = yes
                 location = { is_core = FRA }
             }
             scaled_militancy = {
@@ -336,6 +358,8 @@ country_event = {
         days = 1
     }
 
+    fire_only_once = yes
+
     option = {
         name = "EVT10402OPTA"
         prestige = 15
@@ -343,11 +367,12 @@ country_event = {
         any_pop = { ideology = { factor = 0.10 value = liberal } }
         add_country_modifier = {
             name = louis_napoleon_iii
-            duration = 7300
+            duration = -1
         }
         any_pop = {
             limit = {
                 is_primary_culture = yes
+                is_accepted_culture = yes
                 location = { is_core = FRA }
             }
             scaled_consciousness = {
@@ -390,23 +415,7 @@ country_event = {
     }
 
     mean_time_to_happen =  {
-        months = 3
-        modifier = {
-            factor = 0.9
-            NOT = { conservative = 40 }
-        }
-        modifier = {
-            factor = 0.8
-            NOT = { conservative = 30 }
-        }
-        modifier = {
-            factor = 0.7
-            NOT = { conservative = 20 }
-        }
-        modifier = {
-            factor = 0.5
-            NOT = { conservative = 10 }
-        }
+        days = 7
     }
 
     option = {
@@ -522,6 +531,15 @@ country_event = {
             remove_province_modifier = province_strike
             remove_province_modifier = may_day
         }
+        any_country = {
+            limit = {
+                AND = {
+                    vassal_of = THIS
+                    exists = yes
+                }
+            }
+            government = absolute_monarchy
+        }
     }
 }
 
@@ -542,7 +560,13 @@ country_event = {
     trigger = {
         tag = FRA
         has_country_flag = 2nd_empire
-        has_country_modifier = louis_napoleon_iii
+        OR = {
+            has_country_modifier = louis_napoleon_iii
+            AND = {
+                NOT = { has_country_modifier = louis_napoleon_iii }
+                NOT = { has_country_flag = louis_deposed }
+            }
+        }
         OR = {
             government = absolute_monarchy
             government = prussian_constitutionalism
@@ -550,12 +574,24 @@ country_event = {
         }
         war = no
         OR = {
-            NOT = { rank = 5 }
-            any_core = {
-                NOT = { is_core = ITA }
-                NOT = { owned_by = THIS }
+            AND = {
+                412 = { NOT = { owned_by = THIS } }
+                OR = {
+                    has_country_flag = lost_the_rhine_crisis
+                    has_global_flag = franco_prussian_war_has_begun
+                    AND = { 
+                        exists = GER
+                        412 = { owned_by = GER }
+                    }
+                }
             }
+            is_greater_power = no
             is_disarmed = yes
+            AND = {
+                472 = { is_core = THIS NOT = { owned_by = THIS } } #Savoie
+                exists = ITA
+                truce_with = ITA
+            }
         }
         NOT = {
             has_country_flag = louis_deposed
@@ -571,6 +607,7 @@ country_event = {
     option = {
         name = "EVT10410OPTA"
         set_country_flag = louis_deposed
+        set_country_flag = 3rd_republic
         remove_country_modifier = louis_napoleon_iii
         any_greater_power = {
             limit = {
@@ -620,6 +657,12 @@ country_event = {
                 ideology = socialist
                 factor = -2
             }
+        }
+        any_greater_power = {
+            limit = {
+                government = democracy
+            }
+            relation = { who = THIS value = 200 }
         }
         ai_chance = {
             factor = 80
@@ -763,7 +806,7 @@ country_event = {
             government = hms_government
         }
         war = no
-        year = 1870
+        year = 1871
         NOT = { has_country_flag = louis_deposed }
     }
 
@@ -773,7 +816,7 @@ country_event = {
 
     option = {
         name = "EVT10411OPTA"
-        set_country_flag = louis_deposed
+        set_country_flag = napoleon_iv
         remove_country_modifier = louis_napoleon_iii
         prestige = 25
         ruling_party_ideology = conservative

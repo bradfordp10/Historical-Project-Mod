@@ -299,10 +299,12 @@ country_event = {
     option = {
         name = "EVTOPTA33005"
         prestige = 10
+        treasury = 20000
         set_global_flag = BerlinBaghdadRail
         relation = { who = TUR value = 100 }
         relation = { who = ENG value = -75 }
         relation = { who = RUS value = -75 }
+        ai_chance = { factor = 100 }
     }
 
     option = {
@@ -615,6 +617,7 @@ country_event = {
             war_with = SGF
             war_with = AUS
             war_with = KUK
+            war_with = RUS
         }
         any_neighbor_country = {
             alliance_with = THIS
@@ -625,7 +628,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        days = 7
+        days = 1
     }
 
     option = {
@@ -708,6 +711,10 @@ country_event = {
                 alliance_with = THIS
             }
             leave_alliance = THIS
+            relation = { 
+                who = THIS 
+                value = -100
+            }
         }
         any_country = {
             limit = {
@@ -727,6 +734,10 @@ country_event = {
                 factor = 2
                 tag = KUK
             }
+            modifier = {
+                factor = 0
+                FROM = { any_owned_province = { is_core = THIS } }
+            }
         }
     }
 
@@ -743,7 +754,7 @@ country_event = {
                 tag = KUK
             }
             modifier = {
-                factor = 0.8
+                factor = 0.75
                 government = absolute_monarchy
             }
             modifier = {
@@ -757,6 +768,10 @@ country_event = {
             modifier = {
                 factor = 0
                 alliance_with = GER
+            }
+            modifier = {
+                factor = 2
+                FROM = { any_owned_province = { is_core = THIS } }
             }
         }
     }
@@ -994,6 +1009,7 @@ country_event = {
 
     option = {
         name = "EVT33031OPTB"
+        set_country_flag = german_east_africa_zan
         clr_country_flag = delay_unciv_annexation
         prestige = -5
         FROM = { prestige = 5 }
@@ -1024,6 +1040,9 @@ country_event = {
                 type = place_in_the_sun
                 months = 30
             }
+        }
+        FROM = {
+            create_vassal = THIS
         }
         ai_chance = {
             factor = 95
@@ -1098,7 +1117,27 @@ country_event = {
 
     option = {
         name = "EVT33037OPTA"
+        badboy = 5
+        set_country_flag = french_claimed_the_rhine
         PRU = { set_country_flag = french_claimed_the_rhine }
+        any_country = {
+            limit = {
+                is_greater_power = yes
+                alliance_with = THIS
+            }
+            leave_alliance = THIS
+        }
+        PRU = { country_event = 99925 }
+        casus_belli = {
+            target = PRU
+            type = acquire_state
+            months = 6
+        }
+        casus_belli = {
+            target = PRU
+            type = liberate_country
+            months = 6
+        }
         any_country = {
             limit = {
                 is_greater_power = no
@@ -1107,15 +1146,15 @@ country_event = {
                     primary_culture = south_german
                 }
             }
-        casus_belli = {
+            casus_belli = {
                 target = FRA
                 type = cut_down_to_size
                 months = 20
             }
-        end_military_access = FRA
-        leave_alliance = FRA
-        relation = { who = FRA value = -150 }
-        FRA = { diplomatic_influence = { who = THIS value = -200 } }
+            end_military_access = FRA
+            leave_alliance = FRA
+            relation = { who = FRA value = -150 }
+            FRA = { diplomatic_influence = { who = THIS value = -200 } }
         }
         any_country = {
             limit = {
@@ -1125,22 +1164,46 @@ country_event = {
                     primary_culture = south_german
                 }
             }
-        casus_belli = {
+            casus_belli = {
                 target = FRA
                 type = humiliate
                 months = 20
             }
-        end_military_access = FRA
-        leave_alliance = FRA
-        relation = { who = FRA value = -150 }
+            end_military_access = FRA
+            leave_alliance = FRA
+            relation = { who = FRA value = -150 }
         }
-        ai_chance = { factor = 0.95 }
+        ai_chance = { 
+            factor = 0.15 
+            modifier = {
+                factor = 0
+                has_recently_lost_war = yes
+            }
+            modifier = {
+                factor = 0
+                is_disarmed = yes
+            }
+            modifier = {
+                factor = 0
+                war_exhaustion = 1
+            }
+            modifier = {
+                factor = 0
+                num_of_revolts = 1
+            }
+            modifier = {
+                factor = 0
+                war = yes         
+            }
+        }
     }
 
 
     option = {
         name = "EVT33037OPTB"
         prestige = -10
+        badboy = -2
+        remove_country_modifier = rhine_crisis
         any_country = {
             limit = {
                 OR = {
@@ -1150,7 +1213,7 @@ country_event = {
         }
         relation = { who = FRA value = 50 }
         }
-        ai_chance = { factor = 0.05 }
+        ai_chance = { factor = 0.85 }
     }
 }
 
@@ -1273,11 +1336,19 @@ country_event = {
                 WUR_589 = { owner = { NOT = { is_culture_group = germanic } } }
                 HES_2560 = { owner = { NOT = { is_culture_group = germanic } } }
             }
+            AND = {
+                RHI = {
+                    exists = yes
+                    vassal_of = FRA
+                    }
+                }
+                has_global_flag = left_bank_french_victory
+            }
         }
 
     fire_only_once = yes
 
-    mean_time_to_happen = { days = 5 }
+    mean_time_to_happen = { days = 10 }
 
     option = {
         name = "EVT33038OPTA"
@@ -1467,6 +1538,7 @@ country_event = {
         owns = 528 #Hamburg
         owns = 534 #Hanover
         owns = 564 #Frankfurt
+        NOT = { has_global_flag = german_confederation_austrian }
     }
 
     fire_only_once = yes
