@@ -471,8 +471,9 @@ country_event = {
         tag = PNJ
         has_country_flag = singh
         NOT = { has_leader = "Ranjit Singh" }
+        year = 1838
         NOT = { truce_with = ENG }
-        NOT = { has_country_flag = ranjit_singh_dead }
+        NOT = { has_global_flag = ranjit_singh_dead }
 
     }
 
@@ -480,14 +481,12 @@ country_event = {
 
     option = {
         name = "EVT97115OPTA"
-        set_country_flag = ranjit_singh_dead
+        set_global_flag = ranjit_singh_dead
         any_pop = { militancy = 4 }
-        any_country = {
-            limit = {
-                neighbour = THIS
-                tag = ENG
-            }
-            ENG = { country_event = 97116 }
+        leave_alliance = ENG
+        add_country_modifier = {
+            name = power_vacuum
+            duration = 1825             
         }
     }
 }
@@ -503,17 +502,63 @@ country_event = {
     news_desc_short = "EVTDESC97116_NEWS_SHORT"
     picture = "ranjit_singh_death"
 
-    is_triggered_only = yes
+    trigger = {
+        tag = ENG
+        has_global_flag = ranjit_singh_dead
+        NOT = { 
+            truce_with = PNJ 
+            relation = { who = PNJ value = 150 }
+            alliance_with = PNJ
+        }
+        war = no
+        NOT = { has_global_flag = 1_anglo_sikh_war }
+    }
+    
+    mean_time_to_happen = {
+        months = 30
+        modifier = { factor = 0.8 PNJ = { average_militancy = 3 } }
+        modifier = { factor = 0.5 PNJ = { average_militancy = 7 } }
+        modifier = { factor = 0.8 ENG = { ai = yes } }
+        modifier = { factor = 0.1 year = 1845 }
+        modifier = { factor = 0.01 year = 1846 }
+    }
+    
+    immediate = { set_global_flag = 1_anglo_sikh_war }
 
     option = {
         name = "EVT97116OPTA"
         badboy = 2
         relation = { who = PNJ value = -100 }
         leave_alliance = PNJ
-        casus_belli = {
-            target = PNJ
-            type = make_puppet
-            months = 60
+        random_owned = {
+            limit = {
+                owner = {
+                    nationalism_n_imperialism = 1
+                    NOT = { has_global_flag = berlin_conference }
+                }
+            }
+            owner = {
+                casus_belli = {
+                    target = PNJ
+                    type = establish_protectorate_NI_casus_belli
+                    months = 60
+                }
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    nationalism_n_imperialism = 1
+                    has_global_flag = berlin_conference
+                }
+            }
+            owner = {
+                casus_belli = {
+                    target = PNJ
+                    type = establish_protectorate_BC_casus_belli
+                    months = 60
+                }
+            }
         }
         ai_chance = {
             factor = 1
@@ -527,8 +572,11 @@ country_event = {
         leave_alliance = PNJ
         war = {
             target = PNJ
-            attacker_goal = { casus_belli = conquest_any }
-            call_ally = yes
+            attacker_goal = { 
+                casus_belli = great_game_cb
+            }
+            defender_goal = { casus_belli = status_quo }
+            call_ally = no
         }
 
         ai_chance = {
@@ -615,11 +663,15 @@ province_event = {
             province_id = 1414
             province_id = 1455
         }
+        OR = {
+            has_global_flag = tea_monopoly_broken_1
+            has_global_flag = tea_monopoly_broken
+        }
         NOT = { year = 1910 }
     }
 
     mean_time_to_happen = {
-        months = 36
+        months = 24
         modifier = { factor = 0.5 any_neighbor_province = { trade_goods = tea } }
         modifier = { factor = 200 province_id = 1455 NOT = { year = 1895 } }
     }

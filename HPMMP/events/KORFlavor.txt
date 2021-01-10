@@ -176,7 +176,10 @@ country_event = {
         war = {
             target = KOR
             attacker_goal = {
-                casus_belli = humiliate
+                casus_belli = humiliate   
+            }
+            defender_goal = { 
+                casus_belli = humiliate 
             }
         }
     }
@@ -315,7 +318,7 @@ country_event = {
             NOT = { year = 1870 }
         }
         modifier = {
-            factor = 0.5
+            factor = 0.2
             year = 1875
         }
         modifier = {
@@ -363,6 +366,10 @@ country_event = {
             name = "western_influences"
             duration = -1
         }
+        remove_country_modifier = isolationist_foreign_naval_officers
+        remove_country_modifier = isolationist_foreign_naval_schools
+        remove_country_modifier = isolationist_foreign_officers
+        remove_country_modifier = isolationist_foreign_training
         random_owned = {
             limit = { owner = { NOT = { border_policy = open_borders } } }
             owner = { political_reform = open_borders }
@@ -528,6 +535,10 @@ country_event = {
         name = "EVT85015OPTA"
         prestige = -20
         remove_country_modifier = uncivilized_isolationism
+        remove_country_modifier = isolationist_foreign_naval_officers
+        remove_country_modifier = isolationist_foreign_naval_schools
+        remove_country_modifier = isolationist_foreign_officers
+        remove_country_modifier = isolationist_foreign_training
         add_country_modifier = {
             name = "western_influences"
             duration = -1
@@ -584,8 +595,13 @@ country_event = {
 
     trigger = {
         tag = KOR
-        civilized = no
-        civilization_progress = 0.6
+        OR = { 
+            AND = { 
+                civilized = no
+                civilization_progress = 0.7
+            }
+            year = 1894 
+        }
         government = absolute_monarchy
         OR = {
             part_of_sphere = yes
@@ -631,6 +647,10 @@ country_event = {
         modifier = {
             factor = 0.5
             civilization_progress = 0.85
+        }
+        modifier = {
+            factor = 0
+            year = 1895
         }
     }
 
@@ -807,7 +827,7 @@ country_event = {
                 is_greater_power = yes
             }
             modifier = {
-                factor = 0.5
+                factor = 0
                 OR = {
                     is_our_vassal = KOR
                     alliance_with = KOR

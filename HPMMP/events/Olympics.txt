@@ -14,7 +14,8 @@ country_event = {
 
     trigger = {
         NOT = { has_country_flag = IOCMember }
-        year = 1892
+        year = 1893
+        war = no
         OR = {
             is_greater_power = yes # Nation is a great power
             prestige = 500 # Non-Euro/non GP need to be high prestige to get invite in this era

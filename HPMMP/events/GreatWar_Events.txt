@@ -52,6 +52,7 @@ country_event = {
 
     option = {
         name = "EVTOPTA96000" #We shall be victorious!
+        set_country_flag = great_war_has_happened
         set_country_flag = in_great_war
         war_exhaustion = -20
         any_pop = {
@@ -143,6 +144,26 @@ country_event = {
                 }
             }
         }
+    }
+}
+country_event = {
+    id = 96002
+    title = "EVTNAME96002"
+    desc = "EVTDESC96002"
+
+    trigger = {
+        ai = yes
+        war = no
+        has_country_flag = calling_all_allies
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    option = {
+        name = "EVT96002OPTA"
+        clr_country_flag = calling_all_allies
     }
 }
 #Candidate for "on_action"
@@ -3709,6 +3730,17 @@ country_event = {
             add_core = GER
         }
 
+        #Secede Baltic to Germany, if truce
+        any_owned = {
+            limit = {
+                is_core = UBD
+                owner = {
+                    truce_with = GER
+                }
+            }
+            secede_province = GER
+        }
+
         #Remove cores from the Baltic States
         any_owned = {
             limit = {
@@ -3720,6 +3752,19 @@ country_event = {
                 }
             }
             remove_core = RUS
+        }
+
+        #If no truce with Germany, remove UBD cores
+        any_owned = {
+            limit = {
+                OR = {
+                    is_core = LAT
+                    is_core = LIT
+                    is_core = EST
+                    is_core = UBD
+                }
+            }
+            remove_core = UBD
         }
 
         #add Finnish cores to Viipuri, if owned
@@ -7077,6 +7122,7 @@ country_event = {
         remove_country_modifier = great_war2
         remove_country_modifier = great_war3
         war_exhaustion = 40
+        set_global_flag = france_dismantled
 
         #if over the badboy limit, reduce infamy to 24.99, otherwise reduce infamy by 10
         random_owned = {

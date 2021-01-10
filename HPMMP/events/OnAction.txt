@@ -8,6 +8,7 @@ country_event = {
         country = {
             NOT = { has_country_flag = ghost_country }
             has_country_flag = existing_country
+            NOT = { tag = QNG }
             OR = {
                 slavery = yes_slavery
                 slavery = freedom_of_womb
@@ -33,6 +34,13 @@ country_event = {
                     is_slave = yes
                 }
                 any_pop = { consciousness = -0.5 }
+            }
+            any_owned = {
+                limit = {
+                    has_pop_type = slaves
+                    produces = cotton
+                }
+                add_province_modifier = { name = king_cotton duration = -1 }
             }
         }
         ai_chance = {

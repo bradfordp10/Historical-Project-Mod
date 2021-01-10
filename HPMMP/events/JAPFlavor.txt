@@ -20,6 +20,10 @@ country_event = {
         remove_country_modifier = sakoku
         remove_country_modifier = rangaku
         remove_country_modifier = uncivilized_isolationism
+        remove_country_modifier = isolationist_foreign_naval_officers
+        remove_country_modifier = isolationist_foreign_naval_schools
+        remove_country_modifier = isolationist_foreign_officers
+        remove_country_modifier = isolationist_foreign_training
         random_owned = {
             limit = { owner = { NOT = { border_policy = open_borders } } }
             owner = { political_reform = open_borders }
@@ -27,6 +31,24 @@ country_event = {
         add_country_modifier = {
             name = "western_influences"
             duration = -1
+        }
+        any_country = {
+            limit = {
+                primary_culture = japanese
+                substate_of = THIS
+            }
+            remove_country_modifier = uncivilized_isolationism
+            remove_country_modifier = isolationist_foreign_naval_officers
+            remove_country_modifier = isolationist_foreign_naval_schools
+            remove_country_modifier = isolationist_foreign_officers
+            remove_country_modifier = isolationist_foreign_training
+            limit = { owner = { NOT = { border_policy = open_borders } } }
+            owner = { political_reform = open_borders }
+            }
+            add_country_modifier = {
+                name = "western_influences"
+                duration = -1
+            }
         }
         FROM = { country_event = 97606 }
     }
@@ -130,6 +152,10 @@ country_event = {
         prestige = -10
         FROM = { country_event = 97609 }
         remove_country_modifier = uncivilized_isolationism
+        remove_country_modifier = isolationist_foreign_naval_officers
+        remove_country_modifier = isolationist_foreign_naval_schools
+        remove_country_modifier = isolationist_foreign_officers
+        remove_country_modifier = isolationist_foreign_training
         random_owned = {
             limit = { owner = { NOT = { border_policy = open_borders } } }
             owner = { political_reform = open_borders }
@@ -137,6 +163,25 @@ country_event = {
         add_country_modifier = {
             name = "western_influences"
             duration = -1
+        }
+        any_country = { 
+            limit = {
+                primary_culture = japanese
+                substate_of = THIS 
+            }
+            remove_country_modifier = uncivilized_isolationism
+            remove_country_modifier = isolationist_foreign_naval_officers
+            remove_country_modifier = isolationist_foreign_naval_schools
+            remove_country_modifier = isolationist_foreign_officers
+            remove_country_modifier = isolationist_foreign_training
+            random_owned = {
+            limit = { owner = { NOT = { border_policy = open_borders } } }
+            owner = { political_reform = open_borders }
+            }
+            add_country_modifier = {
+                name = "western_influences"
+                duration = -1
+            }                         
         }
 
         random_owned = {
@@ -276,8 +321,8 @@ province_event = {
             has_country_flag = sonno_joi
             war = no
         }
-        owner = {
-            any_neighbor_country = { tag = JAP }
+        owner = { 
+            any_neighbor_country = { primary_culture = japanese } 
         }
         TKG = { exists = yes }
         is_core = TKG
@@ -1041,6 +1086,14 @@ country_event = {
         }
         ai_chance = {
             factor = 50
+            odifier = {
+                factor = 2
+                tag = SAT
+            }
+            modifier = {
+                factor = 2
+                tag = CHO
+            }
             modifier = {
                 factor = 1.5
                 has_country_flag = angered_by_bakufu
@@ -1143,6 +1196,14 @@ country_event = {
                 factor = 0.8
                 has_country_flag = tozama_daimyo
             }
+            modifier = {
+                factor = 0
+                tag = SAT
+            }
+            modifier = {
+                factor = 0
+                tag = CHO
+            }
         }
     }
 }
@@ -1169,7 +1230,7 @@ country_event = {
             owner = {
                 add_country_modifier = {
                     name = taiping_draft
-                    duration = 90
+                    duration = 365
                 }
             }
         }
@@ -1207,7 +1268,7 @@ country_event = {
             owner = {
                 add_country_modifier = {
                     name = daimyo_draft
-                    duration = 90
+                    duration = 365
                 }
             }
         }
@@ -1219,7 +1280,7 @@ country_event = {
             owner = {
                 add_country_modifier = {
                     name = taiping_draft
-                    duration = 90
+                    duration = 365
                 }
             }
         }
@@ -1439,6 +1500,7 @@ country_event = {
             end_war = THIS
             country_event = { id = 97647 days = 1 }
         }
+        create_vassal = RYU
     }
 }
 
@@ -1459,6 +1521,9 @@ country_event = {
                 THIS = { civilized = no }
             }
             THIS = { civilized = yes }
+        }
+        any_owned = {
+            secede_province = JAP
         }
         JAP = { inherit = THIS }
         ai_chance = {
@@ -1505,6 +1570,32 @@ country_event = {
         months = 3
     }
 
+    immediate = {
+        1651 = {
+            add_province_modifier = {
+                name = gateway_to_harbor
+                duration = 14600
+            }
+            add_province_modifier = {
+                name = baby_boom
+                duration = 1825
+            }
+        }
+        1655 = {
+            add_province_modifier = {
+                name = gateway_to_harbor
+                duration = 14600
+            }
+            add_province_modifier = {
+                name = baby_boom
+                duration = 1825
+            }
+        }
+        add_country_modifier = {
+            name = global_baby_boom
+            duration = 3650
+        }
+
     option = {
         name = "EVT97648OPTA"
         set_country_flag = capital_in_the_east
@@ -1514,9 +1605,25 @@ country_event = {
             life_rating = 10
             add_province_modifier = {
                 name = gateway_to_harbor
-                duration = 3650
+                duration = 14600
+            }
+            add_province_modifier = {
+                name = small_baby_boom
+                duration = 14600
+            }
+            add_province_modifier = {
+                name = baby_boom
+                duration = 1825
             }
             change_province_name = "Tokyo"
+        }
+        add_country_modifier = {
+            name = global_baby_boom_small
+            duration = 5475
+        }
+        add_country_modifier = {
+            name = global_baby_boom
+            duration = 1825
         }
         ai_chance = {
             factor = 100
@@ -1530,8 +1637,24 @@ country_event = {
             life_rating = 10
             add_province_modifier = {
                 name = gateway_to_harbor
-                duration = 3650
+                duration = 14600
             }
+            add_province_modifier = {
+                name = small_baby_boom
+                duration = 14600
+            }
+            add_province_modifier = {
+                name = baby_boom
+                duration = 1825
+            }
+        }
+        add_country_modifier = {
+            name = global_baby_boom_small
+            duration = 5475
+        }
+        add_country_modifier = {
+            name = global_baby_boom
+            duration = 1825
         }
         ai_chance = {
             factor = 0
@@ -1607,6 +1730,26 @@ country_event = {
         days = 7
     }
 
+    immediate = {
+        1651 = {
+            add_province_modifier = {
+                name = gateway_to_harbor
+                duration = 14600
+            }
+        }
+        1655 = {
+            add_province_modifier = {
+                name = gateway_to_harbor
+                duration = 14600
+            }
+            life_rating = 10
+        }
+        add_country_modifier = {
+            name = global_baby_boom
+            duration = 3650
+        }
+    }
+
     option = {
         name = "EVT97651OPTA"
         clr_global_flag = boshin_war
@@ -1616,8 +1759,20 @@ country_event = {
             life_rating = 10
             add_province_modifier = {
                 name = gateway_to_harbor
-                duration = 3650
+                duration = 14600
             }
+            add_province_modifier = {
+                name = small_baby_boom
+                duration = 14600
+            }
+            add_province_modifier = {
+                name = baby_boom
+                duration = 1825
+            }
+        }
+        add_country_modifier = {
+            name = global_baby_boom_small
+            duration = 5475
         }
         random_country = {
             limit = {
@@ -1669,6 +1824,7 @@ country_event = {
             end_war = JAP
             country_event = { id = 97652 days = 15 }
         }
+        create_vassal = RYU
     }
 }
 
@@ -1711,7 +1867,7 @@ country_event = {
         relation = { who = TKG value = -200 }
         add_country_modifier = {
             name = taiping_draft
-            duration = 90
+            duration = 365
         }
         ai_chance = {
             factor = 0
@@ -2029,6 +2185,11 @@ country_event = {
 
     mean_time_to_happen = {
         months = 20
+
+        modifier = {
+            factor = 0.5
+            year = 1855
+        }
     }
 
     option = {
@@ -2056,6 +2217,12 @@ country_event = {
                 life_rating = 10
                 secede_province = THIS
                 any_pop = { limit = { NOT = { is_primary_culture = yes } } literacy = -0.99 }
+                add_province_modifier = { name = population_resettlement duration = 720 } 
+                add_province_modifier = { name = baby_boom duration = 720 }
+                any_pop = {
+                    limit = { type = bureaucrats }
+                    reduce_pop = 0.3
+                }
             }
         }
     }
@@ -2553,6 +2720,7 @@ country_event = {
 
     trigger = {
         tag = JAP
+        is_greater_power = yes
         has_country_modifier = line_of_advantage
         is_disarmed = no
         war = no
@@ -2575,6 +2743,10 @@ country_event = {
                     war = no
                 }
             }
+        }
+        OR = {
+            year = 1874
+            total_amount_of_ships = 35
         }
         NOT = {
             has_country_flag = taiwan_line_of_advantage
@@ -3078,10 +3250,10 @@ country_event = {
             clr_country_flag = fascist_party_in_power
             clr_country_flag = anarcho_liberal_party_in_power
             election = yes
-            small_arms = 10
-            canned_food = 10
-            ammunition = 10
-            artillery = 10
+            small_arms = 50
+            canned_food = 50
+            ammunition = 50
+            artillery = 50
             treasury = 50000
             define_general = {
                 name = "Hijikata Toshizo"

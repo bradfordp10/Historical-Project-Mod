@@ -62,7 +62,6 @@ country_event = {
     option = {
     name = "EVT900000OPTA"
         set_global_flag = italian_ultimatum_sent
-        set_country_flag = guerra_di_libia
         TUR = { country_event = 900001 }
         any_pop = {
             limit = { is_culture_group = italian }

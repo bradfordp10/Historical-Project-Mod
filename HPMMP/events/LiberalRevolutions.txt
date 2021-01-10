@@ -16,6 +16,12 @@ country_event = {
                 cultural_union = { exists = no }
             }
         }
+        NOT = { tag = ENG }
+        NOT = { tag = RUS }
+        NOT = { tag = FIN }
+        NOT = { tag = SWE }
+        NOT = { tag = NOR }
+        NOT = { tag = TUR }
         NOT = { tag = UBD }
         OR = {
             tag = AUS
@@ -42,14 +48,17 @@ country_event = {
             government = democracy
         }
         NOT = {
-            has_global_flag = liberal_revolution_should_now_fire
+            OR = {
+                has_global_flag = liberal_revolution_should_now_fire
+                has_country_flag = isolationist
+            }
         }
     }
 
     mean_time_to_happen = {
         months = 96
         modifier = {
-            factor = 0.3
+            factor = 0.1
             has_global_flag = liberal_revolution_somewhere
             NOT = { is_culture_group = scandinavian }
         }
@@ -61,6 +70,10 @@ country_event = {
         modifier = {
             factor = 0.5
             any_neighbor_country = { has_country_flag = liberal_revolution_in_progress }
+        }
+        modifier = {
+            factor = 2
+            NOT = { literacy = 0.3 }
         }
         modifier = {
             factor = 0.8
@@ -91,7 +104,7 @@ country_event = {
             nationalvalue = nv_order
         }
         modifier = {
-            factor = 2
+            factor = 1.5
             nationalvalue = nv_autocracy
         }
         modifier = {
@@ -505,6 +518,10 @@ country_event = {
         modifier = {
             factor = 0.7
             NOT = { poor_strata_life_needs = 0.5 }
+        }
+        modifier = {
+            factor = 0.7
+            NOT = { unemployment_by_type = { type = farmers value = 0.5 } }
         }
         modifier = {
             factor = 1.5
@@ -2412,6 +2429,14 @@ province_event = {
             owner = { nationalvalue = nv_autocracy }
             }
         }
+        modifier = {
+            factor = 0.5
+            owner = { is_culture_group = french }
+        }
+        modifier = {
+            factor = 0.5
+            owner = { is_culture_group = germanic }
+        }
     }
     option = {
         name = "EVTOPTA10170"
@@ -3930,6 +3955,10 @@ country_event = {
             limit = { is_primary_culture = yes }
             militancy = -6
         }
+        add_country_modifier = {
+            name = no_more_war
+            duration = 7                                                    
+        }
         random_owned = {
             limit = {
                 owner = {
@@ -3941,13 +3970,6 @@ country_event = {
             }
             owner = {
                 prestige = -10
-                war = {
-                    target = HUN
-                    attacker_goal = {
-                        casus_belli = annex_core_country
-                    }
-                    call_ally = yes
-                }
             }
         }
         random_owned = {
@@ -3961,17 +3983,15 @@ country_event = {
             }
             owner = {
                 prestige = 20
-                war = {
-                    target = HUN
-                    attacker_goal = {
-                        casus_belli = annex_core_country
-                    }
-                }
             }
         }
         HUN = {
             capital = 641
             government = hms_government
+            add_country_modifier = {
+                name = no_more_war
+                duration = 7
+            }
             political_reform = mandatory_service
             political_reform = non_secret_ballots
             political_reform = universal_weighted_voting
@@ -3986,6 +4006,10 @@ country_event = {
             clr_country_flag = presidential_dictatorship_gov
             clr_country_flag = fascist_gov
             clr_country_flag = anarcho_liberal_gov
+            relation = {
+                who = RUS
+                value = -200
+            }
         }
 
         ##Debt Law
@@ -4264,6 +4288,15 @@ country_event = {
             limit = { is_primary_culture = yes }
             militancy = -6
         }
+        add_country_modifier = {
+                name = no_more_war
+                duration = 14                                               
+        }
+        casus_belli = {          
+            target = HUN                
+            type = annex_core_country
+            months = 60   
+        }
         random_owned = {
             limit = {
                 owner = {
@@ -4275,13 +4308,6 @@ country_event = {
             }
             owner = {
                 prestige = -10
-                war = {
-                    target = HUN
-                    attacker_goal = {
-                        casus_belli = annex_core_country
-                    }
-                    call_ally = yes
-                }
             }
         }
         random_owned = {
@@ -4295,17 +4321,15 @@ country_event = {
             }
             owner = {
                 prestige = 10
-                war = {
-                    target = HUN
-                    attacker_goal = {
-                        casus_belli = annex_core_country
-                    }
-                }
             }
         }
         HUN = {
             capital = 641
             government = hms_government
+            add_country_modifier = {
+                name = no_more_war
+                duration = 14                                                 
+            }
             political_reform = mandatory_service
             political_reform = non_secret_ballots
             political_reform = universal_weighted_voting
@@ -4696,6 +4720,10 @@ country_event = {
     option = {
         name = "EVT10228OPTA"
         prestige = -10
+        add_country_modifier = {
+            name = thorbecke_reforms
+            duration = 7300
+        }
         random_owned = {
             limit = {
                 owner = { government = prussian_constitutionalism }
@@ -4996,6 +5024,7 @@ country_event = {
     news_desc_short = "EVTDESC10229_NEWS_SHORT"
     picture = "danishgovernment"
     major = yes
+    fire_only_once = yes
 
     trigger = {
         OR = {
@@ -5026,7 +5055,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 1
+        days = 7
         modifier = {
             factor = 0.1
             capital_scope = { controlled_by_rebels = yes }
@@ -5616,9 +5645,9 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 480
+        months = 300
         modifier = {
-            factor = 0.5 #0.1
+            factor = 0.1
             has_country_flag = liberal_revolution_in_progress
         }
         modifier = {
@@ -5673,6 +5702,7 @@ country_event = {
             OR = {
                 vote_franschise = universal_weighted_voting
                 vote_franschise = universal_voting
+                has_country_flag = isolationist
             }
         }
         civilized = yes

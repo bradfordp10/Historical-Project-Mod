@@ -131,6 +131,161 @@ country_event = {
     }
 }
 
+country_event = {
+    id = 35305
+    title = "EVTNAME35305" #the Guerra di Libia
+    desc = "EVTDESC35305"
+    picture = "deliberation"
+    
+    fire_only_once = yes
+    
+    trigger = {
+        tag = ITA
+        war = no
+        is_disarmed = no
+        has_global_flag = berlin_congress_held
+        OR = {
+            military_directionism = 1
+            mass_politics = 1
+            year = 1910
+        }
+        is_greater_power = yes
+        war_policy = jingoism
+        TUR = {
+            owns = 1731
+            is_greater_power = no
+            NOT = {
+                alliance_with = ITA
+                in_sphere = ITA
+            }
+        }
+        NOT = { has_country_modifier = no_more_war }
+    }
+    
+    mean_time_to_happen = {
+        months = 25
+        modifier = {
+            factor = 0.25
+            TUR = { war = yes }
+        }
+    }
+    
+    option = {
+        name = "EVT35305OPTA"
+        set_country_flag = guerra_di_libia
+        any_pop = {
+            limit = { is_culture_group = italian }
+            dominant_issue = {
+                factor = 0.05
+                value = jingoism
+            }
+            scaled_militancy = {
+                issue = jingoism
+                factor = -4
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = { ai = yes }
+                1731 = { is_colonial = no }
+            }
+            owner = {
+                war = {
+                    target = TUR
+                    attacker_goal = {
+                        casus_belli = acquire_any_state
+                        state_province_id = 1731
+                    }
+                    call_ally = yes
+                }
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = { ai = no }
+                1731 = { is_colonial = no }
+            }
+            owner = {
+                war = {
+                    target = TUR
+                    attacker_goal = {
+                        casus_belli = acquire_any_state
+                        state_province_id = 1731
+                    }
+                }
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = { ai = yes }
+                1731 = { is_colonial = yes }
+            }
+            owner = {
+                war = {
+                    target = TUR
+                    attacker_goal = {
+                        casus_belli = place_in_the_sun
+                        state_province_id = 1731
+                    }
+                    call_ally = yes
+                }
+            }
+        }
+        random_owned = {
+            limit = {
+                owner = { ai = no }
+                1731 = { is_colonial = yes }
+            }
+            owner = {
+                war = {
+                    target = TUR
+                    attacker_goal = {
+                        casus_belli = place_in_the_sun
+                        state_province_id = 1731
+                    }
+                }
+            }
+        }
+        ai_chance = {
+            factor = 80
+            modifier = {
+                factor = 0.5
+                badboy = 0.6
+                NOT = {
+                    government = fascist_dictatorship
+                    government = absolute_monarchy
+                }
+            }
+        }
+    }
+    
+    option = {
+        name = "EVT35305OPTB"
+        any_pop = {
+            limit = { is_culture_group = italian }
+            dominant_issue = {
+                factor = 0.02
+                value = pacifism
+            }
+            scaled_militancy = {
+                issue = jingoism
+                factor = 4
+            }
+        }
+        ai_chance = {
+            factor = 20
+            modifier = {
+                factor = 2
+                badboy = 0.6
+                NOT = {
+                    government = fascist_dictatorship
+                    government = absolute_monarchy
+                }
+            }
+        }
+    }
+}
+
 
 country_event = {
 
@@ -312,8 +467,197 @@ country_event = {
                 }
             }
         }
+        random_country = {
+            limit = {
+                tag = AUS
+                OR = { 
+                    AND = { 
+                        owns = 726
+                        owns = 727
+                        owns = 728
+                    }
+                    AND = { 
+                        NOT = { 
+                            owns = 726
+                            owns = 727
+                            owns = 728
+                        }
+                        AND = {
+                            owns = 729
+                            owns = 730
+                            owns = 731
+                        }
+                    }
+                }
+                exists = SAR
+            }
+            THIS = {
+                relation = {
+                    who = AUS
+                    value = -150
+                }
+                casus_belli = {
+                    target = AUS
+                    type = free_peoples
+                    months = 12
+                }
+                war = {
+                    target = AUS
+                    attacker_goal = {
+                        casus_belli = free_peoples
+                        country = SAR
+                        state_province_id = 729
+                    }
+                    call_ally = yes
+                }
+            }
+        }
+        random_country = {
+            limit = {
+                tag = KUK
+                OR = { 
+                    AND = { 
+                        owns = 726
+                        owns = 727
+                        owns = 728
+                    }
+                    AND = { 
+                        NOT = { 
+                            owns = 726
+                            owns = 727
+                            owns = 728
+                        }
+                        AND = {
+                            owns = 729
+                            owns = 730
+                            owns = 731
+                        }
+                    }
+                }
+                exists = SAR
+            }
+            THIS = {
+                relation = {
+                    who = KUK
+                    value = -150
+                }
+                casus_belli = {
+                    target = KUK
+                    type = free_peoples
+                    months = 12
+                }
+                war = {
+                    target = KUK
+                    attacker_goal = {
+                        casus_belli = free_peoples
+                        country = SAR
+                        state_province_id = 729
+                    }
+                    call_ally = yes
+                }
+            }
+        }
+        random_country = {
+            limit = {
+                tag = AUS
+                OR = { 
+                    AND = { 
+                        owns = 726
+                        owns = 727
+                        owns = 728
+                    }
+                    AND = { 
+                        NOT = { 
+                            owns = 726
+                            owns = 727
+                            owns = 728
+                        }
+                        AND = {
+                            owns = 729
+                            owns = 730
+                            owns = 731
+                        }
+                    }
+                }
+                exists = SVY
+            }
+            THIS = {
+                relation = {
+                    who = AUS
+                    value = -150
+                }
+                casus_belli = {
+                    target = AUS
+                    type = free_peoples
+                    months = 12
+                }
+                war = {
+                    target = AUS
+                    attacker_goal = {
+                        casus_belli = free_peoples
+                        country = SVY
+                        state_province_id = 729
+                    }
+                    call_ally = yes
+                }
+            }
+        }
+        random_country = {
+            limit = {
+                tag = KUK
+                OR = { 
+                    AND = { 
+                        owns = 726
+                        owns = 727
+                        owns = 728
+                    }
+                    AND = { 
+                        NOT = { 
+                            owns = 726
+                            owns = 727
+                            owns = 728
+                        }
+                        AND = {
+                            owns = 729
+                            owns = 730
+                            owns = 731
+                        }
+                    }
+                }
+                exists = SVY
+            }
+            THIS = {
+                relation = {
+                    who = KUK
+                    value = -150
+                }
+                casus_belli = {
+                    target = KUK
+                    type = free_peoples
+                    months = 12
+                }
+                war = {
+                    target = KUK
+                    attacker_goal = {
+                        casus_belli = free_peoples
+                        country = SVY
+                        state_province_id = 729
+                    }
+                    call_ally = yes
+                }
+            }
+        }
         ai_chance = {
             factor = 95
+            modifier = {
+                factor = 2
+                has_country_modifier = louis_napoleon_iii
+            }
+            
+            modifier = {
+                factor = 0.5
+                NOT = { has_country_modifier = louis_napoleon_iii }
+            }
         }
     }
 
@@ -334,6 +678,10 @@ country_event = {
         }
         ai_chance = {
             factor = 5
+            modifier = {
+                factor = 10
+                NOT = { has_country_modifier = louis_napoleon_iii }
+            }
         }
     }
 }
@@ -693,6 +1041,11 @@ country_event = {
         modifier = {
             factor = 0.75
             exists = GER
+        }
+        modifier = {
+            factor = 0.01
+            tag = SAR
+            ai = yes
         }
     }
 

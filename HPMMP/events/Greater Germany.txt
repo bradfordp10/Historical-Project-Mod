@@ -58,10 +58,11 @@ country_event = {
             exists = GER
             has_country_flag = austrian_destiny
         }
+        NOT = { badboy = 0.5 }
     }
 
     mean_time_to_happen = {
-        months = 6
+        days = 10
     }
 
     option = {
@@ -133,48 +134,21 @@ country_event = {
         set_country_flag = austrian_destiny
         set_country_flag = austrian_greater_germany
         badboy = 20
+        any_greater_power = {
+            leave_alliance = THIS                     
+        }
+        any_owned = {    
+            limit = {       
+                is_core = KRA                     
+            }
+            remove_core = THIS
+        }
         AUS_612 = { add_core = GER remove_core = HUN }
         AUS_734 = { add_core = GER remove_core = HUN }
         AUS_613 = { add_core = GER remove_core = HUN }
         AUS_619 = { add_core = GER remove_core = HUN }
-        AUS_733 = { remove_core = AUS remove_core = KUK }
-        AUS_736 = { remove_core = AUS remove_core = KUK }
-        AUS_768 = { remove_core = AUS remove_core = KUK }
-        random_country = {
-            limit = {
-                owns = 625
-                625 = {
-                    OR = {
-                        is_core = AUS
-                        is_core = KUK
-                    }
-                }
-            }
-            AUS_625 = { add_core = GER } #Bohemia
-        }
-        random_country = {
-            limit = {
-                owns = 689
-                689 = {
-                    OR = {
-                        is_core = AUS
-                        is_core = KUK
-                    }
-                }
-            }
-            AUS_627 = { add_core = GER } #Lower Silesia
-        }
-        random_country = {
-            limit = {
-                owns = 629
-                629 = {
-                    OR = {
-                        is_core = AUS
-                        is_core = KUK
-                    }
-                }
-            }
-            AUS_626 = { add_core = GER } #Sudetes
+        all_core = {
+            add_core = GER
         }
         any_pop = {
             limit = {
@@ -184,6 +158,24 @@ country_event = {
             }
             consciousness = 5
             militancy = 5
+        }
+
+        random_owned = {
+            limit = {
+                province_id = 647
+            }
+            SIE = {
+                add_accepted_culture = south_german
+            }
+        }
+
+        random_owned = {                                     
+            limit = {
+                province_id = 653                 
+            }
+            BAN = {
+                add_accepted_culture = romanian
+            }           
         }
 
         any_country = { #Returns cores to existing countries
@@ -196,6 +188,24 @@ country_event = {
                 exists = yes
             }
             country_event = 31717
+        }
+
+        any_country = {
+            limit = {
+                OR = {
+                    tag = BAN
+                    tag = SIE           
+                }
+                NOT = { exists = KUK }
+                any_core = {
+                    owned_by = THIS
+                    NOT = { is_core = GER }
+                    is_colonial = no
+                }
+                exists = no
+                is_cultural_union = no
+            }
+            country_event = 31511
         }
 
         any_country = { #Frees greater Hungary and vassalizes them
@@ -216,6 +226,7 @@ country_event = {
             limit = {
                 OR = {
                     tag = BOS
+                    tag = DLM
                     tag = CRO
                     tag = SLO
                     tag = SLV
@@ -298,11 +309,11 @@ country_event = {
                 tag = KUK
             }
             modifier = {
-                factor = 0.5
+                factor = 0.8
                 government = absolute_monarchy
             }
             modifier = {
-                factor = 0
+                factor = 0.5
                 OR = {
                     government = democracy
                     government = hms_government
@@ -452,6 +463,26 @@ country_event = {
         FROM = {
             any_owned = {
                 limit = {
+                    NOT = { 
+                        OR = {
+                            tag = CRO
+                            tag = DLM
+                        }
+                    }
+                    NOT = { is_core = CRO }
+                    NOT = { is_core = GER }
+                    is_core = THIS
+                }
+                secede_province = THIS
+            }
+        }
+        FROM = {
+            any_owned = {
+                limit = {
+                    OR = {
+                        tag = CRO
+                        tag = DLM
+                    }
                     NOT = { is_core = GER }
                     is_core = THIS
                 }
@@ -508,6 +539,26 @@ country_event = {
         FROM = {
             any_owned = {
                 limit = {
+                    NOT = { 
+                        OR = {
+                            tag = CRO
+                            tag = DLM
+                        }
+                    }
+                    NOT = { is_core = CRO }
+                    NOT = { is_core = GER }
+                    is_core = THIS
+                }
+                secede_province = THIS
+            }
+        }
+        FROM = {
+            any_owned = {
+                limit = {
+                    OR = {
+                        tag = CRO
+                        tag = DLM
+                    }
                     NOT = { is_core = GER }
                     is_core = THIS
                 }
@@ -593,7 +644,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 12
+        days = 14
     }
 
     option = {
@@ -611,10 +662,6 @@ country_event = {
         }
         ai_chance = {
             factor = 10
-            modifier = {
-                factor = 0.5
-                is_secondary_power = yes
-            }
             modifier = {
                 factor = 0
                 tag = KUK
@@ -692,8 +739,16 @@ country_event = {
         ai_chance = {
             factor = 30
             modifier = {
-                factor = 0.5
+                factor = 1.5
                 is_secondary_power = yes
+            }
+            modifier = {
+                factor = 1.5
+                alliance_with = GER
+            }
+            modifier = {
+                factor = 1.5
+                relation = { who = GER value = 100 }
             }
             modifier = {
                 factor = 0.5
@@ -936,45 +991,27 @@ country_event = {
         AUS_734 = { add_core = GER remove_core = HUN }
         AUS_613 = { add_core = GER remove_core = HUN }
         AUS_619 = { add_core = GER remove_core = HUN }
+        FROM = {
+            any_owned = {    
+                limit = {       
+                    is_core = KRA                     
+                }
+            remove_core = THIS
+            }
+            all_core = {     
+                limit = {
+                    NOT = { is_core = HUN }  
+                }
+                add_core = GER       
+            }
+        }
+        any_greater_power = {
+            leave_alliance = THIS                     
+        }
         AUS_733 = { remove_core = AUS remove_core = KUK }
         AUS_736 = { remove_core = AUS remove_core = KUK }
         AUS_768 = { remove_core = AUS remove_core = KUK }
-        random_country = {
-            limit = {
-                owns = 625
-                625 = {
-                    OR = {
-                        is_core = AUS
-                        is_core = KUK
-                    }
-                }
-            }
-            AUS_625 = { add_core = GER } #Bohemia
-        }
-        random_country = {
-            limit = {
-                owns = 689
-                689 = {
-                    OR = {
-                        is_core = AUS
-                        is_core = KUK
-                    }
-                }
-            }
-            AUS_627 = { add_core = GER } #Lower Silesia
-        }
-        random_country = {
-            limit = {
-                owns = 629
-                629 = {
-                    OR = {
-                        is_core = AUS
-                        is_core = KUK
-                    }
-                }
-            }
-            AUS_626 = { add_core = GER } #Sudetes
-        }
+        
         any_country = {
             limit = {
                 is_greater_power = yes
@@ -1078,6 +1115,7 @@ country_event = {
                     NOT = { is_core = GER }
                     is_core = THIS
                 }
+                remove_core = AUS
                 secede_province = THIS
             }
             prestige = -5
@@ -1134,6 +1172,8 @@ country_event = {
     option = {
         name = "EVT31518OPTA"
         badboy = 20
+        set_global_flag = austrian_refused_unification
+        remove_country_modifier = prussian_general_staff
         diplomatic_influence = { who = FROM value = -400 }
         relation = { who = FROM value = -400 }
         AUS_612 = { add_core = GER remove_core = HUN }
@@ -1182,6 +1222,11 @@ country_event = {
         add_casus_belli = {
             target = FROM
             type = humiliate
+            months = 60
+        }
+        casus_belli = {
+            target = FROM
+            type = acquire_all_cores
             months = 60
         }
         any_country = {
@@ -1287,49 +1332,32 @@ country_event = {
         name = "EVT31519OPTA"
         prestige = 10
         badboy = 20
+        set_global_flag = austria_joined_germany
+        remove_country_modifier = prussian_general_staff
         AUS_612 = { add_core = GER remove_core = HUN }
         AUS_734 = { add_core = GER remove_core = HUN }
         AUS_613 = { add_core = GER remove_core = HUN }
         AUS_619 = { add_core = GER remove_core = HUN }
+        FROM = {
+            any_owned = {    
+                limit = {       
+                    is_core = KRA                     
+                }
+            remove_core = THIS
+            }
+            all_core = {     
+                limit = {
+                    NOT = { is_core = HUN }  
+                }
+                add_core = GER       
+            }
+        }
+        any_greater_power = {
+            leave_alliance = THIS                     
+        }
         AUS_733 = { remove_core = AUS remove_core = KUK }
         AUS_736 = { remove_core = AUS remove_core = KUK }
         AUS_768 = { remove_core = AUS remove_core = KUK }
-        random_country = {
-            limit = {
-                owns = 625
-                625 = {
-                    OR = {
-                        is_core = AUS
-                        is_core = KUK
-                    }
-                }
-            }
-            AUS_625 = { add_core = GER } #Bohemia
-        }
-        random_country = {
-            limit = {
-                owns = 689
-                689 = {
-                    OR = {
-                        is_core = AUS
-                        is_core = KUK
-                    }
-                }
-            }
-            AUS_627 = { add_core = GER } #Lower Silesia
-        }
-        random_country = {
-            limit = {
-                owns = 629
-                629 = {
-                    OR = {
-                        is_core = AUS
-                        is_core = KUK
-                    }
-                }
-            }
-            AUS_626 = { add_core = GER } #Sudetes
-        }
         FROM = { country_event = 31520 }
         any_country = {
             limit = {
@@ -1395,14 +1423,14 @@ country_event = {
                 war_policy = jingoism
             }
             modifier = {
-                factor = 2
+                factor = 1.5
                 OR = {
                     war_policy = anti_military
                     war_policy = pacifism
                 }
             }
             modifier = {
-                factor = 2
+                factor = 1.5
                 OR = {
                     government = democracy
                     government = hms_government
@@ -1593,7 +1621,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 6
+        days = 7
     }
 
     option = {
@@ -1814,7 +1842,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 12
+        months = 6
     }
 
     option = {
