@@ -47,8 +47,7 @@ HAL = {
     influence_value = 0
 }
 NEJ = {
-    value = -25
-    level = 0
+    value = 50
 }
 HDJ = {
     value = 125        #relation
@@ -113,7 +112,7 @@ USA = { value = 0 }
 PRU = { value = 25 }
 SPA = { value = 25 }
 AUS = { value = 25 }
-RUS = { value = 125 }
+RUS = { value = 75 }
 ENG = { value = 125 }
 FRA = { value = -75 }
 

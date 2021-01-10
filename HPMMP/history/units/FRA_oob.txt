@@ -46,9 +46,9 @@ GRE = {
 
 #GPs
 ENG = { value = 25 }
-RUS = { value = -100 }
+RUS = { value = 25 }
 AUS = { value = -50 }
-USA = { value = 50 }
+USA = { value = 150 }
 PRU = { value = -50 }
 TUR = { value = -75 }
 SPA = { value = 55 }

@@ -12,7 +12,7 @@ TEX = {
 }
 MEX = {
     value = 100        #relation
-    level = 1        #3=cordial, 4 = friendly, 5 sphere
+    level = 2        #3=cordial, 4 = friendly, 5 sphere
     influence_value = 0
 }
 UCA = {
@@ -125,7 +125,7 @@ SPU = {
 
 #Other GP's
 ENG = { value = 50 }
-FRA = { value = 75 }
+FRA = { value = 150 }
 AUS = { value = 25 }
 RUS = { value = 25 }
 PRU = { value = 25 }
@@ -168,6 +168,359 @@ PNB ={
 }
 
 #African Uncivs
+SOK = {
+    value = -25
+    level = 0
+    influence_value = 0
+}
+
+ZAN = {
+    value = -25
+    level = 0
+    influence_value = 0
+}
+
+MAK = {
+    value = -25
+    level = 0
+    influence_value = 0
+}
+
+KAL = {
+    value = -25
+    level = 0
+    influence_value = 0
+}
+
+AFG = {
+    value = -25
+    level = 0
+    influence_value = 0
+}
+
+SIN = {
+    value = -25
+    level = 0
+    influence_value = 0
+}
+
+CRL = {
+    value = -25
+    level = 0
+    influence_value = 0
+}
+
+OYO = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+TRZ = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+WOL = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+GBU = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+TOO = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+TOU = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+JAL = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+SEG = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+MAS = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+MOS = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+KNG = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+ASH = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+ARO = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+DND = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+DAH = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+DAM = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+CLA = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+BEN = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+WRI = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+KBO = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+KON = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+LOA = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+ZUL = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+XHO = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+MAT = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+BSH = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+SUA = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+GAZ = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+AGC = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+MAD = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+WRL = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+MAJ = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+GEL = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+SID = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+HAR = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+TIG = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+GON = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+KAF = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+SHW = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+AWS = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+SHK = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+TUN = {
+    value = -25
+    level = 0
+    influence_value = 0
+}
+
+TRI = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+ALD = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+NAL = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+ORA = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+TRN = {
+    value = 0
+    level = 0
+    influence_value = 0
+}
+
+KOK = {
+    value = -25
+    level = 0
+    influence_value = 0
+}
+
+BUK = {
+    value = -25
+    level = 0
+    influence_value = 0
+}
+
+KAZ = {
+    value = -25
+    level = 0
+    influence_value = 0
+}
+
+KHI = {
+    value = -25
+    level = 0
+    influence_value = 0
+}
+
+EGY = {
+    value = 0       #relation
+    level = 0       #3=cordial, 4 = friendly, 5 sphere
+    influence_value = 0
+}
 
 leader = {
     name = "Winfield Scott"

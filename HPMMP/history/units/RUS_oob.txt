@@ -88,7 +88,7 @@ MCK = {
 
 PER = {
     value = -50
-    level = 2
+    level = 0
     influence_value = 0
 }
 
@@ -110,12 +110,12 @@ CIR = {
 
 #Other GP's
 #GPs
-ENG = { value = -100 }
-FRA = { value = -100 }
+ENG = { value = -75 }
+FRA = { value = 25 }
 AUS = { value = 50 }
 USA = { value = 25 }
 PRU = { value = 80 }
-TUR = { value = 125 }
+TUR = { value = 75 }
 SPA = { value = 0 }
 
 army = {
