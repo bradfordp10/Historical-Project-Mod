@@ -42,7 +42,7 @@ country_event = {
                     limit_to_world_greatest_level = yes
                 }
             }
-            infrastructure = 1
+            infrastructure = 3
         }
         2686 = {
             change_province_name = "Novonikolayevsk"
@@ -99,7 +99,7 @@ country_event = {
                     limit_to_world_greatest_level = yes
                 }
             }
-            infrastructure = 1
+            infrastructure = 3
         }
         1077 = {
             add_province_modifier = {
@@ -152,7 +152,7 @@ country_event = {
                     limit_to_world_greatest_level = yes
                 }
             }
-            infrastructure = 1
+            infrastructure = 3
         }
         1078 = {
             add_province_modifier = {
@@ -184,7 +184,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 20
+        months = 10
     }
 
     option = {
@@ -210,7 +210,7 @@ country_event = {
                     limit_to_world_greatest_level = yes
                 }
             }
-            infrastructure = 1
+            infrastructure = 3
         }
         1083 = {
             add_province_modifier = {
@@ -247,7 +247,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 10
+        months = 3
     }
 
     option = {
@@ -266,22 +266,22 @@ country_event = {
             33={ treasury = 500 }
         }
         1479 = {
-            infrastructure = 1
+            infrastructure = 3
         }
         1555 = {
-            infrastructure = 1
+            infrastructure = 3
         }
         1554 = {
-            infrastructure = 1
+            infrastructure = 3
         }
         1552 = {
-            infrastructure = 1
+            infrastructure = 3
         }
         1002 = {
-            infrastructure = 1
+            infrastructure = 3
         }
         1079 = {
-            infrastructure = 1
+            infrastructure = 3
         }
         1481 = {
             add_province_modifier = {
@@ -319,5 +319,20 @@ country_event = {
                 duration = 365
             }
         }
+        any_pop = { limit = { location = { is_core = MCK } NOT = { type = slaves } } literacy = 0.1 }
+        random_owned = {
+            limit = { 
+                owner = {
+                    owns = 1479
+                    owns = 1616
+                }
+            }
+            owner = {
+                capital = 1479 
+                build_factory_in_capital_state = steel_factory
+                build_factory_in_capital_state = glass_factory
+            }
+        }
+        random_owned = { limit = { province_id = 1616 } THIS = { capital = 1616 } } #Peking
     }
 }

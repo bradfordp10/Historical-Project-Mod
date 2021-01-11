@@ -186,6 +186,7 @@ country_event = {
         SWH = { all_core = { remove_core = SWH } }
         SCH = { all_core = { remove_core = SCH } }
         371 = { remove_core = GER }
+        370 = { remove_core = GER }
         release = HOL
         any_country = {
             limit = {
@@ -283,13 +284,20 @@ country_event = {
             owns = 371
             vassal_of = THIS
         }
+        NOT = { has_global_flag = november_constitution }
     }
 
     fire_only_once = yes
 
     mean_time_to_happen = {
         months = 6
+        modifier = { 
+            factor = 0.1
+            year = 1864
+        }
     }
+
+    immediate = { set_global_flag = november_constitution }
 
     option = {
         name = "EVT90053OPTA"
@@ -297,6 +305,9 @@ country_event = {
         inherit = SWH
         SWH = {
             all_core = { remove_core = SWH }
+        }
+        SCH = {
+            all_core = { remove_core = GER }
         }
         release = HOL
         any_country = {
@@ -484,6 +495,16 @@ country_event = {
             }
             country_event = 90056
         }
+        SWH = {
+            release = HOL
+            change_tag = SCH
+        }
+        diplomatic_influence = {
+            who = SCH
+            value = 400
+        }
+        create_vassal = SCH
+        create_alliance = SCH
     }
 }
 
@@ -505,6 +526,12 @@ country_event = {
             who = FROM
             value = -100
         }
+        diplomatic_influence = {
+            who = HOL
+            value = 400
+        }
+        create_vassal = HOL
+        create_alliance = HOL
     }
 }
 

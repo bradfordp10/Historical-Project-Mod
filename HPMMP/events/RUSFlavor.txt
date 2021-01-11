@@ -314,9 +314,10 @@ country_event = {
         OR = {
             tag = USA
             tag = CAN
-            relation = { who = RUS value = 0 }
+            tag = ENG
             alliance_with = RUS
         }
+        relation = { who = RUS value = 0 }
         is_greater_power = yes
         war = no
         nationalism_n_imperialism = 1
@@ -436,14 +437,17 @@ country_event = {
                     is_greater_power = yes
                     is_secondary_power = yes
                 }
-                any_owned_province = {
-                    OR = {
-                        region = MEX_85
-                        region = USA_78
-                        region = USA_81
-                        region = CAN_13
-                        region = JAP_1088
+                OR = { 
+                    any_owned_province = {
+                        OR = {
+                            region = MEX_85
+                            region = USA_78
+                            region = USA_81
+                            region = CAN_13
+                            region = JAP_1088
+                        }
                     }
+                    has_country_flag = british_oregon
                 }
             }
             set_country_flag = alaska_purchase_interest
@@ -749,8 +753,13 @@ country_event = {
         ai_chance = {
             factor = 80
             modifier = {
+                factor = 0.5
+                NOT = { war_exhaustion = 10 }
+                1082 = { owner = { part_of_sphere = no } }
+            }
+            modifier = {
                 factor = 0.75
-                NOT = { relation = { who = RUS value = -50 } }
+                NOT = { war_exhaustion = 5 }
             }
         }
     }
@@ -1235,6 +1244,7 @@ country_event = {
                 secede_province = THIS
                 add_core = THIS
                 any_pop = { limit = { NOT = { is_primary_culture = yes } } literacy = -0.99 }
+                add_province_modifier = { name = population_resettlement duration = 365 }
             }
         }
     }
@@ -1931,7 +1941,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 80
+        months = 40
             modifier = {
                 factor = 0.8
                 CHI_1082 = { any_owned_province = { country_units_in_province = THIS } }
@@ -2129,6 +2139,24 @@ country_event = {
         remove_province_modifier = nationalist_agitation
         }
 
+        1082 = {
+            poor_strata = {
+                limit = {
+                    culture = russian
+                }
+                reduce_pop = 3
+            }
+        }
+        
+        1083 = {
+            poor_strata = {
+                limit = {
+                    culture = russian
+                }
+                reduce_pop = 2
+            }
+        }
+
         2617 = { poor_strata = {
         limit = {
             OR = {
@@ -2192,7 +2220,7 @@ country_event = {
         has_global_flag = trying_to_expel_the_manchus
     }
 
-    mean_time_to_happen = { months = 80 }
+    mean_time_to_happen = { months = 50 }
 
     option = {
         name = "EVT32533OPTA"

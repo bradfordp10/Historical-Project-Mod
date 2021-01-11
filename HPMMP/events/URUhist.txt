@@ -317,7 +317,7 @@ country_event = {
             }
             end_war = THIS
         }
-        add_country_modifier = { name = small_country_draft duration = 30 }
+        add_country_modifier = { name = small_country_draft duration = 365 }
         add_country_modifier = { name = unrecognized_country duration = 3650 }
         relation = { who = ARC value = -400 }
         relation = { who = ENT value = -400 }
@@ -388,7 +388,7 @@ country_event = {
 
         add_country_modifier = {
             name = small_country_draft
-            duration = 30
+            duration = 365
         }
 
         war = {
@@ -561,7 +561,7 @@ country_event = {
         name = "EVTOPT600065A"
         add_country_modifier = {
             name = small_country_draft
-            duration = 30
+            duration = 365
         }
     }
 }

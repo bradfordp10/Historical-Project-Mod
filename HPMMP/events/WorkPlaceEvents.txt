@@ -131,7 +131,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 800
+        months = 1200
         modifier = {
             factor = 0.9
             average_militancy = 3
@@ -161,13 +161,31 @@ country_event = {
 
     trigger = {
         ammunition = 50
-        economic_policy = laissez_faire
+        NOT = { economic_policy = laissez_faire }
         any_state = { has_building = ammunition_factory }
         NOT = { has_global_flag = workplace_events_disabled }
     }
 
     mean_time_to_happen = {
         months = 800
+        modifier = {
+            factor = 0.9
+            owner = {
+                economic_policy = interventionism
+            }
+        }
+        modifier = {
+            factor = 0.8
+            owner = {
+                economic_policy = state_capitalism
+            }
+        }
+        modifier = {
+            factor = 0.7
+            owner = {
+                economic_policy = planned_economy
+            }
+        }
         modifier = {
             factor = 1.5
             poor_strata_life_needs = 0.9
@@ -199,7 +217,7 @@ province_event = {
     }
 
     mean_time_to_happen = {
-        months = 1800
+        months = 800
         modifier = {
             factor = 0.9
             average_consciousness = 5
@@ -237,13 +255,16 @@ country_event = {
 
     trigger = {
         produces = tea
-        #state_scope = { has_pop_type = bureaucrats }
+        any_owned_province = {
+            limit = { trade_goods = tea }
+            has_pop_type = bureaucrats
+        }
         tea = 40
         NOT = { has_global_flag = workplace_events_disabled }
     }
 
     mean_time_to_happen = {
-        months = 1200
+        months = 1000
         modifier = {
             factor = 0.9
             average_militancy = 5
@@ -257,9 +278,17 @@ country_event = {
             average_militancy = 7
         }
         modifier = {
+            factor = 0.8
+            any_owned_province = {
+                limit = { trade_goods = tea }
+                has_crime = mafia
+            }
+        }
+        modifier = {
             factor = 0.9
             NOT ={ poor_strata_life_needs = 0.9 }
         }
+
         modifier = {
             factor = 1.5
             NOT = { average_militancy = 5 }
@@ -305,7 +334,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 1200
+        months = 800
         modifier = {
             factor = 0.9
             war_exhaustion = 4

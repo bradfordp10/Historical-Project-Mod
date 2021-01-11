@@ -16,7 +16,10 @@ country_event = {
             tag = ENL
         }
         NOT = { has_global_flag = eic_spawned }
-        year = 1857
+        OR = {
+            breech_loaded_rifles = 1
+            year = 1854
+        }
         OR = {
             owns = 1236 #Delhi
             owns = 1251 #Calcutta
@@ -25,17 +28,51 @@ country_event = {
             owns = 1247 #Patna
             owns = 1227 #Lahore
         }
+        NOT = { has_global_flag = sepoy_rebellion }
     }
 
     fire_only_once = yes
 
     mean_time_to_happen = {
-        months = 6
+        months = 60
+        modifier = {
+            factor = 2
+            year = 1850
+        }
+        modifier = {
+            factor = 0.1
+            war_exhaustion = 25
+        }
+        modifier = {
+            factor = 0.5
+            has_global_flag = second_opium_war
+        }
+        modifier = {
+            factor = 0.3
+            has_global_flag = taiping_intervention
+        }
+        modifier = {
+            factor = 0.1
+            year = 1857
+        }
+        modifier = {
+            factor = 0.1
+            year = 1858
+        }
+        modifier = {
+            factor = 0.01
+            year = 1859
+        }
     }
 
     option = {
         name = "EVT90040OPTA"
         set_country_flag = sepoy_rebellion
+        set_global_flag = sepoy_rebellion
+        add_country_modifier = {
+            name = sepoy_mutiny
+            duration = -1
+        }
         any_owned = {
             limit = { is_core = HND }
             random_list = {
@@ -82,6 +119,7 @@ country_event = {
 
     option = {
         name = "EVT900041OPTA"
+        prestige = -5
         relation = { who = FROM value = -150 }
         any_owned = { limit = { is_core = MUG } any_pop = { limit = { has_pop_religion = sunni }
             militancy = 9

@@ -46,6 +46,10 @@ country_event = {
             annex_to = ENT
             CRT = { all_core = { remove_core = CRT add_core = ENT } }
         }
+        any_country = {
+            limit = { war_with = THIS }
+            end_war = THIS
+        }
         ai_chance = { factor = 100 }
     }
 
@@ -398,6 +402,7 @@ country_event = {
         SBA = {
             add_country_modifier = { name = unrecognized_country duration = 3650 }
             add_country_modifier = { name = caudillo_leaders duration = 3650 }
+            add_country_modifier = { name = america_new_world duration = 3650 }
             any_country = { limit = { capital_scope = { continent = south_america } } relation = { who = SBA value = -110 } }
         }
         change_tag_no_core_switch = SBA
@@ -424,7 +429,7 @@ country_event = {
             type = humiliate
             months = 20
         }
-        add_country_modifier = { name = small_country_draft duration = 30 }
+        add_country_modifier = { name = small_country_draft duration = 365 }
         add_country_modifier = { name = unrecognized_country duration = 3650 }
         any_country = {
             limit = { has_country_flag = will_support_entre_rios }

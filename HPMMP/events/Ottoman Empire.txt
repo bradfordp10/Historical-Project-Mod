@@ -655,6 +655,7 @@ country_event = {
         set_country_flag = ottomans_to_turks
         remove_country_modifier = ottomanism_reform
         remove_country_modifier = ottoman_oppression
+        remove_country_modifier = abdulmejid_i_reforms
         remove_accepted_culture = mashriqi
         remove_accepted_culture = bedouin
         remove_accepted_culture = kurdish
@@ -690,7 +691,8 @@ country_event = {
                         province_id = 900 #Antioch
                         region = TUR_823 #Western Thrace
                         region = TUR_809 #Eastern Rumelia
-                        region = TUR_860 #Thrace
+                        region = TUR_860 #Eastern Thrace
+                        region = TUR_861 #Istanbul
                         region = TUR_869 #Izmir
                         region = TUR_863 #Bursa
                         region = EGY_843 #Aegean Islands
@@ -704,7 +706,7 @@ country_event = {
                         region = TUR_894 #Adana
                         region = TUR_885 #Kars
                         region = EGY_897 #Aleppo
-                        #region = TUR_923 #Mosul
+                        region = TUR_923 #Mosul
                     }
                 }
                 remove_core = TUR
@@ -716,7 +718,8 @@ country_event = {
                     province_id = 900 #Antioch
                     region = TUR_823 #Western Thrace
                     region = TUR_809 #Eastern Rumelia
-                    region = TUR_860 #Thrace
+                    region = TUR_860 #Eastern Thrace
+                    region = TUR_861 #Istanbul
                     region = TUR_869 #Izmir
                     region = TUR_863 #Bursa
                     region = EGY_843 #Aegean Islands
@@ -730,11 +733,26 @@ country_event = {
                     region = TUR_894 #Adana
                     region = TUR_885 #Kars
                     region = EGY_897 #Aleppo
-                    #region = TUR_923 #Mosul
+                    region = TUR_923 #Mosul
                 }
             }
             remove_core = TUR
         }
+        # Remove cores
+        TUR_674 = { remove_core = TUR } # Dobrudja
+        TUR_788 = { remove_core = TUR } # Bosnia
+        TUR_810 = { remove_core = TUR } # Bulgaria
+        TUR_809 = { remove_core = TUR } # E.Rumelia
+        TUR_803 = { remove_core = TUR } # S.Serbia
+        MON_2582 = { remove_core = TUR } # Montenegro
+        TUR_853 = { remove_core = TUR } # Albania
+        TUR_832 = { remove_core = TUR } # Thessalia
+        TUR_806 = { remove_core = TUR } # N.Macedonia
+        TUR_805 = { remove_core = TUR } # W.Macedonia
+        TUR_855 = { remove_core = TUR } # Cyprus
+        847 = { remove_core = TUR } #Chania
+        848 = { remove_core = TUR } #Iraklion
+        843 = { remove_core = TUR }
         any_owned = {
             limit = {
                 NOT = { is_core = TUR }
@@ -990,7 +1008,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 12
+        months = 24
     }
 
 
@@ -1344,7 +1362,7 @@ country_event = {
         year = 1875
         OR = {
             civilized = yes
-            civilization_progress = 0.50
+            civilization_progress = 0.75
         }
         NOT = {
             has_global_flag = mahdist_uprising
@@ -1391,6 +1409,10 @@ country_event = {
                 any_owned_province = { is_core = SUD }
                 average_militancy = 6
             }
+        }
+        modifier = {
+            factor = 0.5
+            is_greater_power = yes
         }
     }
 
@@ -1530,6 +1552,7 @@ country_event = {
     fire_only_once = yes
 
     trigger = {
+        war = no
         SUD = { exists = no }
         any_owned_province = {
             has_province_modifier = fundamentalist_sympathies
@@ -1661,11 +1684,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 12
-        modifier = {
-            factor = 0.25
-            has_global_flag = berlin_conference
-        }
+        months = 1
     }
 
 
@@ -1724,18 +1743,14 @@ country_event = {
         owns = 1840
         1841 = { empty = yes }
         1842 = { empty = yes }
+        1843 = { empty = yes }
         1739 = { empty = yes }
         1839 = { empty = yes }
-        year = 1874
+        has_global_flag = berlin_conference
     }
 
     mean_time_to_happen = {
-        months = 12
-
-        modifier = {
-            factor = 0.25
-            has_global_flag = berlin_conference
-        }
+        months = 4
     }
 
 
@@ -1797,16 +1812,10 @@ country_event = {
             add_core = DAR
             any_pop = { literacy = -0.99 }
         }
-        1739 = {
-            secede_province = THIS
+        1843 = {
+            secede_province = THIS                  
+            life_rating = 25
             add_core = SUD
-            any_pop = { literacy = -0.99 }
-        }
-        1839 = {
-            secede_province = THIS
-            life_rating = 22
-            add_core = SUD
-            add_core = DAR
             any_pop = { literacy = -0.99 }
         }
 
@@ -2276,7 +2285,7 @@ country_event = {
         set_global_flag = treaty_of_erzurum
     }
 
-    mean_time_to_happen = { months = 6 }
+    mean_time_to_happen = { days = 1 }
 
     option = {
         name = "EVT986505OPTA"
@@ -2845,6 +2854,11 @@ country_event = {
                 limit = { province_id = 844 any_pop = { has_pop_culture = turkish } }
                 any_pop = { limit = { has_pop_culture = turkish } move_pop = 860 }
             }
+        }
+
+        random_owned = {
+            limit = { province_id = 860 any_pop = { has_pop_culture = greek } }
+            any_pop = { limit = { has_pop_culture = greek } move_pop = 834 }
         }
 
         FROM = {

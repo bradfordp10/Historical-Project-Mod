@@ -948,13 +948,13 @@ country_event = {
 
     trigger = {
         tag = POR
-        year = 1847
+        year = 1850
         2049 = { owner = { civilized = no ai = yes war = no } }
         2050 = { owner = { civilized = no ai = yes war = no } }
         NOT = { has_country_flag = reconquest_of_lourenco_marques }
     }
 
-    mean_time_to_happen = { months = 12 }
+    mean_time_to_happen = { months = 10 }
 
     fire_only_once = yes
 

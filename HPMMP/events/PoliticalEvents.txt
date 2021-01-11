@@ -3662,7 +3662,7 @@ country_event = {
         NOT = { has_country_flag = rich_loving_communists }
     }
 
-    mean_time_to_happen = { months = 60 }
+    mean_time_to_happen = { days = 5 }
 
     option = {
         name = "EVTOPTA4431"

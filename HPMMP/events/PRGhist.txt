@@ -197,7 +197,7 @@ country_event = {
         has_country_flag = carlos_lopez_dictator
     }
 
-    mean_time_to_happen = { months = 12 }
+    mean_time_to_happen = { months = 3 }
 
     option = {
         name = "EVTOPT700003A"
@@ -650,6 +650,10 @@ country_event = {
     option = {
         name = "EVTOPT700014A"
         remove_country_modifier = solano_lopez_industrialization
+        small_arms = 20
+        ammunition = 40
+        canned_food = 40
+        artillery = 10
         2341 = { trade_goods = cotton }
         define_general = {
                 name = "Francisco Solano Lopez"

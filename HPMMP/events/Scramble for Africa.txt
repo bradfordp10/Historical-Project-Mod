@@ -298,6 +298,10 @@ country_event = {
                 neighbour = THIS
             }
             nationalism_n_imperialism = 1
+            NOT = {
+                war_policy = pacifism
+                num_of_revolts = 1
+            }
         }
         NOT = {
             has_country_flag = refused_protectorate
@@ -306,7 +310,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 12
+        months = 6
         modifier = {
             factor = 10
             has_country_flag = delay_unciv_annexation
@@ -538,6 +542,7 @@ country_event = {
             is_greater_power = yes
             is_secondary_power = yes
         }
+        total_amount_of_ships = 50
         NOT = {
             war_policy = pacifism
             has_country_flag = sale_of_assab
@@ -547,6 +552,7 @@ country_event = {
         }
         1851 = {
             owner = {
+                part_of_sphere = no
                 civilized = no
                 war = no
                 NOT = { truce_with = THIS }
@@ -645,6 +651,13 @@ country_event = {
             target = FROM
             type = place_in_the_sun
             months = 240
+        }
+        FROM = {
+            casus_belli = {
+                target = THIS
+                type = demand_concession_BC_casus_belli
+                months = 60
+            }
         }
         any_country = {
             limit = { is_greater_power = yes }

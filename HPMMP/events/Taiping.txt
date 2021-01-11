@@ -19,6 +19,7 @@ country_event = {
 
 
     trigger = {
+        year = 1851
         tag = QNG
         NOT = { has_global_flag = taiping_has_happened }
         has_global_flag = hong
@@ -26,38 +27,30 @@ country_event = {
         has_country_modifier = the_female_shortage
         check_variable = {
             which = taiping_provinces
-            value = 2
+            value = 5
         }
     }
 
     mean_time_to_happen = {
         months = 12
         modifier = {
-            factor = 20
-            NOT = { year = 1845 }
+            factor = 0.75
+            year = 1850
+            NOT = { year = 1852 }
         }
         modifier = {
-            factor = 10
-            year = 1845
-            NOT = { year = 1850 }
-        }
-        modifier = {
-            factor = 0.5
-            year = 1855
+            factor = 0.3
+            year = 1853
             NOT = { year = 1860 }
         }
         modifier = {
             factor = 0.1
-            year = 1860
+            year = 1855
+            NOT = { year = 1860 }
         }
         modifier = {
-            factor = 5
-            NOT = {
-                check_variable = {
-                    which = taiping_provinces
-                    value = 4
-                }
-            }
+            factor = 0.01
+            year = 1860
         }
     }
 
@@ -67,6 +60,14 @@ country_event = {
         any_owned = {
             remove_province_modifier = christian_pamphlets
             remove_province_modifier = christian_repression
+        }
+
+        QNG = {
+            add_country_modifier = {
+                name = no_more_war
+                duration = 120
+            }
+            country_event = { id=99931 days=120 }
         }
 
         any_owned = {
@@ -144,10 +145,17 @@ country_event = {
         set_global_flag = taiping_has_happened
 
         TPG = {
+            grain = 250
+            treasury = 100000
             capital = 2221
             any_pop = {
                 consciousness = -5
                 militancy = -5
+            }
+
+            add_country_modifier = {
+                name = no_more_war
+                duration = 90
             }
 
             add_country_modifier = { name = fanatic_army duration = 1825 }
@@ -262,6 +270,26 @@ country_event = {
             TPG = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery }
         }
 
+        XBI = {
+            add_country_modifier = {
+                name = qing_substate_boost
+                duration = 1395
+            }
+            grain = 250
+        }
+        MCK = {
+            add_country_modifier = {
+                name = qing_substate_boost
+                duration = 1395
+            }
+            grain = 250
+        }
+
+        grain = 250
+
+        release_vassal = LAN
+        leave_alliance = LAN
+
         ai_chance = { factor = 100 }
     }
 
@@ -272,7 +300,7 @@ country_event = {
             remove_province_modifier = christian_pamphlets
             remove_province_modifier = christian_repression
         }
-
+        release_vassal = LAN
         any_owned = {
             limit = {
                 is_core = TPG
@@ -490,20 +518,28 @@ country_event = {
     mean_time_to_happen = { days = 1 }
 
     immediate = {
-    any_pop = {
+        war_exhaustion = 45
+        plurality = -5
+        remove_country_modifier = ever_victorious_army
+        remove_country_modifier = the_xiang_army
+        any_pop = {
             ideology = {
                 factor = 0.6
                 value = conservative
-                }
+            }
             ideology = {
                 factor = 0.2
                 value = reactionary
-                }
+            }
             ideology = {
                 factor = -0.1
                 value = liberal
-                }
             }
+        }
+        any_pop = { 
+            militancy = -7
+            reduce_pop = 0.95
+        }
         any_country = { limit = { vassal_of = THIS }
             any_pop = {
             ideology = {
@@ -526,10 +562,25 @@ country_event = {
             limit = { is_core = TPG }
             any_pop = {
                 militancy = -6
-                reduce_pop = 0.90
+                reduce_pop = 0.85
             }
         }
+        any_pop = {
+            limit = {
+                religion = protestant
+                location = { is_core = TPG }
+            }
+            reduce_pop = 0.75
+        }
         TPG = { all_core = { remove_core = TPG } }
+        MCK = { all_core = { add_core = QNG } }
+        random_country = {
+            limit = {
+                tag = MCK
+                substate_of = QNG
+            }   
+            annex_to = QNG
+        }
     }
 }
 
@@ -672,7 +723,7 @@ country_event = {
         poor_strata = { militancy = 3 }
         add_country_modifier = {
             name = taiping_draft
-            duration = 90
+            duration = 1825
         }
         random_country = {
             limit = {
@@ -820,6 +871,7 @@ country_event = {
     news_desc_medium = "EVTDESC160008_NEWS_MEDIUM"
     news_desc_short = "EVTDESC160008_NEWS_SHORT"
     picture = "taiping"
+    fire_only_once = yes
 
     trigger = {
         has_global_flag = taiping_has_happened
@@ -829,8 +881,13 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 1
+        days = 5
     }
+
+    immediate = {
+        war_exhaustion = 25
+    }
+
     option = {
         name = "EVT160002OPTA"
         set_global_flag = taiping_victorious
@@ -838,6 +895,11 @@ country_event = {
         any_pop = {
             limit = { has_pop_culture = manchu }
             reduce_pop = 0.90
+        }
+        any_pop = { 
+            limit = { NOT = { has_pop_culture = manchu } }
+            militancy = -7
+            reduce_pop = 0.95
         }
         any_pop = {
             limit = {
@@ -911,6 +973,26 @@ country_event = {
                 duration = 3650
             }
         }
+        random_country = {
+            limit = {
+                tag = XBI
+                civilized = no
+                exists = yes
+                ai = yes
+            }
+            annex_to = TPG
+        }
+        random_country = {
+            limit = {
+                tag = MCK
+                civilized = no
+                exists = yes
+                ai = yes
+            }
+            annex_to = TPG
+        }
+        
+        country_event = 160027
     }
 }
 
@@ -1394,6 +1476,15 @@ province_event = {
             region = CHI_1612
             region = CHI_1572
             region = CHI_1559
+            region = CHI_1508
+            region = CHI_1510
+            region = CHI_1563
+            region = CHI_1578
+            region = CHI_1493
+            region = CHI_1499
+            region = CHI_1579
+            region = CHI_1519
+            region = CHI_1504
         }
         is_core = CHI
         is_primary_culture = no
@@ -1755,6 +1846,7 @@ country_event = {
 
     trigger = {
         NOT = { tag = KMT }
+
         is_culture_group = east_asian
         war = yes
         1485 = {
@@ -1790,6 +1882,7 @@ country_event = {
             }
         }
         NOT = {
+            tag = QNG
             exists = TAI
             has_global_flag = retreated_to_taiwan
         }
@@ -2116,5 +2209,109 @@ country_event = {
             end_war = TAI
         }
         change_tag_no_core_switch = TAI
+    }
+}
+
+#Qing Defeat in the Taiping Rebellion
+country_event = {
+    id = 160027
+    title = "EVTNAME160027" #Retreat to Formosa
+    desc = "EVTDESC160027"
+    news = yes
+    news_desc_long = "EVTDESC160026_NEWS_LONG"
+    news_desc_medium = "EVTDESC160026_NEWS_MEDIUM"
+    news_desc_short = "EVTDESC160026_NEWS_SHORT"
+    picture = "panthay_rebellion"
+    major = yes
+    is_triggered_only = yes
+    
+    option = {
+        name = "EVT160026OPTA"
+        clr_country_flag = kuomintang_faction
+        clr_country_flag = neutral_faction
+        clr_country_flag = communist_faction
+        clr_country_flag = beiyang_faction
+        set_global_flag = retreated_to_taiwan
+        1485 = {
+            add_core = QNG
+            add_core = TAI
+            remove_core = FJN
+            secede_province = QNG
+            fort = 3
+        }
+        2562 = {
+            add_core = TAI
+            remove_core = FJN
+            secede_province = QNG
+            fort = 3
+        }
+        2406 = {
+            add_core = TAI
+            remove_core = FJN
+            secede_province = QNG
+            fort = 3
+        }
+        2681 = {
+            add_core = TAI
+            remove_core = FJN
+            secede_province = QNG
+            fort = 3
+        }
+        1616 = {
+            aristocrats = {
+                limit = { has_pop_culture = manchu }
+                money = 2000
+                reduce_pop = 0.8
+                move_pop = 2681
+            }
+            bureaucrats = {
+                limit = { has_pop_culture = manchu  }
+                money = 300
+                reduce_pop = 0.8
+                move_pop = 2681
+            }
+            officers = {
+                limit = { has_pop_culture = manchu  }
+                money = 300
+                reduce_pop = 0.8
+                move_pop = 2681
+            }
+            soldiers = {
+                limit = { has_pop_culture = manchu  }
+                money = 100
+                reduce_pop = 0.8
+                move_pop = 2681
+            }           
+        }
+        QNG = {
+            government = absolute_monarchy
+            ruling_party_ideology = reactionary
+            political_reform = none_voting
+            political_reform = party_appointed
+            political_reform = no_meeting
+            political_reform = state_press
+            political_reform = state_controlled
+            political_reform = underground_parties
+        }
+        QNG = {
+            capital = 2681
+            money = 100000
+            leadership = 40
+            add_accepted_culture = min
+            add_accepted_culture = nanfaren
+            remove_country_modifier = uncivilized_isolationism
+        }
+        
+        random_country = {
+            limit = { 
+                tag = ENG 
+                owns = 1496
+                OR = {
+                    war_with = THIS
+                    truce_with = THIS
+                }
+            }
+            country_event = 99968
+        }
     }
 }
