@@ -855,7 +855,11 @@ political_decisions = {
             860 = {
                 change_province_name = "Constantinople"
                 any_pop = { limit = { is_culture_group = levantine } militancy = -1 }
+                state_scope = {
+                    change_region_name = "Constantinople"
+                }
             }
+            861 = { change_province_name = "Scutari" }
         }
 
         ai_will_do = { 
@@ -910,7 +914,11 @@ political_decisions = {
                     }
                 militancy = -1
                 }
+                state_scope = {
+                    change_region_name = "Tsargrad"
+                }
             }
+            861 = { change_province_name = "Scutari" }
         }
 
         ai_will_do = { factor = 1 }
@@ -939,6 +947,13 @@ political_decisions = {
             prestige = 2
             860 = {
                 change_province_name = "Istanbul"
+                any_pop = { limit = { has_pop_culture = turkish } militancy = -4 }
+                state_scope = {
+                    change_region_name = "Istanbul"
+                }
+            }
+            861 = {
+                change_province_name = "Üsküdar"
                 any_pop = { limit = { has_pop_culture = turkish } militancy = -4 }
             }
         }
