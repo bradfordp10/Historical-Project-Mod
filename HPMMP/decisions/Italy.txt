@@ -671,21 +671,10 @@ political_decisions = {
             }
             any_owned = {
                 limit = {
+                    region = AUS_729
                     OR = {
-                        AND = {
-                            region = AUS_733
-                            OR = {
-                                is_core = AUS
-                                is_core = KUK
-                            }
-                        }
-                        AND = {
-                            region = AUS_729
-                            OR = {
-                                is_core = AUS
-                                is_core = KUK
-                            }
-                        }
+                        is_core = AUS
+                        is_core = KUK                    
                     }
                 }
                 add_core = ITA
@@ -784,7 +773,7 @@ political_decisions = {
                         }
                     }
                 }
-                AUS_734 = { add_core = ITA remove_core = TST }
+                AUS_734 = { add_core = ITA }
                 AUS_736 = { add_core = ITA }
                 owner = { set_global_flag = italian_claimed_venetia }
             }
@@ -1474,13 +1463,6 @@ political_decisions = {
                     is_core = FIU
                     is_core = TRE
                     AND = {
-                            region = AUS_733
-                            OR = {
-                                is_core = AUS
-                                is_core = KUK
-                            }
-                        }
-                    AND = {
                         region = AUS_729
                         OR = {
                             is_core = AUS
@@ -1534,16 +1516,7 @@ political_decisions = {
             }
             any_owned = {
                 limit = {
-                    OR = {
-                        AND = {
-                            region = AUS_733
-                            OR = {
-                                is_core = AUS
-                                is_core = KUK
-                            }
-                        }
-                        AND = {
-                            region = AUS_729
+                    region = AUS_729
                             OR = {
                                 is_core = AUS
                                 is_core = KUK

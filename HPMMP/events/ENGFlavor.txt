@@ -3099,7 +3099,8 @@ country_event = {
                 exists = yes
                 tag = BHR
                 }
-        THIS = { release_vassal = BHR }
+            THIS = { release_vassal = BHR }
+        }
 
         casus_belli = {
             target = BHR

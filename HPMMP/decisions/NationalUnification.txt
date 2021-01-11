@@ -848,11 +848,8 @@ political_decisions = {
                     WEI = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
                     MEI = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
                     COB = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    REU = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
                     NAS = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
                     HOL = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    SCL = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    SWG = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
                     ANH = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
                     HES = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
                     HEK = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
@@ -905,7 +902,6 @@ political_decisions = {
                         tag = BAN
                         tag = UBD
                         tag = SIE
-                        tag = GCF
                     }
                     NOT = { tag = PRU }
                     NOT = { tag = BAN }
@@ -944,10 +940,7 @@ political_decisions = {
                         tag = DNB
                         tag = BAN
                         tag = UBD
-                        tag = VLG
-                        tag = LIE
                         tag = SIE
-                        tag = GCF
                         capital_scope = { continent = africa }
                         capital_scope = { continent = asia }
                     }

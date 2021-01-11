@@ -44,7 +44,6 @@ country_event = {
             remove_country_modifier = isolationist_foreign_training
             limit = { owner = { NOT = { border_policy = open_borders } } }
             owner = { political_reform = open_borders }
-            }
             add_country_modifier = {
                 name = "western_influences"
                 duration = -1

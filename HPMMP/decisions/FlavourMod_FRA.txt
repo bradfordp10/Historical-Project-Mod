@@ -48,7 +48,6 @@ political_decisions = {
 				PRU = { exists = yes }
 				NGF = { exists = yes }
 				GER = { exists = yes }
-				GCF = { exists = yes }
 			}
 			NOT = { truce_with = NET }
 			NOT = { truce_with = LUX }
@@ -153,10 +152,8 @@ political_decisions = {
 		potential = {
 			ai = yes
 			NOT = { has_global_flag = clean_up_france_lost_rhine_crisis }
-			OR = { 
-				FRA = { truce_with = PRU has_country_modifier = rhine_crisis }
-			}
-			575 = { OR = {owned_by = PRU owned_by = NGF owned_by = GER owned_by = GCF owned_by = AUS owned_by = SGF } }
+			FRA = { truce_with = PRU has_country_modifier = rhine_crisis }
+			575 = { OR = {owned_by = PRU owned_by = NGF owned_by = GER owned_by = AUS owned_by = SGF } }
 			PRU = { is_disarmed = no }
 		}
 		
@@ -201,8 +198,7 @@ political_decisions = {
 		}
 		
 		effect = {
-			FRA = { set_country_flag = annexed_rhineland }
-			BOR = { set_country_flag = annexed_rhineland }
+			set_country_flag = annexed_rhineland
 			prestige = 25
 			badboy = 8
 			inherit = RHI

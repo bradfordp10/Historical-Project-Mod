@@ -243,10 +243,7 @@ political_decisions = {
 				AND = {
 					EGY = { war_with = TUR }
 					war_with = EGY
-					OR = { 
-						war_with = FRA
-						war_with = BOR
-					}
+					war_with = FRA
 				}
 			}
 			OR = {
@@ -333,79 +330,6 @@ political_decisions = {
 		}
 		
 		ai_will_do = { factor = 1 }
-	}
-	
-	organize_west_indies = {
-		picture = map_caribbean
-		potential = {
-			is_greater_power = yes
-			mass_politics = 1
-			OR = {
-				AND = {
-					tag = CAN
-					government = hms_government
-					OR = {
-						has_global_flag = british_dismantled
-						has_global_flag = british_flee_to_canada
-					}
-					has_global_flag = france_dismantled
-					FRA = { government = proletarian_dictatorship }
-					ENG = { government = proletarian_dictatorship }
-				}
-				AND = {
-					tag = ENG
-					government = hms_government
-					NOT = { has_global_flag = british_dismantled }
-					has_global_flag = france_dismantled
-					FRA = { government = proletarian_dictatorship }
-				}
-			}
-			2217 = { owned_by = ENG }
-			NOT = { has_global_flag = caribbean_federation_formed }
-		}
-		
-		allow = {
-			war = no
-			2217 = { owned_by = ENG }
-		}
-		
-		effect = {
-			set_global_flag = caribbean_federation_formed
-			prestige = 3
-			ENG = {
-				any_owned = {
-					limit = {
-						OR = {
-							region = ENG_2224
-							region = ENG_2228
-							region = ENG_203
-							region = ENG_1979
-							region = UCA_2186
-							region = UCA_2197
-						}
-					}
-					add_core = CRB
-					remove_core = ENG
-					remove_core = FRA
-					remove_core = BOR
-				}
-				release = CRB
-			}
-			random_country = {
-				limit = {
-					primary_culture = french
-					capital = 425
-				}	
-				country_event = 99992
-			}
-			CRB = {
-				primary_culture = british
-				add_accepted_culture = french
-				add_accepted_culture = afro_caribbean
-			}
-			inherit = CRB
-			release_vassal = CRB
-		}
 	}
 
 	ai_get_british_wyoming = {

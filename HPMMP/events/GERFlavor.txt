@@ -1340,7 +1340,6 @@ country_event = {
                 RHI = {
                     exists = yes
                     vassal_of = FRA
-                    }
                 }
                 has_global_flag = left_bank_french_victory
             }
@@ -1414,7 +1413,7 @@ country_event = {
         }
 
 
-        option = {
+    option = {
         name = "EVT33039OPTB"
         NGF = { set_country_flag = formed_on_rhine_crisis }
         any_owned = {
@@ -1423,13 +1422,13 @@ country_event = {
                 }
             add_core = NGF
             remove_core = THIS
-            }
+        }
         change_tag = NGF
         all_core = {
             limit = { is_core = PRU }
-                remove_core = PRU
-                add_core = NGF
-            }
+            remove_core = PRU
+            add_core = NGF
+        }
         any_country = {
             limit = {
                 ai = yes
@@ -1467,18 +1466,22 @@ country_event = {
             }
             annex_to = SGF
         }
-            relation = { who = SGF value = 400 }
-            diplomatic_influence = { who = SGF value = 100 }
-            create_alliance = SGF
-            random_country = { limit = { exists = yes OR = { tag = AUS tag = KUK } } relation = { who = SGF value = 100 }  diplomatic_influence = { who = SGF value = 50 } }
+        relation = { who = SGF value = 400 }
+        diplomatic_influence = { who = SGF value = 100 }
+        create_alliance = SGF
+        random_country = { 
+            limit = { exists = yes OR = { tag = AUS tag = KUK } } 
+            relation = { who = SGF value = 100 }  
+            diplomatic_influence = { who = SGF value = 50 } 
+        }
         FRA_412 = { add_core = GER }
         any_pop = {
-                limit = { is_culture_group = germanic }
-                dominant_issue = {
-                    factor = 0.1
-                    value = jingoism
-                }
+            limit = { is_culture_group = germanic }
+            dominant_issue = {
+                factor = 0.1
+                value = jingoism
             }
+        }
         SGF = {
             any_pop = {
                 limit = { is_culture_group = germanic }

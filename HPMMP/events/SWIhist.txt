@@ -300,10 +300,12 @@ country_event = {
                 any_owned = {
                     limit = { 
                         is_core = SWI
-                        province_id = 605
-                        province_id = 604
-                        province_id = 603
-                        province_id = 606
+                        OR = {
+                            province_id = 605
+                            province_id = 604
+                            province_id = 603
+                            province_id = 606
+                        }
                     }
                     add_province_modifier = {
                         name = nationalist_agitation
@@ -322,8 +324,11 @@ country_event = {
                 any_owned = {
                     limit = {
                         is_core = SWI
-                        province_id = 2568
-                        province_id = 611
+                        OR = {
+                            province_id = 607
+                            province_id = 609
+                            province_id = 608
+                        }
                     }
                     add_province_modifier = {
                         name = nationalist_agitation

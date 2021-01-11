@@ -12,7 +12,7 @@ political_decisions = {
 		
 		allow = {
 			steel_railroad = 1
-			bessemer_process = 1
+			drilling_and_blasting = 1
 		}
 		
 		effect = {

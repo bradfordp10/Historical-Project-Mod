@@ -450,10 +450,6 @@ political_decisions = {
 					blue_and_brown_water_schools = 1
 					NOT = { war_with = THIS }
 				}
-				GCF = {
-					blue_and_brown_water_schools = 1
-					NOT = { war_with = THIS }
-				}
 			}
 			money = 150000
 		}
@@ -1144,7 +1140,8 @@ political_decisions = {
 			any_pop = {
 				limit = {
 					type = soldiers
-					has_pop_culture = hanhui
+					has_pop_culture = beifaren
+					has_pop_religion = sunni
 					location = { region = CHI_1490 }
 				}
 				reduce_pop = 3.5

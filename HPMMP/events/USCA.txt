@@ -171,12 +171,13 @@ country_event = {
             exists = HON
         }
         
-            any_owned_province = {
-                province_id = 2193
-                controlled_by_rebels = yes
-                province_control_days = 60
-                NOT = { country_units_in_province = UCA }
-            }
+        any_owned_province = {
+            province_id = 2193
+            controlled_by_rebels = yes
+            province_control_days = 60
+            NOT = { country_units_in_province = UCA }
+        }
+    }
 
     mean_time_to_happen = {
         months = 1

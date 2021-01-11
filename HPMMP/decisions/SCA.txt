@@ -192,7 +192,6 @@ political_decisions = {
                                     }
                                 }
                             }
-                            war = no
                             is_greater_power = no
                         }
                         is_core = FIN

@@ -756,21 +756,6 @@ political_decisions = {
 				}
 				owner = { capital = 549 }
 			}
-			random_owned = {
-				limit = {
-					province_id = 599 #Munich
-					owned_by = GCF
-					owner = { NOT = { has_global_flag = german_confederation_austrian } }
-				}
-				owner = { capital = 599 }
-			}
-			random_owned = {
-				limit = {
-					province_id = 619 #Vienna
-					owned_by = GCF
-				}
-				owner = { capital = 619 }
-			}
 		}
 		
 		ai_will_do = { factor = 1 }
@@ -811,7 +796,6 @@ political_decisions = {
 		effect = {
 			set_country_flag = prussian_settlement_commission
 			set_global_flag = germanization
-			political_reform = settlement
 			treasury = -150000
 			552 = { #Cottbus
 				add_province_modifier = {

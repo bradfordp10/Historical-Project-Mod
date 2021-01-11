@@ -1196,7 +1196,7 @@ political_decisions = {
         
         effect = {
             set_country_flag = integrated_selangor
-            SLG = { civilized = no tech_school = unciv_tech_school }
+            SLG = { civilized = no tech_school = developing_tech_school }
             inherit = SLG
             SLG = { all_core = { remove_core = JOH } }
             badboy = 1
@@ -1239,7 +1239,7 @@ political_decisions = {
         
         effect = {
             set_country_flag = integrated_perak
-            PRK = { civilized = no tech_school = unciv_tech_school }
+            PRK = { civilized = no tech_school = developing_tech_school }
             inherit = PRK
             PRK = { all_core = { remove_core = JOH } }
             badboy = 1

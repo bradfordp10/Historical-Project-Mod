@@ -10,7 +10,6 @@ political_decisions = {
 				tag = CAM
 				tag = LUA
 				tag = PGG
-				tag = NIA
 			}
 			civilized = no
 		}
@@ -364,19 +363,7 @@ political_decisions = {
 							40 = { reduce_pop = 1.03 }
 						}
 					}
-					any_pop = {
-						limit = {
-							has_pop_religion = catholic 
-							has_pop_culture = cajun
-							NOT = { type = craftsmen }
-							location = { is_overseas = no }
-						}
-						random_list = {
-							40 = { reduce_pop = 1.02 }
-							30 = { reduce_pop = 1.03 }
-							25 = { reduce_pop = 1.04 }
-						}
-					}
+
 					random_list = {
 						30 = { add_country_modifier = { name = catholic_growth duration = 1825 } }
 						50 = { add_country_modifier = { name = catholic_growth duration = 2190 } }
@@ -430,10 +417,7 @@ political_decisions = {
 				any_pop = {
 					limit = {
 						has_pop_religion = catholic 
-						OR = { 
-							has_pop_culture = cajun
-							has_pop_culture = texan
-						}
+						has_pop_culture = texan
 						NOT = { type = craftsmen }
 						location = { is_overseas = no }
 					}

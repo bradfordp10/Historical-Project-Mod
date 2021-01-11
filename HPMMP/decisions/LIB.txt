@@ -15,7 +15,7 @@ political_decisions = {
     	}
 
     	effect = {
-			LIB = { political_reform = culture_voting_only }
+			LIB = { social_reform = culture_voting_only }
 			1889 = {
 				secede_province = THIS
 				add_core = LIB

@@ -530,7 +530,6 @@ country_event = {
             who = HOL
             value = 400
         }
-        create_vassal = HOL
         create_alliance = HOL
     }
 }

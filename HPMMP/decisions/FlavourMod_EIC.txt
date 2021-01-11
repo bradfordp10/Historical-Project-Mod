@@ -203,7 +203,7 @@ political_decisions = {
 			bessemer_process = 1
 		}
 
-		effect = 
+		effect = {
 			prestige = 15
 			money = -100000
 			1236 = {
