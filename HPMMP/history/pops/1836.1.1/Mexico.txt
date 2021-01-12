@@ -2900,7 +2900,7 @@
         culture = central_american
         religion = catholic
         size = 1375
-        militancy = 5
+        militancy = 4
     }
 
     artisans = {
@@ -2914,13 +2914,14 @@
         culture = mayan
         religion = catholic
         size = 75
+        militancy = 9
     }
 
     farmers = {
         culture = mayan
         religion = catholic
         size = 4550
-        militancy = 9
+        militancy = 4
     }
 }
 #Yucatan Region (440000)

@@ -342,9 +342,14 @@ country_event = {
         }
         2182 = {
             NOT = { is_core = UCA }
-            owned_by = THIS
-            controlled_by = THIS
-            NOT = { average_militancy = 2 }
+            OR = {
+                AND = {
+                    owned_by = THIS
+                    controlled_by = THIS
+                    NOT = { average_militancy = 2 }
+                }
+                owned_by = MEX
+            }
         }
     }
 
