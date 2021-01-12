@@ -200,7 +200,7 @@ country_event = {
 		name = "EVOPTA13067"
 		prestige = -15
 		plurality = -1
-		capital_scope = { add_province_modifier = { name = legation_quarter duration = -1 } }
+		add_country_modifier = { name = legation_quarter duration = -1 }
 		remove_country_modifier = lin_zexu
 		any_owned = {
 			limit = {

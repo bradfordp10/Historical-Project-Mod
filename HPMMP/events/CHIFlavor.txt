@@ -1235,7 +1235,6 @@ country_event = {
             }  
             add_province_modifier = { name = local_opium_habit duration = -1 }                                           
         }
-        GUI = { any_owned = { add_province_modifier = { name = local_opium_habit duration = -1 } } }
         1496 = {
             add_province_modifier = {
                 name = "foreign_smugglers"
@@ -2367,7 +2366,11 @@ country_event = {
         officers = { militancy = -8 }
         random_owned = { limit = { region = CHI_1082 } CHI_1082 = { add_core = MCK } }
         MCK = { random_owned = { limit = { region = CHI_1082 } CHI_1082 = { add_core = MCK } } }
-        random_owned = { limit = { region = CHI_1082 } CHI_1082 = { add_core = MCK } add_accepted_culture = beifaren }
+        random_owned = { 
+            limit = { region = CHI_1082 } 
+            CHI_1082 = { add_core = MCK } 
+            owner = { add_accepted_culture = beifaren }
+        }
         CHI_1479 = { add_core = MCK }
         CHI_1552 = { add_core = MCK }
         1533 = { add_core = MCK }

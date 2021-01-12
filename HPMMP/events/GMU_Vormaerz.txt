@@ -520,10 +520,7 @@ country_event = {
 	trigger = {
 	   NOT = { has_country_flag = die_goettinger_sieben_honoured }
 	   has_global_flag = die_goettinger_sieben
-	   OR = { 
-			tag = GER
-			tag = GCF
-		}
+	   tag = GER
 	   press_rights = free_press
 	   public_meetings = yes_meeting
 	   OR = { 
@@ -1202,10 +1199,7 @@ country_event = {
 		owns = 575 
 		has_country_flag = beethovenfest
 		ENG = { has_country_flag = beethovenfest }
-		OR = { 
-			FRA = { has_country_flag = beethovenfest }
-			BOR = { has_country_flag = beethovenfest }
-		}
+		FRA = { has_country_flag = beethovenfest }
 		BAV = { has_country_flag = beethovenfest }        
 	}
 
@@ -1222,22 +1216,9 @@ country_event = {
 	option = {
 		name = "I found it rather amusing."
 		prestige = 2
-		random_owned = {
-			limit = { exists = FRA }
-			owner = { relation = { who = FRA value = -25 } }
-		}	
-		random_owned = {
-			limit = { exists = BOR }
-			owner = { relation = { who = BOR value = -25 } }
-		}	
+		relation = { who = FRA value = -25 }
 		relation = { who = ENG value = 5 }
-		random_country = {
-			limit = {
-				primary_culture = french
-				capital = 425
-			}	
-			country_event = 200026
-		}
+		FRA = { country_event = 200026 }
 		ENG = { country_event = 200027 }
 		BAV = { country_event = 200028 }
 	}
@@ -2228,10 +2209,7 @@ country_event = {
 
 	trigger = {
 		has_global_flag = weber_aufstand
-		OR = { 
-			tag = GER
-			tag = GCF
-		}
+		tag = GER
 		press_rights = free_press
 		public_meetings = yes_meeting
 		realism = 1

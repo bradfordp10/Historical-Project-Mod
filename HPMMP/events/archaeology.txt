@@ -512,7 +512,7 @@ country_event = {
 					}
 				}
 			}
-		cheap_steel = 1
+		drilling_and_blasting = 1
 	}
 	
 	major = yes

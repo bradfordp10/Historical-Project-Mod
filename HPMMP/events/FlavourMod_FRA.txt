@@ -1,36 +1,3 @@
-country_event = {
-	id = 99954
-	title = "EVTNAME95501"
-	desc = "$FROM_COUNTRY$ declared war!"
-	picture = "scramble_for_africa"
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT97642OPTA"
-		FROM = {
-			war = {
-				target = THIS
-				attacker_goal = { casus_belli = annex_africa_full }
-				defender_goal = { casus_belli = status_quo }
-				call_ally = no
-			}
-		}
-	}
-}
-
-country_event = {
-	id = 99959
-	title = "EVTNAME95501"
-	desc = "$FROM_COUNTRY$ has established a protectorate over our nation"
-	picture = "scramble_for_africa"
-	is_triggered_only = yes
-
-	option = {
-		name = "EVT99993OPTA"
-		FROM = { inherit = THIS }
-	}
-}
-
 #France/Austria - Remove Jewish as accepted pops
 country_event = {
 	id = 99989
@@ -75,35 +42,6 @@ country_event = {
 			consciousness = 5
 		}
 		set_country_flag = jewish_persecution
-	}
-}
-
-#Carribean Federation - French Islands are seized
-country_event = {
-	id = 99992
-	title = "EVTNAME99992"
-	desc = "EVTDESC99992"
-	major = yes
-
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVT99992OPTA"
-		prestige = -15
-		any_owned = {
-			limit = {
-				OR = {
-					region = ENG_2224
-					region = ENG_2228
-					region = ENG_203
-					region = ENG_1979
-					region = UCA_2186
-					region = UCA_2197
-				}
-			}
-			add_core = CRB
-			secede_province = CRB
-		}
 	}
 }
 

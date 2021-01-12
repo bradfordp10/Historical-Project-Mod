@@ -343,7 +343,7 @@ country_event = {
 }
 
 country_event = {
-    id = 97552
+    id = 975524
     title = "EVTNAME97552" #Order Restored in Los Altos
     desc = "EVTDESC97552"
     picture = "frc_salvador"

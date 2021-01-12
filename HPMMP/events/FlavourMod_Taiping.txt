@@ -183,7 +183,6 @@ country_event = {
 					ai = yes
 					NOT = {
 						tag = MCK
-						tag = IMG
 						tag = XBI
 						tag = TPG
 						tag = KOR
@@ -231,7 +230,6 @@ country_event = {
 					ai = yes
 					NOT = {
 						tag = MCK
-						tag = IMG
 						tag = TPG
 						tag = KOR
 						part_of_sphere = yes
@@ -335,13 +333,8 @@ country_event = {
 				factor = 2.5
 				OR = {
 					tag = PGG
-					tag = GUI
 					tag = UYG
 				}
-			}
-			modifier = {
-				factor = 0
-				tag = NIA
 			}
 		}
 	}

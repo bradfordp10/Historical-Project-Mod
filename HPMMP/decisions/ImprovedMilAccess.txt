@@ -51,6 +51,7 @@ political_decisions = {
     	potential = {
             OR = {
                 any_greater_power = {
+                    NOT = { tag = THIS }
              		military_access = THIS
              		NOT = {
              			OR = {
@@ -74,6 +75,7 @@ political_decisions = {
         allow = {
         	OR = {
                 any_greater_power = {
+                    NOT = { tag = THIS }
                     military_access = THIS
                     NOT = {
                         OR = {

@@ -1085,7 +1085,7 @@ country_event = {
         }
         ai_chance = {
             factor = 50
-            odifier = {
+            modifier = {
                 factor = 2
                 tag = SAT
             }

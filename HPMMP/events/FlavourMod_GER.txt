@@ -180,10 +180,6 @@ country_event = {
 				factor = 0
 				FRA = { ai = no }
 			}
-			modifier = {
-				factor = 0
-				BOR = { ai = no }
-			}
 		}
 	}
 }
@@ -643,10 +639,7 @@ country_event = {
 	trigger = {
 		year = 1910
 		owns = 544
-		OR = {
-			tag = GER
-			#tag = GCF
-		}
+		tag = GER
 		NOT = { capital = 599 }
 		is_disarmed = no
 		war = no
@@ -700,15 +693,21 @@ country_event = {
 		random_owned = {
 			limit = {
 				province_id = 599 #Munich
-				owned_by = GCF
-				owner = { NOT = { has_global_flag = german_confederation_austrian } }
+				owned_by = GER
+				owner = { 
+					NOT = { has_global_flag = german_confederation_austrian } 
+					primary_culture = south_german
+				}
 			}
 			owner = { capital = 599 }
 		}
 		random_owned = {
 			limit = {
 				province_id = 619 #Vienna
-				owned_by = GCF
+				owned_by = GER
+				owner = {
+					primary_culture = south_german
+				}
 			}
 			owner = { capital = 619 }
 		}

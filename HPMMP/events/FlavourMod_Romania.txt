@@ -167,7 +167,7 @@
 		option = {
 			name = "EVTOPTA97533"
 			set_country_flag = convention_of_balta_liman
-			government = colonial_company
+			government = absolute_monarchy
 			political_reform = landed_voting
 			political_reform = state_press
 			political_reform = no_draft

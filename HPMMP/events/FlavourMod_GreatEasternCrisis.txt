@@ -7,10 +7,8 @@ country_event = {
 	major = yes
 	
 	trigger = {
-		AND = {
-			tag = RUS
-			is_disarmed = no
-		}
+		tag = RUS
+		is_disarmed = no
 		is_greater_power = yes
 		OR = {
 			AND = { 
@@ -22,8 +20,8 @@ country_event = {
 			}
 			AND = {
 				year = 1860
-				OR = {
-					TUR = { 
+				TUR = { 
+					OR = {
 						war_with = ROM
 						war_with = GRE
 						war_with = BUL
@@ -1067,14 +1065,6 @@ country_event = {
 					secede_province = GRE
 				}
 			}
-		}
-		random_country = {
-			limit = {
-				tag = SAM
-				vassal_of = TUR
-			}
-			TUR = { release_vassal = SAM }
-			GRE = { inherit = SAM }
 		}
 		
 		#Give Crete to Greece

@@ -89,13 +89,11 @@ country_event = {
 	picture = "fascist_march"
 	
 	trigger = {
-		AND = {
-			primary_culture = boer
-			OR = { 
-				government = fascist_dictatorship
-				government = presidential_dictatorship
-				ruling_party_ideology = reactionary
-			}
+		primary_culture = boer
+		OR = { 
+			government = fascist_dictatorship
+			government = presidential_dictatorship
+			ruling_party_ideology = reactionary
 		}
 		is_vassal = no
 		NOT = { has_global_flag = unified_south_africa }
@@ -375,18 +373,15 @@ country_event = {
 	picture = "cape_map" 
 	
 	trigger = {
-		AND = {
-			primary_culture = boer
-			owns = 2087
-			owns = 2100
-			owns = 2098
-			owns = 2111
-			owns = 2113
-			owns = 2114
-			owns = 2105
-			owns = 2094
-			
-		}
+		primary_culture = boer
+		owns = 2087
+		owns = 2100
+		owns = 2098
+		owns = 2111
+		owns = 2113
+		owns = 2114
+		owns = 2105
+		owns = 2094
 		invention = manifest_destiny
 		NOT = { has_country_flag = united_boer_saf_fired }
 	}
@@ -680,20 +675,18 @@ country_event = {
 	
 	trigger = {
 		primary_culture = boer
-		AND = {
+		OR = {
+			ruling_party_ideology = liberal
+			ruling_party_ideology = communist
+			ruling_party_ideology = socialist
+		}			
+		any_owned_province = {
 			OR = {
-				ruling_party_ideology = liberal
-				ruling_party_ideology = communist
-				ruling_party_ideology = socialist
-			}			
-			any_owned_province = {
-				OR = {
-					is_core = XHO
-					is_core = ZUL
-					is_core = SHO
-					is_core = MAT
-					is_core = TSW
-				} 
+				is_core = XHO
+				is_core = ZUL
+				is_core = SHO
+				is_core = MAT
+				is_core = TSW
 			}
 		}
 		NOT = { has_country_flag = native_reintegration_boer }
@@ -710,16 +703,14 @@ country_event = {
 		}
 		any_pop = {
 			limit = {
-				AND = {
-					OR = {
-						has_pop_culture = boer
-						has_pop_culture = british
-					}
-					OR = {
-						pop_majority_ideology = conservative
-						pop_majority_ideology = reactionary
-						pop_majority_ideology = fascist
-					}
+				OR = {
+					has_pop_culture = boer
+					has_pop_culture = british
+				}
+				OR = {
+					pop_majority_ideology = conservative
+					pop_majority_ideology = reactionary
+					pop_majority_ideology = fascist
 				}
 			}
 			militancy = 3
@@ -787,16 +778,14 @@ country_event = {
 		set_country_flag = native_slaughter
 		any_pop = {
 			limit = {
-				AND = {
-					OR = {
-						has_pop_culture = boer
-						has_pop_culture = british
-					}
-					OR = {
-						pop_majority_ideology = reactionary
-						pop_majority_ideology = fascist
-						pop_majority_ideology = conservative
-					}
+				OR = {
+					has_pop_culture = boer
+					has_pop_culture = british
+				}
+				OR = {
+					pop_majority_ideology = reactionary
+					pop_majority_ideology = fascist
+					pop_majority_ideology = conservative
 				}
 			}
 			militancy = -1
@@ -836,16 +825,14 @@ country_event = {
 		set_country_flag = native_displacement
 		any_pop = {
 			limit = {
-				AND = {
-					OR = {
-						has_pop_culture = boer
-						has_pop_culture = british
-					}
-					OR = {
-						pop_majority_ideology = reactionary
-						pop_majority_ideology = fascist
-						pop_majority_ideology = conservative
-					}
+				OR = {
+					has_pop_culture = boer
+					has_pop_culture = british
+				}
+				OR = {
+					pop_majority_ideology = reactionary
+					pop_majority_ideology = fascist
+					pop_majority_ideology = conservative
 				}
 			}
 			militancy = -1
@@ -896,15 +883,13 @@ province_event = {
 		NOT = { has_country_flag = no_slaughter }
 		has_province_modifier = african_exodus
 		owner = { 
-			AND = {
-				owns = 2071
-				owns = 2072
-				owns = 2069
-				owns = 2073
-				owns = 2068
-				owns = 2070
-				owns = 2635
-			}
+			owns = 2071
+			owns = 2072
+			owns = 2069
+			owns = 2073
+			owns = 2068
+			owns = 2070
+			owns = 2635
 		}
 	}
 
@@ -947,15 +932,13 @@ province_event = {
 		NOT = { has_country_flag = no_slaughter }
 		has_province_modifier = african_extermination
 		owner = { 
-			AND = {
-				owns = 2071
-				owns = 2072
-				owns = 2069
-				owns = 2073
-				owns = 2068
-				owns = 2070
-				owns = 2635
-			}
+			owns = 2071
+			owns = 2072
+			owns = 2069
+			owns = 2073
+			owns = 2068
+			owns = 2070
+			owns = 2635
 		}
 	}
 
@@ -1276,13 +1259,13 @@ country_event = {
 		set_country_flag = cattle_killing
 		random_list = {
 			33 = { 
-				any_pop = { limit = { NOT = { OR = { culture = boer culture = griqua } } } reduce_pop = 0.6 }
+				any_pop = { limit = { NOT = { culture = boer } reduce_pop = 0.6 }
 			}
 			33 = { 
-				any_pop = { limit = { NOT = { OR = { culture = boer culture = griqua } } } reduce_pop = 0.7 }
+				any_pop = { limit = { NOT = { culture = boer}  reduce_pop = 0.7 }
 			}
 			33 = { 
-				any_pop = { limit = { NOT = { OR = { culture = boer culture = griqua } } } reduce_pop = 0.8 }
+				any_pop = { limit = { NOT = { culture = boer } reduce_pop = 0.8 }
 			}
 		}
 		2096 = { owner = { country_event = 6026 } }
@@ -1886,10 +1869,8 @@ country_event = { #We have a port of our own
 	picture = "walvis"
 
 	trigger = {
-		AND =  {
-				has_country_flag = cape_port_access #has access through UK controlled Cape
-				total_num_of_ports = 1 #no longer landlocked
-			}
+		has_country_flag = cape_port_access #has access through UK controlled Cape
+		total_num_of_ports = 1 #no longer landlocked
 	}
 
 	mean_time_to_happen = {

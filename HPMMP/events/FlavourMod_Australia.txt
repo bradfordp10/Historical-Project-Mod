@@ -120,30 +120,6 @@ country_event = {
 			reduce_pop = 0.10
 		}
 		
-		any_pop = {
-			limit = { 
-				culture = aborigine
-				location = { 
-					is_core = FAS
-					NOT = {
-						province_id = 2501
-						province_id = 2496
-						province_id = 2506
-						province_id = 2604
-					}
-				}
-			}
-			reduce_pop = 0.10
-		}
-
-		any_pop = {
-			limit = { 
-				culture = melanesian
-				location = { is_core = FAS}
-			}
-			reduce_pop = 0.10
-		}
-		
 		AST = {
 			all_core = {
 				limit = {  

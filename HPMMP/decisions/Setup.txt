@@ -1,5 +1,25 @@
 political_decisions = {
 
+option_disable_starting_party_loyalty = {
+        picture = starting_options
+        alert = no
+        potential = {
+            NOT = { has_global_flag = party_loyalty_eliminated }
+            ai = yes
+            year = 1841
+        }
+
+        allow = {
+        }
+
+        effect = {
+            set_global_flag = party_loyalty_eliminated
+            country_event = 6016814
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
 ###Setup Decisions
     literacy_SPA = {
         potential = {

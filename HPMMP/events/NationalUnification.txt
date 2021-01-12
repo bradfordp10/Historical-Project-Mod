@@ -318,6 +318,9 @@ country_event = {
                 value = -200
             }
         }
+        FROM = {
+            country_event = 11102
+        }
         any_country = {
             limit = {
                 exists = yes

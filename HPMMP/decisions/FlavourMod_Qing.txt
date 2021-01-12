@@ -125,13 +125,23 @@ political_decisions = {
 				scaled_consciousness = { factor = -2 }
 				scaled_militancy = { factor = -2 }
 			}
+			random_owned = {
+            	limit = { owner = { has_country_modifier = western_presence_research } }
+            	owner = { remove_country_modifier = western_presence_research }
+        	}
+        	random_owned = {
+            	limit = { owner = { has_country_modifier = european_military_mission } }
+            	owner = { remove_country_modifier = european_military_mission }
+        	}
+        	random_owned = {
+            	limit = { owner = { has_country_modifier = legation_quarter } }
+            	owner = { remove_country_modifier = legation_quarter }
+        	}
 			any_owned = {
 				remove_province_modifier = western_presence
 				remove_province_modifier = foreign_smugglers
 				remove_province_modifier = foreign_trading_post
 				remove_province_modifier = local_opium_habit
-				remove_province_modifier = european_military_mission
-				remove_province_modifier = legation_quarter
 				remove_province_modifier = kettler_denkmal
 				remove_province_modifier = extraterritoriality_granted
 			}

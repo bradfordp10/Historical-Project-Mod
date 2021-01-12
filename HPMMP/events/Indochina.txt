@@ -816,7 +816,6 @@ country_event = {
                 OR = {
                     region = SIA_1358
                     region = SIA_1392
-                    region = SIA_1355
                 }
             }
             secede_province = SIA

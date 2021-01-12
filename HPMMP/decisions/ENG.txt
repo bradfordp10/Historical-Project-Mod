@@ -330,12 +330,10 @@ political_decisions = {
             1496 = {
                 add_province_modifier = {
                     name = colonial_recruitment
-                    duration = 1095
+                    duration = 365
                 }
             }
-            QNG = {
-                add_country_modifier = { name = legation_quarter duration = -1 }
-            }
+            QNG = { country_event = 13067 }
             diplomatic_influence = {
                 who = QNG
                 value = 50

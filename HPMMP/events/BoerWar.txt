@@ -380,7 +380,6 @@ country_event = {
     option = {
         name = "EVT98211OPTA"
         prestige = -5
-        all_core = { remove_core = FROM }
         any_pop = {
             limit = { has_pop_culture = boer }
             consciousness = 4
@@ -395,7 +394,6 @@ country_event = {
     option = {
         name = "EVT98211OPTB"
         prestige = 5
-        all_core = { remove_core = FROM }
         relation = { who = FROM value = -50 }
         any_pop = {
             limit = { has_pop_culture = zulu }

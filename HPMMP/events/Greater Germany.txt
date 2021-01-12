@@ -193,6 +193,23 @@ country_event = {
         any_country = {
             limit = {
                 OR = {
+                    tag = DLM
+                    tag = CRO           
+                }
+                any_core = {
+                    owned_by = THIS
+                    NOT = { is_core = GER }
+                    is_colonial = no
+                }
+                exists = no
+                is_cultural_union = no
+            }
+            country_event = 31511
+        }
+
+        any_country = {
+            limit = {
+                OR = {
                     tag = BAN
                     tag = SIE           
                 }
@@ -226,8 +243,6 @@ country_event = {
             limit = {
                 OR = {
                     tag = BOS
-                    tag = DLM
-                    tag = CRO
                     tag = SLO
                     tag = SLV
                     tag = BOH
@@ -463,26 +478,6 @@ country_event = {
         FROM = {
             any_owned = {
                 limit = {
-                    NOT = { 
-                        OR = {
-                            tag = CRO
-                            tag = DLM
-                        }
-                    }
-                    NOT = { is_core = CRO }
-                    NOT = { is_core = GER }
-                    is_core = THIS
-                }
-                secede_province = THIS
-            }
-        }
-        FROM = {
-            any_owned = {
-                limit = {
-                    OR = {
-                        tag = CRO
-                        tag = DLM
-                    }
                     NOT = { is_core = GER }
                     is_core = THIS
                 }
@@ -1008,7 +1003,6 @@ country_event = {
         any_greater_power = {
             leave_alliance = THIS                     
         }
-        AUS_733 = { remove_core = AUS remove_core = KUK }
         AUS_736 = { remove_core = AUS remove_core = KUK }
         AUS_768 = { remove_core = AUS remove_core = KUK }
         
@@ -1180,7 +1174,6 @@ country_event = {
         AUS_734 = { add_core = GER remove_core = HUN }
         AUS_613 = { add_core = GER remove_core = HUN }
         AUS_619 = { add_core = GER remove_core = HUN }
-        AUS_733 = { remove_core = AUS remove_core = KUK }
         AUS_736 = { remove_core = AUS remove_core = KUK }
         AUS_768 = { remove_core = AUS remove_core = KUK }
         random_country = {
@@ -1355,7 +1348,6 @@ country_event = {
         any_greater_power = {
             leave_alliance = THIS                     
         }
-        AUS_733 = { remove_core = AUS remove_core = KUK }
         AUS_736 = { remove_core = AUS remove_core = KUK }
         AUS_768 = { remove_core = AUS remove_core = KUK }
         FROM = { country_event = 31520 }

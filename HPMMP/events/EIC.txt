@@ -60,79 +60,6 @@ country_event = {
 }
 
 country_event = {
-    id = 9990002
-    title = "EVTNAME9990008"
-    desc = "EVTDESC9990002"
-    picture = "deliberation"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVT9990008OPTA"
-        FROM = {
-            country_event = 9990003
-        }
-    }
-
-    option = {
-        name = "EVT9990008OPTB"
-        FROM = {
-            country_event = 9990004
-        }
-        ai_chance = { factor = 1 }
-    }
-}
-
-country_event = {
-    id = 9990003
-    title = "EVTNAME9990003"
-    desc = "EVTDESC9990003"
-    picture = "deliberation"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVTDESC9990003"
-        release_vassal = EIC
-        clr_global_flag = eic_spawned
-        war = {
-            target = EIC
-            attacker_goal = {
-                casus_belli = civil_war
-            }
-            defender_goal = {
-                casus_belli = status_quo
-            }
-            call_ally = yes
-        }
-        set_global_flag = war_with_EIC
-    }
-}
-
-country_event = {
-    id = 9990004
-    title = "EVTNAME9990004"
-    desc = "EVTDESC9990004"
-    picture = "deliberation"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVT9990010OPTA"
-        clr_global_flag = eic_spawned
-        any_country = {
-            limit = { vassal_of = EIC }
-            neutrality = yes
-        }
-        EIC = { civilized = no }
-        inherit = EIC
-        treasury = 100000
-        1251 = { remove_core = EIC }
-        EIC = { all_core = { remove_core = EIC } }
-    }
-}
-
-country_event = {
     id = 9990005
     title = "EVTNAME9990005"
     desc = "EVTDESC9990005"
@@ -1257,34 +1184,6 @@ country_event = {
                 has_pop_type = serfs
             }
             any_pop = { limit = { type = serfs } pop_type = farmers }
-        }
-    }
-}
-
-
-#EIC Setup
-country_event = {
-    id = 9990016
-    title = "EVTNAME9990016"
-    desc = "EVTDESC9990016"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVTOPTA9990016"
-        any_owned = {
-            limit = { is_core = HND }
-            secede_province = EIC
-        }
-        create_vassal = EIC
-        relation = { who = EIC value = 400 }
-        diplomatic_influence = { who = EIC value = 400 }
-        create_alliance = EIC
-        EIC = { set_country_flag = unreleasable_country capital = 1251 }
-        any_country = {
-            limit = { NOT = { tag = ENG } }
-            relation = { who = EIC value = -400 }
-            diplomatic_influence = { who = EIC value = -400 }
         }
     }
 }
