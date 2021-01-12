@@ -59,10 +59,7 @@ country_event = {
             exists = COS
         }
         OR = {
-            AND = {
-                exists = NIC
-                exists = HON
-            }
+            exists = HON
             any_owned_province = {
                 province_id = 2201
                 controlled_by_rebels = yes
@@ -117,12 +114,12 @@ country_event = {
             has_country_flag = nicaragua_independence
             exists = NIC
         }
-            any_owned_province = {
-                province_id = 2197
-                controlled_by_rebels = yes
-                province_control_days = 60
-                NOT = { country_units_in_province = UCA }
-            }
+        any_owned_province = {
+            province_id = 2197
+            controlled_by_rebels = yes
+            province_control_days = 60
+            NOT = { country_units_in_province = UCA }
+        }
     }
 
     mean_time_to_happen = {
@@ -170,19 +167,30 @@ country_event = {
             has_country_flag = honduras_independence
             exists = HON
         }
-        
-        any_owned_province = {
-            province_id = 2193
-            controlled_by_rebels = yes
-            province_control_days = 60
-            NOT = { country_units_in_province = UCA }
+        OR = { 
+            exists = NIC
+            any_owned_province = {
+                province_id = 2193
+                controlled_by_rebels = yes
+                province_control_days = 60
+                NOT = { country_units_in_province = UCA }
+            }
         }
     }
 
     mean_time_to_happen = {
-        months = 1
+        months = 4
         modifier = {
-            factor = 24
+            factor = 0.25
+            any_owned_province = {
+                province_id = 2193
+                controlled_by_rebels = yes
+                province_control_days = 60
+                NOT = { country_units_in_province = UCA }
+            }
+        }
+        modifier = {
+            factor = 6
             has_global_flag = the_usca_has_failed
         }
     }
@@ -225,18 +233,30 @@ country_event = {
             has_country_flag = guatemala_independence
             exists = GUA
         }
-        any_owned_province = {
-            province_id = 2186
-            controlled_by_rebels = yes
-            province_control_days = 60
-            NOT = { country_units_in_province = UCA }
+        OR = {
+            exists = COS
+            any_owned_province = {
+                province_id = 2186
+                controlled_by_rebels = yes
+                province_control_days = 60
+                NOT = { country_units_in_province = UCA }
+            }
         }
     }
 
     mean_time_to_happen = {
-        months = 1
+        months = 4
         modifier = {
-            factor = 24
+            factor = 0.25
+            any_owned_province = {
+                province_id = 2186
+                controlled_by_rebels = yes
+                province_control_days = 60
+                NOT = { country_units_in_province = UCA }
+            }
+        }
+        modifier = {
+            factor = 6
             has_global_flag = the_usca_has_failed
         }
     }
