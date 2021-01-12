@@ -43,12 +43,8 @@ political_decisions = {
 		picture = george_eden
 		potential = {
 			NOT = { war_exhaustion = 1 }
-			OR = {
-				AND = {
-					tag = ENG
-					owns = 1251
-				}
-			}
+			tag = ENG
+			owns = 1251
 			AFG = {
 				exists = yes
 				is_vassal = no
@@ -157,21 +153,13 @@ political_decisions = {
 							type = bureaucrats
 							location = { is_core = HND }
 						}
-						reduce_pop = 2
-					}
-					any_pop = {
-						limit = { 
-							culture = anglo_indian
-							type = bureaucrats
-							location = { is_core = HND }
-						}
 						reduce_pop = 2.5
 					}
 				}
 			}
 			any_pop = {
 				limit = { 
-					culture = anglo_indian
+					culture = british
 					location = { is_core = HND }
 				}
 				reduce_pop = 1.25
@@ -200,7 +188,7 @@ political_decisions = {
 			money = 100001
 			is_greater_power = yes
 			integral_rail_system = 1
-			bessemer_process = 1
+			drilling_and_blasting = 1
 		}
 
 		effect = {

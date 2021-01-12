@@ -212,10 +212,10 @@ NORMAL_WAR_CONQUEST_ANY_NAME_ENG_MUG;The Indian Rebellion;;;;;;;;;;;;;;;;;;;;;;;
 AGRESSION_WAR_CONQUEST_ANY_NAME_ENG_MUG;The Indian Rebellion;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
 NORMAL_CIVIL_WAR_NAME_ENG_EIC;The East India Company Uprising;;;;;;;;;;;;x,,,
 AGRESSION_CIVIL_WAR_NAME_ENG_EIC;The East India Company Uprising;;;;;;;;;;;;x,,,
-cb_sykes_picot_;The Asia Minor Agreement;;;;;;;;;;x
+cb_sykes_picot;The Asia Minor Agreement;;;;;;;;;;x
 cb_sykes_picot_setup;Seize the Arab Provinces;;;;;;;;;;x
 cb_sykes_picot_short;Seize the Arab Provinces;;;;;;;;;;x
-cut_down_to_size_ottoman_;The Russo-Turkish War;;;;;;;;;;x
+cut_down_to_size_ottoman;The Russo-Turkish War;;;;;;;;;;x
 cut_down_to_size_ottoman_setup;Free the Balkans;;;;;;;;;;x
 cut_down_to_size_ottoman_short;Free the Balkans;;;;;;;;;;x
 NORMAL_SYKES_PICOT_WAR_NAME;The$ORDER$Asia Minor Expedition;;;;;;;;;;;;;;;;;;;;x,,,
@@ -230,3 +230,18 @@ NORMAL_CIVIL_WAR_NAME_SWI_SDB;The Sonderbund War;;;;;;;;;;;;x,,,
 NORMAL_WAR_BOXER_NAME;The Boxer Rebellion;$ORDER$ rÃ©bellion des Boxers;$ORDER$Boxer Aufstand;;;;;;;;;;;x
 NORMAL_WAR_PUPPET_NAME_TUR_WAL;The$ORDER$Wallachian Revolution;;;;;;;;;;;;;;;;;;;;x,,,
 AGRESSION_WAR_PUPPET_NAME_TUR_WAL;The$ORDER$Wallachian Revolution;;;;;;;;;;;;;;;;;;;;x,,,
+AGRESSION_WAR_CONQUEST_ANY_NAME_QNG_XBI;The Dungan Revolt in Qinghai;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;
+AGRESSION_PUNITIVE_EXPEDITION_WAR_NAME_ENG_QNG;The $ORDER$Opium War;;;;;;;;;;;;;;;;;x,,,
+NORMAL_CIVIL_WAR_NAME_USA_CSA;The $ORDER$American Civil War;$ORDER$ guerre de r嶵ellion;$ORDER$Rebellionskrieg;;;;;;;;;;;x
+international_pariah;International Pariah;Paria International;Internationales Ausgestossen;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
+international_pariah_desc;We are a pariah in the international community for our aggressive policies.;;;;;;;;;;;;;x,,,
+great_war;Total War;Guerre Totale;Gr廲er Krieg;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
+great_war_desc;We are in a state of total war with our enemies. We must rise up as one, or risk the destruction of our entire way of life.;;;;;;;;;;;;;x,,
+great_war2;The Demands of War;Les Demandes de la Guerre;Die Nachfragen des Krieges;;;;;;;;;;;x,,,
+great_war2_desc;Massive shortages are causing our people's enthusiasm for war to dim.;;;;;;;;;;;;;x,,,
+great_war3;Is It All For Nothing?;Est-il Tout Pour Rien?;Ist Alles F Nichts?;;;;;;;;;;;x,,,
+great_war3_desc;If we do not end the war soon, things will go very badly for us.;;;;;;;;;;;;;x,,
+colonial_conquest;Colonial Conquest;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+colonial_conquest_desc;Acquire an enemy 即state劬 where we have 即colonial claims劬, but this will gives us a random amount of 刪infamy劬 from 刪0.5 to 2劬.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x,,
+colonial_conquest_short;Acquire $STATE$;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,
+colonial_conquest_setup;Acquire $STATE$ from $RECIPIENT$;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;,,,

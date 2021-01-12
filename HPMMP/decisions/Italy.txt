@@ -1517,11 +1517,9 @@ political_decisions = {
             any_owned = {
                 limit = {
                     region = AUS_729
-                            OR = {
-                                is_core = AUS
-                                is_core = KUK
-                            }
-                        }
+                    OR = {
+                        is_core = AUS
+                        is_core = KUK
                     }
                 }
                 add_core = ITA

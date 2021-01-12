@@ -1525,10 +1525,8 @@ country_event = {
 		2101 = { #Oranje owns Bloemfontein
 			owned_by = THIS 
 		}
-		AND = {
-			ENG = { owns = 2087 } #Cape Town	
-			ENG = { owns = 2093 } #Calvinia
-		}
+		ENG = { owns = 2087 } #Cape Town	
+		ENG = { owns = 2093 } #Calvinia
 		OR = {
 			ENG = { owns = 2094 } #Kimberley
 			ORA = { owns = 2094 } #Kimberley
@@ -1583,13 +1581,11 @@ country_event = { #Petition Portugal for port access
 	trigger = {
 		tag = TRN #Event for Transvaal
 		money = 10000 #This will cost money for the railroads
-		AND = {
-			2110 = { #Transvaal owns Zotspanberg
-				owned_by = THIS 
-			}
-			2105 = { #Transvaal owns Pretoria
-				owned_by = THIS 
-			}
+		2110 = { #Transvaal owns Zotspanberg
+			owned_by = THIS 
+		}
+		2105 = { #Transvaal owns Pretoria
+			owned_by = THIS 
 		}
 		2049 = { #Portugal owns Lourenço Marques
 			owned_by = POR
@@ -1723,10 +1719,8 @@ country_event = { #We have a port of our own
 	picture = "walvis"
 
 	trigger = {
-		AND =  {
-				has_country_flag = portugal_port_access #has access through Portuguese ports
-				total_num_of_ports = 1 #no longer landlocked
-			}
+		has_country_flag = portugal_port_access #has access through Portuguese ports
+		total_num_of_ports = 1 #no longer landlocked
 		NOT = { has_country_flag = we_have_port }
 	}
 
@@ -1761,28 +1755,24 @@ country_event = { #Ask UK for port access through the Cape
 		tag = ORA #Event for Oranje
 		money = 6000 #This will cost money for the railroads
 		in_sphere = ENG
-		AND = {
-			2101 = { #Oranje owns Bloemfontein
-				owned_by = THIS 
-			}
-			2013 = { #Oranje owns Philippolis
-				owned_by = THIS 
-			}
-			2558 = { #UK owns Calvinia
-				owned_by = ENG 
-			}
-			2093 = { #UK owns De Aar
-				owned_by = ENG 
-			}
-			2087 = { #UK owns the Cape
-				owned_by = ENG 
-			}
+		2101 = { #Oranje owns Bloemfontein
+			owned_by = THIS 
+		}
+		2013 = { #Oranje owns Philippolis
+			owned_by = THIS 
+		}
+		2558 = { #UK owns Calvinia
+			owned_by = ENG 
+		}
+		2093 = { #UK owns De Aar
+			owned_by = ENG 
+		}
+		2087 = { #UK owns the Cape
+			owned_by = ENG 
 		}
 		NOT = {
-			AND =  {
-				has_country_flag = cape_port_access
-				total_num_of_ports = 1 #landlocked
-			}
+			has_country_flag = cape_port_access
+			total_num_of_ports = 1 #landlocked
 		}
 	}
 	
@@ -2300,23 +2290,6 @@ country_event = {
 			}
 			country_event = 6052 #Kruger telegram
 		}
-		GCF = { 
-			limit = { #conditions for not sending telegram
-				is_greater_power = yes
-				exists = yes
-				NOT = {
-					alliance_with = ENG	
-					truce_with = ENG
-					war_policy = pacifism
-				}
-				OR = {
-					government = absolute_monarchy
-					government = prussian_constitutionalism
-					government = hms_government
-				}
-			}
-			country_event = 6052 #Kruger telegram
-		}
 			
 		ai_chance = {
 			factor = 85
@@ -2414,17 +2387,9 @@ country_event = {
 		year = 1896
 		war = no
 		exists = ORA
-		NOT = {
-			alliance_with = ORA
-		}
-		AND = {
-			ORA = {
-				is_vassal = no
-			}
-			TRN = {
-				is_vassal = no
-			}
-		}
+		NOT = { alliance_with = ORA }
+		ORA = { is_vassal = no }
+		TRN = { is_vassal = no }
 		NOT = { has_country_flag = zar_ora_alliance }
 	}
 	

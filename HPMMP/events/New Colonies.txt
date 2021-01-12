@@ -2038,10 +2038,6 @@ province_event = {
         owner = {
             civilized = yes
             NOT = { capital_scope = { continent = africa } }
-            NOT = { capital_scope = { continent = west_africa } }
-            NOT = { capital_scope = { continent = east_africa } }
-            NOT = { capital_scope = { continent = central_africa } }
-            NOT = { capital_scope = { continent = south_west_africa } }
         }
         OR = {
             AND = {
@@ -2093,10 +2089,7 @@ province_event = {
     desc = "EVTDESC98845"
     
     trigger = {
-        OR = {
-            region = BEL_1990
-            region = BEL_1996
-        }
+        region = BEL_1990
         owned_by = THIS
         controlled_by = THIS
         any_neighbor_province = {
@@ -2105,10 +2098,6 @@ province_event = {
         owner = {
             civilized = yes
             NOT = { capital_scope = { continent = africa } }
-            NOT = { capital_scope = { continent = west_africa } }
-            NOT = { capital_scope = { continent = east_africa } }
-            NOT = { capital_scope = { continent = central_africa } }
-            NOT = { capital_scope = { continent = south_west_africa } }
         }
         OR = {
             AND = {

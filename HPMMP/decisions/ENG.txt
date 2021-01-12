@@ -1102,7 +1102,7 @@ political_decisions = {
         
         effect = { 
             set_country_flag = integrated_johore
-            JOH = { civilized = no tech_school = unciv_tech_school }
+            JOH = { civilized = no tech_school = developing_tech_school }
             inherit = JOH
             any_owned = { limit = { NOT = { OR = { province_id = 1386 province_id = 1384 province_id = 1385 } } } remove_core = JOH }
             1388 = { remove_core = JOH add_core = PRK }
@@ -1151,7 +1151,7 @@ political_decisions = {
         
         effect = { 
             set_country_flag = integrated_pahang
-            PHG = { civilized = no tech_school = unciv_tech_school }
+            PHG = { civilized = no tech_school = developing_tech_school }
             PHG = { all_core = { add_province_modifier = { name = nationalist_agitation duration = 730 } } }
             PHG = { all_core = { remove_core = JOH } }
             inherit = PHG

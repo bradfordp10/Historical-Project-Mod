@@ -125,9 +125,7 @@ political_decisions = {
 		
 		allow = {
 			war = no
-			OR = { 
-				FRA = { truce_with = PRU has_country_modifier = rhine_crisis }
-			}
+			FRA = { truce_with = PRU has_country_modifier = rhine_crisis }
 			PRU = { has_recently_lost_war = yes }
 		}
 		
