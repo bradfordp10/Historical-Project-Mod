@@ -267,6 +267,11 @@ GWA = {
     level = 5
     influence_value = 0
 }
+MNP = {
+    value = 125
+    level = 5
+    influence_value = 0
+}
 HYD = {
     value = 125
     level = 5
@@ -333,6 +338,12 @@ MUG = {
     value = 125
     level = 5
     influence_value = 0
+}
+
+MLD = {
+    value = 150
+    level = 5
+    influence_value = 100
 }
 
 leader = {

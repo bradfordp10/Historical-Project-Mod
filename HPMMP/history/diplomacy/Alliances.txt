@@ -56,6 +56,13 @@ alliance = {
     end_date = 1936.1.1
 }
 
+alliance = {      
+    first = ENG
+    second = PNJ
+    start_date = 1386.9.5
+    end_date = 1840.1.1
+}
+
 #Treaty of Hunkar Iskelesi - Russian-Ottoman Alliance
 alliance = {
     first = TUR
@@ -154,19 +161,19 @@ alliance = {
         end_date = 1867.1.1
     }
 alliance = {
-        first = PRU
+        first = AUS
         second = FRM
         start_date = 1835.1.1
         end_date = 1867.1.1
     }
 alliance = {
-        first = PRU
+        first = AUS
         second = HEK
         start_date = 1835.1.1
         end_date = 1867.1.1
     }
 alliance = {
-        first = PRU
+        first = AUS
         second = HES
         start_date = 1835.1.1
         end_date = 1867.1.1
@@ -184,7 +191,7 @@ alliance = {
         end_date = 1867.1.1
     }
 alliance = {
-        first = PRU
+        first = AUS
         second = NAS
         start_date = 1835.1.1
         end_date = 1867.1.1
