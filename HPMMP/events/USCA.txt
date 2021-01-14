@@ -344,8 +344,8 @@ country_event = {
 
 country_event = {
     id = 975524
-    title = "EVTNAME97552" #Order Restored in Los Altos
-    desc = "EVTDESC97552"
+    title = "EVTNAME975524" #Order Restored in Los Altos
+    desc = "EVTDESC975524"
     picture = "frc_salvador"
 
     fire_only_once = yes

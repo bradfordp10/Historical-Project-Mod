@@ -953,6 +953,10 @@ country_event = {
         NOT = {
             year = 1860
             has_global_flag = egypt_submitted_to_ottomans
+            any_greater_power = {
+                war_with = TUR
+                has_country_flag = oriental_crisis_support_Egypt
+            }
         }
     }
 

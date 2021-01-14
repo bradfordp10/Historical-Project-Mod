@@ -28,6 +28,10 @@ country_event = {
 					primary_culture = north_german 
 					primary_culture = south_german
 				}
+				NOT = { tag = SIE }
+                NOT = { tag = LUX }
+                NOT = { tag = BAN }
+                NOT = { tag = UBD }
 			}
 			create_alliance = THIS
 			casus_belli = {

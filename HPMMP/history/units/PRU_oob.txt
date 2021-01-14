@@ -148,7 +148,7 @@ ENG = { value = 25 }
 FRA = { value = -50 }
 AUS = { value = 150 }
 USA = { value = 25 }
-RUS = { value = 150 }
+RUS = { value = 80 }
 TUR = { value = 25 }
 SPA = { value = 0 }
 

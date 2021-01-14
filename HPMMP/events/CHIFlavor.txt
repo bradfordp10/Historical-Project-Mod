@@ -1231,6 +1231,7 @@ country_event = {
                     region = CHI_1547
                     region = CHI_1578
                     region = CHI_1526
+                    region = CHI_1505
                 }
             }  
             add_province_modifier = { name = local_opium_habit duration = -1 }                                           

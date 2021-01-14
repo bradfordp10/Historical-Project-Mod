@@ -122,7 +122,6 @@ annex_california = {
 
     allow = {
         prestige = 50
-        war = no
         OR = {  
             has_country_flag = treaty_of_guadalupe_hidalgo
             AND = {
