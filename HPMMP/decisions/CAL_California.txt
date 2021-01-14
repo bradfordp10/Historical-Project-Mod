@@ -123,8 +123,14 @@ annex_california = {
     allow = {
         prestige = 50
         war = no
+        OR = {  
+            has_country_flag = treaty_of_guadalupe_hidalgo
+            AND = {
+                MEX = { has_recently_lost_war = yes }
+                truce_with = THIS
+            }
+        }
         CAL = {
-            war = no
             OR = {
                 is_vassal = no
                 vassal_of = USA
@@ -138,6 +144,19 @@ annex_california = {
 
     effect = {
         set_country_flag = annex_california
+        CAL = {
+            end_war = MEX
+        }
+        any_country = {
+            limit = {
+                tag = MEX
+                }
+            end_war = CAL
+        }
+        relation = {
+            who = CAL
+            value = 200
+        }
         CAL = { country_event = 110062 }
     }
 

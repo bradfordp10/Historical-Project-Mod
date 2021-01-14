@@ -71,7 +71,7 @@ political_decisions = {
                     NOT = { badboy = 0.5 }
                     NOT = { any_owned_province = { continent = africa } }
                     tag = BEL
-                    year = 1885
+                    year = 1884
                     raider_group_doctrine = 1
                 }
             }

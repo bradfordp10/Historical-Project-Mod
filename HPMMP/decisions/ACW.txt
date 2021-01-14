@@ -429,10 +429,10 @@ political_decisions = {
             USA_129 = { add_core = USA } #Oklahoma
             USA_106 = { add_core = USA } #Colorado
             #USA_78 = { add_core = USA } #Washington
-            USA_81 = { add_core = USA } #Portland
+            USA_81 = { add_core = USA } #Oregon
             USA_91 = { add_core = USA } #Idaho
-            USA_111 = { add_core = USA }
-            USA_126 = { add_core = USA }
+            USA_111 = { add_core = USA } #Wyoming
+            USA_126 = { add_core = USA } #Kansas
             2148 = { add_core = USA }
             105 = { add_core = USA }
             104 = { add_core = USA }
@@ -1113,6 +1113,10 @@ political_decisions = {
 
         effect = {
             war_exhaustion = -10
+            add_country_modifier = {
+                name = global_baby_boom
+                duration = 365
+            }
             any_pop = { militancy = -3 }
             remove_country_modifier = the_slavery_debate
             remove_accepted_culture = dixie

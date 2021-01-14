@@ -1435,7 +1435,7 @@ political_decisions = {
 
         allow = {
             war = no
-            civilization_progress = 0.5
+            year = 1860
             OR = {
                 NOT = { prestige = 25 }
                 has_recently_lost_war = yes
@@ -1447,6 +1447,7 @@ political_decisions = {
         }
 
         effect = {
+            set_country_flag = self_strengthening_movement
             random_owned = {
                 limit = {
                     owner = { ai = no }
@@ -1456,6 +1457,12 @@ political_decisions = {
             add_country_modifier = {
                 name = self_strengthening_movement
                 duration = 1825
+            }
+            1617 = {
+                add_province_modifier = {
+                    name = foreign_trading_post
+                    duration = 1825
+                }
             }
             CHI = { set_country_flag = self_strengthening_movement }
             KMT = { set_country_flag = self_strengthening_movement }
