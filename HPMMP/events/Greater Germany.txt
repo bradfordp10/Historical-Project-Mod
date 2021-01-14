@@ -534,26 +534,6 @@ country_event = {
         FROM = {
             any_owned = {
                 limit = {
-                    NOT = { 
-                        OR = {
-                            tag = CRO
-                            tag = DLM
-                        }
-                    }
-                    NOT = { is_core = CRO }
-                    NOT = { is_core = GER }
-                    is_core = THIS
-                }
-                secede_province = THIS
-            }
-        }
-        FROM = {
-            any_owned = {
-                limit = {
-                    OR = {
-                        tag = CRO
-                        tag = DLM
-                    }
                     NOT = { is_core = GER }
                     is_core = THIS
                 }
