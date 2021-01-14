@@ -86,6 +86,7 @@ MEC = {
 }
 MEI = {
     value = 125
+    level = 5
     military_access = yes
 }
 NAS = {

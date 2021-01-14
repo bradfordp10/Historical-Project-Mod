@@ -496,6 +496,14 @@ country_event = {
             country_event = 90056
         }
         SWH = {
+            random_owned = {
+                limit ={
+                    province_id = 529
+                }
+                secede_province = THIS
+            }
+        }
+        SWH = {
             release = HOL
             change_tag = SCH
         }
