@@ -86,6 +86,10 @@ MOR = {
 }
 
 #Europe
+HAN = {
+    value = 50
+    level = 1
+}
 GRE = {
     value = -25        #relation
     level = 0        #3=cordial, 4 = friendly, 5 sphere
@@ -98,12 +102,12 @@ SER = {
 }
 MOL = {
     value = 125
-    level = 4
+    level = 3
     influence_value = 0
 }
 WAL = {
     value = 125
-    level = 4
+    level = 3
     influence_value = 0
 }
 

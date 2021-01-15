@@ -1,6 +1,11 @@
 #Sphere of Influence
 
 #Europe
+HAN = {
+    value = 50
+    level = 1
+}
+
 MON = {
     value = -10
     level = 5

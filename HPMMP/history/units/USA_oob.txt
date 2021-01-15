@@ -122,6 +122,11 @@ SPU = {
     influence_value = 0
 }
 
+HAN = {
+    value = 50
+    level = 1
+}
+
 
 #Other GP's
 ENG = { value = 50 }

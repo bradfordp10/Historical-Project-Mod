@@ -1499,7 +1499,7 @@ country_event = {
             end_war = THIS
             country_event = { id = 97647 days = 1 }
         }
-        create_vassal = RYU
+        JAP = { create_vassal = RYU }
     }
 }
 
@@ -1824,7 +1824,7 @@ country_event = {
             end_war = JAP
             country_event = { id = 97652 days = 15 }
         }
-        create_vassal = RYU
+        TKG = { create_vassal = RYU }
     }
 }
 
