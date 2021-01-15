@@ -148,7 +148,9 @@ ENG_300 = { 300 294 301 302 303 } #South East England
 
 ### Scandinavia
 
-DEN_251 = { 251 252 253 2636 } #Iceland & Greenland
+DEN_251 = { 251 2636 } #Greenland
+
+DEN_252 = { 252 253 } #Iceland
 
 SWE_308 = { 308 305 306 307 } #Nordnoge
 
