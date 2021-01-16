@@ -30,7 +30,10 @@ political_decisions = {
                         OR = {
                             owned_by = THIS
                             owner = {
-                                in_sphere = THIS
+                                OR = {
+                                    in_sphere = THIS
+                                    part_of_sphere = no
+                                }
                                 OR = {
                                     is_vassal = no
                                     vassal_of = THIS
@@ -87,7 +90,10 @@ political_decisions = {
             any_country = {
                 limit = {
                     primary_culture = south_german
-                    in_sphere = THIS
+                    OR = {
+                        in_sphere = THIS
+                        part_of_sphere = no
+                    }
                     NOT = {
                         has_country_flag = post_colonial_country
                         tag = THIS
@@ -143,7 +149,10 @@ political_decisions = {
                             owned_by = THIS
                             owner = {
                                 ai = yes
-                                in_sphere = THIS
+                                OR = {
+                                    in_sphere = THIS
+                                    part_of_sphere = no
+                                }
                                 OR = {
                                     is_vassal = no
                                     vassal_of = THIS
@@ -174,7 +183,10 @@ political_decisions = {
                         tag = BAV
                         tag = SGM
                     }
-                    in_sphere = THIS
+                    OR = {
+                        in_sphere = THIS
+                        part_of_sphere = no
+                    }
                 }
                 annex_to = THIS
             }
@@ -232,7 +244,10 @@ political_decisions = {
                             owned_by = THIS
                             owner = {
                                 ai = yes
-                                in_sphere = THIS
+                                OR = {
+                                    in_sphere = THIS
+                                    part_of_sphere = no
+                                }
                                 OR = {
                                     is_vassal = no
                                     vassal_of = THIS
@@ -288,7 +303,10 @@ political_decisions = {
             any_country = {
                 limit = {
                     primary_culture = south_german
-                    in_sphere = THIS
+                    OR = {
+                        in_sphere = THIS
+                        part_of_sphere = no
+                    }
                     NOT = {
                         tag = THIS
                         tag = KUK
@@ -331,7 +349,10 @@ political_decisions = {
                             OR = {
                                 owned_by = THIS
                                 owner = {
-                                    in_sphere = THIS
+                                    OR = {
+                                        in_sphere = THIS
+                                        part_of_sphere = no
+                                    }
                                     OR = {
                                         is_vassal = no
                                         vassal_of = THIS
@@ -391,7 +412,10 @@ political_decisions = {
                         primary_culture = north_german
                         tag = SCH
                     }
-                    in_sphere = THIS
+                    OR = {
+                        in_sphere = THIS
+                        part_of_sphere = no
+                    }
                     NOT = { tag = THIS }
                     NOT = { has_country_flag = post_colonial_country }
                     OR = {
@@ -426,7 +450,10 @@ political_decisions = {
             random_country = {
                 limit = {
                     tag = SCH
-                    in_sphere = THIS     
+                    OR = {
+                        in_sphere = THIS
+                        part_of_sphere = no
+                    }     
                 }
                 country_event = 11106
             }
@@ -465,7 +492,10 @@ political_decisions = {
                     OR = {
                         owned_by = THIS
                         owner = {
-                            in_sphere = THIS
+                            OR = {
+                                in_sphere = THIS
+                                part_of_sphere = no
+                            }
                             OR = {
                                 is_vassal = no
                                 vassal_of = THIS
@@ -487,7 +517,10 @@ political_decisions = {
                     NOT = { is_greater_power = yes }
                     NOT = { has_country_flag = post_colonial_country }
                     is_culture_group = THIS
-                    in_sphere = THIS
+                    OR = {
+                        in_sphere = THIS
+                        part_of_sphere = no
+                    }
                     OR = {
                         is_vassal = no
                         vassal_of = THIS
@@ -530,7 +563,10 @@ political_decisions = {
                         OR = {
                             owned_by = THIS
                             owner = {
-                                in_sphere = THIS
+                                OR = {
+                                    in_sphere = THIS
+                                    part_of_sphere = no
+                                }
                                 OR = {
                                     is_vassal = no
                                     vassal_of = THIS
@@ -548,7 +584,10 @@ political_decisions = {
                         OR = {
                             owned_by = THIS
                             owner = {
-                                in_sphere = THIS
+                                OR = {
+                                    in_sphere = THIS
+                                    part_of_sphere = no
+                                }
                                 OR = {
                                     is_vassal = no
                                     vassal_of = THIS
@@ -565,7 +604,10 @@ political_decisions = {
                             OR = {
                                 owned_by = THIS
                                 owner = {
-                                    in_sphere = THIS
+                                    OR = {
+                                        in_sphere = THIS
+                                        part_of_sphere = no
+                                    }
                                     OR = {
                                         is_vassal = no
                                         vassal_of = THIS
@@ -601,7 +643,10 @@ political_decisions = {
                                 OR = {
                                     owned_by = THIS
                                     owner = {
-                                        in_sphere = THIS
+                                        OR = {
+                                            in_sphere = THIS
+                                            part_of_sphere = no
+                                        }
                                         OR = {
                                             is_vassal = no
                                             vassal_of = THIS
@@ -618,7 +663,10 @@ political_decisions = {
                             OR = {
                                 owned_by = THIS
                                 owner = {
-                                    in_sphere = THIS
+                                    OR = {
+                                        in_sphere = THIS
+                                        part_of_sphere = no
+                                    }
                                     OR = {
                                         is_vassal = no
                                         vassal_of = THIS
@@ -634,7 +682,10 @@ political_decisions = {
                             OR = {
                                 owned_by = THIS
                                 owner = {
-                                    in_sphere = THIS
+                                    OR = {
+                                        in_sphere = THIS
+                                        part_of_sphere = no
+                                    }
                                     OR = {
                                         is_vassal = no
                                         vassal_of = THIS
@@ -670,7 +721,10 @@ political_decisions = {
                     tag = AUS
                     exists = yes
                     is_greater_power = no
-                    in_sphere = THIS
+                    OR = {
+                        in_sphere = THIS
+                        part_of_sphere = no
+                    }
                     war = no
                     OR = {
                         vassal_of = THIS
@@ -698,7 +752,10 @@ political_decisions = {
                     }
                     exists = yes
                     is_greater_power = no
-                    in_sphere = THIS
+                    OR = {
+                        in_sphere = THIS
+                        part_of_sphere = no
+                    }
                     war = no
                     OR = {
                         vassal_of = THIS
@@ -779,7 +836,10 @@ political_decisions = {
             any_country = {
                 limit = {
                     OR = {
-                        in_sphere = THIS
+                        OR = {
+                            in_sphere = THIS
+                            part_of_sphere = no
+                        }
                         AND = {
                             tag = BAV
                             ai = yes
@@ -839,32 +899,32 @@ political_decisions = {
             nationalism_n_imperialism = 1
             is_greater_power = yes
             war = no
-            ALS = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }                                           
+            ALS = { all_core = { OR = { owned_by = THIS owner = { OR = { in_sphere = THIS part_of_sphere = no } OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }                                           
             OR = {
-                GER = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+                GER = { all_core = { OR = { owned_by = THIS owner = { OR = { in_sphere = THIS part_of_sphere = no } OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
                 AND = {                       
-                    HAN = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    SAX = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    WEI = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    MEI = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    COB = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    NAS = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    HOL = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    ANH = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    HES = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    HEK = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    BRA = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    LIP = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    OLD = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    MEC = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    HAM = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    LUB = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    FRM = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
-                    BRE = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+                    HAN = { all_core = { OR = { owned_by = THIS owner = { OR = { in_sphere = THIS part_of_sphere = no } OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+                    SAX = { all_core = { OR = { owned_by = THIS owner = { OR = { in_sphere = THIS part_of_sphere = no } OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+                    WEI = { all_core = { OR = { owned_by = THIS owner = { OR = { in_sphere = THIS part_of_sphere = no } OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+                    MEI = { all_core = { OR = { owned_by = THIS owner = { OR = { in_sphere = THIS part_of_sphere = no } OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+                    COB = { all_core = { OR = { owned_by = THIS owner = { OR = { in_sphere = THIS part_of_sphere = no } OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+                    NAS = { all_core = { OR = { owned_by = THIS owner = { OR = { in_sphere = THIS part_of_sphere = no } OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+                    HOL = { all_core = { OR = { owned_by = THIS owner = { OR = { in_sphere = THIS part_of_sphere = no } OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+                    ANH = { all_core = { OR = { owned_by = THIS owner = { OR = { in_sphere = THIS part_of_sphere = no } OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+                    HES = { all_core = { OR = { owned_by = THIS owner = { OR = { in_sphere = THIS part_of_sphere = no } OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+                    HEK = { all_core = { OR = { owned_by = THIS owner = { OR = { in_sphere = THIS part_of_sphere = no } OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+                    BRA = { all_core = { OR = { owned_by = THIS owner = { OR = { in_sphere = THIS part_of_sphere = no } OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+                    LIP = { all_core = { OR = { owned_by = THIS owner = { OR = { in_sphere = THIS part_of_sphere = no } OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+                    OLD = { all_core = { OR = { owned_by = THIS owner = { OR = { in_sphere = THIS part_of_sphere = no } OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+                    MEC = { all_core = { OR = { owned_by = THIS owner = { OR = { in_sphere = THIS part_of_sphere = no } OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+                    HAM = { all_core = { OR = { owned_by = THIS owner = { OR = { in_sphere = THIS part_of_sphere = no } OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+                    LUB = { all_core = { OR = { owned_by = THIS owner = { OR = { in_sphere = THIS part_of_sphere = no } OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+                    FRM = { all_core = { OR = { owned_by = THIS owner = { OR = { in_sphere = THIS part_of_sphere = no } OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+                    BRE = { all_core = { OR = { owned_by = THIS owner = { OR = { in_sphere = THIS part_of_sphere = no } OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
                     ai = yes
                     NOT = { exists = NGF }
                     OR = { 
-                        SGF = { all_core = { OR = { owned_by = THIS owner = { in_sphere = THIS OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
+                        SGF = { all_core = { OR = { owned_by = THIS owner = { OR = { in_sphere = THIS part_of_sphere = no } OR = { is_vassal = no vassal_of = THIS } war = no is_greater_power = no } } } }
                         NOT = { exists = SGF }
                     }
                     PRU = { exists = yes ai = yes }
@@ -918,7 +978,7 @@ political_decisions = {
             any_country = {
                 limit = {
                     OR = {
-                        in_sphere = THIS
+                        OR = { in_sphere = THIS part_of_sphere = no }
                         AND = {
                             tag = BAV
                             ai = yes
@@ -977,7 +1037,7 @@ political_decisions = {
             SGF = {
                 OR = {
                     AND = {
-                        in_sphere = THIS
+                        OR = { in_sphere = THIS part_of_sphere = no }
                         ai = yes
                         war = no
                         is_mobilised = no
@@ -1045,7 +1105,7 @@ political_decisions = {
                             }
                         }
                         owner = {
-                            in_sphere = THIS
+                            OR = { in_sphere = THIS part_of_sphere = no }
                             OR = {
                                 is_vassal = no
                                 vassal_of = THIS
@@ -1075,7 +1135,7 @@ political_decisions = {
             any_country = {
                 limit = {
                     is_culture_group = italian
-                    in_sphere = THIS
+                    OR = { in_sphere = THIS part_of_sphere = no }
                     NOT = { has_country_flag = post_colonial_country }
                 }
                 country_event = 11101
@@ -1140,7 +1200,7 @@ political_decisions = {
                         is_core = AFG
                         is_core = KAS
                         owner = {
-                            in_sphere = THIS
+                            OR = { in_sphere = THIS part_of_sphere = no }
                             OR = {
                                 is_vassal = no
                                 vassal_of = THIS
@@ -1200,7 +1260,7 @@ political_decisions = {
                             }
                         }
                     }
-                    in_sphere = THIS
+                    OR = { in_sphere = THIS part_of_sphere = no }
                     OR = {
                         is_vassal = no
                         vassal_of = THIS
@@ -1311,7 +1371,7 @@ political_decisions = {
                         OR = {
                             owned_by = THIS
                             owner = {
-                                in_sphere = THIS
+                                OR = { in_sphere = THIS part_of_sphere = no }
                                 OR = {
                                     is_vassal = no
                                     vassal_of = THIS
@@ -1359,7 +1419,7 @@ political_decisions = {
                         primary_culture = north_german
                         tag = SCH
                     }
-                    in_sphere = THIS
+                    OR = { in_sphere = THIS part_of_sphere = no }
                     NOT = { tag = THIS }
                     NOT = { tag = UBD }
                     NOT = { has_country_flag = post_colonial_country }
@@ -1405,7 +1465,7 @@ political_decisions = {
                         OR = {
                             owned_by = THIS
                             owner = {
-                                in_sphere = THIS
+                                OR = { in_sphere = THIS part_of_sphere = no }
                                 OR = {
                                     is_vassal = no
                                     vassal_of = THIS
@@ -1450,7 +1510,7 @@ political_decisions = {
             any_country = {
                 limit = {
                     primary_culture = south_german
-                    in_sphere = THIS
+                    OR = { in_sphere = THIS part_of_sphere = no }
                     NOT = { tag = THIS }
                     NOT = { tag = KUK }
                     NOT = { tag = DNB }

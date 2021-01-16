@@ -61,12 +61,12 @@ DEN = {
 MOL = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 WAL = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 
 #Asia

@@ -51,6 +51,7 @@ COB = {
 FRM = {
     value = 125
     level = 5
+    influence_value = 100
     military_access = yes
 }
 HAM = {

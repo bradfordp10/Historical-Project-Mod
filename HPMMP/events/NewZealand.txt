@@ -20,6 +20,7 @@ country_event = {
 		name = "EVTOPTA7790011"
 		prestige = 5
 		relation = { who = ENG value = 50 }
+		2515 = { secede_province = ENG }
 		ai_chance = { factor = 100 }
 	}
 
@@ -27,6 +28,8 @@ country_event = {
 		name = "EVTOPTB7790011"
 		prestige = 5
 		ENG = { country_event = 7790012 }
+		ENG_2513 = { add_core = FRA }
+		2515 = { secede_province = FRA }
 		any_pop = { 
 			limit = { has_pop_culture = french }
 			militancy = 1
@@ -78,6 +81,8 @@ country_event = {
 	option = {
 		name = "There is nothing more we can do."
 		prestige = -5
+		2515 = { secede_province = ENG }
+		ENG_2513 = { remove_core = FRA }
 		relation = { who = ENG value = 20 }
 		ai_chance = { factor = 70 }
 	}
@@ -86,7 +91,6 @@ country_event = {
 		name = "British paper is nothing against French steel!"
 		relation = { who = ENG value = -400 }
 		badboy = 5
-		ENG_2513 = { add_core = THIS }
 		ENG = {		
 			casus_belli = {
 				target = THIS
@@ -110,7 +114,6 @@ country_event = {
 		name = "A glorious day for France!"
 		prestige = 10
 		ENG_2513 = { remove_core = ENG }
-		ENG_2513 = { add_core = THIS }
 		ENG = { any_owned = { limit = { is_core = THIS } secede_province = THIS } }
 		relation = { who = FROM value = 150 }
 	}
@@ -127,7 +130,6 @@ country_event = {
 	option = {
 		name = "We will accept their offer."
 		ENG_2513 = { remove_core = ENG }
-		ENG_2513 = { add_core = THIS }
 		ENG = { any_owned = { limit = { is_core = THIS } secede_province = THIS } }
 		relation = { who = FROM value = 150 }
 		treasury = -250000
@@ -138,7 +140,6 @@ country_event = {
 		name = "The British cannot sell what they do not rightfully own."
 		relation = { who = ENG value = -400 }
 		badboy = 8
-		ENG_2513 = { add_core = THIS }
 		ENG = {	
 			casus_belli = {
 				target = THIS

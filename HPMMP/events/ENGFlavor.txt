@@ -1842,6 +1842,7 @@ country_event = {
         prestige = 5
         ENG_2509 = { add_core = THIS add_core = NZL } #North Island
         ENG_2513 = { add_core = THIS add_core = NZL } #South Island
+        2512 = { secede_province = THIS }
         any_pop = {
             limit = { has_pop_culture = maori }
             militancy = -3

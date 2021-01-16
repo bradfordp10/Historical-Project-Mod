@@ -1292,8 +1292,13 @@ country_event = {
             civilized = no
         }
         NOT = {
+            owns = 1706
+            owns = 1708 
+        }
+        NOT = {
             truce_with = ALD
             alliance_with = ALD
+            has_country_flag = marched_through_the_iron_gates
             has_country_flag = no_more_algerian_rebellion
             has_country_modifier = punitive_effects
             war_policy = pacifism
@@ -1518,12 +1523,15 @@ country_event = {
     trigger = {
         tag = FRA
         owns = 1700
+        owns = 1708
+        owns = 1706
         NOT = { has_country_flag = marched_through_the_iron_gates }
         OR = {
             government = hms_government
             government = absolute_monarchy
             government = prussian_constitutionalism
         }
+        year = 1839
         NOT = {
             year = 1870
             owns = 1705

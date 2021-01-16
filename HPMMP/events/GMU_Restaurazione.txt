@@ -1732,6 +1732,45 @@ country_event = {
 
 	mean_time_to_happen = { days = 7 }
 
+	immediate = {
+		any_owned = {
+			limit = {
+				OR = {
+					is_core = PAR
+					is_core = MOD
+					is_core = LUC
+					is_core = TUS
+				}
+			}
+			release = PAR
+			release = MOD
+			release = LUC
+			release = TUS
+		}
+		AUS = {
+			diplomatic_influence = {
+				who = PAR
+				value = 400
+			}
+			create_alliance = PAR
+			diplomatic_influence = {
+				who = MOD
+				value = 400
+			}
+			create_alliance = MOD
+			diplomatic_influence = {
+				who = LUC
+				value = 400
+			}
+			create_alliance = LUC
+			diplomatic_influence = {
+				who = TUS
+				value = 400
+			}
+			create_alliance = TUS
+		}
+	}
+
 	option = {
 		name = "We need a change in our politics."
 		prestige = 5

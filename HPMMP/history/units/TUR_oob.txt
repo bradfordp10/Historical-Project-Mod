@@ -102,12 +102,12 @@ SER = {
 }
 MOL = {
     value = 125
-    level = 3
+    level = 4
     influence_value = 0
 }
 WAL = {
     value = 125
-    level = 3
+    level = 4
     influence_value = 0
 }
 
