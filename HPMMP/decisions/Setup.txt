@@ -2844,34 +2844,6 @@ option_disable_starting_party_loyalty = {
                 diplomatic_influence = { who = NEH value = -400 }
             }
 
-            any_country = {
-                limit = {
-                    exists = yes
-                    is_greater_power = yes
-                    NOT = { tag = PRU }
-                    NOT = { tag = AUS }
-                }
-                diplomatic_influence = { who = SGM value = -400 }
-                diplomatic_influence = { who = ANH value = -400 }
-                diplomatic_influence = { who = BRA value = -400 }
-                diplomatic_influence = { who = BRE value = -400 }
-                diplomatic_influence = { who = COB value = -400 }
-                diplomatic_influence = { who = FRM value = -400 }
-                diplomatic_influence = { who = HAM value = -400 }
-                diplomatic_influence = { who = HES value = -400 }
-                diplomatic_influence = { who = LIP value = -400 }
-                diplomatic_influence = { who = LUB value = -400 }
-                diplomatic_influence = { who = MEC value = -400 }
-                diplomatic_influence = { who = MEI value = -400 }
-                diplomatic_influence = { who = NAS value = -400 }
-                diplomatic_influence = { who = OLD value = -400 }
-                diplomatic_influence = { who = SAX value = -400 }
-                diplomatic_influence = { who = WEI value = -400 }
-                diplomatic_influence = { who = BAV value = -400 }
-                diplomatic_influence = { who = BAD value = -400 }
-                diplomatic_influence = { who = WUR value = -400 }
-            }
-
             MEX = { add_country_modifier = { name = fight_the_power duration = 3650 } }
             1253 = { add_province_modifier = { name = local_economic_downturn duration = 8760 } }
 

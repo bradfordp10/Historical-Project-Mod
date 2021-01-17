@@ -34,18 +34,22 @@ SAX = {
 }
 ANH = {
     value = 125
+    level = 3
     military_access = yes
 }
 BRA = {
     value = 125
+    level = 3
     military_access = yes
 }
 BRE = {
     value = 125
+    level = 3
     military_access = yes
 }
 COB = {
     value = 125
+    level = 3
     military_access = yes
 }
 FRM = {
@@ -56,6 +60,7 @@ FRM = {
 }
 HAM = {
     value = 125
+    level = 3
     military_access = yes
 }
 HAN = {
@@ -77,14 +82,17 @@ HES = {
 }
 LIP = {
     value = 125
+    level = 3
     military_access = yes
 }
 LUB = {
     value = 125
+    level = 3
     military_access = yes
 }
 MEC = {
     value = 125
+    level = 3
     military_access = yes
 }
 MEI = {
@@ -101,10 +109,12 @@ NAS = {
 }
 OLD = {
     value = 125
+    level = 3
     military_access = yes
 }
 WEI = {
     value = 125
+    level = 3
     military_access = yes
 }
 
