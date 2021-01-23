@@ -209,7 +209,7 @@ political_decisions = {
             728 = { remove_core = AUS }
             PAP_741 = { add_core = THIS }
             TUS_744 = { add_core = THIS }
-            #MOD_739 = { add_core = THIS }
+            MOD_739 = { add_core = THIS }
             any_country = {
                 limit = {
                     OR = {
@@ -1104,18 +1104,18 @@ political_decisions = {
 
         allow = {
             war = no
-            is_vassal = no
+            year = 1847
             OR = {
                 part_of_sphere = no
-                AND = {
-                    sphere_owner = { is_sphere_leader_of = TUS }
-                    year = 1847
-                }
+                sphere_owner = { is_sphere_leader_of = TUS }
+            }
+            OR = {
+                is_vassal = no
+                overlord = { is_our_vassal = TUS }
             }
             TUS = {
                 war = no
                 neighbour = LUC
-                is_vassal = no
             }
         }
 

@@ -3517,4 +3517,3 @@ red_shirts = {
     global_pop_consciousness_modifier = 0.01
     icon = 18
 }
-

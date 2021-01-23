@@ -2,7 +2,7 @@
 HAW = {
     value = 125        #relation
     level = 5        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
+    influence_value = 100
 }
 #North America
 TEX = {
@@ -120,11 +120,6 @@ SPU = {
     value = 0    #relation
     level = 0        #3=cordial, 4 = friendly, 5 sphere
     influence_value = 0
-}
-
-HAN = {
-    value = 50
-    level = 1
 }
 
 

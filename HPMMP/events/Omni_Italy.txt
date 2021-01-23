@@ -1,0 +1,65 @@
+#Austro-French Withdrawal from Romagna
+country_event = {
+	id = 202066
+	title = "EVTNAME202066" 
+	desc = "EVTDESC202066"
+
+	trigger = {
+		OR = {
+			tag = FRA
+			tag = AUS
+		}
+		year = 1838
+		OR = {
+			any_owned = {
+				is_core = PAP
+			}
+			is_our_vassal = RMG
+		}
+		NOT = { has_country_flag = papal_withdrawal }
+	}
+
+	mean_time_to_happen = {
+		months = 3
+		modifier = {
+			factor = 0.01
+			tag = FRA
+			NOT = { has_country_flag = papal_withdrawal }
+			AUS = { has_country_flag = papal_withdraw}
+		}
+		modifier = {
+			factor = 0.01
+			tag = AUS
+			NOT = { has_country_flag = papal_withdrawal }
+			FRA = { has_country_flag = papal_withdraw}
+		}
+	}
+
+	option = {
+		name = "EVT202066OPTA"
+		set_country_flag = papal_withdrawal
+		any_owned = {
+			limit = { 
+				is_core = PAP
+			}
+			secede_province = PAP
+		}
+		random_country ={
+			limit = {
+				tag = RMG
+				exists = yes
+				vassal_of = THIS
+			}
+			THIS = { release_vassal = RMG }
+			PAP = { inherit = RMG }
+		}
+		diplomatic_influence = {
+			who = PAP
+			value = 50
+		}
+		relation = {
+			who = PAP
+			value = 50
+		}
+	}
+}

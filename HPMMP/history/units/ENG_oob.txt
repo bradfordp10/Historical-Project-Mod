@@ -25,30 +25,30 @@ JOH = {
 SLG = {
     value = 150
     level = 5
-    influence_value = 50
+    influence_value = 100
 }
 
 PRK = {
     value = 150
     level = 5
-    influence_value = 50
+    influence_value = 100
 }
 
 PHG = {
     value = 150
     level = 5
-    influence_value = 50
+    influence_value = 100
 }
 
 BUR = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 BHP = {
     value = 100
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 SIA = {
     value = 150
@@ -58,6 +58,7 @@ SIA = {
 NEP = {
     value = 100       
     level = 5
+    influence_value = 100
 }
 
 QNG ={
@@ -131,12 +132,12 @@ BHR = {
 ABU = {
     value = 50
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 OMA = {
     value = 100
     level = 5
-    influence_value = 50
+    influence_value = 100
 }
 NEJ = {
     value = 100
@@ -166,7 +167,7 @@ MHR = {
 POR = {
     value = 200        #relation
     level = 5        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 75
+    influence_value = 100
 }
 NET = {
     value = 125        #relation
@@ -193,17 +194,17 @@ GRE = {
 BEL = {
     value = 200
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 HAN = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 ION = {
     value = 150
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 
 #South America
@@ -235,109 +236,109 @@ PNJ = {
 AWA = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 BAS = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 BER = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 BIK = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 BHO = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 BUN = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 GWA = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 MNP = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 HYD = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 IND = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 JAI = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 JAS = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 JOD = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 KUT = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 MEW = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 MYS = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 NAG = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 ORI = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 TRA = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 
 MAH = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 
 MUG = {
     value = 125
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 
 MLD = {

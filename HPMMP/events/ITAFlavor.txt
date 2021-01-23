@@ -812,7 +812,7 @@ country_event = {
         466 = { add_core = FRA }
         472 = { add_core = FRA }
         PAP_741 = { add_core = THIS }
-        #MOD_739 = { add_core = THIS }
+        MOD_739 = { add_core = THIS }
         TUS_744 = { add_core = THIS }
     }
 }
@@ -1172,11 +1172,10 @@ country_event = {
         government = absolute_monarchy
         year = 1844
         NOT = { year = 1855 }
-        any_owned_province = {
-            is_core = SYC
-            OR = {
-                average_militancy = 6
-                average_consciousness = 8
+        OR = {
+            has_country_modifier = springtime_of_nations
+            any_owned_province = {
+                is_core = SYC
                 controlled_by = REB
             }
         }
@@ -1185,50 +1184,11 @@ country_event = {
     fire_only_once = yes
     mean_time_to_happen = { months = 4 }
 
-    option = {
-        name = "EVTOPTA96173"
-        random_list = {
-            70 = {
-                762 = { secede_province = SYC }
-                764 = { secede_province = SYC }
-                prestige = -5
-                war = {
-                    target = SYC
-                    attacker_goal = { casus_belli = annex_core_country }
-                    defender_goal = { casus_belli = status_quo    }
-                }
-            }
-            10 = {
-                762 = { secede_province = SYC }
-                prestige = -5
-                war = {
-                    target = SYC
-                    attacker_goal = { casus_belli = annex_core_country }
-                    defender_goal = { casus_belli = status_quo    }
-                }
-            }
-            10 = {
-                762 = { secede_province = SYC }
-                764 = { secede_province = SYC }
-                763 = { secede_province = SYC }
-                prestige = -5
-                war = {
-                    target = SYC
-                    attacker_goal = { casus_belli = annex_core_country }
-                    defender_goal = { casus_belli = status_quo    }
-                }
-            }
-            5 = {
-                any_owned = { limit = { is_core = SYC }
-                    add_province_modifier = {
-                        name = nationalist_agitation
-                        duration = 1095
-                    }
-                }
-            }
-        }
+    immediate = { 
+        762 = { secede_province = SYC }
+        764 = { secede_province = SYC }
         SYC = {
-            government = democracy
+            government = hms_government
             political_reform = mandatory_service
             ruling_party_ideology = liberal
             clr_country_flag = election_started
@@ -1241,11 +1201,21 @@ country_event = {
             clr_country_flag = anarcho_liberal_party_in_power
             add_country_modifier = {
                 name = small_country_draft
-                duration = 30
+                duration = 720
             }
         }
         relation = { who = SYC value = -400 }
         diplomatic_influence = { who = SYC value = -400 }
+    }
+
+    option = {
+        name = "EVTOPTA96173"
+        prestige = -5
+        war = {
+            target = SYC
+            attacker_goal = { casus_belli = annex_core_country }
+            defender_goal = { casus_belli = status_quo    }
+        }
         ai_chance = { factor = 0.98 }
     }
 
@@ -1253,21 +1223,16 @@ country_event = {
         name = "EVTOPTB96173"
         prestige = -10
         762 = {
-            secede_province = SYC
             remove_core = SIC
         }
         764 = {
-            secede_province = SYC
             remove_core = SIC
         }
         ai_chance = { factor = 0.02 }
     }
 
         option = {
-        name = "EVTOPTC96173"
-            762 = { secede_province = SYC }
-            764 = { secede_province = SYC }
-            763 = { secede_province = SYC }
+            name = "EVTOPTC96173"
             change_tag_no_core_switch = SYC
             SIC = {
                 prestige = -5
