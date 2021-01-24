@@ -794,13 +794,15 @@ country_event = {
             government = prussian_constitutionalism
             government = hms_government
         }
-        NEH = {
-            exists = yes
-            ai = yes
+        608 = {
+            OR = {
+                owned_by = THIS
+                owned_by NEH
+            }
             OR = {
                 average_consciousness = 4
                 average_militancy = 2
-                has_country_modifier = springtime_of_nations
+                owner = { has_country_modifier = springtime_of_nations }
             }
         }
         war = no
@@ -813,17 +815,26 @@ country_event = {
 
     option = {
         name = "EVTOPTA34613"
+        set_global_flag = neuchatel_crisis_escalating
         NEH = {
-            set_country_flag = neuchatel_crisis_escalating
             government = democracy
+        }
+        random_country = {
+            limit = { tag = NEH exists = yes }
+            THIS = {
+                relation = { who = NEH value = -400 }
+                leave_alliance = NEH
+                release_vassal = NEH
+            }
+            any_country = {
+                limit = { is_greater_power = yes exists = yes }
+                diplomatic_influence = { who = NEH value = -400 }
+            }
+        }
+        608 = { 
             any_pop = { militancy = -9 consciousness = -9 }
         }
-        relation = { who = NEH value = -400 }
-        leave_alliance = NEH
-        any_country = {
-            limit = { is_greater_power = yes exists = yes }
-            diplomatic_influence = { who = NEH value = -400 }
-        }
+        608 = { secede_province = SWI  }
         ai_chance = { factor = 0.95 }
     }
 
@@ -835,7 +846,7 @@ country_event = {
         608 = { remove_core = GER }
         608 = { remove_core = PRU }
         608 = { remove_core = NEH }
-        SWI = { inherit = NEH }
+        608 = { secede_province = SWI }
 
         relation = { who = SWI value = 75 }
         diplomatic_influence = { who = SWI value = 50 }
@@ -879,10 +890,10 @@ country_event = {
                     is_vassal = no
                 }
             }
-            clr_country_flag = neuchatel_crisis_escalating
             neutrality = yes
-            annex_to = SWI
         }
+        clr_global_flag = neuchatel_crisis_escalating
+        608 = { secede_province = NEH }
     }
 }
 
@@ -898,13 +909,10 @@ country_event = {
         has_country_flag = claiming_neuchatel
         608 = { is_core = THIS }
         year = 1845
-        NEH = {
-            war = no
-            ai = yes
-            exists = yes
+        608 = {
             OR = {
                 AND = {
-                    has_country_flag = neuchatel_crisis_escalating
+                    has_global_flag = neuchatel_crisis_escalating
                     average_consciousness = 2
                     average_militancy = 1
                 }
@@ -936,11 +944,16 @@ country_event = {
             remove_country_modifier = neutrality_modifier
         }
         relation = { who = SWI value = -400 }
-        relation = { who = NEH value = -400 }
+        random_country = {
+            limit = { tag = NEH exists = yes }
+            THIS = {
+                relation = { who = NEH value = -400 }
+                diplomatic_influence = { who = NEH value = -400 }
+                leave_alliance = NEH
+                release_vassal = NEH
+            }
+        }
         diplomatic_influence = { who = SWI value = -400 }
-        diplomatic_influence = { who = NEH value = -400 }
-        leave_alliance = NEH
-        release_vassal = NEH
         ENG = {
             create_alliance = SWI
             set_country_flag = supports_switzerland
@@ -984,8 +997,7 @@ country_event = {
                     months = 60
                 }
         }
-        random_owned = { limit = { owner = { ai = no } } owner = { casus_belli = { target = SWI type = release_puppet months = 12 } } }
-        random_owned = { limit = { owner = { ai = yes } } owner = { casus_belli = { target = SWI type = release_puppet_AI months = 12 } } }
+        casus_belli = { target = SWI type = humiliate months = 12 }
         add_country_modifier = { name = preparations_for_war duration = 370 }
         ai_chance = {
             factor = 0.1
@@ -1004,6 +1016,7 @@ country_event = {
         608 = { remove_core = GER }
         608 = { remove_core = PRU }
         608 = { remove_core = NEH }
+        clr_global_flag = neuchatel_crisis_escalating
         random_country = {
             limit = {
                 exists = yes
@@ -1014,10 +1027,10 @@ country_event = {
                     is_vassal = no
                 }
             }
-            clr_country_flag = neuchatel_crisis_escalating
             neutrality = yes
             annex_to = SWI
         }
+        608 = { secede_province = SWI }
         ai_chance = { factor = 0.9 }
     }
 }

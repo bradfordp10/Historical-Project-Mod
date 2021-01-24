@@ -31,22 +31,6 @@ vassal = {
     end_date = 1860.1.1
 }
 
-#Prussia - Sigmaringen
-vassal = {
-    first = PRU
-    second = SGM
-    start_date = 1836.1.1
-    end_date = 1870.1.1
-}
-
-#Switzerland - Neuchatel
-vassal = {
-    first = SWI
-    second = NEH
-    start_date = 1836.1.1
-    end_date = 1870.1.1
-}
-
 #Bahrain - Qatar
 vassal = {
     first = BHR
