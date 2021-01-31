@@ -126,9 +126,17 @@ political_decisions = {
                 tag = ENL
             }
             year = 1860
-            ION = {
-                vassal_of = THIS
-                ai = yes
+            OR = {
+                any_owned = {
+                    is_core = ION
+                }
+                AND = {
+                    ION = { 
+                        vassal_of = THIS
+                        ai = yes 
+                    }
+                }
+
             }
             GRE = { exists = yes }
         }
@@ -145,7 +153,6 @@ political_decisions = {
                     exists = yes
                 }
                 relation = { who = THIS value = 100 }
-                inherit = ION
                 THIS = {
                     diplomatic_influence = { who = GRE value = 100 }
                     any_owned = {
@@ -153,6 +160,7 @@ political_decisions = {
                         secede_province = ION
                     }
                 }
+                inherit = ION
                 ION = {
                     set_country_flag = normalized_cultures
                     remove_accepted_culture = british

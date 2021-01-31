@@ -38,7 +38,7 @@ country_event = {
 
     option = {
         name = "EVTOPTA36898"
-        random_owned = { limit = { owner = { is_our_vassal = HAN } } owner = { leave_alliance = HAN release_vassal = HAN diplomatic_influence = { who = HAN value = -200 } } }
+        release = HAN
         HAN = { government = absolute_monarchy }
         random_country = {
             limit = {
@@ -46,6 +46,13 @@ country_event = {
                 is_greater_power = yes
             }
             diplomatic_influence = { who = HAN value = 400 }
+        }
+        random_country = {
+            limit = {
+                tag = PRU
+                is_greater_power = yes
+            }
+            diplomatic_influence = { who = HAN value = 50 }
         }
         prestige = 5
         election = yes
