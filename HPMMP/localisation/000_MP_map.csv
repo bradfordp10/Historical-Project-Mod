@@ -19,3 +19,18 @@ SPA_477;Leon;;;;;;;;;;;;;x
 SPA_479;Castilla la Vieja;;;;;;;;;;;;;x
 DEN_251;Greenland;;;;;;;;;;;;;x
 DEN_252;Iceland;;;;;;;;;;;;;x
+SAR;Sardinia;;;;;;;;;;;;;x
+PAR;Parma & Piacenza;;;;;;;;;;;;;x
+MOD;Modena & Reggio;;;;;;;;;;;;;x
+AUS_absolute_monarchy;The Austrian Empire;;;;;;;;;;;;;x
+AUS_prussian_constitutionalism;The Austrian Empire;;;;;;;;;;;;;x
+PAP;The Papal States;;;;;;;;;;;;;x
+PAP_democracy;The Roman Republic;;;;;;;;;;;;;
+PAP_theocracy;The Papal States;;;;;;;;;;;;;
+PAP_presidential_dictatorship;The Roman Republic;;;;;;;;;;;;;
+PAP_bourgeois_dictatorship;The Roman Republic;;;;;;;;;;;;;
+PAP_proletarian_dictatorship;The People's Republic of Rome;;;;;;;;;;;;;
+PAP_fascist_dictatorship;The Roman Republic;;;;;;;;;;;;;
+SIC;The Two Sicilies;;;;;;;;;;;;;x
+VEN_democracy;San Marco;;;;;;;;;;;;;x
+VEN_democracy_ADJ;San Marcan;;;;;;;;;;;;;x

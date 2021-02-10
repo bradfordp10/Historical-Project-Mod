@@ -10,7 +10,7 @@ categories =  {
 
     urban = {
         movement_cost = 1.0
-        defence = 2
+        defence = 1
         color = { 140 150 130 }
         farm_rgo_size = -0.5
         farm_rgo_eff = 0.25
@@ -20,12 +20,14 @@ categories =  {
     }
 
     arctic = {
-        movement_cost = 1.1
+        movement_cost = 1.25
+        defence = 1
         color = { 235 235 235 }
         farm_rgo_size = -0.8
         farm_rgo_eff = -0.4
         mine_rgo_size = 0.0
         mine_rgo_eff = -0.2
+        supply_limit = 2
         min_build_naval_base = 4
         min_build_railroad = 4
         min_build_fort = 1
@@ -39,7 +41,7 @@ categories =  {
         farm_rgo_eff = 0.0
         mine_rgo_size = 0.0
         mine_rgo_eff = 0.0
-        supply_limit = 10
+        supply_limit = 8
 
     }
 
@@ -50,7 +52,7 @@ categories =  {
         farm_rgo_eff = -0.1
         mine_rgo_size = 0.0
         mine_rgo_eff = 0.0
-        supply_limit = 4
+        supply_limit = 6
 
     }
 
@@ -61,12 +63,12 @@ categories =  {
         farm_rgo_eff = -0.15
         mine_rgo_size = 0.0
         mine_rgo_eff = 0.0
-        supply_limit = 4
+        supply_limit = 6
 
     }
 
     forest = {
-        movement_cost = 1.2
+        movement_cost = 1.10
         defence = 1
         color = { 91 123 45 }
         farm_rgo_size = 0.0
@@ -78,9 +80,9 @@ categories =  {
     }
 
     jungle = {
-        movement_cost = 1.3
+        movement_cost = 1.5
         attrition = 1.5
-        defence = 2
+        defence = 1
 
         color = { 32 151 0 }
         farm_rgo_size = -0.25
@@ -88,14 +90,14 @@ categories =  {
         mine_rgo_size = 0.0
         mine_rgo_eff = -0.2
 
-        supply_limit = 1
+        supply_limit = 5
         min_build_railroad = 3
         min_build_fort = 1
         combat_width = -0.25
     }
 
     boreal = {
-        movement_cost = 1.3
+        movement_cost = 1.25
         defence = 1
         attrition = 1
 
@@ -105,6 +107,7 @@ categories =  {
         mine_rgo_size = -0.0
         mine_rgo_eff = -0.2
 
+        supply_limit = 4
         min_build_naval_base = 4
         min_build_railroad = 4
         min_build_fort = 1
@@ -112,7 +115,7 @@ categories =  {
     }
 
     hills = {
-        movement_cost = 1.2
+        movement_cost = 1.4
         defence = 1
         color = { 135 70 0 }
 
@@ -121,13 +124,13 @@ categories =  {
         mine_rgo_size = 0.0
         mine_rgo_eff = 0.0
 
-        supply_limit = 6
+        supply_limit = 5
         min_build_railroad = 1
         combat_width = -0.33
     }
 
     dryhills = {
-        movement_cost = 1.2
+        movement_cost = 1.4
         defence = 1
         color = { 70 135 0 }
 
@@ -136,13 +139,13 @@ categories =  {
         mine_rgo_size = 0.0
         mine_rgo_eff = 0.0
 
-        supply_limit = 3
+        supply_limit = 5
         min_build_railroad = 1
         combat_width = -0.33
     }
 
     marsh = {
-        movement_cost = 1.4
+        movement_cost = 1.3
         attrition = 1
         defence = 1
         color = { 76 112 105 }
@@ -150,13 +153,13 @@ categories =  {
         farm_rgo_eff = -0.3
         mine_rgo_size = -0.25
         mine_rgo_eff = -0.3
-        supply_limit = 3
+        supply_limit = 5
         min_build_railroad = 2
         combat_width = -0.25
     }
 
     farmlands = {
-        movement_cost = 1.0
+        movement_cost = 1.1
         color = { 137 104 165 }
         farm_rgo_size = 0.0
         farm_rgo_eff = 0.25
@@ -166,7 +169,7 @@ categories =  {
     }
 
     mining_district = {
-        movement_cost = 1.0
+        movement_cost = 1.1
         color = { 137 104 165 }
         farm_rgo_size = 0.0
         farm_rgo_eff = 0.0
@@ -176,14 +179,14 @@ categories =  {
     }
 
     mountain = {
-        movement_cost = 1.4
-        defence = 3
+        movement_cost = 1.5
+        defence = 2
         color = { 117 108 119 }
         farm_rgo_size = -0.2
         farm_rgo_eff = 0.0
         mine_rgo_size = 0.1
         mine_rgo_eff = 0.0
-        supply_limit = 2
+        supply_limit = 4
 
         combat_width = -0.6
 
@@ -191,14 +194,16 @@ categories =  {
     }
 
     montane_tundra = {
-        movement_cost = 1.4
-        defence = 3
+        movement_cost = 1.5
+        defence = 2
         color = { 117 108 120 }
 
         farm_rgo_size = -0.8
         farm_rgo_eff = -0.5
         mine_rgo_size = 0.0
         mine_rgo_eff = 0.0
+
+        supply_limit = 4
 
         min_build_naval_base = 4
         min_build_railroad = 4
@@ -210,7 +215,7 @@ categories =  {
 
     montane_forest = {
         movement_cost = 1.5
-        defence = 3
+        defence = 2
         color = { 117 108 121 }
 
         farm_rgo_size = -0.4
@@ -218,7 +223,7 @@ categories =  {
         mine_rgo_size = 0.0
         mine_rgo_eff = 0.0
 
-        supply_limit = 2
+        supply_limit = 4
 
         combat_width = -0.70
 
@@ -226,39 +231,40 @@ categories =  {
     }
 
     desert = {
-        movement_cost = 1.5
+        movement_cost = 1.05
         color = { 218 195 0 }
 
         farm_rgo_size = -0.8
         farm_rgo_eff = -0.5
         mine_rgo_size = -0.8
         mine_rgo_eff = -0.5
+        supply_limit = 4
         min_build_railroad = 6
         min_build_fort = 1
         attrition = 2
     }
 
     semidesert = {
-        movement_cost = 1.2
+        movement_cost = 1.0
         color = { 208 155 0 }
         farm_rgo_size = -0.3
         farm_rgo_eff = -0.3
         mine_rgo_size = -0.1
         mine_rgo_eff = -0.1
-        supply_limit = 2
+        supply_limit = 7
         min_build_railroad = 2
         attrition = 1
     }
 
 
     coastal_desert = {
-        movement_cost = 1.2
+        movement_cost = 1.0
         color = { 208 156 0 }
         farm_rgo_size = -0.4
         farm_rgo_eff = -0.2
         mine_rgo_size = 0.0
         mine_rgo_eff = -0.1
-        supply_limit = 2
+        supply_limit = 4
         min_build_railroad = 3
         attrition = 1
     }
@@ -272,7 +278,7 @@ categories =  {
         farm_rgo_eff = 0.0
         mine_rgo_size = -0.5
         mine_rgo_eff = 0.0
-        supply_limit = 2
+        supply_limit = 6
         combat_width = -0.3
     }
 
@@ -285,12 +291,13 @@ categories =  {
         farm_rgo_eff = 0.0
         mine_rgo_size = -0.95
         mine_rgo_eff = 0.0
+        supply_limit = 4
         min_build_railroad = 6
         min_build_fort = 6
     }
 
     new_world_boreal = {
-        movement_cost = 1.3
+        movement_cost = 1.25
         defence = 1
         attrition = 1
 
@@ -299,6 +306,7 @@ categories =  {
         farm_rgo_eff = -0.3
         mine_rgo_size = -10.0
         mine_rgo_eff = -0.2
+        supply_limit = 4
 
         immigrant_attract = -0.6
         min_build_naval_base = 4
@@ -308,14 +316,15 @@ categories =  {
     }
 
     new_world_montane_tundra = {
-        movement_cost = 1.4
-        defence = 3
+        movement_cost = 1.5
+        defence = 2
         color = { 210 155 16 }
 
         farm_rgo_size = -10.8
         farm_rgo_eff = -0.5
         mine_rgo_size = -10.0
         mine_rgo_eff = 0.0
+        supply_limit = 4
 
         min_build_naval_base = 4
         min_build_railroad = 4
@@ -326,12 +335,14 @@ categories =  {
     }
 
     new_world_arctic = {
-        movement_cost = 1.1
+        movement_cost = 1.25
+        defence = 1
         color = { 210 155 15 }
         farm_rgo_size = -10.8
         farm_rgo_eff = -0.4
         mine_rgo_size = -10.0
         mine_rgo_eff = -0.2
+        supply_limit = 2
         min_build_naval_base = 4
         min_build_railroad = 4
         min_build_fort = 1
@@ -340,23 +351,23 @@ categories =  {
     }
 
     new_world_mountain = {
-        movement_cost = 1.4
-        defence = 3
+        movement_cost = 1.5
+        defence = 2
         color = { 210 155 14 }
         farm_rgo_size = -10.2
         farm_rgo_eff = 0.0
         mine_rgo_size = -10
         mine_rgo_eff = 0.0
-        supply_limit = 2
+        supply_limit = 4
         combat_width = -0.6
         min_build_railroad = 3
         immigrant_attract = -0.4
     }
 
     new_world_jungle = {
-        movement_cost = 1.3
+        movement_cost = 1.5
         attrition = 1.5
-        defence = 2
+        defence = 1
 
         color = { 210 155 13 }
         farm_rgo_size = -10.25
@@ -364,7 +375,7 @@ categories =  {
         mine_rgo_size = -10.0
         mine_rgo_eff = -0.2
 
-        supply_limit = 1
+        supply_limit = 5
         min_build_railroad = 3
         min_build_fort = 1
         combat_width = -0.25
@@ -380,7 +391,7 @@ categories =  {
         farm_rgo_eff = 0.0
         mine_rgo_size = -10.0
         mine_rgo_eff = 0.0
-        supply_limit = 10
+        supply_limit = 8
     }
 
     new_world_small_island = {
@@ -392,20 +403,21 @@ categories =  {
         farm_rgo_eff = 0.0
         mine_rgo_size = -10.5
         mine_rgo_eff = 0.0
-        supply_limit = 2
+        supply_limit = 6
         combat_width = -0.3
         assimilation_rate = -0.5
         immigrant_attract = -0.75
     }
 
     new_world_desert = {
-        movement_cost = 1.5
+        movement_cost = 1.05
         color = { 210 155 30 }
 
         farm_rgo_size = -9.0
         farm_rgo_eff = -0.5
         mine_rgo_size = -9.0
         mine_rgo_eff = -0.5
+        supply_limit = 4
         min_build_railroad = 4
         min_build_fort = 1
         attrition = 2
@@ -413,14 +425,14 @@ categories =  {
     }
 
     new_world_semidesert = {
-        movement_cost = 1.2
+        movement_cost = 1.0
         color = { 210 155 31 }
 
         farm_rgo_size = -7.0
         farm_rgo_eff = -0.3
         mine_rgo_size = -7.0
         mine_rgo_eff = -0.1
-        supply_limit = 2
+        supply_limit = 7
         min_build_railroad = 2
         immigrant_attract = -0.25
         attrition = 1

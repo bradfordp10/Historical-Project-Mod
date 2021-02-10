@@ -13,31 +13,31 @@ QNG ={
 KWT = {
     value = 125        #relation
     level = 5        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
+    influence_value = 100
 }
 
 BTL = {
     value = 125        #relation
     level = 5        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
+    influence_value = 100
 }
 
 BHT = {
     value = 125        #relation
     level = 5        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
+    influence_value = 100
 }
 
 BNB = {
     value = 125        #relation
     level = 5        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
+    influence_value = 100
 }
 
 BDN = {
     value = 125        #relation
     level = 5        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
+    influence_value = 100
 }
 
 #Middle East
@@ -52,7 +52,7 @@ NEJ = {
 HDJ = {
     value = 125        #relation
     level = 5        #3=cordial, 4 = friendly, 5 = sphere
-    influence_value = 0
+    influence_value = 100
 }
 NYE = {
     value = -100
@@ -61,13 +61,13 @@ NYE = {
 BHR = {
     value = 125        #relation
     level = 5        #3=cordial, 4 = friendly, 5 = sphere
-    influence_value = 0
+    influence_value = 100
 }
 
 QAT = {
     value = 125        #relation
     level = 5        #3=cordial, 4 = friendly, 5 = sphere
-    influence_value = 0
+    influence_value = 100
 }
 
 #Africa
@@ -79,17 +79,13 @@ EGY = {
 TUN = {
     value = 125        #relation
     level = 5        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
+    influence_value = 100
 }
 MOR = {
     value = 100
 }
 
 #Europe
-HAN = {
-    value = 50
-    level = 1
-}
 GRE = {
     value = -25        #relation
     level = 0        #3=cordial, 4 = friendly, 5 sphere
@@ -98,7 +94,7 @@ GRE = {
 SER = {
     value = 0        #relation
     level = 5        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
+    influence_value = 100
 }
 MOL = {
     value = 125

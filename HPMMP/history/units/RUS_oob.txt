@@ -1,39 +1,35 @@
 #Sphere of Influence
 
 #Europe
-HAN = {
-    value = 50
-    level = 1
-}
 
 MON = {
     value = -10
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 
 TCA = {
     value = 200
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 
 UBD = {
     value = 200
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 
 ABK = {
     value = 200
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 
 FIN = {
     value = 100
     level = 5
-    influence_value = 0
+    influence_value = 100
 }
 SWE = {
     value = 125
