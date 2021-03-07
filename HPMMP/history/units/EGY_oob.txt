@@ -1,3 +1,11 @@
+TUR = {
+    truce_until = 1838.5.1
+}
+
+GRE = {
+    truce_until = 1842.7.1
+}
+
 DAR = {
     value = 80
 }
@@ -270,6 +278,38 @@ army = {
 
 }
 
+army = {
+    name = "Bedouins"
+    location = 1153
+    regiment = {
+        name= "1.Beni Atiya"
+        type = irregular
+        home = 1153
+    }
+
+    regiment = {
+        name= "2.Beni Atiya"
+        type = irregular
+        home = 1152
+    }
+}
+
+army = {
+    name = "Bedouins"
+    location = 1151
+    regiment = {
+        name= "1.Harb"
+        type = irregular
+        home = 1151
+    }
+
+    regiment = {
+        name= "2.Harb"
+        type = irregular
+        home = 1155
+    }
+}
+
 leader = {
     name = "Ibrahim Pasha"
     type = land
@@ -286,4 +326,12 @@ leader = {
     personality = balanced_p
     background = drillmaster
     prestige = 0.1
+}
+
+leader = {
+    name = "Muhammad ibn Awn"
+    type = land
+    date = 1836.1.1
+    personality = harsh
+    background = brownnoser
 }
