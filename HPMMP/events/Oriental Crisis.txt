@@ -158,6 +158,7 @@ country_event = {
                     region = TUR_894
                     region = EGY_897
                     region = EGY_903
+                    region = EGY_910
                     is_core = CRE
                 }
             }
@@ -166,8 +167,19 @@ country_event = {
         }
         EGY_915 = { add_core = EGY }
         EGY_921 = { add_core = EGY }
-        EGY_910 = { add_core = EGY }
         TUR = { country_event = 90078 }
+        random_country = {
+            limit = {
+                tag = HDJ
+                ai = yes
+                OR = {
+                    part_of_sphere = no
+                    in_sphere = TUR
+                }
+            }
+            annex_to = TUR
+        }
+        HDJ = { all_core = { add_core = TUR } }
         remove_country_modifier = muhammad_alis_reforms
         any_pop = {
             limit = { is_primary_culture = yes }

@@ -972,7 +972,12 @@ political_decisions = {
 
         allow = {
             war = no
-            is_sphere_leader_of = SGM
+            SGM = {
+                OR = {
+                    in_sphere = THIS
+                    part_of_sphere = no
+                }
+            }
             OR = {
                 AND = {
                     SGM = {

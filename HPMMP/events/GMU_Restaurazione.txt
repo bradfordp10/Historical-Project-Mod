@@ -1406,7 +1406,16 @@ country_event = {
 	desc = "EVTDESC202015"
 	picture = "roman_republic"
 
-	is_triggered_only = yes
+	trigger = {
+		tag = FRA
+		is_greater_power = yes
+		PAP = { government = democracy }
+		NOT = { has_country_flag = roman_intervention }
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
 
 	immediate = {
 		casus_belli = {
@@ -1414,6 +1423,7 @@ country_event = {
 			type = add_to_sphere
 			months = 60
 		}
+		set_country_flag = roman_intervention
 	}
 
 	option = {
@@ -1589,10 +1599,24 @@ country_event = {
 					tag = PAR
 					tag = MOD
 					tag = LUC
+					AND = {
+						tag = PAP
+						government = democracy
+						war = no
+					}
 				}
 			}
 			any_owned = { add_core = SAR secede_province = THIS }
 			annex_to = THIS
+		}
+		PAP = {
+			any_owned = {
+				limit = {
+					is_core = RMG
+				}
+				add_core = SAR 
+				secede_province = THIS
+			}
 		}
 	}
 }
