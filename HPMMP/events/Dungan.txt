@@ -382,12 +382,10 @@ country_event = {
     option = {
         name = "EVT80126OPTA"
         plurality = -2
-        UYG = { 
-            change_tag = XIN
-            end_war = QNG
-        }
-        prestige = 10
+        release_vassal = UYG
         UYG = { change_tag = XIN }
+        create_vassal = XIN
+        prestige = 10
         XIN = {
             any_owned = {
                 remove_province_modifier = anti_manchu_sentiment
