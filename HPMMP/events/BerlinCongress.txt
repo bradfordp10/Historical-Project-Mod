@@ -1663,7 +1663,10 @@ country_event = {
             MON = { set_country_flag = received_congress_benefit }
         }
         any_owned = {
-            limit = { is_core = MON }
+            limit = { 
+                is_core = MON
+                NOT = { province_id = 2577 } 
+            }
             secede_province = MON
         }
         random_country = {

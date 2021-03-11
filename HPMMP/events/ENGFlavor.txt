@@ -2510,17 +2510,14 @@ country_event = {
         badboy = 1
         relation = { who = LHJ value = -400 }
         diplomatic_influence = { who = LHJ value = -400 }
-
-        owner = {
-            casus_belli = { target = LHJ type = establish_protectorate_casus_belli months = 60 }
-            casus_belli = { target = LHJ type = conquest_any months = 36 }
-            war = {
-                target = LHJ
-                attacker_goal = { casus_belli = conquest_any }
-                defender_goal = { casus_belli = humiliate }
-                call_ally = no
-            }  
-        }
+        casus_belli = { target = LHJ type = establish_protectorate_casus_belli months = 60 }
+        casus_belli = { target = LHJ type = conquest_any months = 36 }
+        war = {
+            target = LHJ
+            attacker_goal = { casus_belli = conquest_any }
+            defender_goal = { casus_belli = humiliate }
+            call_ally = no
+        }  
 
         ai_chance = {
             factor = 99
