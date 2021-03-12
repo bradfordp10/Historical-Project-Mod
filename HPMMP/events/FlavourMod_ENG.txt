@@ -903,7 +903,7 @@ country_event = {
 }
 
 #White Highlands
-province_event = {
+country_event = {
 	id = 99107
 	title = "EVTNAME99107" 
 	desc = "EVTDESC99107"
