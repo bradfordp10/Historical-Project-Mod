@@ -487,7 +487,7 @@ acquire_all_cores = {
 
     badboy_factor = 0
     prestige_factor = 2
-    peace_cost_factor = 0.7
+    peace_cost_factor = 0.5
     penalty_factor = 1
     always = yes
 
@@ -903,7 +903,6 @@ claim_holy_land = {
                 is_culture_group = italian
                 is_culture_group = iberian
             }
-            ai = no
             has_global_flag = abandoned_holy_land
         }
         OR = {
@@ -7531,7 +7530,7 @@ cut_down_to_size_taiping = {
     break_truce_prestige_factor = 0
     break_truce_infamy_factor = 0
     break_truce_militancy_factor = 0
-    truce_months = 48
+    truce_months = 60
     
     good_relation_prestige_factor = 1
     good_relation_infamy_factor = 1
@@ -7575,7 +7574,7 @@ cb_sykes_picot = {
     break_truce_prestige_factor = 0
     break_truce_infamy_factor = 0
     break_truce_militancy_factor = 0
-    truce_months = 48
+    truce_months = 60
     
     good_relation_prestige_factor = 1
     good_relation_infamy_factor = 0
@@ -7614,7 +7613,7 @@ cut_down_to_size_ottoman = {
     break_truce_prestige_factor = 0
     break_truce_infamy_factor = 0
     break_truce_militancy_factor = 0
-    truce_months = 48
+    truce_months = 60
     
     good_relation_prestige_factor = 1
     good_relation_infamy_factor = 1
@@ -8354,7 +8353,7 @@ acquire_substate_core_region = {
     break_truce_prestige_factor = 1
     break_truce_infamy_factor = 2
     break_truce_militancy_factor = 2
-    truce_months = 48
+    truce_months = 60
     
     good_relation_prestige_factor = 1
     good_relation_infamy_factor = 1

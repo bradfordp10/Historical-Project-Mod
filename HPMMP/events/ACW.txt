@@ -3674,7 +3674,7 @@ province_event = {
     }
 
     mean_time_to_happen = {
-        months = 12
+        months = 6
         modifier = {
             factor = 0.5
             yes_slavery = 15
@@ -3698,6 +3698,13 @@ province_event = {
                     factor = 0.2
                 }
                 militancy = 1
+            }
+            any_pop = {
+                limit = {
+                    culture = dixie
+                    type = soldiers
+                }
+                reduce_pop = 1.5
             }
         }
     }

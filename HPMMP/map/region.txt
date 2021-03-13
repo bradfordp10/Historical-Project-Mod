@@ -1007,9 +1007,9 @@ FRA_1893 = { 1893 1895 1896 1900 } #Windward Coast - West Ivory Coast
 
 FRA_1901 = { 1901 1902 1903 1904 1905 1906 } #Houet
 
-ASH_1909 = { 1907 1908 1909 1910 } #Gold Coast - South Ghana
+ASH_1909 = { 1907 1908 1909 } #Gold Coast - South Ghana
 
-FRA_1907 = { 1912 1911 1913 } #Ghana - North Ghana
+FRA_1907 = { 1912 1910 1911 1913 } #Ghana - North Ghana
 
 ASH_1910 = { 1915 1916 } #Volta
 

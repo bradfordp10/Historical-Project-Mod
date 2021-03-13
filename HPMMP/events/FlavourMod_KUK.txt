@@ -99,7 +99,6 @@ country_event = {
 				exists = yes
 				is_greater_power = no
 				is_culture_group = THIS
-				NOT = { vassal_of = THIS }
 				is_substate = no
 			}
 			relation = {
@@ -117,6 +116,20 @@ country_event = {
 			leave_alliance = THIS
 			end_military_access = THIS
 			create_alliance = FROM
+		}
+		any_owned = {
+			limit = {
+				owner = { primary_culture = north_german }
+				culture = south_german
+			}
+			secede_province = FROM
+		}
+		any_owned = {
+			limit = {
+				owner = { primary_culture = south_german }
+				culture = north_german
+			}
+			secede_province = FROM
 		}
 		add_country_modifier = {
 			name = diplomatic_isolation
@@ -310,7 +323,7 @@ country_event = {
 		name = "EVT99996OPTA"
 		random_country = {
 			limit = {
-				has_country_flag = ai_demand_sigmaringen
+				has_country_flag = demand_sigmaringen
 			}
 			diplomatic_influence = {
 				who = THIS

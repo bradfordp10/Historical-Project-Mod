@@ -170,21 +170,15 @@ country_event = {
         months = 800
         modifier = {
             factor = 0.9
-            owner = {
-                economic_policy = interventionism
-            }
+            economic_policy = interventionism
         }
         modifier = {
             factor = 0.8
-            owner = {
-                economic_policy = state_capitalism
-            }
+            economic_policy = state_capitalism
         }
         modifier = {
             factor = 0.7
-            owner = {
-                economic_policy = planned_economy
-            }
+            economic_policy = planned_economy
         }
         modifier = {
             factor = 1.5
@@ -255,10 +249,6 @@ country_event = {
 
     trigger = {
         produces = tea
-        any_owned_province = {
-            limit = { trade_goods = tea }
-            has_pop_type = bureaucrats
-        }
         tea = 40
         NOT = { has_global_flag = workplace_events_disabled }
     }
@@ -276,13 +266,6 @@ country_event = {
         modifier = {
             factor = 0.9
             average_militancy = 7
-        }
-        modifier = {
-            factor = 0.8
-            any_owned_province = {
-                limit = { trade_goods = tea }
-                has_crime = mafia
-            }
         }
         modifier = {
             factor = 0.9

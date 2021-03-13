@@ -2004,7 +2004,6 @@ country_event = {
     trigger = {
         year = 1929
         any_owned_province = {
-            has_province_modifier = local_tractors
             OR = {
                 province_id = 135
                 province_id = 136

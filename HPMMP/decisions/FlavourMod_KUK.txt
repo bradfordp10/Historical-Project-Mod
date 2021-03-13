@@ -118,12 +118,10 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	peace_of_prague = { #Lets AI Austria Take Sigmaringen if they win brother's war/white peace AI Prussia
+	peace_of_prague = { #Lets Austria Take Sigmaringen if they win brother's war/white peace Prussia
 		picture = gtfo
 		potential = {
 			tag = AUS
-			ai = yes
-			PRU = { ai = yes }
 			OR = {
 				SGM = {
 					exists = yes
@@ -148,7 +146,7 @@ political_decisions = {
 				BAV = { in_sphere = THIS }
 				BAD = { in_sphere = THIS }
 			}
-			NOT = { has_country_flag = ai_demand_sigmaringen }
+			NOT = { has_country_flag = demand_sigmaringen }
 		}
 		
 		allow = {
@@ -166,7 +164,7 @@ political_decisions = {
 		}
 		
 		effect = {
-			set_country_flag = ai_demand_sigmaringen
+			set_country_flag = demand_sigmaringen
 			war_exhaustion = -25
 			badboy = 5
 			remove_country_modifier = brothers_war_aggressor

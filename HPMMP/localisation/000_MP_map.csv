@@ -20,8 +20,7 @@ SPA_479;Castilla la Vieja;;;;;;;;;;;;;x
 DEN_251;Greenland;;;;;;;;;;;;;x
 DEN_252;Iceland;;;;;;;;;;;;;x
 SAR;Sardinia;;;;;;;;;;;;;x
-PAR;Parma & Piacenza;;;;;;;;;;;;;x
-MOD;Modena & Reggio;;;;;;;;;;;;;x
+SIA_absolute_monarchy;Siam;;;;;;;;;;;;;x
 AUS_absolute_monarchy;The Austrian Empire;;;;;;;;;;;;;x
 AUS_prussian_constitutionalism;The Austrian Empire;;;;;;;;;;;;;x
 PAP;The Papal States;;;;;;;;;;;;;x
@@ -34,3 +33,24 @@ PAP_fascist_dictatorship;The Roman Republic;;;;;;;;;;;;;
 SIC;The Two Sicilies;;;;;;;;;;;;;x
 VEN_democracy;San Marco;;;;;;;;;;;;;x
 VEN_democracy_ADJ;San Marcan;;;;;;;;;;;;;x
+UCA;Central America;;;;;;;;;;;;;
+UCA_absolute_monarchy;Central America;;;;;;;;;;;;;
+UCA_prussian_constitutionalism;Central America;;;;;;;;;;;;;
+UCA_hms_government;Central America;;;;;;;;;;;;;
+UCA_democracy;Central America;;;;;;;;;;;;;
+UCA_proletarian_dictatorship;Central America;;;;;;;;;;;;;
+QNG;China;;;;;;;;;;;;;
+QNG_ADJ;Chinese;;;;;;;;;;;;;
+QNG_absolute_monarchy;The Chinese Empire;;;;;;;;;;;;;
+QNG_prussian_constitutionalism;The Chinese Empire;;;;;;;;;;;;;
+QNG_hms_government;The Chinese Empire;;;;;;;;;;;;;
+JAP_abolsute_monarchy;The Japanese Empire;;;;;;;;;;;;;
+JAP_prussian_constitutionalism;The Japanese Empire;;;;;;;;;;;;;
+FRA_constitutional_monarchy;The French Kingdom;;;;;;;;;;;;;
+GER_absolute_monarchy;Germany;;;;;;;;;;;;;
+GER_prussian_constitutionalism;Germany;;;;;;;;;;;;;
+ENG;Britain;;;;;;;;;;;;;
+ENG_absolute_monarchy;The British Empire;;;;;;;;;;;;;
+ENG_prussian_constitutionalism;The British Empire;;;;;;;;;;;;;
+MEX_absolute_monarchy;The Mexican Empire;;;;;;;;;;;;;
+MEX_prussian_constitutionalism;The Mexican Empire;;;;;;;;;;;;;

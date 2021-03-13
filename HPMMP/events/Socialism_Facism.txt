@@ -300,26 +300,24 @@ country_event = {
 
         modifier = {
             factor = 1.2
-            owner = {
-                    nationalvalue = nv_liberty
-            }
+            nationalvalue = nv_liberty
         }
         modifier = {
             factor = 1.2
             OR = {
-            owner = {
+                AND = {
                     nationalvalue = nv_autocracy
-                NOT = {
-                    ruling_party_ideology = socialist
-                    ruling_party_ideology = communist
+                    NOT = {
+                        ruling_party_ideology = socialist
+                        ruling_party_ideology = communist
+                    }
                 }
-            }
             
-            owner = {
-                    nationalvalue = nv_order
-                NOT = {
-                    ruling_party_ideology = socialist
-                    ruling_party_ideology = communist
+                AND = {
+                        nationalvalue = nv_order
+                    NOT = {
+                        ruling_party_ideology = socialist
+                        ruling_party_ideology = communist
                     }
                 }
             }
