@@ -1446,6 +1446,7 @@ political_decisions = {
                             OR = {
                                 region = BEL_1977
                                 region = BEL_1984
+                                region = BEL_1992
                                 region = BEL_1987
                                 region = BEL_1990
                             }
@@ -2584,6 +2585,7 @@ political_decisions = {
                                 OR = {
                                     region = BEL_1977
                                     region = BEL_1984
+                                    region = BEL_1992
                                     region = BEL_1987
                                     region = BEL_1990
                                 }
@@ -2609,6 +2611,7 @@ political_decisions = {
                                 OR = {
                                     region = BEL_1977
                                     region = BEL_1984
+                                    region = BEL_1992
                                     region = BEL_1987
                                     region = BEL_1990
                                 }
@@ -2620,6 +2623,7 @@ political_decisions = {
                                 OR = {
                                     region = BEL_1977
                                     region = BEL_1984
+                                    region = BEL_1992
                                     region = BEL_1987
                                     region = BEL_1990
                                 }

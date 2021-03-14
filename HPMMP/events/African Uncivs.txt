@@ -24,12 +24,6 @@ country_event = { #Mzilikazi of Matabele flees to Matabeland
             any_pop = { limit = { NOT = { has_pop_culture = boer } } literacy = -0.99 }
             any_pop = { limit = { has_pop_culture = nguni } reduce_pop = 1.2 }
         }
-        2075 = { #Serowe
-            add_core = MAT
-            secede_province = MAT
-            life_rating = 20
-            any_pop = { limit = { NOT = { has_pop_culture = boer } } literacy = -0.99 }
-        }
 
         2108 = {
             any_pop = { limit = { has_pop_culture = nguni }

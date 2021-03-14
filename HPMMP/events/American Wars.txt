@@ -620,7 +620,7 @@ country_event = {
                 duration = 365
             }
         }
-        #CAN_18 = { add_core = ENG }
+        CAN_18 = { add_core = ENG }
         ENG_22 = { add_core = ENG }
         USA_78 = {
             remove_core = COL
@@ -730,7 +730,7 @@ country_event = {
             limit = {
                 OR = {
                     region = CAN_13
-                    #region = CAN_18
+                    region = CAN_18
                     region = ENG_22
                 }
             }

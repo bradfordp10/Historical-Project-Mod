@@ -1473,6 +1473,7 @@ province_event = {
     trigger = {
         OR = {
             region = ENG_1956
+            region = ENG_1957
             region = SPA_1955
         }
         owned_by = THIS
@@ -2247,52 +2248,52 @@ province_event = {
     }
 }
 
-#province_event = {
-#    id = 98853
-#    title = "EVTNAME98800"
-#    desc = "EVTDESC98852"
-#
-#    trigger = {
-#        region = FRA_1970
-#        owned_by = THIS
-#        controlled_by = THIS
-#        any_neighbor_province = { is_core = CAR }
-#        owner = {
-#            civilized = yes
-#            NOT = { capital_scope = { continent = africa } }
-#        }
-#        OR = {
-#            AND = {
-#                owner = { owns = 1965 }
-#                CAR = { exists = no }
-#            }
-#            CAR = {
-#                vassal_of = THIS
-#                is_culture_group = THIS
-#            }
-#        }
-#        NOT = {
-#            is_core = CAR
-#        }
-#    }
-#
-#    mean_time_to_happen = {
-#        months = 120
-#    }
-#
-#    option = {
-#        name = "EVT98800OPTA"
-#        state_scope = {
-#            any_owned = {
-#                limit = {
-#                    NOT = { is_core = CAR }
-#                }
-#                add_core = CAR
-#                any_pop = { militancy = -3 }
-#            }
-#        }
-#    }
-#}
+province_event = {
+    id = 98853
+    title = "EVTNAME98800"
+    desc = "EVTDESC98852"
+
+    trigger = {
+        region = FRA_1970
+        owned_by = THIS
+        controlled_by = THIS
+        any_neighbor_province = { is_core = CAR }
+        owner = {
+            civilized = yes
+            NOT = { capital_scope = { continent = africa } }
+        }
+        OR = {
+            AND = {
+                owner = { owns = 1965 }
+                CAR = { exists = no }
+            }
+            CAR = {
+                vassal_of = THIS
+                is_culture_group = THIS
+            }
+        }
+        NOT = {
+            is_core = CAR
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 120
+    }
+
+    option = {
+        name = "EVT98800OPTA"
+        state_scope = {
+            any_owned = {
+                limit = {
+                    NOT = { is_core = CAR }
+                }
+               add_core = CAR
+                any_pop = { militancy = -3 }
+            }
+        }
+    }
+}
 
 province_event = {
     id = 98854
@@ -4162,7 +4163,7 @@ province_event = {
         OR = {
             #region = ENG_6
             region = ENG_9
-            #region = CAN_18
+            region = CAN_18
             region = ENG_22
             region = ENG_30
             region = ENG_36

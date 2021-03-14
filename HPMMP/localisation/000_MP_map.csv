@@ -11,7 +11,7 @@ TUR_860;Eastern Thrace;;;;;;;;;;;;;x
 TUR_805;Macedonia;;;;;;;;;;;;;x
 TUR_861;Istanbul;;;;;;;;;;;;;x
 EGY_848;Crete;;;;;;;;;;;;;x
-ABU_1167;Trucial Oman;;;;;;;;;;;;;x
+ABU_1167;Trucial Coast;;;;;;;;;;;;;x
 PER_1122;Kermanshah;;;;;;;;;;;;;x
 ENG_1957;Southern Cameroons;;;;;;;;;;;;;x
 ENG_1956;Cameroun;;;;;;;;;;;;;x
@@ -44,9 +44,9 @@ QNG_ADJ;Chinese;;;;;;;;;;;;;
 QNG_absolute_monarchy;The Chinese Empire;;;;;;;;;;;;;
 QNG_prussian_constitutionalism;The Chinese Empire;;;;;;;;;;;;;
 QNG_hms_government;The Chinese Empire;;;;;;;;;;;;;
-JAP_abolsute_monarchy;The Japanese Empire;;;;;;;;;;;;;
+JAP_absolute_monarchy;The Japanese Empire;;;;;;;;;;;;;
 JAP_prussian_constitutionalism;The Japanese Empire;;;;;;;;;;;;;
-FRA_constitutional_monarchy;The French Kingdom;;;;;;;;;;;;;
+FRA_hms_government;The French Kingdom;;;;;;;;;;;;;
 GER_absolute_monarchy;Germany;;;;;;;;;;;;;
 GER_prussian_constitutionalism;Germany;;;;;;;;;;;;;
 ENG;Britain;;;;;;;;;;;;;
@@ -54,3 +54,19 @@ ENG_absolute_monarchy;The British Empire;;;;;;;;;;;;;
 ENG_prussian_constitutionalism;The British Empire;;;;;;;;;;;;;
 MEX_absolute_monarchy;The Mexican Empire;;;;;;;;;;;;;
 MEX_prussian_constitutionalism;The Mexican Empire;;;;;;;;;;;;;
+OMA_absolute_monarchy;Muscat & Oman;;;;;;;;;;;;;
+OMA_prussian_consitutionalism;Muscat & Oman;;;;;;;;;;;;;
+OMA_hms_government;Muscat & Oman;;;;;;;;;;;;;
+NYE_absolute_monarchy;Yemen;;;;;;;;;;;;;
+NYE_prussian_constitutionalism;Yemen;;;;;;;;;;;;;
+NYE_hms_government;Yemen;;;;;;;;;;;;;
+NYE;Yemen;;;;;;;;;;;;;
+ABU_absolute_monarchy;Trucial Oman;;;;;;;;;;;;;
+MAJ;Majerteenia;;;;;;;;;;;;;
+ORA;The Orange Free State;;;;;;;;;;;;;
+ORA_ADJ;Boer;;;;;;;;;;;;;
+TRN;The South African Republic;;;;;;;;;;;;;
+TRN_ADJ;Boer;;;;;;;;;;;;;
+TRN_absolute_monarchy;The South African Kingdom;;;;;;;;;;;;;
+TRN_prussian_constitutionalism;The South African Kingdom;;;;;;;;;;;;;
+TRN_hms_government;The South African Kingdom;;;;;;;;;;;;;

@@ -77,6 +77,7 @@ country_event = {
         1983 = { add_core = CNG }
         1985 = { add_core = CNG }
         BEL_1984 = { add_core = CNG }
+        BEL_1992 = { add_core = CNG }
         BEL_1987 = { add_core = CNG }
         BEL_1990 = { add_core = CNG }
         any_country = {
@@ -942,6 +943,10 @@ country_event = {
                     province_id = 1994
                 }
                 BEL_1984 = {
+                    secede_province = THIS
+                    any_pop = { literacy = -0.99 }
+                }
+                BEL_1992 = {
                     secede_province = THIS
                     any_pop = { literacy = -0.99 }
                 }
