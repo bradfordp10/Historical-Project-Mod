@@ -5,13 +5,9 @@ political_decisions = {
             NOT = {
                 has_country_flag = ems_dispatch_sent
             }
-            OR = {
-                tag = PRU
-                tag = NGF
-            }
-            FRA = {
-                any_owned_province = { is_core = GER }
-            }
+            tag = NGF
+            412 = { NOT = { owned_by = THIS } }
+            has_country_flag = von_moltke
             OR = {
                 government = absolute_monarchy
                 government = prussian_constitutionalism
@@ -53,6 +49,7 @@ political_decisions = {
         effect = {
             prestige = 5
             FRA = { country_event = 19200 }
+            FRA_412 = { add_core = GER }
             set_country_flag = ems_dispatch_sent
             set_global_flag = franco_prussian_war_started
             any_pop = {
@@ -83,8 +80,12 @@ political_decisions = {
                     war_exhaustion = 5
                     num_of_revolts = 1
                     is_disarmed = yes
-                    FRA = { brigades_compare = 1.5 }
+                    FRA = { brigades_compare = 2 }
                 }
+            }
+            modifier = {
+                factor = 0
+                war = yes
             }
         }
     }
