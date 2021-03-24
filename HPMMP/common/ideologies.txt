@@ -260,13 +260,10 @@ socialist_group = {
 
         add_political_reform = {
             base = 0
-            modifier = {
-                    factor = -1
-                    NOT = { ruling_party_ideology = communist }
-            }
             group = {
                 modifier = {
                     factor = 0.1
+                    ruling_party_ideology = communist
                     OR = {
                         militancy = 1
                         political_movement_strength = 0.1
@@ -274,6 +271,7 @@ socialist_group = {
                 }
                 modifier = {
                     factor = 0.1
+                    ruling_party_ideology = communist
                     OR = {
                         militancy = 2
                         political_movement_strength = 0.2
@@ -281,6 +279,7 @@ socialist_group = {
                 }
                 modifier = {
                     factor = 0.1
+                    ruling_party_ideology = communist
                     OR = {
                         militancy = 3
                         political_movement_strength = 0.3
@@ -288,6 +287,7 @@ socialist_group = {
                 }
                 modifier = {
                     factor = 0.1
+                    ruling_party_ideology = communist
                     OR = {
                         militancy = 4
                         political_movement_strength = 0.4
@@ -295,6 +295,7 @@ socialist_group = {
                 }
                 modifier = {
                     factor = 0.1
+                    ruling_party_ideology = communist
                     OR = {
                         militancy = 5
                         political_movement_strength = 0.5
@@ -302,6 +303,7 @@ socialist_group = {
                 }
                 modifier = {
                     factor = 0.1
+                    ruling_party_ideology = communist
                     OR = {
                         militancy = 6
                         political_movement_strength = 0.6
@@ -309,6 +311,7 @@ socialist_group = {
                 }
                 modifier = {
                     factor = 0.1
+                    ruling_party_ideology = communist
                     OR = {
                         militancy = 7
                         political_movement_strength = 0.7
@@ -316,6 +319,7 @@ socialist_group = {
                 }
                 modifier = {
                     factor = 0.1
+                    ruling_party_ideology = communist
                     OR = {
                         militancy = 8
                         political_movement_strength = 0.8
@@ -323,6 +327,7 @@ socialist_group = {
                 }
                 modifier = {
                     factor = 0.1
+                    ruling_party_ideology = communist
                     OR = {
                         militancy = 9
                         political_movement_strength = 0.9

@@ -28,11 +28,11 @@ PAP_democracy;The Roman Republic;;;;;;;;;;;;;
 PAP_theocracy;The Papal States;;;;;;;;;;;;;
 PAP_presidential_dictatorship;The Roman Republic;;;;;;;;;;;;;
 PAP_bourgeois_dictatorship;The Roman Republic;;;;;;;;;;;;;
-PAP_proletarian_dictatorship;The People's Republic of Rome;;;;;;;;;;;;;
+PAP_proletarian_dictatorship;The Roman Republic;;;;;;;;;;;;;
 PAP_fascist_dictatorship;The Roman Republic;;;;;;;;;;;;;
 SIC;The Two Sicilies;;;;;;;;;;;;;x
-VEN_democracy;San Marco;;;;;;;;;;;;;x
-VEN_democracy_ADJ;San Marcan;;;;;;;;;;;;;x
+VEN_democracy;Venice;;;;;;;;;;;;;x
+VEN_democracy_ADJ;Venetian;;;;;;;;;;;;;x
 UCA;Central America;;;;;;;;;;;;;
 UCA_absolute_monarchy;Central America;;;;;;;;;;;;;
 UCA_prussian_constitutionalism;Central America;;;;;;;;;;;;;
@@ -47,8 +47,7 @@ QNG_hms_government;The Chinese Empire;;;;;;;;;;;;;
 JAP_absolute_monarchy;The Japanese Empire;;;;;;;;;;;;;
 JAP_prussian_constitutionalism;The Japanese Empire;;;;;;;;;;;;;
 FRA_hms_government;The French Kingdom;;;;;;;;;;;;;
-GER_absolute_monarchy;Germany;;;;;;;;;;;;;
-GER_prussian_constitutionalism;Germany;;;;;;;;;;;;;
+GER_hms_government;Germany;;;;;;;;;;;;;
 ENG;Britain;;;;;;;;;;;;;
 ENG_absolute_monarchy;The British Empire;;;;;;;;;;;;;
 ENG_prussian_constitutionalism;The British Empire;;;;;;;;;;;;;
@@ -64,9 +63,22 @@ NYE;Yemen;;;;;;;;;;;;;
 ABU_absolute_monarchy;Trucial Oman;;;;;;;;;;;;;
 MAJ;Majerteenia;;;;;;;;;;;;;
 ORA;The Orange Free State;;;;;;;;;;;;;
-ORA_ADJ;Boer;;;;;;;;;;;;;
+ORA_ADJ;Orange;;;;;;;;;;;;;
 TRN;The South African Republic;;;;;;;;;;;;;
-TRN_ADJ;Boer;;;;;;;;;;;;;
+TRN_ADJ;Transvaal;;;;;;;;;;;;;
 TRN_absolute_monarchy;The South African Kingdom;;;;;;;;;;;;;
 TRN_prussian_constitutionalism;The South African Kingdom;;;;;;;;;;;;;
 TRN_hms_government;The South African Kingdom;;;;;;;;;;;;;
+LOM;Lombardy;;;;;;;;;;;;;
+GLM;Galicia & Lodomeria;;;;;;;;;;;;;
+COB;Saxe-Coburg & Gotha;;;;;;;;;;;;;
+LUX;Luxembourg;;;;;;;;;;;;;
+FRM;Frankfurt;;;;;;;;;;;;;
+CHI_democracy;The Republic of China;;;;;;;;;;;;;
+CHI_presidential_dictatorship;The Republic of China;;;;;;;;;;;;;
+CHI_absolute_monarchy;The Chinese Empire
+CHI_prussian_constitutionalism;The Chinese Empire;;;;;;;;;;;;;
+CHI_proletarian_dictatorship;The People's Republic of China;;;;;;;;;;;;;
+CHI_fascist_dictatorship;The Republic of China;;;;;;;;;;;;;
+FRA_fascist_dictatorship;The French State;;;;;;;;;;;;;
+XBI_presidential_dictatorship;Ma Family;;;;;;;;;;;;;

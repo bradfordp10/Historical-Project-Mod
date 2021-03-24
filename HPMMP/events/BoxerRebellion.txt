@@ -21,7 +21,6 @@ country_event = {
         tag = QNG
         civilized = no
         OR = {
-            civilization_progress = 0.65
             year = 1895
             has_country_flag = wuxu_coup
         }
@@ -54,7 +53,6 @@ country_event = {
             is_disarmed = yes
             has_country_modifier = western_influences
             has_country_modifier = self_strengthening_movement
-            civilization_progress = 0.75
         }
         NOT = {
             TPG = { exists = yes }

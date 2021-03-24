@@ -99,12 +99,23 @@ political_decisions = {
                     NOT = { owns = 1496 }
                     1496 = { owner = { civilized = no truce_with = THIS } }
                 }
-
+                modifier = {
+                    factor = 0
+                    tag = GER
+                    NOT = { owns = 1566 }
+                    1566 = { owner = { civilized = no truce_with = THIS } }
+                }
+                modifier = {
+                    factor = 0
+                    tag = FRA
+                    NOT = { owns = 2632 }
+                    2632 = { owner = { civilized = no truce_with = THIS } }
+                }
                 modifier = {
                     factor = 0
                     tag = ENG
-                    NOT = { owns = 1566 }
-                    1566 = { owner = { civilized = no truce_with = THIS } }
+                    NOT = { owns = 1538 }
+                    1538 = { owner = { civilized = no truce_with = THIS } }
                 }
                 modifier = {
                     factor = 0
@@ -147,6 +158,18 @@ political_decisions = {
                     tag = RUS
                     NOT = { owns = 1481 }
                     1481 = { owner = { civilized = no truce_with = THIS } }
+                }
+                modifier = {
+                    factor = 0
+                    tag = GER
+                    NOT = { owns = 1566 }
+                    1566 = { owner = { civilized = no truce_with = THIS } }
+                }
+                modifier = {
+                    factor = 0
+                    tag = FRA
+                    NOT = { owns = 2632 }
+                    2632 = { owner = { civilized = no truce_with = THIS } }
                 }
                 modifier = {
                     factor = 0
@@ -198,6 +221,18 @@ political_decisions = {
                 }
                 modifier = {
                     factor = 0
+                    tag = GER
+                    NOT = { owns = 1566 }
+                    1566 = { owner = { civilized = no truce_with = THIS } }
+                }
+                modifier = {
+                    factor = 0
+                    tag = FRA
+                    NOT = { owns = 2632 }
+                    2632 = { owner = { civilized = no truce_with = THIS } }
+                }
+                modifier = {
+                    factor = 0
                     primary_culture = japanese
                     NOT = { owns = 1415 }
                     1481 = { owner = { civilized = no truce_with = THIS } }
@@ -212,10 +247,6 @@ political_decisions = {
     qingdao_treaty_port = {
         picture = qingdao_china
         potential = {
-            OR = { 
-                tag = NGF
-                tag = GER
-            }
             has_country_modifier = negotiating_treaty
             1566 = { owner = { has_country_modifier = negotiating_unequal_treaty civilized = no truce_with = THIS } }
             NOT = { has_country_modifier = chinese_treaty_port }
@@ -250,6 +281,12 @@ political_decisions = {
                     tag = ENG
                     NOT = { owns = 1569 }
                     1569 = { owner = { civilized = no truce_with = THIS } }
+                }
+                modifier = {
+                    factor = 0
+                    tag = FRA
+                    NOT = { owns = 2632 }
+                    2632 = { owner = { civilized = no truce_with = THIS } }
                 }
                 modifier = {
                     factor = 0
@@ -305,14 +342,26 @@ political_decisions = {
                 modifier = {
                     factor = 0
                     tag = ENG
+                    NOT = { owns = 1538 }
+                    1538 = { owner = { civilized = no truce_with = THIS } }
+                }
+                modifier = {
+                    factor = 0
+                    tag = ENG
                     NOT = { owns = 1569 }
                     1569 = { owner = { civilized = no truce_with = THIS } }
                 }
                 modifier = {
                     factor = 0
-                    tag = ENG
+                    tag = GER
                     NOT = { owns = 1566 }
                     1566 = { owner = { civilized = no truce_with = THIS } }
+                }
+                modifier = {
+                    factor = 0
+                    tag = FRA
+                    NOT = { owns = 2632 }
+                    2632 = { owner = { civilized = no truce_with = THIS } }
                 }
                 modifier = {
                     factor = 0
@@ -328,7 +377,6 @@ political_decisions = {
     weihaiwei_treaty_port = {
         picture = weihaiwei_china
         potential = {
-            tag = ENG
             has_country_modifier = negotiating_treaty
             1569 = { owner = { has_country_modifier = negotiating_unequal_treaty civilized = no truce_with = THIS } }
             NOT = { has_country_modifier = chinese_treaty_port }
@@ -356,8 +404,8 @@ political_decisions = {
                 modifier = {
                     factor = 0
                     tag = ENG
-                    NOT = { owns = 1566 }
-                    1566 = { owner = { civilized = no truce_with = THIS } }
+                    NOT = { owns = 1538 }
+                    1538 = { owner = { civilized = no truce_with = THIS } }
                 }
                 modifier = {
                     factor = 0
@@ -367,8 +415,20 @@ political_decisions = {
                 }
                 modifier = {
                     factor = 0
+                    tag = GER
+                    NOT = { owns = 1566 }
+                    1566 = { owner = { civilized = no truce_with = THIS } }
+                }
+                modifier = {
+                    factor = 0
+                    tag = FRA
+                    NOT = { owns = 2632 }
+                    2632 = { owner = { civilized = no truce_with = THIS } }
+                }
+                modifier = {
+                    factor = 0
                     primary_culture = japanese
-                    NOT = { owns = 1415 }
+                    NOT = { owns = 1481 }
                     1481 = { owner = { civilized = no truce_with = THIS } }
                     NOT = { owns = 1485 }
                     1485 = { owner = { civilized = no truce_with = THIS } }
@@ -413,8 +473,20 @@ political_decisions = {
                 modifier = {
                     factor = 0
                     tag = ENG
+                    NOT = { owns = 1538 }
+                    1538 = { owner = { civilized = no truce_with = THIS } }
+                }
+                modifier = {
+                    factor = 0
+                    tag = GER
                     NOT = { owns = 1566 }
                     1566 = { owner = { civilized = no truce_with = THIS } }
+                }
+                modifier = {
+                    factor = 0
+                    tag = FRA
+                    NOT = { owns = 2632 }
+                    2632 = { owner = { civilized = no truce_with = THIS } }
                 }
                 modifier = {
                     factor = 0
@@ -481,8 +553,20 @@ political_decisions = {
                 modifier = {
                     factor = 0
                     tag = ENG
+                    NOT = { owns = 1538 }
+                    1538 = { owner = { civilized = no truce_with = THIS } }
+                }
+                modifier = {
+                    factor = 0
+                    tag = GER
                     NOT = { owns = 1566 }
                     1566 = { owner = { civilized = no truce_with = THIS } }
+                }
+                modifier = {
+                    factor = 0
+                    tag = FRA
+                    NOT = { owns = 2632 }
+                    2632 = { owner = { civilized = no truce_with = THIS } }
                 }
                 modifier = {
                     factor = 0
@@ -528,8 +612,20 @@ political_decisions = {
                 modifier = {
                     factor = 0
                     tag = ENG
+                    NOT = { owns = 1538 }
+                    1538 = { owner = { civilized = no truce_with = THIS } }
+                }
+                modifier = {
+                    factor = 0
+                    tag = GER
                     NOT = { owns = 1566 }
                     1566 = { owner = { civilized = no truce_with = THIS } }
+                }
+                modifier = {
+                    factor = 0
+                    tag = FRA
+                    NOT = { owns = 2632 }
+                    2632 = { owner = { civilized = no truce_with = THIS } }
                 }
                 modifier = {
                     factor = 0
@@ -553,7 +649,6 @@ political_decisions = {
     kwangchowan_treaty_port = {
         picture = kwangchowan_china
         potential = {
-            tag = FRA
             has_country_modifier = negotiating_treaty
             2632 = { owner = { has_country_modifier = negotiating_unequal_treaty civilized = no truce_with = THIS } }
             NOT = { has_country_modifier = chinese_treaty_port }
@@ -586,6 +681,12 @@ political_decisions = {
                 modifier = {
                     factor = 0
                     tag = ENG
+                    NOT = { owns = 1538 }
+                    1538 = { owner = { civilized = no truce_with = THIS } }
+                }
+                modifier = {
+                    factor = 0
+                    tag = GER
                     NOT = { owns = 1566 }
                     1566 = { owner = { civilized = no truce_with = THIS } }
                 }
@@ -643,8 +744,20 @@ political_decisions = {
                 modifier = {
                     factor = 0
                     tag = ENG
+                    NOT = { owns = 1538 }
+                    1538 = { owner = { civilized = no truce_with = THIS } }
+                }
+                modifier = {
+                    factor = 0
+                    tag = GER
                     NOT = { owns = 1566 }
                     1566 = { owner = { civilized = no truce_with = THIS } }
+                }
+                modifier = {
+                    factor = 0
+                    tag = FRA
+                    NOT = { owns = 2632 }
+                    2632 = { owner = { civilized = no truce_with = THIS } }
                 }
                 modifier = {
                     factor = 0

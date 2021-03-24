@@ -487,7 +487,7 @@ acquire_all_cores = {
 
     badboy_factor = 0
     prestige_factor = 2
-    peace_cost_factor = 0.5
+    peace_cost_factor = 0.7
     penalty_factor = 1
     always = yes
 
@@ -535,14 +535,6 @@ acquire_all_cores = {
     allowed_states = {
         any_owned_province = { is_core = THIS }
         #NOT = { any_owned_province = { is_capital = yes } }
-        OR = {
-            THIS = { ai = no }
-            AND = { 
-                THIS = { total_amount_of_ships = 5 } 
-                any_owned_province = { port = yes }
-            }
-            any_owned_province = { any_neighbor_province = { owned_by = THIS } }
-        }
     }
 
     all_allowed_states = yes

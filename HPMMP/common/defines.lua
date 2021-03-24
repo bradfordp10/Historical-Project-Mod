@@ -505,7 +505,7 @@ diplomacy = {
 
     MIN_WARSCORE_TO_INTERVENE = -1,
     MIN_MONTHS_TO_INTERVENE = 0,
-    MAX_WARSCORE_FROM_BATTLES = 20,
+    MAX_WARSCORE_FROM_BATTLES = 40,
 
     GUNBOAT_DIPLOMATIC_COST = 1,
     GUNBOAT_RELATION_ON_ACCEPT = 1,
@@ -605,7 +605,7 @@ diplomacy = {
 
     TWS_FULFILLED_SPEED = 0.1, -- Ticking War Score grows up with this speed daily once CB is fulfilled
     TWS_NOT_FULFILLED_SPEED = 0.1, -- Ticking War Score falls down when CB is not fulfilled (or after grace period)
-    TWS_GRACE_PERIOD_DAYS = 730, -- Ticking War Score delay before it starts falling down for not fulfilling CB.
+    TWS_GRACE_PERIOD_DAYS = 365, -- Ticking War Score delay before it starts falling down for not fulfilling CB.
     TWS_CB_LIMIT_DEFAULT = 100,
     TWS_FULFILLED_IDLE_SPACE = 0.75, -- How much % the CB fulfillment must done, so TWS starts ticking.
     TWS_BATTLE_MIN_COUNT = 5, -- At least X battles before the aspect of wins will count
@@ -714,8 +714,8 @@ ai =
     CHANCE_FOREIGN_INVEST = 0.2,
     TWS_AWARENESS_SCORE_LOW_CAP = 0.2, -- AI will always add CBs if current warscore is less then that number (including TWS)
     TWS_AWARENESS_SCORE_ASPECT = 0.5, -- AI will not add any more CBs when TWS is more then X% of total WS. (to not destroy the progress)
-    PEACE_BASE_RELUCTANCE = 20, -- AI base stubbornness to refuse peace (always applied)
-    PEACE_TIME_MONTHS = 30, -- months of additional AI stubbornness in a war
+    PEACE_BASE_RELUCTANCE = 10, -- AI base stubbornness to refuse peace (always applied)
+    PEACE_TIME_MONTHS = 15, -- months of additional AI stubbornness in a war
     PEACE_TIME_FACTOR = 0.6, -- after months of stubbornness the effect of time passed is multiplied by this
     PEACE_TIME_FACTOR_NO_GOALS = 2.0, -- this extra time factor is applied after PEACE_TIME_FACTOR if we ahve no wargoals
     PEACE_WAR_EXHAUSTION_FACTOR = 0.5, -- AI willingness to peace based on war exhaustion
@@ -729,7 +729,7 @@ ai =
     PEACE_ALLY_FORCE_BALANCE_MULT = 0, -- Multiplies PEACE_FORCE_BALANCE_FACTOR for allies in a war
     AGGRESSION_BASE = 3, -- general AI aggression
     AGGRESSION_UNCIV_BONUS = 5, -- additional AI civ aggression against uncivs
-    FLEET_SIZE = 50, -- AI will attempt to keep fleets of roughly this size (fewer fleets generally results in more competent naval AI)
+    FLEET_SIZE = 30, -- AI will attempt to keep fleets of roughly this size (fewer fleets generally results in more competent naval AI)
     MIN_FLEETS = 1, -- Minimum amount of main fleets the AI will divide its navy into (does not include specialized fleets such as blockades and naval invasions)
     MAX_FLEETS = 20, -- Maximal amount of main fleets the AI will divide its navy into (does not include specialized fleets such as blockades and naval invasions)
     MONTHS_BEFORE_DISBAND = 8, -- Months from start date before AI will disband armies/navies (to avoid disbands because of early economic turmoil)

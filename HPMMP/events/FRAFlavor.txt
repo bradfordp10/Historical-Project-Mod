@@ -1290,10 +1290,7 @@ country_event = {
             exists = yes
             neighbour = THIS
             civilized = no
-        }
-        NOT = {
-            owns = 1706
-            owns = 1708 
+            number_of_states = 3
         }
         NOT = {
             truce_with = ALD
@@ -1321,27 +1318,10 @@ country_event = {
         badboy = 2
         relation = { who = ALD value = -200 }
         diplomatic_influence = { who = ALD value = -200 }
-        random_country = {
-            limit = {
-                tag = ALD
-                NOT = { number_of_states = 2 }
-            }
-            add_casus_belli = {
-                target = THIS
-                type = establish_protectorate_casus_belli
-                months = 24
-            }
-        }
-        random_country = {
-            limit = {
-                tag = ALD
-                number_of_states = 2
-            }
-            add_casus_belli = {
-                target = THIS
-                type = demand_concession_casus_belli
-                months = 24
-            }
+        add_casus_belli = {
+            target = ALD
+            type = demand_concession_casus_belli
+            months = 24
         }
         ai_chance = {
             factor = 1
