@@ -269,7 +269,13 @@ political_decisions = {
         }
 
         effect = {
-            AUS = { release_vassal = HUN }
+            AUS = { 
+                release_vassal = HUN
+                diplomatic_influence = { who = HUN value = -400 }
+                relation = { who = HUN value = -400 } 
+            }
+            clr_country_flag = unreleasable_country
+            neutrality = yes
             set_country_flag = hungarian_revolution_began
             small_arms = 100
             regular_clothes = 100

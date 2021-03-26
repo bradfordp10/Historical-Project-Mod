@@ -199,9 +199,9 @@ political_decisions = {
 			}
 			any_owned = {
 				limit = {
-					region = JAP_1649
+					province_id = 1649
 				}
-				naval_base = -3
+				naval_base = 3
 			}
 			
 			set_country_flag = imperial_japanese_navy
@@ -328,6 +328,7 @@ political_decisions = {
 				}
 			}
 			has_country_flag = establish_the_kaitakushi
+			NOT = { has_country_flag = karafuto_prefecture }
 		}
 		
 		allow = {
@@ -344,6 +345,7 @@ political_decisions = {
 		}
 		
 		effect = {
+			set_country_flag = karafuto_prefecture
 			random_owned = {
 				limit = {
 					province_id = 1087

@@ -1774,7 +1774,7 @@ political_decisions = {
                 state_scope = {
                     change_region_name = "Hokkaido"
                     any_owned = {
-                        add_province_modifier = { name = population_resettlement duration = 10950 }
+                        add_province_modifier = { name = population_resettlement duration = 1095 }
                         add_province_modifier = { name = baby_boom duration = 9125 }
                         add_province_modifier = { name = plantation duration = -1 }
                     }

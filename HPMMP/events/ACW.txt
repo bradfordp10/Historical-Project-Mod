@@ -54,11 +54,8 @@ country_event = {
 
     immediate = {
         set_country_flag = civil_war_soon
-        release_vassal = CSA
-        CSA = {
-            set_country_flag = unreleasable_country
-            set_country_flag = exempt_from_vassal_contribution
-        }
+        release = CSA
+        
     }
 
     option = {
@@ -96,6 +93,15 @@ country_event = {
                     }
                 }
                 secede_province = USA
+            }
+            any_owned = {
+            limit = {
+                province_id = 143
+                province_id = 144
+                province_id = 145
+            }
+            add_core = CSA
+            secede_province = CSA
             }
         }
 
@@ -144,6 +150,15 @@ country_event = {
                 secede_province = USA
             }
         }
+        any_owned = {
+            limit = {
+                province_id = 143
+                province_id = 144
+                province_id = 145
+            }
+            add_core = CSA
+            secede_province = CSA
+        }
         diplomatic_influence = { who = CSA value = 400 }
         relation = { who = CSA value = -400 }
         change_tag_no_core_switch = CSA
@@ -166,10 +181,7 @@ country_event = {
         NOT = { truce_with = CSA }
         CSA = { exists = yes }
         has_country_flag = civil_war_soon
-        OR = {
-            CSA = { NOT = { has_country_modifier = preparing_for_war } }
-            NOT = { is_our_vassal = CSA }
-        }
+        CSA = { NOT = { has_country_modifier = preparing_for_war } }
         NOT = { has_global_flag = american_civil_war_has_happened }
     }
 
@@ -177,12 +189,10 @@ country_event = {
         clr_country_flag = the_slavery_debate
         clr_country_flag = civil_war_soon
         set_global_flag = american_civil_war_has_happened
-        release_vassal = CSA
         diplomatic_influence = { who = CSA value = -400 }
         relation = { who = CSA value = -400 }
         CSA = {
             set_country_flag = the_slavery_debate
-            clr_country_flag = unreleasable_country
             neutrality = yes
         }
     }

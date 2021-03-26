@@ -1307,10 +1307,6 @@ country_event = {
 
     mean_time_to_happen = {
         months = 9
-        modifier = {
-            factor = 4
-            has_country_flag = algerian_rebellion
-        }
     }
 
     option = {

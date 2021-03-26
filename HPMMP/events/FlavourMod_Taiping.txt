@@ -67,6 +67,7 @@ country_event = {
 	option = {
 		name = "EVT160001OPTA"
 		plurality = -5
+		TPG = { neutrality = yes }
 		war = {
 			target = TPG
 			attacker_goal = { casus_belli = civil_war }		

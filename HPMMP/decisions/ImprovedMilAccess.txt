@@ -49,6 +49,7 @@ political_decisions = {
 
     remove_military_access = {
     	potential = {
+            war = no
             OR = {
                 any_greater_power = {
                     NOT = { tag = THIS }

@@ -73,7 +73,7 @@ country_event = {
         any_owned = {
             limit = {
                 is_core = TPG
-                not = { province_id = 1616 }
+                port = no
             }
             secede_province = TPG
         }
@@ -131,15 +131,6 @@ country_event = {
                     name = anti_manchu_sentiment
                     duration = 730
                 }
-            }
-        }
-        war = {
-            target = TPG
-            attacker_goal = {
-                casus_belli = civil_war
-            }
-            defender_goal = {
-                casus_belli = civil_war
             }
         }
         set_global_flag = taiping_has_happened
@@ -1485,6 +1476,7 @@ province_event = {
             region = CHI_1579
             region = CHI_1519
             region = CHI_1504
+            region = CHI_1505
         }
         is_core = CHI
         is_primary_culture = no

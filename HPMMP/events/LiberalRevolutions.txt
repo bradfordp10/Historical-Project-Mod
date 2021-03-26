@@ -3942,8 +3942,13 @@ country_event = {
             }
             secede_province = HUN
         }
-        relation = { who = HUN value = -100 }
+        relation = { who = HUN value = -400 }
+        diplomatic_influence = { who = HUN value = 400 }
         create_vassal = HUN
+        HUN = {
+            set_country_flag = unreleasable_country
+            set_country_flag = exempt_from_vassal_contribution
+        }
         any_owned = {
             limit = { is_core = AUS }
             remove_province_modifier = liberal_agitation
@@ -3954,7 +3959,7 @@ country_event = {
         }
         add_country_modifier = {
             name = no_more_war
-            duration = 7                                                    
+            duration = 180                                                    
         }
         random_owned = {
             limit = {
@@ -3987,7 +3992,7 @@ country_event = {
             government = hms_government
             add_country_modifier = {
                 name = no_more_war
-                duration = 7
+                duration = 180
             }
             political_reform = mandatory_service
             political_reform = non_secret_ballots
@@ -4203,7 +4208,7 @@ country_event = {
             }
             secede_province = HUN
         }
-        relation = { who = HUN value = -100 }
+        relation = { who = HUN value = -400 }
         prestige = -25
         casus_belli = {
             target = HUN
@@ -4276,7 +4281,13 @@ country_event = {
             }
             secede_province = HUN
         }
-        relation = { who = HUN value = -100 }
+        relation = { who = HUN value = -400 }
+        diplomatic_influence = { who = HUN value = 400 }
+        create_vassal = HUN
+        HUN = {
+            set_country_flag = unreleasable_country
+            set_country_flag = exempt_from_vassal_contribution
+        }
         any_owned = {
             limit = { is_core = AUS }
             remove_province_modifier = liberal_agitation
@@ -4287,12 +4298,7 @@ country_event = {
         }
         add_country_modifier = {
                 name = no_more_war
-                duration = 14                                               
-        }
-        casus_belli = {          
-            target = HUN                
-            type = annex_core_country
-            months = 60   
+                duration = 180                                               
         }
         random_owned = {
             limit = {
@@ -4325,7 +4331,7 @@ country_event = {
             government = hms_government
             add_country_modifier = {
                 name = no_more_war
-                duration = 14                                                 
+                duration = 180                                                 
             }
             political_reform = mandatory_service
             political_reform = non_secret_ballots

@@ -1169,7 +1169,12 @@ country_event = {
 
     trigger = {
         tag = SIC
-        government = absolute_monarchy
+        NOT = {
+            OR = {
+                government = hms_government
+                government = democracy
+            }
+        }
         year = 1844
         NOT = { year = 1855 }
         any_owned_province = {

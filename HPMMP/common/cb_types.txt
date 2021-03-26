@@ -2232,7 +2232,6 @@ liberate_country = {
             has_global_flag = italy_fights_turk
             has_global_flag = wakhan_treaty
             has_global_flag = persia_treaty
-            has_global_flag = italy_fights_turk
         }
         OR = {
             NOT = { has_country_flag = dismantle_declared }
@@ -2243,7 +2242,6 @@ liberate_country = {
             has_global_flag = italy_fights_turk
             has_global_flag = wakhan_treaty
             has_global_flag = persia_treaty
-            has_global_flag = italy_fights_turk
         }
     }
 
