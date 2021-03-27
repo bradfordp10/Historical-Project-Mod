@@ -1578,10 +1578,7 @@ political_decisions = {
         }
 
         allow = {
-            OR = {
-                great_wars_enabled = yes
-                NOT = { any_greater_power = { alliance_with = ENG } }
-            }
+            great_wars_enabled = yes
             war = no
             ENG = { war = no }
             is_greater_power = yes
@@ -1595,14 +1592,12 @@ political_decisions = {
             set_country_flag = anglo_alliance_created
             relation = { who = ENG value = 200 }
             create_alliance = ENG
-            military_access = ENG
-            ENG = { military_access = THIS }
         }
     }
 
     japanese_sakhalin = {
         picture = map_yellow_sea
-        blue_and_brown_water_schools = 1
+        
         potential = {
             OR = {
                 tag = JAP

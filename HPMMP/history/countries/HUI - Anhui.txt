@@ -3,7 +3,7 @@ primary_culture = beifaren
 religion = mahayana
 government = presidential_dictatorship
 plurality = 0.0
-nationalvalue = nv_order
+nationalvalue = nv_tradition
 literacy = 0.04
 
 # Political reforms

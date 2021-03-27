@@ -460,7 +460,7 @@ political_decisions = {
 				GER = {
 					exists = yes
 					blue_and_brown_water_schools = 1
-					NOT = { war_with_this }
+					NOT = { war_with = THIS }
 				}
 			}
 			money = 150000
@@ -491,14 +491,18 @@ political_decisions = {
 			}
 			CHI = {
 				set_country_flag = beiyang_fleet_established 
-				activate_technology = alphabetic_flag_signaling
+				activate_technology = battleship_column_doctrine
 				activate_technology = steamers
+				activate_technology = alphabetic_flag_signaling
+				activate_technology = iron_steamers
 			}
 			
 			KMT = {
 				set_country_flag = beiyang_fleet_established
-				activate_technology = alphabetic_flag_signaling
+				activate_technology = battleship_column_doctrine
 				activate_technology = steamers
+				activate_technology = alphabetic_flag_signaling
+				activate_technology = iron_steamers
 			}
 			set_variable = { which = china_destablization value = 1 }
 		}
@@ -516,6 +520,7 @@ political_decisions = {
 		allow = {
 			OR = {
 				year = 1895
+				civilization_progress = 0.65
 				civilized = yes
 				AND = {
 					foreign_weapons = yes_foreign_weapons
@@ -531,8 +536,12 @@ political_decisions = {
 		
 		effect = {
 			treasury = -100000
-			activate_technology = army_professionalism
+			activate_technology = army_command_principle
+			activate_technology = flintlock_rifles
 			activate_technology = muzzle_loaded_rifles
+			activate_technology = bronze_muzzle_loaded_artillery
+			activate_technology = iron_muzzle_loaded_artillery
+			activate_technology = military_staff_system
 			random_owned = {
 				limit = { owner = { civilized = no } }
 				owner = {
@@ -552,19 +561,25 @@ political_decisions = {
 				set_country_flag = the_new_army_established 
 				activate_technology = flintlock_rifles
 				activate_technology = muzzle_loaded_rifles
-				activate_technology = army_professionalism
+				activate_technology = bronze_muzzle_loaded_artillery
+				activate_technology = iron_muzzle_loaded_artillery
+				activate_technology = military_staff_system
 			}
 			KMT = {
 				set_country_flag = the_new_army_established 
 				activate_technology = flintlock_rifles
 				activate_technology = muzzle_loaded_rifles
-				activate_technology = army_professionalism
+				activate_technology = bronze_muzzle_loaded_artillery
+				activate_technology = iron_muzzle_loaded_artillery
+				activate_technology = military_staff_system
 			}
 			GMJ = {
 				set_country_flag = the_new_army_established 
 				activate_technology = flintlock_rifles
 				activate_technology = muzzle_loaded_rifles
-				activate_technology = army_professionalism
+				activate_technology = bronze_muzzle_loaded_artillery
+				activate_technology = iron_muzzle_loaded_artillery
+				activate_technology = military_staff_system
 			}
 			set_variable = { which = china_destablization value = 1 }
 		}
@@ -621,12 +636,18 @@ political_decisions = {
 			1482 = { naval_base = 3 }
 			prestige = 5
 			treasury = -75000
-			set_country_flag = fuzhou_aresenal_established 
+			set_country_flag = fuzhou_aresenal_established
+			activate_technology = post_nelsonian_thought
+			activate_technology = clipper_design 
 			CHI = {
 				set_country_flag = fuzhou_aresenal_established
+				activate_technology = post_nelsonian_thought
+				activate_technology = clipper_design
 			}
 			KMT = { 
-				set_country_flag = fuzhou_aresenal_established 
+				set_country_flag = fuzhou_aresenal_established
+				activate_technology = post_nelsonian_thought
+				activate_technology = clipper_design 
 			}
 		}
 		ai_will_do = { factor = 1 }
@@ -648,6 +669,9 @@ political_decisions = {
 		effect = {
 			prestige = 5
 			add_country_modifier = { name = maritime_customs_service duration = -1 }
+			activate_technology = no_standard
+			CHI = { activate_technology = no_standard }
+			KMT = { activate_technology = no_standard }
 			random_owned = { limit = { owner = { civilized = no  } } owner = { military_reform = yes_foreign_naval_officers } }
 		}
 		ai_will_do = { factor = 1 }
@@ -711,12 +735,13 @@ political_decisions = {
 			treasury = -75000
 			set_country_flag = establish_the_peking_field_force 
 			activate_technology = military_staff_system
-			activate_technology = army_command_principle
+			activate_technology = army_professionalism
 			random_owned = {
 				limit = { owner = { civilized = no } }
 				owner = {
 					military_reform = yes_foreign_weapons
 					military_reform = yes_foreign_officers
+					activate_technology = flintlock_rifles
 				}
 			}
 			CHI = {
@@ -724,12 +749,14 @@ political_decisions = {
 				activate_technology = flintlock_rifles
 				activate_technology = military_staff_system
 				activate_technology = army_command_principle
+				activate_technology = army_professionalism
 			}
 			KMT = {
 				set_country_flag = establish_the_peking_field_force 
 				activate_technology = flintlock_rifles
 				activate_technology = military_staff_system
 				activate_technology = army_command_principle
+				activate_technology = army_professionalism
 			}			
 		}
 		ai_will_do = { factor = 1 }
@@ -772,6 +799,7 @@ political_decisions = {
 				owner = { economic_reform = yes_education_reform  }
 			}
 			activate_technology = private_banks
+			activate_technology = no_standard
 			KMT = { activate_technology = private_banks }
 			CHI = { activate_technology = private_banks }
 			set_variable = { which = china_destablization value = -1 }
@@ -874,11 +902,17 @@ political_decisions = {
 					economic_reform = yes_firearms_production 
 				}
 			}
+			activate_technology = breech_loaded_rifles
+			activate_technology = piston_steam_engine
 			CHI = {
 				set_country_flag = hanyang_arsenal
+				activate_technology = breech_loaded_rifles
+				activate_technology = piston_steam_engine
 			}
 			KMT = {
 				set_country_flag = hanyang_arsenal
+				activate_technology = breech_loaded_rifles
+				activate_technology = piston_steam_engine
 			}
 			random_owned = {
 				limit = {
@@ -958,6 +992,10 @@ political_decisions = {
 		
 		allow = {
 			war = no
+			OR = { 
+				civilization_progress = 0.65
+				civilized = yes
+			}
 		}
 		
 		effect = {
@@ -1111,7 +1149,7 @@ political_decisions = {
 			OR = { 
 				AND = {
 					foreign_weapons = yes_foreign_weapons
-					civilization_progress = 0.5
+					civilization_progress = 0.65
 				}
 				civilized = yes
 			}
@@ -1154,6 +1192,7 @@ political_decisions = {
 		allow = {
 			war = no
 			OR = {
+				civilization_progress = 0.8
 				year = 1895
 				civilized = yes
 			}
@@ -1223,10 +1262,12 @@ political_decisions = {
 				owner = { military_reform = yes_western_shipyards }
 			}
 			CHI = {
+				activate_technology = raider_group_doctrine
 				set_country_flag = kiangnan_aresenal_established
 				activate_technology = hot_blast
 			}
 			KMT = { 
+				activate_technology = raider_group_doctrine
 				set_country_flag = kiangnan_aresenal_established
 				activate_technology = hot_blast
 			}

@@ -3,7 +3,7 @@ primary_culture = south_andean
 religion = catholic
 government = democracy
 plurality = 20.0
-nationalvalue = nv_liberty
+nationalvalue = nv_order
 literacy = 0.12
 non_state_culture_literacy = 0.01
 civilized = yes
@@ -72,6 +72,7 @@ military_staff_system = 1
 clipper_design = 1
 
 # Inventions
+dragoon_activation = yes
 
 #Starting Consciousness
 consciousness = 2

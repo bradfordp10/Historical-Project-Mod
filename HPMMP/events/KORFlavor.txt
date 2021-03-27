@@ -1494,6 +1494,12 @@ country_event = {
                 THIS = { primary_culture = japanese }
             }
             clr_country_flag = seoul_occupied
+            THIS = {
+                war = {
+                    target = KOR
+                    attacker_goal = { casus_belli = make_puppet }
+                }
+            }
             any_owned = {
                 limit = {
                     OR = {
@@ -1501,17 +1507,7 @@ country_event = {
                         province_id = 1624
                     }
                 }
-                secede_province = THIS
-            }
-            THIS = {
-                war = {
-                    target = KOR
-                    attacker_goal = { casus_belli = make_puppet }
-                    defender_goal = {
-                        casus_belli = acquire_core_state
-                        state_province_id  = 1624
-                    }
-                }
+                change_controller = THIS
             }
         }
     }

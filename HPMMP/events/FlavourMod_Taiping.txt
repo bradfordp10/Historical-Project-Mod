@@ -74,10 +74,6 @@ country_event = {
 			defender_goal = { casus_belli = civil_war }
 		}		
 		set_global_flag = tpg_war_started
-		small_arms = 150
-		canned_food = 150
-		regular_clothes = 150
-		grain = 1000
 	}
 }
 
@@ -134,12 +130,6 @@ country_event = {
 		name = "EVTOPT99962"
 		war_exhaustion = 50
 		QNG = { country_event = 99963 }
-		random_owned = { limit = { NOT = { region = CHI_2221 } } state_scope = { any_owned = { secede_province = QNG } } }
-		random_owned = { limit = { NOT = { region = CHI_2221 } } state_scope = { any_owned = { secede_province = QNG } } }
-		random_owned = { limit = { NOT = { region = CHI_2221 } } state_scope = { any_owned = { secede_province = QNG } } }
-		random_owned = { limit = { NOT = { region = CHI_2221 } } state_scope = { any_owned = { secede_province = QNG } } }
-		random_owned = { limit = { NOT = { region = CHI_2221 } } state_scope = { any_owned = { secede_province = QNG } } }
-		random_owned = { limit = { NOT = { region = CHI_2221 } } state_scope = { any_owned = { secede_province = QNG } } }
 	}
 }
 

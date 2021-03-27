@@ -6,7 +6,7 @@ culture = circassian
 religion = sunni
 government = theocracy
 plurality = 0.0
-nationalvalue = nv_order
+nationalvalue = nv_tradition
 literacy = 0.01
 
 # Political reforms

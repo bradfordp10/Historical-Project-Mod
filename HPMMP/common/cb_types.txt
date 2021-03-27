@@ -613,6 +613,7 @@ restore_austrian_empire = {
             NOT = { tag = ITA }
             THIS = { NOT = { has_country_flag = accepts_italy } }
         }
+        NOT = { tag = HUN }
         NOT = { has_country_modifier = neutrality_modifier }
         NOT = { in_sphere = THIS }
         OR = {

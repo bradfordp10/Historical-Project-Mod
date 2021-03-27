@@ -6,7 +6,7 @@ culture = yao
 religion = protestant
 government = democracy
 plurality = 0.0
-nationalvalue = nv_order
+nationalvalue = nv_tradition
 literacy = 0.04
 
 # Political reforms

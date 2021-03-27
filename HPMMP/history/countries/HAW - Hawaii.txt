@@ -1,11 +1,10 @@
 capital = 658
 primary_culture = polynesian
-culture = yankee
 religion = protestant
 government = absolute_monarchy
 plurality = 0.0
 nationalvalue = nv_tradition
-literacy = 0.01
+literacy = 0.03
 non_state_culture_literacy = 0.01
 
 slavery = no_slavery

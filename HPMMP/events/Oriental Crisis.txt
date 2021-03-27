@@ -814,20 +814,7 @@ country_event = {
             who = EGY
             value = -50
         }
-        casus_belli = {
-            target = EGY
-            type = liberate_country
-            months = 12
-        }
-        set_country_flag = exclusive_liberate_country_CB
         EGY = { add_country_modifier = { name = war_focus duration = -1 } }
-        war = {
-            target = EGY
-            attacker_goal = {
-                casus_belli = liberate_country
-                country = TUR
-            }
-        }
         TUR = { country_event = 90086 }
         random_owned = {
             limit = {
@@ -917,6 +904,13 @@ country_event = {
             who = FROM
             value = 75
         }
+        war = {               #No target initiates a one-day war that automatically resolves in a WP, but call_ally causes the new ally 
+               attacker_goal = {
+                   casus_belli = humiliate
+               }
+               call_ally = yes
+        }
+        badboy = -6       #Add this in so that you don't have to eat the infamy from declaring a war with no CB fabricated already.
     }
 }
 
@@ -1277,6 +1271,16 @@ country_event = {
             who = EGY
             value = 400
         }
+        create_alliance = EGY
+        EGY = {
+            war = {               #No target initiates a one-day war that automatically resolves in a WP, but call_ally causes the new ally 
+                   attacker_goal = {
+                       casus_belli = humiliate
+                   }
+                   call_ally = yes
+            }
+            badboy = -6       #Add this in so that you don't have to eat the infamy from declaring a war with no CB fabricated already.
+        }
         TUR = { country_event = 90091 }
         any_country = {
             limit = {
@@ -1388,9 +1392,13 @@ country_event = {
         name = "EVT90092OPTA"
         relation = {
             who = FROM
-            value = -20
+            value = -75
         }
-        FROM = { country_event = 90093 }
+        add_casus_belli = {
+            target = FROM
+            type = humiliate
+            months = 12
+        }
         ai_chance = {
             factor = 75
         }
@@ -1409,79 +1417,82 @@ country_event = {
     }
 }
 
-country_event = {
-
-    id = 90093
-
-    title = "EVTNAME90093" # $FROMCOUNTRY$ Demands Withdrawal
-    desc = "EVTDESC90093"
-    picture = "cairo"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVT90093OPTA"
-        clr_country_flag = oriental_crisis_support_Egypt
-        set_country_flag = oriental_crisis_neutral
-        prestige = -10
-        relation = {
-            who = EGY
-            value = -25
-        }
-        random_owned = {
-            limit = {
-                owner = { is_sphere_leader_of = EGY }
-            }
-            owner = {
-                diplomatic_influence = {
-                    who = EGY
-                    value = -200
-                }
-            }
-        }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = { is_sphere_leader_of = EGY }
-                }
-            }
-            owner = {
-                diplomatic_influence = {
-                    who = EGY
-                    value = -50
-                }
-            }
-        }
-        ai_chance = {
-            factor = 75
-            modifier = {
-                factor = 0
-                war_with = FROM
-                NOT = { has_country_flag = oriental_crisis_neutral }
-            }
-        }
-    }
-
-    option = {
-        name = "EVT90093OPTB"
-        relation = {
-            who = FROM
-            value = -50
-        }
-        add_casus_belli = {
-            target = FROM
-            type = humiliate
-            months = 12
-        }
-        ai_chance = {
-            factor = 25
-            modifier = {
-                factor = 0
-                has_country_flag = oriental_crisis_neutral
-            }
-        }
-    }
-}
+#country_event = {
+#
+#    id = 90093
+#
+#    title = "EVTNAME90093" # $FROMCOUNTRY$ Demands Withdrawal
+#    desc = "EVTDESC90093"
+#    picture = "cairo"
+#
+#    is_triggered_only = yes
+#
+#    option = {
+#        name = "EVT90093OPTA"
+#        clr_country_flag = oriental_crisis_support_Egypt
+#        set_country_flag = oriental_crisis_neutral
+#        prestige = -10
+#        relation = {
+#            who = EGY
+#            value = -25
+#        }
+#        random_owned = {
+#            limit = {
+#                owner = { is_sphere_leader_of = EGY }
+#            }
+#            owner = {
+#                diplomatic_influence = {
+#                    who = EGY
+#                    value = -200
+#                }
+#            }
+#        }
+#        random_owned = {
+#            limit = {
+#                owner = {
+#                    NOT = { is_sphere_leader_of = EGY }
+#                }
+#            }
+#            owner = {
+#                diplomatic_influence = {
+#                    who = EGY
+#                    value = -50
+#                }
+#            }
+#        }
+#        any_country = {
+#            limit = {
+#                OR = {
+#                    tag = TUR
+#                }
+#            }
+#        }
+#        ai_chance = {
+#            factor = 75
+#            
+#        }
+#    }
+#
+#    option = {
+#        name = "EVT90093OPTB"
+#        relation = {
+#            who = FROM
+#            value = -50
+##        }
+#        add_casus_belli = {
+#            target = FROM
+#            type = humiliate
+#            months = 12
+#        }
+#        ai_chance = {
+#            factor = 25
+#            modifier = {
+#                factor = 0
+#                has_country_flag = oriental_crisis_neutral
+#            }
+#        }
+#    }
+#}
 
 country_event = {
 

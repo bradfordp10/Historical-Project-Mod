@@ -114,8 +114,7 @@ political_decisions = {
                 modifier = {
                     factor = 0
                     tag = ENG
-                    NOT = { owns = 1538 }
-                    1538 = { owner = { civilized = no truce_with = THIS } }
+                    NOT = { has_country_flag = treaty_of_tientsin }
                 }
                 modifier = {
                     factor = 0
@@ -273,8 +272,7 @@ political_decisions = {
                 modifier = {
                     factor = 0
                     tag = ENG
-                    NOT = { owns = 1566 }
-                    1566 = { owner = { civilized = no truce_with = THIS } }
+                    NOT = { has_country_flag = treaty_of_tientsin }
                 }
                 modifier = {
                     factor = 0
@@ -342,8 +340,7 @@ political_decisions = {
                 modifier = {
                     factor = 0
                     tag = ENG
-                    NOT = { owns = 1538 }
-                    1538 = { owner = { civilized = no truce_with = THIS } }
+                    NOT = { has_country_flag = treaty_of_tientsin }
                 }
                 modifier = {
                     factor = 0
@@ -404,8 +401,7 @@ political_decisions = {
                 modifier = {
                     factor = 0
                     tag = ENG
-                    NOT = { owns = 1538 }
-                    1538 = { owner = { civilized = no truce_with = THIS } }
+                    NOT = { has_country_flag = treaty_of_tientsin }
                 }
                 modifier = {
                     factor = 0
@@ -473,8 +469,7 @@ political_decisions = {
                 modifier = {
                     factor = 0
                     tag = ENG
-                    NOT = { owns = 1538 }
-                    1538 = { owner = { civilized = no truce_with = THIS } }
+                    NOT = { has_country_flag = treaty_of_tientsin }
                 }
                 modifier = {
                     factor = 0
@@ -553,8 +548,7 @@ political_decisions = {
                 modifier = {
                     factor = 0
                     tag = ENG
-                    NOT = { owns = 1538 }
-                    1538 = { owner = { civilized = no truce_with = THIS } }
+                    NOT = { has_country_flag = treaty_of_tientsin }
                 }
                 modifier = {
                     factor = 0
@@ -612,8 +606,7 @@ political_decisions = {
                 modifier = {
                     factor = 0
                     tag = ENG
-                    NOT = { owns = 1538 }
-                    1538 = { owner = { civilized = no truce_with = THIS } }
+                    NOT = { has_country_flag = treaty_of_tientsin }
                 }
                 modifier = {
                     factor = 0
@@ -681,8 +674,7 @@ political_decisions = {
                 modifier = {
                     factor = 0
                     tag = ENG
-                    NOT = { owns = 1538 }
-                    1538 = { owner = { civilized = no truce_with = THIS } }
+                    NOT = { has_country_flag = treaty_of_tientsin }
                 }
                 modifier = {
                     factor = 0
@@ -744,8 +736,7 @@ political_decisions = {
                 modifier = {
                     factor = 0
                     tag = ENG
-                    NOT = { owns = 1538 }
-                    1538 = { owner = { civilized = no truce_with = THIS } }
+                    NOT = { has_country_flag = treaty_of_tientsin }
                 }
                 modifier = {
                     factor = 0

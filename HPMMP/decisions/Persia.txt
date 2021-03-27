@@ -157,7 +157,7 @@ revoke_kurdish_autonomy = {
         }
 
         allow = {
-            civilization_progress = 0.35
+            civilization_progress = 0.25
         }
 
         effect = {

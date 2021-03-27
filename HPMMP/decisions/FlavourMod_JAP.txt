@@ -192,16 +192,22 @@ political_decisions = {
 			relation = {
 				who = ENG
 				value = 50
-			}	
-			1649 = {
-				sub_unit = { type = ironclad value = current }
-				sub_unit = { type = ironclad value = current }
 			}
 			any_owned = {
+				limit = {
+					region = JAP_1649
+				}
+				naval_base = -3
+			}
+			random_owned = {
 				limit = {
 					province_id = 1649
 				}
 				naval_base = 3
+			}
+			1649 = {
+				sub_unit = { type = ironclad value = current }
+				sub_unit = { type = ironclad value = current }
 			}
 			
 			set_country_flag = imperial_japanese_navy

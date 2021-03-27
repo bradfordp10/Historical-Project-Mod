@@ -851,7 +851,7 @@ political_decisions = {
         picture = dreams_of_empire
         potential = {
             civilized = no
-            civilization_progress = 0.2
+            civilization_progress = 0.1
             NOT = {
                 has_country_flag = lacking_writing_system
                 any_owned_province = { has_building = naval_base }

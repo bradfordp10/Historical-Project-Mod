@@ -1,5 +1,6 @@
 capital = 608
-primary_culture = swiss
+primary_culture = north_german
+culture = swiss
 religion = protestant
 government = hms_government
 plurality = 25.0
@@ -76,6 +77,13 @@ hot_blast = 1
 basic_chemistry = 1
 
 #Inventions
+authoritarianism = yes
+hierarchical_order = yes
+traditionalism = yes
+political_religion = yes
+paternalism = yes
+
+schools = industrial_tech_school
 
 # Starting Consciousness
 consciousness = 3

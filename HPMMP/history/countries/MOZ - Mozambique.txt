@@ -11,7 +11,7 @@ culture = swahili
 religion = catholic
 government = presidential_dictatorship
 plurality = 0.0
-nationalvalue = nv_order
+nationalvalue = nv_tradition
 literacy = 0.13
 
 # Political reforms

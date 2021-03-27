@@ -146,7 +146,7 @@ country_event = {
 
             add_country_modifier = {
                 name = no_more_war
-                duration = 90
+                duration = 120
             }
 
             add_country_modifier = { name = fanatic_army duration = 1825 }

@@ -3,7 +3,7 @@ primary_culture = north_andean
 religion = catholic
 government = democracy
 plurality = 25.0
-nationalvalue = nv_equality
+nationalvalue = nv_order
 literacy = 0.06
 non_state_culture_literacy = 0.01
 civilized = yes
@@ -70,6 +70,7 @@ piston_steam_engine = 1
 mechanical_production = 1
 
 # Inventions
+dragoon_activation = yes
 
 #Starting Consciousness
 consciousness = 2

@@ -81,6 +81,7 @@ hot_blast = 1
 basic_chemistry = 1
 
 #Inventions
+gendarmerie = yes
 
 # Starting Consciousness
 consciousness = 3

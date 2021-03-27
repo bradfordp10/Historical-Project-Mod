@@ -798,8 +798,8 @@ country_event = {
             exists = yes
             ai = yes
             OR = {
-                average_consciousness = 4
-                average_militancy = 2
+                average_consciousness = 1
+                average_militancy = 1
                 has_country_modifier = springtime_of_nations
             }
         }

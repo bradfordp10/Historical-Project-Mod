@@ -82,5 +82,7 @@ romanticism = 1
 #Inventions
 
 # Starting Consciousness
-consciousness = 1
-nonstate_consciousness = 1
+consciousness = 0
+nonstate_consciousness = 0
+
+schools = army_tech_school

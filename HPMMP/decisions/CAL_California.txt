@@ -119,7 +119,7 @@ annex_california = {
         OR = {
             CAL = { exists = yes }
             MEX = {
-                any_owned = {
+                any_owned_province = {
                     is_core = CAL
                 }
             }
@@ -127,12 +127,9 @@ annex_california = {
     }
 
     allow = {
-        OR = {  
-            has_country_flag = treaty_of_guadalupe_hidalgo
-            AND = {
-                MEX = { has_recently_lost_war = yes }
-                truce_with = THIS
-            }
+        any_owned_province = {
+            is_core = MEX
+            NOT = { is_core = TEX }
         }
         CAL = {
             OR = { 

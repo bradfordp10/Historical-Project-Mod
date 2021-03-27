@@ -6,10 +6,10 @@ plurality = 0.0
 nationalvalue = nv_tradition
 literacy = 0.05
 non_state_culture_literacy = 0.04
-prestige = 1
+prestige = 25
 
 # Political reforms
-slavery = no_slavery
+slavery = yes_slavery
 upper_house_composition = appointed
 vote_franschise = none_voting
 public_meetings = no_meeting
@@ -48,6 +48,7 @@ upper_house = {
     communist = 0
 }
 
+decision = QNG_setup
 
 foreign_weapons = yes_foreign_weapons
 admin_reform = yes_admin_reform
@@ -63,6 +64,7 @@ modern_winemaking = yes
 #big_sail_ships = yes
 #sail_ships_transport = yes
 #big_sail_support = yes
+qing_grain = yes
 
 # Starting Consciousness
 consciousness = 0

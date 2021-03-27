@@ -32,7 +32,7 @@ conscription = mandatory_service
 debt_law = debtors_prisons
 penal_system = incarceration
 child_labor = child_labor_legal
-citizens_rights = primary_culture_only
+citizens_rights = culture_voting_only
 border_policy = open_borders
 
 set_country_flag = protestant_country
@@ -92,6 +92,8 @@ nonstate_consciousness = 1
 
 oob = "SWI_oob.txt"
 decision = declare_neutrality
+decision = 1836_switzerland_setup
+
 
 1861.1.1 = {
     oob = "/1861/SWI_oob.txt"

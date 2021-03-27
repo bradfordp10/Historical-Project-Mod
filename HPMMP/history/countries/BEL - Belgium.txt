@@ -34,10 +34,11 @@ conscription = mandatory_service
 debt_law = debtors_prisons
 penal_system = capital_punishment
 child_labor = child_labor_legal
-citizens_rights = culture_voting_only
+citizens_rights = all_voting_pops
 border_policy = open_borders
 
 set_country_flag = catholic_country
+
 
 ruling_party = BEL_conservative
 last_election = 1834.1.1
@@ -81,7 +82,10 @@ experimental_railroad = 1
 high_pressure_steam_engine = 1
 interchangeable_parts = 1
 
+set_country_flag = is_belgium
+
 #Inventions
+gendarmerie = yes
 
 # Starting Consciousness
 consciousness = 4

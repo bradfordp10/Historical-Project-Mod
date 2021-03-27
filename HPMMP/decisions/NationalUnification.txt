@@ -1075,7 +1075,7 @@ political_decisions = {
             any_country = {
                 limit = {
                     is_culture_group = italian
-                    OR = { in_sphere = THIS part_of_sphere = no }
+                    in_sphere = THIS
                     NOT = { has_country_flag = post_colonial_country }
                 }
                 country_event = 11101

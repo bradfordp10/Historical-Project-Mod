@@ -4607,7 +4607,7 @@ country_event = {
         name = "EVT10227OPTA"
         diplomatic_influence = {
             who = HUN
-            value = -100
+            value = -400
         }
         any_pop = {
             limit = { is_primary_culture = yes }

@@ -255,6 +255,35 @@ political_decisions = {
         }
     }
 
+    hungary_no_wars = {
+        picture = gtfo
+        potential = {
+            tag = HUN
+            has_global_flag = hungarian_revolution_occurred
+            vassal_of = AUS
+            NOT = { has_country_flag = hungarian_revolution_began }
+        }
+
+        allow = {
+            war = yes
+            has_country_modifier = no_more_war
+        }
+
+        effect = {
+            any_country = {
+                limit = {
+                    NOT = { tag = AUS }
+                    war_with = THIS
+                }
+                end_war = THIS
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
     begin_hungarian_revolution = {
         picture = gtfo
         potential = {

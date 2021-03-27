@@ -72,6 +72,7 @@ hot_blast = 1
 experimental_railroad = 1
 basic_chemistry = 1
 stock_exchange = 1
+market_structure = 1
 ad_hoc_money_bill_printing = 1
 romanticism = 1
 interchangeable_parts = 1
@@ -81,6 +82,7 @@ late_classical_theory = 1
 # Inventions
 secularization = yes
 social_conscience = yes
+gendarmerie = yes
 
 # Starting Consciousness
 consciousness = 3
@@ -109,8 +111,9 @@ decision = france_1836_setup
 oob = "FRA_oob.txt"
 
 foreign_investment = {
-    PAP = 6000
-    SAR = 4000
+    PAP = 15000
+    SAR = 10000
+    BEL = 20000
 }
 
 1861.1.1 = {

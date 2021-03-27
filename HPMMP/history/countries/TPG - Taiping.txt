@@ -1,6 +1,9 @@
 capital = 2221
-primary_culture = nanfaren
+primary_culture = hakka
+culture = nanfaren
 culture = beifaren
+culture = yue
+culture = min
 religion = protestant
 government = theocracy
 plurality = 0.0

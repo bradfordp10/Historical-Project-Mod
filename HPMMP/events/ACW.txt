@@ -95,13 +95,15 @@ country_event = {
                 secede_province = USA
             }
             any_owned = {
-            limit = {
-                province_id = 143
-                province_id = 144
-                province_id = 145
-            }
-            add_core = CSA
-            secede_province = CSA
+                limit = {
+                    OR = {
+                        province_id = 143
+                        province_id = 144
+                        province_id = 145
+                    }
+                }
+                add_core = CSA
+                secede_province = CSA
             }
         }
 
@@ -152,9 +154,11 @@ country_event = {
         }
         any_owned = {
             limit = {
-                province_id = 143
-                province_id = 144
-                province_id = 145
+                    OR = {
+                        province_id = 143
+                        province_id = 144
+                        province_id = 145
+                    }
             }
             add_core = CSA
             secede_province = CSA

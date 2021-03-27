@@ -97,12 +97,13 @@ nonstate_consciousness = 1
 schools = army_tech_school
 
 foreign_investment = {
-    NEH = 10000
-    SGM = 10000
-    OLD = 10000
-    MEC = 7500
+    NEH = 20000
+    SGM = 20000
+    OLD = 20000
+    MEC = 17500
     SAX = 7500
-    HAN = 10000
+    HAN = 15000
+    UBD = 10000
     SIC = 2000
 }
 
