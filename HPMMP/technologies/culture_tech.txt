@@ -4,7 +4,7 @@ classicism_n_early_romanticism = {
     year = 1836
     cost = 3600
 
-    prestige = 0.075
+    prestige = 0.05
     ai_chance = {
         factor = 1.01
         modifier = {
@@ -28,7 +28,7 @@ romanticism = {
     year = 1836
     cost = 7200
 
-    prestige = 0.075
+    prestige = 0.05
 
 
     ai_chance = {
@@ -58,7 +58,7 @@ realism = {
     year = 1836
     cost = 10800
 
-    prestige = 0.075
+    prestige = 0.05
     ai_chance = {
         factor = 1.05
         modifier = {
@@ -89,7 +89,7 @@ impressionism = {
     year = 1850
     cost = 14400
 
-    prestige = 0.075
+    prestige = 0.05
     ai_chance = {
         factor = 1.05
         modifier = {
@@ -557,12 +557,12 @@ biologism = {
             not = { literacy = 0.25 }
         }
         modifier = {
-            factor = 10
+            factor = 50
             capital_scope = { continent = europe }
             NOT = { tag = TUR }
             OR = {
-                not = { literacy = 0.7 }
-                year = 1880
+                not = { literacy = 0.75 }
+                year = 1870
                 tag = ENG
             }
             OR = {
@@ -593,10 +593,10 @@ social_science = {
     cost = 18000
 
     colonial_migration = 0.05
-    education_efficiency = 0.2
+    education_efficiency = 0.1
 
     ai_chance = {
-        factor = 1.5
+        factor = 1.05
         modifier = {
             factor = 2 #2
             not = { literacy = 0.75 }
@@ -637,9 +637,9 @@ social_alienation = {
     cost = 21600
 
     colonial_migration = 0.05
-    education_efficiency = 0.2
+    education_efficiency = 0.1
     ai_chance = {
-        factor = 1.5
+        factor = 1.05
         modifier = {
             factor = 2
             is_greater_power = yes
@@ -698,7 +698,7 @@ ideological_thought = {
     max_national_focus = 1
 
     ai_chance = {
-        factor = 11
+        factor = 15
         modifier = {
             factor = 6
             is_greater_power = yes
@@ -744,6 +744,25 @@ ideological_thought = {
             factor = 20
             culture_has_union_tag = yes
         }
+        modifier = {
+            factor = 20
+            tag = PRU
+        }
+        modifier = {
+            factor = 5100
+            tag = SAR
+            year = 1845
+        }
+        modifier = {
+            factor = 5100
+            OR = {
+                year = 1845
+                tag = SAR
+                tag = PRU
+                tag = USA
+                tag = FRA
+            }
+        }
     }
 }
 state_n_government = {
@@ -753,9 +772,9 @@ state_n_government = {
 
     max_national_focus = 1
     ai_chance = {
-        factor = 15
+        factor = 25
         modifier = {
-            factor = 3.5
+            factor = 4
             is_greater_power = yes
         }
         modifier = {
@@ -773,24 +792,37 @@ state_n_government = {
             }
         }
         modifier = {
+            factor = 0.25
+            is_greater_power = no
+            is_secondary_power = no
+            NOT = { total_pops = 3000000 }
+        }
+        modifier = {
             factor = 20
             culture_has_union_tag = yes
         }
 
         modifier = {
-            factor = 30
+            factor = 51
             rank = 16
             year = 1850
             any_owned_province = { port = yes }
             total_pops = 3000000
         }
         modifier = {
-            factor = 30
+            factor = 5100
             OR = {
-                year = 1860
+                year = 1845
                 tag = SAR
                 tag = PRU
                 tag = USA
+                tag = FRA
+            }
+        }
+        modifier = {
+            factor = 30
+            OR = {
+                year = 1860
                 colonial_nation = yes
             }
         }
@@ -810,9 +842,9 @@ nationalism_n_imperialism = {
     cb_creation_speed = 0.1
 
     ai_chance = {
-        factor = 20
+        factor = 25
         modifier = {
-            factor = 21
+            factor = 25
             is_greater_power = yes
             OR = {
                 any_greater_power = { any_owned_province = { any_neighbor_province = { empty = yes } } }
@@ -827,7 +859,17 @@ nationalism_n_imperialism = {
             total_pops = 4000000
         }
         modifier = {
-            factor = 2
+            factor = 50
+            is_greater_power = yes
+            year = 1860
+        }
+        modifier = {
+            factor = 200
+            tag = FRA
+            year = 1852
+        }
+        modifier = {
+            factor = 500
             is_greater_power = yes
             year = 1865
         }
@@ -837,7 +879,7 @@ nationalism_n_imperialism = {
             year = 1870
         }
         modifier = {
-            factor = 1.5
+            factor = 2.5
             OR = {
                 total_pops = 4000000
                 AND = {
@@ -869,9 +911,14 @@ nationalism_n_imperialism = {
                 AND = {
                     cultural_union = { exists = no }
                     is_greater_power = yes
+                    year = 1855
                 }
                 tag = POR
             }
+        }
+        modifier = {
+            factor = 510
+            tag = SAR
         }
     }
 }
@@ -883,9 +930,9 @@ revolution_n_counterrevolution = {
     max_national_focus = 1
     diplomatic_points = 0.25
     ai_chance = {
-        factor = 20
+        factor = 35
         modifier = {
-            factor = 21
+            factor = 200
             is_greater_power = yes
             OR = {
                 any_greater_power = { any_owned_province = { any_neighbor_province = { empty = yes } } }
@@ -957,7 +1004,7 @@ introspectionism = {
     reinforce_rate = 0.05
 
     ai_chance = {
-        factor = 1.25
+        factor = 1.01
         modifier = {
             factor = 1.05 #1.25
             is_greater_power = yes
@@ -1011,7 +1058,7 @@ associationism = {
     reinforce_rate = 0.05
 
     ai_chance = {
-        factor = 1.25
+        factor = 1.01
         modifier = {
             factor = 1.05
             is_greater_power = yes
@@ -1036,14 +1083,14 @@ associationism = {
 }
 phenomenalism = {
     area = psychology
-    year = 1850
+    year = 1836
     cost = 10800
 
     regular_experience_level = 5
     reinforce_rate = 0.05
 
     ai_chance = {
-        factor = 1.25
+        factor = 1.01
         modifier = {
             factor = 1.05 #1.25
             is_greater_power = yes
@@ -1068,14 +1115,14 @@ phenomenalism = {
 }
 experimental_psychology = {
     area = psychology
-    year = 1870
+    year = 1850
     cost = 14400
 
     regular_experience_level = 5
     reinforce_rate = 0.05
 
     ai_chance = {
-        factor = 1.5
+        factor = 1.01
         modifier = {
             factor = 1.05 #1.25
             is_greater_power = yes
@@ -1100,16 +1147,16 @@ experimental_psychology = {
 }
 psychoanalysis = {
     area = psychology
-    year = 1890
+    year = 1870
     cost = 18000
 
     regular_experience_level = 5
     reinforce_rate = 0.05
 
     ai_chance = {
-        factor = 4
+        factor = 1.01
         modifier = {
-            factor = 3 #1.25
+            factor = 1.05 #1.25
             is_greater_power = yes
         }
         modifier = {
@@ -1133,14 +1180,14 @@ psychoanalysis = {
 }
 behaviorism = {
     area = psychology
-    year = 1910
+    year = 1900
     cost = 21600
 
     regular_experience_level = 5
     reinforce_rate = 0.05
 
     ai_chance = {
-        factor = 1.2
+        factor = 1.01
         modifier = {
             factor = 1.25
             is_greater_power = yes

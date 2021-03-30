@@ -4,7 +4,8 @@ private_banks = {
     year = 1836
     cost = 3600
 
-    tax_eff = 5
+    activate_building = cement_factory
+    tax_eff = 3
 
     ai_chance = {
         factor = 4
@@ -346,9 +347,10 @@ early_classical_theory_and_critique = {
     year = 1836
     cost = 3600
 
+    activate_building = lumber_mill
     factory_input = -0.01
     ai_chance = {
-        factor = 1
+        factor = 25
         modifier = {
             factor = 1.02
             tech_school = commerce_tech_school
@@ -363,7 +365,7 @@ early_classical_theory_and_critique = {
         }
         modifier = {
             factor = 0.25
-            NOT = { literacy = 0.4 }
+            NOT = { literacy = 0.15 }
         }
     }
 }
@@ -376,7 +378,7 @@ late_classical_theory = {
     rgo_goods_output = { precious_goods = 0.1 }
     rgo_size = { precious_goods = 0.05 }
     ai_chance = {
-        factor = 8
+        factor = 1.01
         modifier = {
             factor = 1.2
             industrial_score = 20 #10
@@ -576,6 +578,7 @@ freedom_of_trade = {
     year = 1836
     cost = 3600
 
+    activate_building = luxury_clothes_factory
     influence = 0.1
     farm_rgo_eff = 0.1
     rgo_goods_output = { coal = 0.1 }
@@ -585,10 +588,14 @@ freedom_of_trade = {
     rgo_goods_output = { sulphur = 0.1 }
 
     ai_chance = {
-        factor = 11
+        factor = 15
         modifier = {
             factor = 1.5
             is_greater_power = yes
+        }
+        modifier = {
+            factor = 5
+            tag = JAP
         }
         modifier = {
             factor = 1.05
@@ -607,14 +614,8 @@ freedom_of_trade = {
             tech_school = commerce_tech_school
         }
         modifier = {
-            factor = 0.25
-            NOT = {
-                literacy = 0.4
-                any_owned_province = {
-                    continent = africa
-                    is_colonial = yes
-                }
-            }
+            factor = 0.5
+            NOT = { literacy = 0.15 }                         
         }
     }
 }
@@ -632,7 +633,7 @@ market_structure = {
     rgo_goods_output = { sulphur = 0.1 }
 
     ai_chance = {
-        factor = 2
+        factor = 1.05
 
         modifier = {
             factor = 50
@@ -643,7 +644,7 @@ market_structure = {
             }
         }
         modifier = {
-            factor = 2
+            factor = 1.2
             is_greater_power = yes
         }
         modifier = {
@@ -659,7 +660,7 @@ market_structure = {
             industrial_score = 50
         }
         modifier = {
-            factor = 2
+            factor = 1.02
             tech_school = commerce_tech_school
         }
         modifier = {
@@ -667,15 +668,9 @@ market_structure = {
             colonial_nation = yes
             year = 1870
         }
-        modifier = {
+        modifier = {      
             factor = 0.25
-            NOT = {
-                literacy = 0.4
-                any_owned_province = {
-                    continent = africa
-                    is_colonial = yes
-                }
-            }
+            NOT = { literacy = 0.4 }                      
         }
     }
 
@@ -694,9 +689,9 @@ business_regulations = {
     rgo_goods_output = { sulphur = 0.1 }
 
     ai_chance = {
-        factor = 2
+        factor = 1.05
         modifier = {
-            factor = 2
+            factor = 1.2
             is_greater_power = yes
         }
         modifier = {
@@ -708,7 +703,7 @@ business_regulations = {
             industrial_score = 150
         }
         modifier = {
-            factor = 2
+            factor = 1.02
             tech_school = commerce_tech_school
         }
         modifier = {
@@ -716,15 +711,9 @@ business_regulations = {
             colonial_nation = yes
             year = 1870
         }
-        modifier = {
+        modifier = {    
             factor = 0.25
-            NOT = {
-                literacy = 0.4
-                any_owned_province = {
-                    continent = africa
-                    is_colonial = yes
-                }
-            }
+            NOT = { literacy = 0.4 }         
         }
     }
 
@@ -737,9 +726,9 @@ market_regulations = {
     influence = 0.2
     rgo_goods_output = { precious_goods = 0.1 }
     ai_chance = {
-        factor = 2
+        factor = 1.05
         modifier = {
-            factor = 2
+            factor = 1.2
             is_greater_power = yes
         }
         modifier = {
@@ -751,11 +740,11 @@ market_regulations = {
             industrial_score = 250
         }
         modifier = {
-            factor = 3
+            factor = 1.04
             any_owned_province = { trade_goods = precious_goods }
         }
         modifier = {
-            factor = 2
+            factor = 1.02
             tech_school = commerce_tech_school
         }
         modifier = {
@@ -766,15 +755,9 @@ market_regulations = {
                 is_colonial = yes
             }
         }
-        modifier = {
+        modifier = {    
             factor = 0.25
-            NOT = {
-                literacy = 0.4
-                any_owned_province = {
-                    continent = africa
-                    is_colonial = yes
-                }
-            }
+            NOT = { literacy = 0.4 }         
         }
     }
 
@@ -859,6 +842,7 @@ guild_based_production = {
     year = 1836
     cost = 3600
 
+    activate_building = canned_food_factory
     factory_output = 0.01
     ai_chance = {
         factor = 1.03

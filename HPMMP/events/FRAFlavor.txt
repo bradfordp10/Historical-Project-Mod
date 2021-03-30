@@ -1319,10 +1319,43 @@ country_event = {
             type = demand_concession_casus_belli
             months = 24
         }
-        add_casus_belli = {
-            target = ALD
-            type = demand_concession_casus_belli
-            months = 24
+        random_owned = {
+            limit = { 
+                owner = {
+                    owns = 1710
+                }
+            }
+            owner = {
+                war = {
+                    target = ALD
+                    attacker_goal = {
+                        casus_belli = demand_concession_casus_belli
+                        state_province_id = 1703
+                    }
+                    defender_goal = {
+                        casus_belli = acquire_all_cores
+                    }
+                }
+            }
+        }
+        random_owned = {
+            limit = { 
+                owner = {
+                    NOT = { owns = 1710 }
+                }
+            }
+            owner = {
+                war = {
+                    target = ALD
+                    attacker_goal = {
+                        casus_belli = demand_concession_casus_belli
+                        state_province_id = 1710
+                    }
+                    defender_goal = {
+                        casus_belli = acquire_all_cores
+                    }
+                }
+            }
         }
         ai_chance = {
             factor = 1

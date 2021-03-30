@@ -811,6 +811,8 @@ flintlock_rifles = {
 
     activate_unit = infantry
 
+    combat_width = -2
+
     ai_chance = {
         factor = 2
         modifier = {
@@ -1063,6 +1065,11 @@ muzzle_loaded_rifles = {
         }
 
         modifier = {
+            factor = 10
+            tag = PRU
+        }
+
+        modifier = {
             factor = 3
             OR = {
                 tech_school = army_tech_school
@@ -1084,6 +1091,10 @@ breech_loaded_rifles = {
 
     ai_chance = {
         factor = 4
+        modifier = {
+            factor = 100
+            tag = PRU
+        }
         modifier = {
             factor = 10
             is_greater_power = yes
@@ -3035,7 +3046,7 @@ military_directionism = {
 }
 aeronautics = {
     area = military_science
-    year = 1914
+    year = 1903
     cost = 21600
     army_base = {
         default_organisation = 10
@@ -3329,7 +3340,7 @@ army_professionalism = {
         supply_consumption = 0.10
     }
     ai_chance = {
-        factor = 1.3
+        factor = 1.5
         modifier = {
             factor = 1.05
             year = 1860
@@ -3360,7 +3371,7 @@ army_professionalism = {
             }
         }
         modifier = {
-            factor = 3
+            factor = 5
             is_greater_power = yes
             any_neighbor_country = {
                 OR = {
@@ -3399,6 +3410,16 @@ army_professionalism = {
                 tech_school = prussian_tech_school
                 tech_school = japanese_tech_school
             }
+        }
+
+        modifier = {
+            factor = 1.5
+            colonial_nation = yes
+        }
+        
+        modifier = {
+            factor = 5
+            tag = FRA
         }
     }
 }

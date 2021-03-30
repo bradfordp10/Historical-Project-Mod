@@ -4300,12 +4300,10 @@ china_acquire_state = {
                 }
                 THIS = { ai = no }
             }
-            AND = {
-                any_owned_province = {
-                    NOT = { is_core = THIS }
-                    is_core = CHI
-                    owner = { civilized = no }
-                }
+            any_owned_province = {
+                NOT = { is_core = THIS }
+                is_core = CHI
+                owner = { civilized = no }
             }
         }
     }
@@ -4486,10 +4484,6 @@ demand_concession_casus_belli = {
             }
             has_country_flag = post_colonial_country
         }
-        NOT = { has_country_modifier = neutrality }
-        civilized = no
-        number_of_states = 2
-        is_vassal = no
         OR = {
             war_with = THIS
             THIS = { NOT = { has_country_modifier = punitive_effects } }

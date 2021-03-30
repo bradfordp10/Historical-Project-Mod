@@ -26,10 +26,10 @@ country_event = {
         }
         OR = {
             AND = {
-                average_militancy = 3
+                average_militancy = 4
                 has_country_modifier = springtime_of_nations
             }
-            average_militancy = 5
+            average_militancy = 6
             any_owned_province = {
                 is_capital = yes
                 controlled_by = REB
