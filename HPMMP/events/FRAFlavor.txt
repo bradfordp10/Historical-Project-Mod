@@ -1282,6 +1282,8 @@ country_event = {
     desc = "EVTDESC37235"
     picture = "arab_revolt"
 
+    fire_only_once = yes
+
     trigger = {
         tag = FRA
         war = no
@@ -1296,7 +1298,6 @@ country_event = {
             truce_with = ALD
             alliance_with = ALD
             has_country_flag = marched_through_the_iron_gates
-            has_country_flag = no_more_algerian_rebellion
             has_country_modifier = punitive_effects
             war_policy = pacifism
             casus_belli = ALD
@@ -1319,42 +1320,18 @@ country_event = {
             type = demand_concession_casus_belli
             months = 24
         }
-        random_owned = {
-            limit = { 
-                owner = {
-                    owns = 1710
-                }
+        war = {
+            target = ALD
+            attacker_goal = {
+                casus_belli = demand_concession_casus_belli
+                state_province_id = 1703
             }
-            owner = {
-                war = {
-                    target = ALD
-                    attacker_goal = {
-                        casus_belli = demand_concession_casus_belli
-                        state_province_id = 1703
-                    }
-                    defender_goal = {
-                        casus_belli = acquire_all_cores
-                    }
-                }
+            attacker_goal = {
+                casus_belli = demand_concession_casus_belli
+                state_province_id = 1710
             }
-        }
-        random_owned = {
-            limit = { 
-                owner = {
-                    NOT = { owns = 1710 }
-                }
-            }
-            owner = {
-                war = {
-                    target = ALD
-                    attacker_goal = {
-                        casus_belli = demand_concession_casus_belli
-                        state_province_id = 1710
-                    }
-                    defender_goal = {
-                        casus_belli = acquire_all_cores
-                    }
-                }
+            defender_goal = {
+                casus_belli = acquire_all_cores
             }
         }
         ai_chance = {
@@ -1365,13 +1342,6 @@ country_event = {
         name = "EVT37235OPTB"
         prestige = -5
         relation = { who = ALD value = 25 }
-        ai_chance = {
-            factor = 0
-        }
-    }
-    option = {
-        name = "EVT37235OPTC"
-        set_country_flag = no_more_algerian_rebellion
         ai_chance = {
             factor = 0
         }
