@@ -94,7 +94,9 @@ country_event = {
                 }
                 secede_province = USA
             }
-            any_owned = {
+        }
+
+        any_owned = {
                 limit = {
                     OR = {
                         province_id = 143
@@ -104,7 +106,6 @@ country_event = {
                 }
                 add_core = CSA
                 secede_province = CSA
-            }
         }
 
         diplomatic_influence = { who = CSA value = 400 }

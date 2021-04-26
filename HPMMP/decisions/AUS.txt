@@ -114,6 +114,7 @@ political_decisions = {
                         revolt_percentage = .25
                     }
                 }
+                NOT = { year = 1867 }
             }
             modifier = {
                 factor = 0

@@ -482,6 +482,7 @@ country_event = {
         tag = NET
         war = no
         is_disarmed = no
+        nationalism_n_imperialism = 1
         NOT = { has_country_modifier = punitive_effects }
         NOT = { war_policy = pacifism }
         OR = {
@@ -545,8 +546,7 @@ country_event = {
             }
             KLM = {
                 neighbour = THIS
-                exists = yes
-                             
+                exists = yes      
                 NOT = { civilized = yes }
                 NOT = { truce_with = THIS }
                 NOT = { vassal_of = THIS }
@@ -566,72 +566,13 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 20
-        modifier = {
-            factor = 0.5
-            nationalism_n_imperialism = 1
-        }
-        modifier = {
-            factor = 1.5
-            ai = no
-        }                                                                                                      
+        months = 15
     }
 
     option = {
         name = "EVT95251OPTA"
         badboy = 2
         prestige = -2
-        random_country = {
-            limit = {
-                OR = {
-                    tag = ATJ
-                    tag = SAK
-                    tag = SLW
-                    tag = BAL
-                    tag = KTI
-                    tag = LAN
-                    tag = PNK
-                    tag = KLM
-                }
-                exists = yes
-                neighbour = THIS
-                NOT = { number_of_states = 2 }
-                THIS = { NOT = { nationalism_n_imperialism = 1 } }
-                NOT = { truce_with = THIS }
-                NOT = { vassal_of = THIS }
-                NOT = { in_sphere = THIS }
-                NOT = { civilized = yes }
-            }
-            leave_alliance = THIS
-            relation = { who = THIS value = -100 }
-            add_casus_belli = { target = THIS type = establish_protectorate_casus_belli months = 24 }
-        }
-
-        random_country = {
-            limit = {
-                OR = {
-                    tag = ATJ
-                    tag = SAK
-                    tag = SLW
-                    tag = BAL
-                    tag = KTI
-                    tag = LAN
-                    tag = PNK
-                    tag = KLM
-                }
-                exists = yes
-                neighbour = THIS
-                number_of_states = 2
-                THIS = { NOT = { nationalism_n_imperialism = 1 } }
-                NOT = { truce_with = THIS }
-                NOT = { vassal_of = THIS }
-                NOT = { in_sphere = THIS }
-                NOT = { civilized = yes }
-            }
-            leave_alliance = NET
-            relation = { who = NET value = -100 }
-            add_casus_belli = { target = NET type = demand_concession_casus_belli months = 24 }
-        }
 
         random_country = {
             limit = {
@@ -652,7 +593,7 @@ country_event = {
                 NOT = { vassal_of = THIS }
                 NOT = { in_sphere = THIS }
                 NOT = { civilized = yes }
-                THIS = { nationalism_n_imperialism = 1 NOT = { has_global_flag = berlin_conference } }
+                THIS = { NOT = { has_global_flag = berlin_conference } }
             }
             leave_alliance = NET
             relation = { who = NET value = -100 }
@@ -678,7 +619,7 @@ country_event = {
                 NOT = { vassal_of = THIS }
                 NOT = { in_sphere = THIS }
                 NOT = { civilized = yes }
-                THIS = { nationalism_n_imperialism = 1 NOT = { has_global_flag = berlin_conference } }
+                THIS = { NOT = { has_global_flag = berlin_conference } }
             }
             leave_alliance = NET
             relation = { who = NET value = -100 }
@@ -703,7 +644,7 @@ country_event = {
                 NOT = { vassal_of = THIS }
                 NOT = { in_sphere = THIS }
                 NOT = { civilized = yes }
-                THIS = { nationalism_n_imperialism = 1 has_global_flag = berlin_conference }
+                THIS = { has_global_flag = berlin_conference }
             }
             leave_alliance = NET
             relation = { who = NET value = -100 }
@@ -728,7 +669,7 @@ country_event = {
                 NOT = { vassal_of = THIS }
                 NOT = { in_sphere = THIS }
                 NOT = { civilized = yes }
-                THIS = { nationalism_n_imperialism = 1 has_global_flag = berlin_conference }
+                THIS = { has_global_flag = berlin_conference }
             }
             leave_alliance = NET
             relation = { who = NET value = -100 }

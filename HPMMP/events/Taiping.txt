@@ -291,15 +291,22 @@ country_event = {
             remove_province_modifier = christian_pamphlets
             remove_province_modifier = christian_repression
         }
-        release_vassal = LAN
+
+        QNG = {
+            add_country_modifier = {
+                name = no_more_war
+                duration = 120
+            }
+            country_event = { id=99931 days=120 }
+        }
+
         any_owned = {
             limit = {
                 is_core = TPG
-                not = { province_id = 1616 }
+                port = no
             }
             secede_province = TPG
         }
-
         capital = 1616
         any_pop = {
             limit = {
@@ -356,22 +363,20 @@ country_event = {
                 }
             }
         }
-        war = {
-            target = TPG
-            attacker_goal = {
-                casus_belli = civil_war
-            }
-            defender_goal = {
-                casus_belli = civil_war
-            }
-        }
         set_global_flag = taiping_has_happened
 
         TPG = {
+            grain = 250
+            treasury = 100000
             capital = 2221
             any_pop = {
                 consciousness = -5
                 militancy = -5
+            }
+
+            add_country_modifier = {
+                name = no_more_war
+                duration = 120
             }
 
             add_country_modifier = { name = fanatic_army duration = 1825 }
@@ -485,6 +490,26 @@ country_event = {
             limit = { owner = { foreign_artillery = yes_foreign_artillery } }
             TPG = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery }
         }
+
+        XBI = {
+            add_country_modifier = {
+                name = qing_substate_boost
+                duration = 1395
+            }
+            grain = 250
+        }
+        MCK = {
+            add_country_modifier = {
+                name = qing_substate_boost
+                duration = 1395
+            }
+            grain = 250
+        }
+
+        grain = 250
+
+        release_vassal = LAN
+        leave_alliance = LAN
 
         change_tag_no_core_switch = TPG
 
